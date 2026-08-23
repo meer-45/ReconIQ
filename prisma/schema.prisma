@@ -1,7 +1,7 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
+// ReconIQ – unified schema draft
+// ONE pool of transactions across all 3 sources, distinguished by dataSource.
+// This is required so subset-sum matching and pgvector similarity search
+// can operate over a single table, not three.
 
 generator client {
   provider = "prisma-client"
@@ -10,4 +10,117 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+enum DataSource {
+  BANK_STATEMENT
+  GATEWAY_SETTLEMENT
+  MERCHANT_LEDGER
+}
+
+enum MatchMethod {
+  EXACT
+  SUBSET_SUM
+  AI_FUZZY
+  AI_CLASSIFIED
+  MANUAL
+}
+
+enum ActorType {
+  SYSTEM
+  AI
+  HUMAN
+}
+
+// Single unified pool for every raw record, regardless of source.
+// subsetSum.ts and the embedding/fuzzy-match layer both query this
+// one table – no cross-table joins needed to find "everything unmatched."
+
+model TransactionRecord {
+  transactionRecordId String     @id @default(uuid())
+  dataSource           DataSource
+
+  // Original identifiers, kept as-is per source (UTR / gateway txn ID / ledger ref)
+  externalReference    String
+  amountPaise          Int        // signed: negative for refunds/chargebacks
+  currencyCode         String     @default("INR")
+
+  transactionDate      DateTime
+  ingestedAt           DateTime   @default(now())
+
+  rawDescription        String
+  rawPayload            Json       // full original row, for audit/debug
+
+  // Embedding for fuzzy text matching (Day 6-7). Populated after ingestion.
+
+  matchGroupId          String?
+  matchGroup             MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
+
+  auditTrailEntries      AuditTrail[]
+  unresolvedExceptions   UnresolvedException[]
+
+  @@index([dataSource, transactionDate])
+  @@index([matchGroupId])
+  @@index([externalReference])
+}
+
+// One resolved match, spanning any number of TransactionRecords
+// across any combination of sources (this is what makes many-to-one
+// bundling representable without a junction table).
+model MatchGroup {
+  matchGroupId       String       @id @default(uuid())
+  method             MatchMethod
+  confidenceScore    Float        @default(1.0) // 1.0 for deterministic exact/subset_sum
+  status             String       @default("matched") // matched, pending_review, rejected
+
+  createdAt          DateTime     @default(now())
+  resolvedAt         DateTime?
+
+  transactionRecords TransactionRecord[]
+  auditTrailEntries   AuditTrail[]
+
+  @@index([method])
+  @@index([status, createdAt])
+}
+
+// Every decision, algorithmic or AI, gets one row here.
+model AuditTrail {
+  auditTrailId       String       @id @default(uuid())
+  decisionTimestamp  DateTime     @default(now())
+
+  method             MatchMethod
+  reason             String       // plain-English explanation of the decision
+  actor              ActorType
+  actorId            String?      // e.g. "subsetSum.ts", "gpt-4o-classifier", or a human user id
+
+  transactionRecordId String?
+  transactionRecord    TransactionRecord? @relation(fields: [transactionRecordId], references: [transactionRecordId])
+
+  matchGroupId        String?
+  matchGroup           MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
+
+  metadata            Json?       // score breakdown, DP params, LLM prompt version, etc.
+
+  @@index([decisionTimestamp])
+  @@index([method, actor])
+}
+
+// Anything Layer 1 (deterministic) and Layer 2 (AI) couldn't resolve.
+model UnresolvedException {
+  unresolvedExceptionId String     @id @default(uuid())
+  createdAt              DateTime   @default(now())
+
+  classification          String?    // duplicate, missing_counterpart, timing_lag, other
+  rootCauseHypothesis     String?    // plain-English, from LLM classification step
+  riskScore                Float      @default(0.0) // amount magnitude x recurrence, 0.0-1.0
+
+  isResolved               Boolean    @default(false)
+  resolvedAt               DateTime?
+  resolvedBy                String?   // human actor id, or "auto" if system-resolved
+
+  transactionRecordId      String?
+  transactionRecord         TransactionRecord? @relation(fields: [transactionRecordId], references: [transactionRecordId])
+
+  @@index([isResolved, riskScore])
+  @@index([classification])
 }

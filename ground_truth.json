@@ -1,0 +1,4399 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-08-23T16:40:05.280Z",
+  "totalExpectedMatches": 549,
+  "expectedMatches": [
+    {
+      "bankStatementRecordId": "tx_1blzpgtrlsr",
+      "gatewaySettlementRecordId": "tx_53v77dugf8i",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:35:54.231Z"
+    },
+    {
+      "bankStatementRecordId": "tx_1blzpgtrlsr",
+      "gatewaySettlementRecordId": "tx_y3z4vfuhh5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:35:54.231Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9l308c2jff",
+      "gatewaySettlementRecordId": "tx_qa1msz1he2o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T22:24:24.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_62id35ms8dd",
+      "gatewaySettlementRecordId": "tx_p0pejp2edh",
+      "merchantLedgerRecordId": "tx_oudud8zdp5",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T04:36:19.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_62id35ms8dd",
+      "gatewaySettlementRecordId": "tx_xblsam0f8n",
+      "merchantLedgerRecordId": "tx_oudud8zdp5",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T04:36:19.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_62id35ms8dd",
+      "gatewaySettlementRecordId": "tx_kc60bc8p8b",
+      "merchantLedgerRecordId": "tx_oudud8zdp5",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T04:36:19.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_62id35ms8dd",
+      "gatewaySettlementRecordId": "tx_2bk8q5zeh3v",
+      "merchantLedgerRecordId": "tx_oudud8zdp5",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T04:36:19.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dfqf9s3kqsa",
+      "gatewaySettlementRecordId": "tx_2xhkhyrr3im",
+      "merchantLedgerRecordId": "tx_k3s02571vrq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T19:48:26.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dfqf9s3kqsa",
+      "gatewaySettlementRecordId": "tx_mqs34xk313",
+      "merchantLedgerRecordId": "tx_k3s02571vrq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T19:48:26.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hak2dhk9q1k",
+      "gatewaySettlementRecordId": "tx_oxy5g8fb0fa",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T20:29:59.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dcvxfowg4if",
+      "gatewaySettlementRecordId": "tx_e5h8qm1kyw9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:28:57.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dcvxfowg4if",
+      "gatewaySettlementRecordId": "tx_389stwbwjm6",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:28:57.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dcvxfowg4if",
+      "gatewaySettlementRecordId": "tx_v0zuegd0jd9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:28:57.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dcvxfowg4if",
+      "gatewaySettlementRecordId": "tx_rvpu728afgh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:28:57.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dcvxfowg4if",
+      "gatewaySettlementRecordId": "tx_xuozklvn8e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T19:28:57.232Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dehahm9cmr9",
+      "gatewaySettlementRecordId": "tx_h8i0dew8i18",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T17:17:35.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0ljsxtpu341",
+      "gatewaySettlementRecordId": "tx_nrzhwm3xuvb",
+      "merchantLedgerRecordId": "tx_6bzn7bp2jls",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:02:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0ljsxtpu341",
+      "gatewaySettlementRecordId": "tx_5byi9ygwat6",
+      "merchantLedgerRecordId": "tx_6bzn7bp2jls",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:02:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0ljsxtpu341",
+      "gatewaySettlementRecordId": "tx_zp68bi3k8ob",
+      "merchantLedgerRecordId": "tx_6bzn7bp2jls",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:02:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0ljsxtpu341",
+      "gatewaySettlementRecordId": "tx_x9qtqblk1wb",
+      "merchantLedgerRecordId": "tx_6bzn7bp2jls",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:02:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bw4kp5clogr",
+      "gatewaySettlementRecordId": "tx_r887wameid",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T09:42:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bw4kp5clogr",
+      "gatewaySettlementRecordId": "tx_d8sxjpzpv4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T09:42:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bw4kp5clogr",
+      "gatewaySettlementRecordId": "tx_kpkyx42g01e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T09:42:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bw4kp5clogr",
+      "gatewaySettlementRecordId": "tx_b223rwa6nzs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T09:42:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bw4kp5clogr",
+      "gatewaySettlementRecordId": "tx_xzgtvyeqnr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T09:42:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_06sd9j4oee1t",
+      "gatewaySettlementRecordId": "tx_fofkipqso1l",
+      "merchantLedgerRecordId": "tx_u3yygkk0j3",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:30:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_06sd9j4oee1t",
+      "gatewaySettlementRecordId": "tx_b2zdwjljisl",
+      "merchantLedgerRecordId": "tx_u3yygkk0j3",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:30:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sp4x4smfurr",
+      "gatewaySettlementRecordId": "tx_sqdkjmqcnur",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T10:25:08.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sp4x4smfurr",
+      "gatewaySettlementRecordId": "tx_z15oos38tw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T10:25:08.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sp4x4smfurr",
+      "gatewaySettlementRecordId": "tx_vn9smvsrxn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T10:25:08.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sp4x4smfurr",
+      "gatewaySettlementRecordId": "tx_hwahbgnvtvg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T10:25:08.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6f8e804n1ti",
+      "gatewaySettlementRecordId": "tx_6yfln0rigry",
+      "merchantLedgerRecordId": "tx_h6bndtrkml4",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:39:11.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6f8e804n1ti",
+      "gatewaySettlementRecordId": "tx_7x5afx0sb9r",
+      "merchantLedgerRecordId": "tx_h6bndtrkml4",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:39:11.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_s3yx0u7a3l",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_dmujcgighps",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_65cbgw1ygj8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_y16yzf1l2xh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_kj6rh52zka",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_srqsfwna0n",
+      "gatewaySettlementRecordId": "tx_l3hp714qwc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T05:13:06.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_aki6ai1n9lo",
+      "gatewaySettlementRecordId": "tx_slbk3rf50fs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T13:21:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_aki6ai1n9lo",
+      "gatewaySettlementRecordId": "tx_2tay536kxc8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T13:21:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_aki6ai1n9lo",
+      "gatewaySettlementRecordId": "tx_whaif6m1ei",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T13:21:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_aki6ai1n9lo",
+      "gatewaySettlementRecordId": "tx_42zcssptilg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T13:21:54.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fg7if8dod9b",
+      "gatewaySettlementRecordId": "tx_zmubvmz2def",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T12:18:29.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_89pbjglmm14",
+      "gatewaySettlementRecordId": "tx_8ycb7spcyy6",
+      "merchantLedgerRecordId": "tx_kcj3xkrq7sg",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T14:49:23.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_89pbjglmm14",
+      "gatewaySettlementRecordId": "tx_ghls7q7528f",
+      "merchantLedgerRecordId": "tx_kcj3xkrq7sg",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T14:49:23.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_89pbjglmm14",
+      "gatewaySettlementRecordId": "tx_lyrl7p5vtdo",
+      "merchantLedgerRecordId": "tx_kcj3xkrq7sg",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T14:49:23.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2c77xl4p5ca",
+      "gatewaySettlementRecordId": "tx_kawj6cyv9od",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T00:09:56.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2c77xl4p5ca",
+      "gatewaySettlementRecordId": "tx_x7iziqzh3j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T00:09:56.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2c77xl4p5ca",
+      "gatewaySettlementRecordId": "tx_0oenvx1qmmld",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T00:09:56.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cfp2pj1uoug",
+      "gatewaySettlementRecordId": "tx_hwdxapza9aq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T18:13:08.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bhyn1w15b8l",
+      "gatewaySettlementRecordId": "tx_5woaoac87i4",
+      "merchantLedgerRecordId": "tx_lydzeojbbhi",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T18:52:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bhyn1w15b8l",
+      "gatewaySettlementRecordId": "tx_31nbxqcpam5",
+      "merchantLedgerRecordId": "tx_lydzeojbbhi",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T18:52:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bhyn1w15b8l",
+      "gatewaySettlementRecordId": "tx_t8bsa1q3x5r",
+      "merchantLedgerRecordId": "tx_lydzeojbbhi",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T18:52:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bhyn1w15b8l",
+      "gatewaySettlementRecordId": "tx_p5zmzrac93a",
+      "merchantLedgerRecordId": "tx_lydzeojbbhi",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T18:52:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8bp3haeelpu",
+      "gatewaySettlementRecordId": "tx_n5nl5ldh8ep",
+      "merchantLedgerRecordId": "tx_u52w3y9tit",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T00:05:40.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8bp3haeelpu",
+      "gatewaySettlementRecordId": "tx_sqj85c6ocee",
+      "merchantLedgerRecordId": "tx_u52w3y9tit",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T00:05:40.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8bp3haeelpu",
+      "gatewaySettlementRecordId": "tx_k34hxx3yjaj",
+      "merchantLedgerRecordId": "tx_u52w3y9tit",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T00:05:40.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9y30sh7ef1q",
+      "gatewaySettlementRecordId": "tx_jpj2kgjntqn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T14:17:41.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmeurj54zf",
+      "gatewaySettlementRecordId": "tx_522lun3ovvi",
+      "merchantLedgerRecordId": "tx_rxsivkine7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T02:20:57.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmeurj54zf",
+      "gatewaySettlementRecordId": "tx_ci9ub9tv98b",
+      "merchantLedgerRecordId": "tx_rxsivkine7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T02:20:57.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmeurj54zf",
+      "gatewaySettlementRecordId": "tx_r2kfq73b0z",
+      "merchantLedgerRecordId": "tx_rxsivkine7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T02:20:57.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmeurj54zf",
+      "gatewaySettlementRecordId": "tx_0y55flm9lxhq",
+      "merchantLedgerRecordId": "tx_rxsivkine7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T02:20:57.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p6a8rqlbozh",
+      "gatewaySettlementRecordId": "tx_v9fohf6uv5",
+      "merchantLedgerRecordId": "tx_zrbdz2r39ij",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T05:58:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p6a8rqlbozh",
+      "gatewaySettlementRecordId": "tx_ry54e26akhg",
+      "merchantLedgerRecordId": "tx_zrbdz2r39ij",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T05:58:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p6a8rqlbozh",
+      "gatewaySettlementRecordId": "tx_clc4fdwdqo",
+      "merchantLedgerRecordId": "tx_zrbdz2r39ij",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T05:58:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p6a8rqlbozh",
+      "gatewaySettlementRecordId": "tx_878byvuigbp",
+      "merchantLedgerRecordId": "tx_zrbdz2r39ij",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T05:58:46.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lh4tnhx5esj",
+      "gatewaySettlementRecordId": "tx_e58re4kxa6",
+      "merchantLedgerRecordId": "tx_6e6c41rqiry",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T23:47:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lh4tnhx5esj",
+      "gatewaySettlementRecordId": "tx_1nqnwx79blw",
+      "merchantLedgerRecordId": "tx_6e6c41rqiry",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T23:47:53.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nh72zsroedc",
+      "gatewaySettlementRecordId": "tx_vktp7gqzclr",
+      "merchantLedgerRecordId": "tx_v3d73j7mxkq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T15:25:04.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nh72zsroedc",
+      "gatewaySettlementRecordId": "tx_e1slbeuiadf",
+      "merchantLedgerRecordId": "tx_v3d73j7mxkq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T15:25:04.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmjtbbjqej",
+      "gatewaySettlementRecordId": "tx_7h2ulrda5ty",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T17:46:13.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jmjtbbjqej",
+      "gatewaySettlementRecordId": "tx_2rl2tyi4rw4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T17:46:13.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b0ids37q4a",
+      "gatewaySettlementRecordId": "tx_r7au6h008a9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T02:08:15.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b0ids37q4a",
+      "gatewaySettlementRecordId": "tx_lhwju8f8b4g",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T02:08:15.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b0ids37q4a",
+      "gatewaySettlementRecordId": "tx_adqi7w9pw9u",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T02:08:15.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_opzcc7qw888",
+      "gatewaySettlementRecordId": "tx_earkt684nki",
+      "merchantLedgerRecordId": "tx_mp6r643e079",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T16:59:45.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_opzcc7qw888",
+      "gatewaySettlementRecordId": "tx_iia6qcnlsmd",
+      "merchantLedgerRecordId": "tx_mp6r643e079",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T16:59:45.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yq4c76bhnnq",
+      "gatewaySettlementRecordId": "tx_qb5w815l8u",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T16:06:24.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yq4c76bhnnq",
+      "gatewaySettlementRecordId": "tx_8111a86ha6o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T16:06:24.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yq4c76bhnnq",
+      "gatewaySettlementRecordId": "tx_tjqw93tulu",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T16:06:24.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mktw1mmiw0j",
+      "gatewaySettlementRecordId": "tx_xmcyidim8fp",
+      "merchantLedgerRecordId": "tx_8od7s9drkf8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T23:04:19.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mktw1mmiw0j",
+      "gatewaySettlementRecordId": "tx_xrblfa7kkrp",
+      "merchantLedgerRecordId": "tx_8od7s9drkf8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T23:04:19.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mktw1mmiw0j",
+      "gatewaySettlementRecordId": "tx_slm6fdr9sc",
+      "merchantLedgerRecordId": "tx_8od7s9drkf8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T23:04:19.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mktw1mmiw0j",
+      "gatewaySettlementRecordId": "tx_f5l9zrpqg5h",
+      "merchantLedgerRecordId": "tx_8od7s9drkf8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T23:04:19.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mktw1mmiw0j",
+      "gatewaySettlementRecordId": "tx_5ms2jdib9rh",
+      "merchantLedgerRecordId": "tx_8od7s9drkf8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T23:04:19.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_v6ojhg61b2",
+      "gatewaySettlementRecordId": "tx_j63g58gw97j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T16:23:58.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dprr4nlrrx8",
+      "gatewaySettlementRecordId": "tx_cujl0eugycu",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T03:58:44.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dprr4nlrrx8",
+      "gatewaySettlementRecordId": "tx_2cuso67zrbk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T03:58:44.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dprr4nlrrx8",
+      "gatewaySettlementRecordId": "tx_q6zs4efq8op",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T03:58:44.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_crsaxoqwf0q",
+      "gatewaySettlementRecordId": "tx_rjkxrc41bhn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T10:35:03.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ny630c7i28n",
+      "gatewaySettlementRecordId": "tx_y97pyjxl3h",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T04:16:18.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ny630c7i28n",
+      "gatewaySettlementRecordId": "tx_v8se16mepig",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T04:16:18.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pg7vq3o9jn9",
+      "gatewaySettlementRecordId": "tx_s7maqhfzds",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T04:38:11.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_r71bvgjhsul",
+      "gatewaySettlementRecordId": "tx_c14td8iv1mj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T04:37:33.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_s73bnq5nf2",
+      "gatewaySettlementRecordId": "tx_bnzlaxrx0iv",
+      "merchantLedgerRecordId": "tx_jlayuxqexvl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T11:44:33.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_s73bnq5nf2",
+      "gatewaySettlementRecordId": "tx_gly35nneiyo",
+      "merchantLedgerRecordId": "tx_jlayuxqexvl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T11:44:33.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_s73bnq5nf2",
+      "gatewaySettlementRecordId": "tx_6v37uaibcjs",
+      "merchantLedgerRecordId": "tx_jlayuxqexvl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T11:44:33.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2ipredi8non",
+      "gatewaySettlementRecordId": "tx_zg40u7yca4b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T13:33:50.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tqeemljv3y",
+      "gatewaySettlementRecordId": "tx_qsqgnms0pj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T09:19:37.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tqeemljv3y",
+      "gatewaySettlementRecordId": "tx_7p4ftty0qvg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T09:19:37.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_657j4tiwakg",
+      "gatewaySettlementRecordId": "tx_98mohmn8ivc",
+      "merchantLedgerRecordId": "tx_eg9x42qu5tv",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T02:21:39.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_657j4tiwakg",
+      "gatewaySettlementRecordId": "tx_o5vsqqloirr",
+      "merchantLedgerRecordId": "tx_eg9x42qu5tv",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T02:21:39.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_657j4tiwakg",
+      "gatewaySettlementRecordId": "tx_oxxchvp3m4",
+      "merchantLedgerRecordId": "tx_eg9x42qu5tv",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T02:21:39.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_657j4tiwakg",
+      "gatewaySettlementRecordId": "tx_mvycgmkg9v",
+      "merchantLedgerRecordId": "tx_eg9x42qu5tv",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T02:21:39.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_657j4tiwakg",
+      "gatewaySettlementRecordId": "tx_nijmj0f8zhc",
+      "merchantLedgerRecordId": "tx_eg9x42qu5tv",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T02:21:39.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6dnvm0psujj",
+      "gatewaySettlementRecordId": "tx_y2br4xqyoia",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T15:08:14.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5czpb0ejjoa",
+      "gatewaySettlementRecordId": "tx_e0q1dhrnoyp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T21:28:58.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5czpb0ejjoa",
+      "gatewaySettlementRecordId": "tx_seqp6ii9rqs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T21:28:58.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5czpb0ejjoa",
+      "gatewaySettlementRecordId": "tx_uktgared6b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T21:28:58.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5czpb0ejjoa",
+      "gatewaySettlementRecordId": "tx_pnj956i81ln",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T21:28:58.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_c5wvqqv9g9",
+      "gatewaySettlementRecordId": "tx_cxfad9vr9c",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T23:46:31.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dh3mk0zfiwv",
+      "gatewaySettlementRecordId": "tx_27yq5wtcihf",
+      "merchantLedgerRecordId": "tx_680w9exl5h7",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T18:15:00.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dh3mk0zfiwv",
+      "gatewaySettlementRecordId": "tx_2zm61gce1dk",
+      "merchantLedgerRecordId": "tx_680w9exl5h7",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T18:15:00.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dh3mk0zfiwv",
+      "gatewaySettlementRecordId": "tx_wjqnwtoy4wo",
+      "merchantLedgerRecordId": "tx_680w9exl5h7",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T18:15:00.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dh3mk0zfiwv",
+      "gatewaySettlementRecordId": "tx_zarcywjz76",
+      "merchantLedgerRecordId": "tx_680w9exl5h7",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T18:15:00.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dh3mk0zfiwv",
+      "gatewaySettlementRecordId": "tx_7ecx4pa3e7d",
+      "merchantLedgerRecordId": "tx_680w9exl5h7",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T18:15:00.233Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6j2t2t4wgvi",
+      "gatewaySettlementRecordId": "tx_kxvknvd9hws",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T18:57:51.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fxgaqdkh03r",
+      "gatewaySettlementRecordId": "tx_edhmiigh4li",
+      "merchantLedgerRecordId": "tx_tonxvxld7ap",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:17:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fxgaqdkh03r",
+      "gatewaySettlementRecordId": "tx_fm0c8cac2me",
+      "merchantLedgerRecordId": "tx_tonxvxld7ap",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:17:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fxgaqdkh03r",
+      "gatewaySettlementRecordId": "tx_yexkc2j2f6",
+      "merchantLedgerRecordId": "tx_tonxvxld7ap",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T16:17:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_093qml36ogr3",
+      "gatewaySettlementRecordId": "tx_nym3w84mu7b",
+      "merchantLedgerRecordId": "tx_kumckba1nte",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T21:12:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_093qml36ogr3",
+      "gatewaySettlementRecordId": "tx_n9u2gip8dno",
+      "merchantLedgerRecordId": "tx_kumckba1nte",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T21:12:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_093qml36ogr3",
+      "gatewaySettlementRecordId": "tx_06k4z06nepgb",
+      "merchantLedgerRecordId": "tx_kumckba1nte",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T21:12:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_70mynppn6gn",
+      "gatewaySettlementRecordId": "tx_jotsr16ti0e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T15:26:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_purbsi6re6s",
+      "gatewaySettlementRecordId": "tx_v6sjvhciudb",
+      "merchantLedgerRecordId": "tx_8z618wdwh78",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:26:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_purbsi6re6s",
+      "gatewaySettlementRecordId": "tx_v2oe4pgl8r",
+      "merchantLedgerRecordId": "tx_8z618wdwh78",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:26:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sclpzz9wwtr",
+      "gatewaySettlementRecordId": "tx_u804i7vdlop",
+      "merchantLedgerRecordId": "tx_ahv57i50eje",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T06:30:08.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sclpzz9wwtr",
+      "gatewaySettlementRecordId": "tx_d91701a2pxu",
+      "merchantLedgerRecordId": "tx_ahv57i50eje",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T06:30:08.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sclpzz9wwtr",
+      "gatewaySettlementRecordId": "tx_w5dptwy9w4",
+      "merchantLedgerRecordId": "tx_ahv57i50eje",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T06:30:08.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sclpzz9wwtr",
+      "gatewaySettlementRecordId": "tx_xz8xm3bpbb",
+      "merchantLedgerRecordId": "tx_ahv57i50eje",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T06:30:08.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sclpzz9wwtr",
+      "gatewaySettlementRecordId": "tx_5wmcbh38ntd",
+      "merchantLedgerRecordId": "tx_ahv57i50eje",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T06:30:08.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7fv1hf9u0jx",
+      "gatewaySettlementRecordId": "tx_s2qwdbe1xmj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T06:59:56.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_n2bvv5nivm",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_kzlgvckqc3q",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_gvdrprwb77a",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_byoyvn4li69",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_x7zkh1zzvun",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5uqux9gy786",
+      "gatewaySettlementRecordId": "tx_uw2da2l6kls",
+      "merchantLedgerRecordId": "tx_xue3t6e2s9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:16:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ystnctvzi2",
+      "gatewaySettlementRecordId": "tx_3eelmaj5nd2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T04:10:56.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_aevi3w1wpf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_msk0ps6qiqr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_lkdr0cz8jb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_p9erbltzygj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_hm4o916fbnj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bvta80cft3b",
+      "gatewaySettlementRecordId": "tx_gf4ud2rjmk7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:40:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_hst3dw57ly",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_um53sbpdmnp",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_zszwh9rjwbr",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_j569zc0w4u",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_5haqm0qkipg",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nk6o177nueo",
+      "gatewaySettlementRecordId": "tx_5whrbug05mm",
+      "merchantLedgerRecordId": "tx_hc9dy8i9xsn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T00:49:20.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4dtqd63i5ca",
+      "gatewaySettlementRecordId": "tx_qt231ht7sxo",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T04:48:54.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4dtqd63i5ca",
+      "gatewaySettlementRecordId": "tx_rm6fd1058t",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T04:48:54.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hn4q3ipx735",
+      "gatewaySettlementRecordId": "tx_hiwewe8tase",
+      "merchantLedgerRecordId": "tx_zhwxhoss3pr",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T02:54:32.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hn4q3ipx735",
+      "gatewaySettlementRecordId": "tx_4cuq9yeis3v",
+      "merchantLedgerRecordId": "tx_zhwxhoss3pr",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T02:54:32.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hn4q3ipx735",
+      "gatewaySettlementRecordId": "tx_inxmlbu3p",
+      "merchantLedgerRecordId": "tx_zhwxhoss3pr",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T02:54:32.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hn4q3ipx735",
+      "gatewaySettlementRecordId": "tx_k9c7kx2lj5o",
+      "merchantLedgerRecordId": "tx_zhwxhoss3pr",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T02:54:32.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ay52joey13t",
+      "gatewaySettlementRecordId": "tx_wplv1kmoc9i",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T18:34:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ay52joey13t",
+      "gatewaySettlementRecordId": "tx_dz03hq48tmg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T18:34:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ay52joey13t",
+      "gatewaySettlementRecordId": "tx_u4a9zyatadr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T18:34:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ay52joey13t",
+      "gatewaySettlementRecordId": "tx_up6evpaf41j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T18:34:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ay52joey13t",
+      "gatewaySettlementRecordId": "tx_9y4qyd2behv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T18:34:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nmpp5q1tpof",
+      "gatewaySettlementRecordId": "tx_12msrb2xdhw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T15:05:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pb12pt6g3q",
+      "gatewaySettlementRecordId": "tx_etzejrzfkcl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T01:56:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bpz6l5qd22p",
+      "gatewaySettlementRecordId": "tx_jm136kave9",
+      "merchantLedgerRecordId": "tx_5z0awqv5wf9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:52:43.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bpz6l5qd22p",
+      "gatewaySettlementRecordId": "tx_lw6s9m0ylt",
+      "merchantLedgerRecordId": "tx_5z0awqv5wf9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:52:43.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bpz6l5qd22p",
+      "gatewaySettlementRecordId": "tx_mqviwn7whbq",
+      "merchantLedgerRecordId": "tx_5z0awqv5wf9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:52:43.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bpz6l5qd22p",
+      "gatewaySettlementRecordId": "tx_f5gag1nmez4",
+      "merchantLedgerRecordId": "tx_5z0awqv5wf9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:52:43.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bpz6l5qd22p",
+      "gatewaySettlementRecordId": "tx_xgvfnu52m0h",
+      "merchantLedgerRecordId": "tx_5z0awqv5wf9",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T02:52:43.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_kv0hlikgnl",
+      "gatewaySettlementRecordId": "tx_o6sej762a7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T05:27:31.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_kv0hlikgnl",
+      "gatewaySettlementRecordId": "tx_sc8pmdmwggs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T05:27:31.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jvigj41lqtm",
+      "gatewaySettlementRecordId": "tx_tf3ibmvsr2i",
+      "merchantLedgerRecordId": "tx_qarb23bsen",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T15:13:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jvigj41lqtm",
+      "gatewaySettlementRecordId": "tx_ej1hb6qqi6r",
+      "merchantLedgerRecordId": "tx_qarb23bsen",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T15:13:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jvigj41lqtm",
+      "gatewaySettlementRecordId": "tx_fmrol631pd",
+      "merchantLedgerRecordId": "tx_qarb23bsen",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T15:13:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jvigj41lqtm",
+      "gatewaySettlementRecordId": "tx_1u0tf58gb0d",
+      "merchantLedgerRecordId": "tx_qarb23bsen",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T15:13:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jvigj41lqtm",
+      "gatewaySettlementRecordId": "tx_xkth54rqk4",
+      "merchantLedgerRecordId": "tx_qarb23bsen",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T15:13:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_a0pyik0pxc",
+      "gatewaySettlementRecordId": "tx_2zce1ri5i6k",
+      "merchantLedgerRecordId": "tx_uilrsp6espj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T21:24:49.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_a0pyik0pxc",
+      "gatewaySettlementRecordId": "tx_m09gc2pmfb",
+      "merchantLedgerRecordId": "tx_uilrsp6espj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T21:24:49.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_a0pyik0pxc",
+      "gatewaySettlementRecordId": "tx_vesxin2e9",
+      "merchantLedgerRecordId": "tx_uilrsp6espj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T21:24:49.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n59hravmbib",
+      "gatewaySettlementRecordId": "tx_7whidy4h2sj",
+      "merchantLedgerRecordId": "tx_i61ny6yhfj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T19:43:12.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n59hravmbib",
+      "gatewaySettlementRecordId": "tx_it4igg2uw8n",
+      "merchantLedgerRecordId": "tx_i61ny6yhfj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T19:43:12.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n59hravmbib",
+      "gatewaySettlementRecordId": "tx_s1mk20xskr",
+      "merchantLedgerRecordId": "tx_i61ny6yhfj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T19:43:12.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n59hravmbib",
+      "gatewaySettlementRecordId": "tx_ubwbt0ojpj",
+      "merchantLedgerRecordId": "tx_i61ny6yhfj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T19:43:12.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n59hravmbib",
+      "gatewaySettlementRecordId": "tx_b4qbc7vcs9s",
+      "merchantLedgerRecordId": "tx_i61ny6yhfj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T19:43:12.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dfzae1vmuq6",
+      "gatewaySettlementRecordId": "tx_7r6iq67hu6k",
+      "merchantLedgerRecordId": "tx_6cf4fq734hc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T13:07:54.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dfzae1vmuq6",
+      "gatewaySettlementRecordId": "tx_cqlbfldivfl",
+      "merchantLedgerRecordId": "tx_6cf4fq734hc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T13:07:54.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dfzae1vmuq6",
+      "gatewaySettlementRecordId": "tx_lxpd4qjsro",
+      "merchantLedgerRecordId": "tx_6cf4fq734hc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T13:07:54.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_o0qe9iqs9t",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_652lmzoebg8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_5qpl2eg89l9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_4bjj9esofb2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_jrybzp3cgnh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_99378ivocke",
+      "gatewaySettlementRecordId": "tx_9z1820jimb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T07:06:25.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_58eym0udmtn",
+      "gatewaySettlementRecordId": "tx_qfzwwwhquao",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T18:59:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_58eym0udmtn",
+      "gatewaySettlementRecordId": "tx_mc6qkjjccli",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T18:59:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_58eym0udmtn",
+      "gatewaySettlementRecordId": "tx_7mgyq2q8duo",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T18:59:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_itt4a53xtkh",
+      "gatewaySettlementRecordId": "tx_don0mnyc67c",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:51:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_itt4a53xtkh",
+      "gatewaySettlementRecordId": "tx_ci7jo9q6h6b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:51:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_itt4a53xtkh",
+      "gatewaySettlementRecordId": "tx_cdmaxmutoyl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:51:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_itt4a53xtkh",
+      "gatewaySettlementRecordId": "tx_sir6csmd25",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:51:19.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_3cb7b1igjy8",
+      "gatewaySettlementRecordId": "tx_elbv8uxoz5o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T17:48:36.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j9hdovi6f3g",
+      "gatewaySettlementRecordId": "tx_fojyitr1oyu",
+      "merchantLedgerRecordId": "tx_x9a65nie0lc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T15:39:56.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j9hdovi6f3g",
+      "gatewaySettlementRecordId": "tx_2lhzmgukyob",
+      "merchantLedgerRecordId": "tx_x9a65nie0lc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T15:39:56.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cmlxqej89k",
+      "gatewaySettlementRecordId": "tx_d5hfgnnt82r",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T15:20:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fiml22kup7j",
+      "gatewaySettlementRecordId": "tx_ga3zx1mqzw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:30:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fiml22kup7j",
+      "gatewaySettlementRecordId": "tx_gyiu6ox8tdi",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:30:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fiml22kup7j",
+      "gatewaySettlementRecordId": "tx_0ihzftw7o0pq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:30:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fiml22kup7j",
+      "gatewaySettlementRecordId": "tx_52rjpvkdpsw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:30:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fiml22kup7j",
+      "gatewaySettlementRecordId": "tx_if0il04fg7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:30:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6fp0mmf5x58",
+      "gatewaySettlementRecordId": "tx_6ecu5v0uzu2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T16:23:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yabdx0zqdp",
+      "gatewaySettlementRecordId": "tx_kfecb1cduw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T08:30:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j4u1wktaqqg",
+      "gatewaySettlementRecordId": "tx_dohup3lfqd",
+      "merchantLedgerRecordId": "tx_7oprl5nqfea",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T22:26:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j4u1wktaqqg",
+      "gatewaySettlementRecordId": "tx_rcfyhve2oxs",
+      "merchantLedgerRecordId": "tx_7oprl5nqfea",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T22:26:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xiyp3i00k8l",
+      "gatewaySettlementRecordId": "tx_i4516swpvt",
+      "merchantLedgerRecordId": "tx_otuzdzdlkyd",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T19:10:46.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xiyp3i00k8l",
+      "gatewaySettlementRecordId": "tx_vk0pm4c4g0i",
+      "merchantLedgerRecordId": "tx_otuzdzdlkyd",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T19:10:46.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xiyp3i00k8l",
+      "gatewaySettlementRecordId": "tx_psh5awl919",
+      "merchantLedgerRecordId": "tx_otuzdzdlkyd",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T19:10:46.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xiyp3i00k8l",
+      "gatewaySettlementRecordId": "tx_re4q9tlibuq",
+      "merchantLedgerRecordId": "tx_otuzdzdlkyd",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T19:10:46.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xiyp3i00k8l",
+      "gatewaySettlementRecordId": "tx_qh8axn1oek",
+      "merchantLedgerRecordId": "tx_otuzdzdlkyd",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T19:10:46.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mdqp3akv1y",
+      "gatewaySettlementRecordId": "tx_qzbp8v8alin",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T15:23:36.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_29han24qxb1",
+      "gatewaySettlementRecordId": "tx_rlo8v8jma3c",
+      "merchantLedgerRecordId": "tx_20phk9lmyb0h",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T21:26:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_29han24qxb1",
+      "gatewaySettlementRecordId": "tx_r85w24motso",
+      "merchantLedgerRecordId": "tx_20phk9lmyb0h",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T21:26:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_29han24qxb1",
+      "gatewaySettlementRecordId": "tx_ry49sd8o8r",
+      "merchantLedgerRecordId": "tx_20phk9lmyb0h",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T21:26:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_iygxxifovvd",
+      "gatewaySettlementRecordId": "tx_sfex4jmv5e",
+      "merchantLedgerRecordId": "tx_rfsy08zti7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T22:42:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_iygxxifovvd",
+      "gatewaySettlementRecordId": "tx_68ubjx22g2y",
+      "merchantLedgerRecordId": "tx_rfsy08zti7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T22:42:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_iygxxifovvd",
+      "gatewaySettlementRecordId": "tx_370yis2zauu",
+      "merchantLedgerRecordId": "tx_rfsy08zti7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T22:42:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_iygxxifovvd",
+      "gatewaySettlementRecordId": "tx_neso804yzc",
+      "merchantLedgerRecordId": "tx_rfsy08zti7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T22:42:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_iygxxifovvd",
+      "gatewaySettlementRecordId": "tx_dyu95fcg2lg",
+      "merchantLedgerRecordId": "tx_rfsy08zti7l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T22:42:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_z6lbk5ksw4d",
+      "gatewaySettlementRecordId": "tx_w72li9f0itn",
+      "merchantLedgerRecordId": "tx_y4gkzeqd2hc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T00:36:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_z6lbk5ksw4d",
+      "gatewaySettlementRecordId": "tx_hj8ir8pf8x",
+      "merchantLedgerRecordId": "tx_y4gkzeqd2hc",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T00:36:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n7qk2siso2s",
+      "gatewaySettlementRecordId": "tx_o9cgt0wm5t8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T17:57:31.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_m3ebqy3hx1g",
+      "gatewaySettlementRecordId": "tx_14p9wb8a20a",
+      "merchantLedgerRecordId": "tx_t85qsewvom",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T02:23:51.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_m3ebqy3hx1g",
+      "gatewaySettlementRecordId": "tx_clhw167nom9",
+      "merchantLedgerRecordId": "tx_t85qsewvom",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T02:23:51.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cvst8s44eg",
+      "gatewaySettlementRecordId": "tx_qcly3mkkg8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:16:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cvst8s44eg",
+      "gatewaySettlementRecordId": "tx_ngtgz864ke",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:16:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cvst8s44eg",
+      "gatewaySettlementRecordId": "tx_e6wz7d4f7s5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:16:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cvst8s44eg",
+      "gatewaySettlementRecordId": "tx_eybih6ollbp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:16:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cvst8s44eg",
+      "gatewaySettlementRecordId": "tx_d9sef23p67n",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T17:16:29.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pma7uayn9n",
+      "gatewaySettlementRecordId": "tx_2kk7lpe95t7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T10:50:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pma7uayn9n",
+      "gatewaySettlementRecordId": "tx_fxyks5hmy4w",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T10:50:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_easlm2chq8c",
+      "gatewaySettlementRecordId": "tx_m40tzqrp6z",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T07:56:47.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fy6z4xjdcqp",
+      "gatewaySettlementRecordId": "tx_86qfmqmlrz8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T16:21:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fy6z4xjdcqp",
+      "gatewaySettlementRecordId": "tx_s7ovbjyutas",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T16:21:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fy6z4xjdcqp",
+      "gatewaySettlementRecordId": "tx_ortllwtep4i",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T16:21:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fy6z4xjdcqp",
+      "gatewaySettlementRecordId": "tx_2hvx6dsd6s9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T16:21:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fy6z4xjdcqp",
+      "gatewaySettlementRecordId": "tx_myj6djaw2y",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T16:21:02.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9ikm1llh4p",
+      "gatewaySettlementRecordId": "tx_zwyt6h2t14p",
+      "merchantLedgerRecordId": "tx_o19c1hs3xgl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T20:56:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9ikm1llh4p",
+      "gatewaySettlementRecordId": "tx_vq9z4q17pg",
+      "merchantLedgerRecordId": "tx_o19c1hs3xgl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T20:56:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9ikm1llh4p",
+      "gatewaySettlementRecordId": "tx_mmy7xm95typ",
+      "merchantLedgerRecordId": "tx_o19c1hs3xgl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T20:56:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9ikm1llh4p",
+      "gatewaySettlementRecordId": "tx_zqhzhhcw6o",
+      "merchantLedgerRecordId": "tx_o19c1hs3xgl",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T20:56:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4p14uklyz1",
+      "gatewaySettlementRecordId": "tx_op09hkdlhqi",
+      "merchantLedgerRecordId": "tx_8tsmyib7cbm",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T03:30:06.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4p14uklyz1",
+      "gatewaySettlementRecordId": "tx_sqqj3il4z4",
+      "merchantLedgerRecordId": "tx_8tsmyib7cbm",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T03:30:06.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4p14uklyz1",
+      "gatewaySettlementRecordId": "tx_h93u7cdjm0c",
+      "merchantLedgerRecordId": "tx_8tsmyib7cbm",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T03:30:06.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4p14uklyz1",
+      "gatewaySettlementRecordId": "tx_yzalqx59mqq",
+      "merchantLedgerRecordId": "tx_8tsmyib7cbm",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T03:30:06.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4p14uklyz1",
+      "gatewaySettlementRecordId": "tx_mzyn32fpkkc",
+      "merchantLedgerRecordId": "tx_8tsmyib7cbm",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T03:30:06.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_t6pja3quotc",
+      "gatewaySettlementRecordId": "tx_553xynd3g7a",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T13:31:24.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_t6pja3quotc",
+      "gatewaySettlementRecordId": "tx_wwg2wrmwldq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T13:31:24.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uvt0uzzc0d",
+      "gatewaySettlementRecordId": "tx_fb6x1oqvzvr",
+      "merchantLedgerRecordId": "tx_yztwv84y0c8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T18:42:11.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uvt0uzzc0d",
+      "gatewaySettlementRecordId": "tx_fsnzut918f",
+      "merchantLedgerRecordId": "tx_yztwv84y0c8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T18:42:11.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uvt0uzzc0d",
+      "gatewaySettlementRecordId": "tx_9h8g2lxo66",
+      "merchantLedgerRecordId": "tx_yztwv84y0c8",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T18:42:11.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_vz2rg70bn",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_62mn68qggyh",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_8r17xefkcu",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_jqle0rgucum",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_l0nbj23t4v",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8mlik41mr5a",
+      "gatewaySettlementRecordId": "tx_6wlmm13wpgq",
+      "merchantLedgerRecordId": "tx_ywgptgbyihb",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T14:32:52.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_ivlbbqmifw",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_t3gfhgob5gc",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_r0cvboess6",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_5tmh1v7y5qw",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_od4t9g6gdsi",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wcisrtn6ca",
+      "gatewaySettlementRecordId": "tx_udgvxv714gb",
+      "merchantLedgerRecordId": "tx_9eia3vaano",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T11:11:14.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_w2qjrigonrt",
+      "gatewaySettlementRecordId": "tx_kvw2wtzf7hc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T18:32:36.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_965d5olpgwg",
+      "gatewaySettlementRecordId": "tx_65ep86w47cd",
+      "merchantLedgerRecordId": "tx_f5zwvdthic",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T16:48:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_965d5olpgwg",
+      "gatewaySettlementRecordId": "tx_iqodjn58nuc",
+      "merchantLedgerRecordId": "tx_f5zwvdthic",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T16:48:18.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hyaeqa2ll4n",
+      "gatewaySettlementRecordId": "tx_7ikrotk8ptp",
+      "merchantLedgerRecordId": "tx_wah0auyf0us",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:41:07.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hyaeqa2ll4n",
+      "gatewaySettlementRecordId": "tx_3u0szqlhvi4",
+      "merchantLedgerRecordId": "tx_wah0auyf0us",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:41:07.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hyaeqa2ll4n",
+      "gatewaySettlementRecordId": "tx_i71m2kkjz1",
+      "merchantLedgerRecordId": "tx_wah0auyf0us",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:41:07.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hyaeqa2ll4n",
+      "gatewaySettlementRecordId": "tx_yfr84nw8iwj",
+      "merchantLedgerRecordId": "tx_wah0auyf0us",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:41:07.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hyaeqa2ll4n",
+      "gatewaySettlementRecordId": "tx_ej1qq9usenj",
+      "merchantLedgerRecordId": "tx_wah0auyf0us",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T07:41:07.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nfedxvsf9l",
+      "gatewaySettlementRecordId": "tx_x2h8zwwcxb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T15:51:22.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4drlor2m2ph",
+      "gatewaySettlementRecordId": "tx_tok507anywn",
+      "merchantLedgerRecordId": "tx_njuq7hw00p",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T14:17:53.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4drlor2m2ph",
+      "gatewaySettlementRecordId": "tx_cgs8cl7u2vl",
+      "merchantLedgerRecordId": "tx_njuq7hw00p",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T14:17:53.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lphdd24fakh",
+      "gatewaySettlementRecordId": "tx_exs9hjlu8at",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T17:43:30.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_9egvlrmemmn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_v7w2utzejs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_sbketjc6u3",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_npjm6ezhbtd",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_7vodm1dlmyh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i9ub0igud4r",
+      "gatewaySettlementRecordId": "tx_hllkf2l80ci",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T04:51:58.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5lv15vrm0bv",
+      "gatewaySettlementRecordId": "tx_dmuwgmzce7e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T22:11:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5lv15vrm0bv",
+      "gatewaySettlementRecordId": "tx_qs1p85q937",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T22:11:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5lv15vrm0bv",
+      "gatewaySettlementRecordId": "tx_9ghsjyns61",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T22:11:45.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rpobvzqoa6k",
+      "gatewaySettlementRecordId": "tx_o0bvkuepo9",
+      "merchantLedgerRecordId": "tx_nmsf42nivpj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:53:37.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rpobvzqoa6k",
+      "gatewaySettlementRecordId": "tx_19ecziflh3xj",
+      "merchantLedgerRecordId": "tx_nmsf42nivpj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:53:37.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rpobvzqoa6k",
+      "gatewaySettlementRecordId": "tx_p0pp9o13i0n",
+      "merchantLedgerRecordId": "tx_nmsf42nivpj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:53:37.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rpobvzqoa6k",
+      "gatewaySettlementRecordId": "tx_tzg59g6484k",
+      "merchantLedgerRecordId": "tx_nmsf42nivpj",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:53:37.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_vcetpr44ais",
+      "gatewaySettlementRecordId": "tx_eduw1u5fg1o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T00:16:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x78u57sbsns",
+      "gatewaySettlementRecordId": "tx_0u8ouqpd34c",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:02:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x78u57sbsns",
+      "gatewaySettlementRecordId": "tx_k5x08x86bw8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:02:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x78u57sbsns",
+      "gatewaySettlementRecordId": "tx_32lqt9hokh1",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:02:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x78u57sbsns",
+      "gatewaySettlementRecordId": "tx_p20hsvmrga",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T12:02:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uava37xwnej",
+      "gatewaySettlementRecordId": "tx_gszzomedie",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T13:12:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uava37xwnej",
+      "gatewaySettlementRecordId": "tx_on2zl2iy5zj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T13:12:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uava37xwnej",
+      "gatewaySettlementRecordId": "tx_wdmg772boec",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T13:12:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_tgyrnawo7sq",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_zc64poin1gb",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_mo219bngps",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_83j69wqk30w",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_sr16rbfzft",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ckld3wh6u1i",
+      "gatewaySettlementRecordId": "tx_b30sxhkhp0s",
+      "merchantLedgerRecordId": "tx_l30q613z5v",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-18T05:47:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p5icq3ec8mr",
+      "gatewaySettlementRecordId": "tx_ehrnkepauj",
+      "merchantLedgerRecordId": "tx_a60wgghwt0b",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T13:07:50.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p5icq3ec8mr",
+      "gatewaySettlementRecordId": "tx_hzvwu0hclij",
+      "merchantLedgerRecordId": "tx_a60wgghwt0b",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T13:07:50.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p5icq3ec8mr",
+      "gatewaySettlementRecordId": "tx_jfi3zhx9in",
+      "merchantLedgerRecordId": "tx_a60wgghwt0b",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T13:07:50.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p5icq3ec8mr",
+      "gatewaySettlementRecordId": "tx_rc5n9u5gham",
+      "merchantLedgerRecordId": "tx_a60wgghwt0b",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T13:07:50.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p5icq3ec8mr",
+      "gatewaySettlementRecordId": "tx_pzq3ziv6hgo",
+      "merchantLedgerRecordId": "tx_a60wgghwt0b",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T13:07:50.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n7w3rrbgxe",
+      "gatewaySettlementRecordId": "tx_qvbkkqcdjk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T03:30:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n7w3rrbgxe",
+      "gatewaySettlementRecordId": "tx_9v3e4xem1vh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T03:30:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n7w3rrbgxe",
+      "gatewaySettlementRecordId": "tx_gon8fgwjz55",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T03:30:57.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_y90w0qu5e8",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_a8brzn585c",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_s5kvb4axjtc",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_t91qi0esa",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_skcjg9k953c",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v2wxnsldkj",
+      "gatewaySettlementRecordId": "tx_q5oh5fwv09",
+      "merchantLedgerRecordId": "tx_q5wudsiy9bp",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-13T19:22:15.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_t0wooqas65",
+      "gatewaySettlementRecordId": "tx_7nziqms8hvx",
+      "merchantLedgerRecordId": "tx_m0j02df1y9j",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T22:46:35.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_t0wooqas65",
+      "gatewaySettlementRecordId": "tx_4z4edfyz88v",
+      "merchantLedgerRecordId": "tx_m0j02df1y9j",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T22:46:35.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_t0wooqas65",
+      "gatewaySettlementRecordId": "tx_soq6duslz5e",
+      "merchantLedgerRecordId": "tx_m0j02df1y9j",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T22:46:35.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_yzqxxovg8ui",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_t4f28bn1ui",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_5i9okzyuf4r",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_cbxbrlmqu4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_vtse9zad3al",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g6bqyitdffm",
+      "gatewaySettlementRecordId": "tx_1dwlw4n8zuq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-19T01:21:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h9t37sr1jrd",
+      "gatewaySettlementRecordId": "tx_d3b4sutxi2o",
+      "merchantLedgerRecordId": "tx_iyo21zyoxn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:38:21.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h9t37sr1jrd",
+      "gatewaySettlementRecordId": "tx_5as9n91qx7o",
+      "merchantLedgerRecordId": "tx_iyo21zyoxn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:38:21.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h9t37sr1jrd",
+      "gatewaySettlementRecordId": "tx_lfabkw5u3ol",
+      "merchantLedgerRecordId": "tx_iyo21zyoxn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:38:21.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h9t37sr1jrd",
+      "gatewaySettlementRecordId": "tx_nue9bbkrv9",
+      "merchantLedgerRecordId": "tx_iyo21zyoxn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:38:21.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h9t37sr1jrd",
+      "gatewaySettlementRecordId": "tx_2g9qsrdt9sb",
+      "merchantLedgerRecordId": "tx_iyo21zyoxn",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T21:38:21.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yp70pw3wyxl",
+      "gatewaySettlementRecordId": "tx_vw83tbdmty",
+      "merchantLedgerRecordId": "tx_d5916jb14xe",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T22:21:28.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yp70pw3wyxl",
+      "gatewaySettlementRecordId": "tx_uusyqcfm55",
+      "merchantLedgerRecordId": "tx_d5916jb14xe",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T22:21:28.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yp70pw3wyxl",
+      "gatewaySettlementRecordId": "tx_670jhjvtjox",
+      "merchantLedgerRecordId": "tx_d5916jb14xe",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T22:21:28.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i37xemp3c7k",
+      "gatewaySettlementRecordId": "tx_f3ozjeyl4ev",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T01:32:41.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_m13otake9eh",
+      "gatewaySettlementRecordId": "tx_7c77z5ntn59",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T21:57:44.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_okoi6hzyi6s",
+      "gatewaySettlementRecordId": "tx_jj6r2oik7k",
+      "merchantLedgerRecordId": "tx_qdycoaev4l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T01:54:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_okoi6hzyi6s",
+      "gatewaySettlementRecordId": "tx_fgtvtkobffv",
+      "merchantLedgerRecordId": "tx_qdycoaev4l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T01:54:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_okoi6hzyi6s",
+      "gatewaySettlementRecordId": "tx_lrgefs8ukuo",
+      "merchantLedgerRecordId": "tx_qdycoaev4l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T01:54:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_okoi6hzyi6s",
+      "gatewaySettlementRecordId": "tx_hf1misp1k1",
+      "merchantLedgerRecordId": "tx_qdycoaev4l",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-23T01:54:40.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_oqmgwtxhuw9",
+      "gatewaySettlementRecordId": "tx_jpnfupohuab",
+      "merchantLedgerRecordId": "tx_omzei0hnjz",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T11:56:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_oqmgwtxhuw9",
+      "gatewaySettlementRecordId": "tx_zgxxoz69t8g",
+      "merchantLedgerRecordId": "tx_omzei0hnjz",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-17T11:56:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wq32j3plnn",
+      "gatewaySettlementRecordId": "tx_whap4bg5ai",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T12:17:36.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tvw5d271oy",
+      "gatewaySettlementRecordId": "tx_ja6s6h26q3b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T01:13:16.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0il0vqcduk3i",
+      "gatewaySettlementRecordId": "tx_s2ydlwwhzk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T14:34:38.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5wjwi9hfre",
+      "gatewaySettlementRecordId": "tx_bxp2xpp02v",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:38:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5wjwi9hfre",
+      "gatewaySettlementRecordId": "tx_2vxgddmtbg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:38:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5wjwi9hfre",
+      "gatewaySettlementRecordId": "tx_3rr2boz0txw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-20T03:38:10.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_350ujr5z4oa",
+      "gatewaySettlementRecordId": "tx_2mhlc6t24zz",
+      "merchantLedgerRecordId": "tx_9x4zr1otbiq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T22:14:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_350ujr5z4oa",
+      "gatewaySettlementRecordId": "tx_4j5wpsydhvb",
+      "merchantLedgerRecordId": "tx_9x4zr1otbiq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T22:14:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_350ujr5z4oa",
+      "gatewaySettlementRecordId": "tx_6ewjv35fe92",
+      "merchantLedgerRecordId": "tx_9x4zr1otbiq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T22:14:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_350ujr5z4oa",
+      "gatewaySettlementRecordId": "tx_f4ygaojp9f9",
+      "merchantLedgerRecordId": "tx_9x4zr1otbiq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T22:14:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_350ujr5z4oa",
+      "gatewaySettlementRecordId": "tx_jvahwggbucc",
+      "merchantLedgerRecordId": "tx_9x4zr1otbiq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-22T22:14:00.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ure7uo8gbic",
+      "gatewaySettlementRecordId": "tx_qh8xftbccgh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T00:17:11.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_24cf2tqkang",
+      "gatewaySettlementRecordId": "tx_1wctatm00kz",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T13:00:48.235Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nug25he2i5l",
+      "gatewaySettlementRecordId": "tx_ku83l4jndb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T13:42:48.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d15849qo1sb",
+      "gatewaySettlementRecordId": "tx_kv0p3ikxnc",
+      "merchantLedgerRecordId": "tx_g8180ukh3ea",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T18:29:25.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d15849qo1sb",
+      "gatewaySettlementRecordId": "tx_hfem3zjgaw7",
+      "merchantLedgerRecordId": "tx_g8180ukh3ea",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T18:29:25.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cs2r0pc6wa5",
+      "gatewaySettlementRecordId": "tx_59bvqmytswk",
+      "merchantLedgerRecordId": "tx_25iq3cix3wq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T17:44:28.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cs2r0pc6wa5",
+      "gatewaySettlementRecordId": "tx_x15g1c7j0bg",
+      "merchantLedgerRecordId": "tx_25iq3cix3wq",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-15T17:44:28.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_3743d69tkig",
+      "gatewaySettlementRecordId": "tx_6r4690el1q8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T12:33:05.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xcxbfuvdsz",
+      "gatewaySettlementRecordId": "tx_r8l8losjqse",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T20:31:33.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jp9mlqwbh9a",
+      "gatewaySettlementRecordId": "tx_5cxlpbq6kgn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T14:54:15.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ha0gg1k3lt5",
+      "gatewaySettlementRecordId": "tx_wxefhyvef5j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T20:14:09.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2p466jzjlrl",
+      "gatewaySettlementRecordId": "tx_z40dop2geh8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T23:34:08.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2p466jzjlrl",
+      "gatewaySettlementRecordId": "tx_3rizvu6si93",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-16T23:34:08.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b7glcwmy3x6",
+      "gatewaySettlementRecordId": "tx_mhhbfcsefai",
+      "merchantLedgerRecordId": "tx_o8lm0m8qji",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:28:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b7glcwmy3x6",
+      "gatewaySettlementRecordId": "tx_54qgtzajvnq",
+      "merchantLedgerRecordId": "tx_o8lm0m8qji",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:28:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b7glcwmy3x6",
+      "gatewaySettlementRecordId": "tx_5khhp70hvp",
+      "merchantLedgerRecordId": "tx_o8lm0m8qji",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:28:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_b7glcwmy3x6",
+      "gatewaySettlementRecordId": "tx_bil2t7a9p3l",
+      "merchantLedgerRecordId": "tx_o8lm0m8qji",
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T09:28:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d9nnj6dyey",
+      "gatewaySettlementRecordId": "tx_7tug4c32h9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T18:16:33.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d9nnj6dyey",
+      "gatewaySettlementRecordId": "tx_u99hb4jzuq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T18:16:33.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bkrl1gkt5p7",
+      "gatewaySettlementRecordId": "tx_jy05qps555m",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T22:31:39.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_f54jz47ft6b",
+      "gatewaySettlementRecordId": "tx_apuo72rmzgc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T08:20:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_f54jz47ft6b",
+      "gatewaySettlementRecordId": "tx_jmrqrdyk819",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-21T08:20:49.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7oy9kkx0yuo",
+      "gatewaySettlementRecordId": "tx_cmmhjlibjb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T07:51:42.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7oy9kkx0yuo",
+      "gatewaySettlementRecordId": "tx_vkwoyt5z6z",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T07:51:42.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7oy9kkx0yuo",
+      "gatewaySettlementRecordId": "tx_fygtj08zrqq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-14T07:51:42.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_khtlmr0uwzj",
+      "gatewaySettlementRecordId": "tx_7yisjksloze",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T22:59:46.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tdz8dcw9ldh",
+      "gatewaySettlementRecordId": "tx_5c3h3q794wa",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T21:46:27.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6sl5o8hgb5r",
+      "gatewaySettlementRecordId": "tx_00znl7ri3y4a",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T12:36:32.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2589cuavmaeh",
+      "gatewaySettlementRecordId": "tx_rf362pd6mil",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T07:35:11.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uaeo2ulp1pj",
+      "gatewaySettlementRecordId": "tx_m7zomk3saxj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T03:51:25.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_q2wxgmwparl",
+      "gatewaySettlementRecordId": "tx_y05ux0lxi4p",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T17:13:48.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4c5us2k9lrx",
+      "gatewaySettlementRecordId": "tx_cn7yn49qf7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T12:34:56.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pnfz7n3sg4",
+      "gatewaySettlementRecordId": "tx_6k8pfnpj2p4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T20:51:20.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hxc3oomyjcw",
+      "gatewaySettlementRecordId": "tx_qadjh8po4d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T02:46:48.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fuor0xdatqb",
+      "gatewaySettlementRecordId": "tx_a6hm8lp87fa",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T10:52:48.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_p7zt1px2eif",
+      "gatewaySettlementRecordId": "tx_hmdpw58xfcu",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T15:03:01.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_746is34k92w",
+      "gatewaySettlementRecordId": "tx_yef7upn5nm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T19:58:46.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_o86pwg7eb3",
+      "gatewaySettlementRecordId": "tx_fzkoqdtw8hk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T21:28:31.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j2aaegfjwjl",
+      "gatewaySettlementRecordId": "tx_ab0y0zyxo2s",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T09:15:37.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2o0ge0gingb",
+      "gatewaySettlementRecordId": "tx_qoqrtzpxcgb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T09:38:36.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cu628zcd3h9",
+      "gatewaySettlementRecordId": "tx_6s6dsm5zrfa",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T20:34:55.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ra7yajlizod",
+      "gatewaySettlementRecordId": "tx_4eud18rrq9r",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T19:06:40.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_slv81tzq1e",
+      "gatewaySettlementRecordId": "tx_wyr2l8b7xj9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T05:41:28.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_q8qv4wh2oa",
+      "gatewaySettlementRecordId": "tx_7ou97fqh9v8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T04:14:03.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lp8ws3s73i",
+      "gatewaySettlementRecordId": "tx_v7q2z82dhkq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T18:37:08.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rnurhsg8z0q",
+      "gatewaySettlementRecordId": "tx_54ylu8g43j2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T16:10:38.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_e5i9kt7obt5",
+      "gatewaySettlementRecordId": "tx_7j98tmemwe2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T05:56:44.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_h8s7pw00bkf",
+      "gatewaySettlementRecordId": "tx_pbz3lm3mg4d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T21:07:19.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x7f8qi09oab",
+      "gatewaySettlementRecordId": "tx_7awuq5igdp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T06:39:20.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bl5j2jyjtc",
+      "gatewaySettlementRecordId": "tx_svucii9i8lp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T01:29:30.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0gbci1esu16g",
+      "gatewaySettlementRecordId": "tx_h0o0aq0q2bq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T01:45:40.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xyrne1hls4e",
+      "gatewaySettlementRecordId": "tx_vw4aruxr7xj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T10:40:17.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_kwp1ndc1pgl",
+      "gatewaySettlementRecordId": "tx_7beqajrmfkq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T17:11:28.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_j9jac6i0q2",
+      "gatewaySettlementRecordId": "tx_mietjeke5zi",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T06:03:33.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_20wnqkkzgob",
+      "gatewaySettlementRecordId": "tx_azlpeoqmk4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T06:18:46.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ydro3i9n3vg",
+      "gatewaySettlementRecordId": "tx_w50zr2h0f6g",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T21:56:47.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mq3gookmdti",
+      "gatewaySettlementRecordId": "tx_81io12axs5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T04:44:14.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4ikh0rccch",
+      "gatewaySettlementRecordId": "tx_0wb2et1tya7p",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T03:29:22.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_74n74hd9umy",
+      "gatewaySettlementRecordId": "tx_4jw5bfbdct",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T04:51:58.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4wza0qhdp1",
+      "gatewaySettlementRecordId": "tx_4128gfm1j9d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T17:12:19.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_honzqj7zibt",
+      "gatewaySettlementRecordId": "tx_0dd7p5o7eqzg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T21:46:33.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xqup44kp50f",
+      "gatewaySettlementRecordId": "tx_aq7g2wxtsj7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T21:00:57.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bcvz722ztjm",
+      "gatewaySettlementRecordId": "tx_2i9kw6rq6yr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T13:04:52.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_323v2bzh0m4",
+      "gatewaySettlementRecordId": "tx_5vfmxmyj2mq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T07:42:43.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wjq4zuwm99",
+      "gatewaySettlementRecordId": "tx_dcg5uwukjga",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T15:36:19.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6v18ykhmusd",
+      "gatewaySettlementRecordId": "tx_ka5qwj1sz7q",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T08:08:25.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_w6ko9i8pjf",
+      "gatewaySettlementRecordId": "tx_9k6rcna7wrl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T16:25:30.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d25tc3nkvo4",
+      "gatewaySettlementRecordId": "tx_71mssiobcdp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T13:39:06.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lld3yhq26s",
+      "gatewaySettlementRecordId": "tx_mqei6o1lkcc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T19:30:37.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9frl868v2ve",
+      "gatewaySettlementRecordId": "tx_xjqtm71e0jc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T13:41:04.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yrkpc30yob",
+      "gatewaySettlementRecordId": "tx_5g323x85is8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T05:25:50.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hdjl580pvh8",
+      "gatewaySettlementRecordId": "tx_7ntvq7gnbqk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T23:22:01.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_riifeogndwq",
+      "gatewaySettlementRecordId": "tx_1bofra46ax",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T12:34:40.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_haay7qb01o9",
+      "gatewaySettlementRecordId": "tx_ccw5vkmdsv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T21:53:32.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_shjfkm0shgb",
+      "gatewaySettlementRecordId": "tx_bx79rmanw44",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T00:37:32.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g4yccflhbjd",
+      "gatewaySettlementRecordId": "tx_pe9p7ujqaw",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T03:06:12.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nxhcfeth1k",
+      "gatewaySettlementRecordId": "tx_uf36lj3rfm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T14:36:14.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_o5c3soiunf",
+      "gatewaySettlementRecordId": "tx_ihep1ga176p",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T17:17:12.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_twj8m8d2nte",
+      "gatewaySettlementRecordId": "tx_zsil6ijkm8o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T18:49:48.236Z"
+    },
+    {
+      "bankStatementRecordId": "tx_f5qkwq6l5i",
+      "gatewaySettlementRecordId": "tx_w5x1pm24is",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T02:27:59.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_qqx6wt1xzah",
+      "gatewaySettlementRecordId": "tx_hmapnpseo2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T16:59:52.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7pbsndvj4ly",
+      "gatewaySettlementRecordId": "tx_di1skt8hfgm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T20:06:13.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sntilokwth",
+      "gatewaySettlementRecordId": "tx_xt9xel71c4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T22:52:25.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_x6w9mclnfsc",
+      "gatewaySettlementRecordId": "tx_8he1781pd4y",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T00:37:58.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_c4dm85sbdjk",
+      "gatewaySettlementRecordId": "tx_7w5fzrvname",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T09:55:14.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6ro3d1b7z3",
+      "gatewaySettlementRecordId": "tx_n0ocf1j4wr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T10:42:17.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rqhfr508giq",
+      "gatewaySettlementRecordId": "tx_oe1axku42ba",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T23:24:03.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2wyjba20zj3",
+      "gatewaySettlementRecordId": "tx_v49t0xdfdu",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T06:19:26.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tg5iwarftxf",
+      "gatewaySettlementRecordId": "tx_uk48k4h5cad",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T20:30:33.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_i39cbkh29qe",
+      "gatewaySettlementRecordId": "tx_uu5kkkcjcfl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T19:03:33.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_75d5liyxnz",
+      "gatewaySettlementRecordId": "tx_cfe1uihy1n4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T05:32:23.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_m56otk3p3z8",
+      "gatewaySettlementRecordId": "tx_i5c1o84g9zr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T08:53:21.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lvmw2f0i0wb",
+      "gatewaySettlementRecordId": "tx_6kpb23z61sv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T10:57:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_7ykzyzbw7ov",
+      "gatewaySettlementRecordId": "tx_09nxym82axk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T12:34:13.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4dpsdi4239d",
+      "gatewaySettlementRecordId": "tx_lmow36mrcrc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T23:53:02.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_gy3l135av57",
+      "gatewaySettlementRecordId": "tx_rceot9s16p",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T03:02:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hqmctjujmp",
+      "gatewaySettlementRecordId": "tx_fwgk4zngood",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T20:42:17.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_2du25c88iih",
+      "gatewaySettlementRecordId": "tx_ihlxj8hun3",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T23:06:42.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ymx3mhywhe",
+      "gatewaySettlementRecordId": "tx_52gk5wjobav",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T10:01:58.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_qf8sk1m7awq",
+      "gatewaySettlementRecordId": "tx_i4mff92fob",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T15:16:31.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_d0oymhtoldo",
+      "gatewaySettlementRecordId": "tx_rh3i4j1ezdm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T21:52:39.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_f2q6yc5s46d",
+      "gatewaySettlementRecordId": "tx_9pu8fe56cji",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T21:26:13.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_1801em0e0s8",
+      "gatewaySettlementRecordId": "tx_078wh8hkeert",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T18:47:17.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uk804euycfh",
+      "gatewaySettlementRecordId": "tx_3v1dpsgh29g",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T09:58:09.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_culij55ddnv",
+      "gatewaySettlementRecordId": "tx_94s4bblcefu",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T12:58:36.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_uo8vjt2ucvm",
+      "gatewaySettlementRecordId": "tx_acz5btkr5kv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T04:53:05.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_g020qnr4ezc",
+      "gatewaySettlementRecordId": "tx_gm7lmppthy",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T08:59:45.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_6ypq0odij2q",
+      "gatewaySettlementRecordId": "tx_6ygkjq6glla",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T23:33:03.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4pp4vv5spzo",
+      "gatewaySettlementRecordId": "tx_fs1u283h6ae",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T21:14:35.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_lknpgseqtz",
+      "gatewaySettlementRecordId": "tx_o8dk2c3l4hm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T10:50:04.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_fe5bddopyb",
+      "gatewaySettlementRecordId": "tx_xcit4t5en9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T11:04:47.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wxg7j7bwu9",
+      "gatewaySettlementRecordId": "tx_34s3ggdcl3u",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T08:56:27.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_pz4i0a1cf0r",
+      "gatewaySettlementRecordId": "tx_dpfdr1hy3ca",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T03:29:34.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mpw23n1o8gd",
+      "gatewaySettlementRecordId": "tx_ukduiq9pzn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T08:11:44.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4sqs8ztwg5s",
+      "gatewaySettlementRecordId": "tx_fw57zw3lor8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T06:39:05.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_9skxi2wquen",
+      "gatewaySettlementRecordId": "tx_402p0caefe1",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T06:04:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jt1omdvbll",
+      "gatewaySettlementRecordId": "tx_o3lpq6v7lj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T02:08:05.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_dahjsjhdf1p",
+      "gatewaySettlementRecordId": "tx_9jumvl9x16o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T19:26:07.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_f5pwtpbsutp",
+      "gatewaySettlementRecordId": "tx_hb9ejjnf99",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T09:59:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sdmtr99t69r",
+      "gatewaySettlementRecordId": "tx_y9ngn1folvi",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T21:28:47.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_etp9a2v2zzn",
+      "gatewaySettlementRecordId": "tx_bq3u78n3lpd",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T13:45:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_vdlg7jcqd2b",
+      "gatewaySettlementRecordId": "tx_79dkz2uat2q",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T19:55:18.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yvojwm4h3as",
+      "gatewaySettlementRecordId": "tx_kyymk4tveti",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T08:34:37.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_16w40dr11to",
+      "gatewaySettlementRecordId": "tx_smov266o22d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T12:14:05.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tc4d1jxpi5",
+      "gatewaySettlementRecordId": "tx_3te1jfheqy7",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T17:57:03.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_0g4lhe1ys4xe",
+      "gatewaySettlementRecordId": "tx_5q4tcio2sbe",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T17:39:07.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_hjq5wr9ey6c",
+      "gatewaySettlementRecordId": "tx_bdzmq95p7ad",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T01:42:17.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rxdgjagikmf",
+      "gatewaySettlementRecordId": "tx_vxem30696us",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T04:10:48.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ixwemu6nxe",
+      "gatewaySettlementRecordId": "tx_43tzqtc5gvg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T17:32:07.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_rnf5we1h6o",
+      "gatewaySettlementRecordId": "tx_jmdmwwbmgf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T09:08:04.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ho9klu6jif4",
+      "gatewaySettlementRecordId": "tx_3os0o2aekis",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T17:11:33.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_vce2t7i7tfd",
+      "gatewaySettlementRecordId": "tx_w9135gvs46",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T08:32:42.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mykme9ohh1",
+      "gatewaySettlementRecordId": "tx_6iz04fps2b3",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T09:13:28.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_jgs5l41bz4",
+      "gatewaySettlementRecordId": "tx_wi70rhlz4ej",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T22:20:54.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nx9ke10va4",
+      "gatewaySettlementRecordId": "tx_s98k0xsodko",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T07:56:27.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_odbygd3xwu8",
+      "gatewaySettlementRecordId": "tx_s0e637m715",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T03:52:01.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_thxnhwfxam7",
+      "gatewaySettlementRecordId": "tx_4b2wmhi7352",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T16:04:40.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_vnyyy5pqpf",
+      "gatewaySettlementRecordId": "tx_4jshysvetn8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T23:22:22.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_plg5g5lg7m8",
+      "gatewaySettlementRecordId": "tx_0nbpz8gd945f",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T04:39:38.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_q45qy9qt9bh",
+      "gatewaySettlementRecordId": "tx_zx8la6k7h4e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T18:01:13.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_5xr6kue4rif",
+      "gatewaySettlementRecordId": "tx_zev1ow5xr8n",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T05:06:59.237Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ffj3zktaqqn",
+      "gatewaySettlementRecordId": "tx_lr0z6706keh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T14:21:38.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cxlqwf1bsu5",
+      "gatewaySettlementRecordId": "tx_7yk4ocnpr3b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T13:22:08.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_1fn38sgo36c",
+      "gatewaySettlementRecordId": "tx_usvda6rqxj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T03:15:54.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_87jzsljtv3l",
+      "gatewaySettlementRecordId": "tx_o65m7cpg47i",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T17:58:22.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_8u6zxen52m6",
+      "gatewaySettlementRecordId": "tx_7ijqtb28kt",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T09:40:57.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_w49379a5jd",
+      "gatewaySettlementRecordId": "tx_mu8ae5ssuzj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T21:49:22.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_mlcq5hc4twf",
+      "gatewaySettlementRecordId": "tx_c3zdcxr40d8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T21:17:01.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_870mbkobnf3",
+      "gatewaySettlementRecordId": "tx_w347c49zkus",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T06:52:24.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_oy9puncmy8",
+      "gatewaySettlementRecordId": "tx_wx1jnyxwfh8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-16T20:47:29.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_46oipvn0qvt",
+      "gatewaySettlementRecordId": "tx_e6s5roeik7i",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T19:52:17.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_w2lzi6k65a",
+      "gatewaySettlementRecordId": "tx_1qmmhp09kiq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T18:04:32.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_yl7w69anp7f",
+      "gatewaySettlementRecordId": "tx_8pecb0485tr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T01:07:50.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_c2pp3cxuy1i",
+      "gatewaySettlementRecordId": "tx_wjbwu7d9z8c",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T17:04:20.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_22rsrlxgk6a",
+      "gatewaySettlementRecordId": "tx_rj3qwnwp1lg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T15:13:33.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ariuql51ui",
+      "gatewaySettlementRecordId": "tx_zp27cug7xk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T13:38:49.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xmm3sx5ndk",
+      "gatewaySettlementRecordId": "tx_n5vtb29nm7c",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T20:09:39.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_agsgholigq",
+      "gatewaySettlementRecordId": "tx_vztmkq66heo",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T22:12:12.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xi3xsi8slmk",
+      "gatewaySettlementRecordId": "tx_dm7o97ih1g8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T03:52:36.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_nd399t8pndl",
+      "gatewaySettlementRecordId": "tx_ren9efrm9qg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T11:48:43.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_n1vqc6ys2t",
+      "gatewaySettlementRecordId": "tx_bqkqviabs2u",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T19:07:52.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_525idro3jy5",
+      "gatewaySettlementRecordId": "tx_47rcwjjpwi",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T10:36:36.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ob9mb1xt4t",
+      "gatewaySettlementRecordId": "tx_dclnhp2cqdb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T10:17:26.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ky0xflz82es",
+      "gatewaySettlementRecordId": "tx_zo7rolr26jg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T11:37:23.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_tg5gumvu5o",
+      "gatewaySettlementRecordId": "tx_qcy6c7dgqqg",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T03:25:46.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_brpjskzppmn",
+      "gatewaySettlementRecordId": "tx_awl6udybz1j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-20T20:42:27.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_llog420d77r",
+      "gatewaySettlementRecordId": "tx_1e8dk1f3rc5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-18T01:51:10.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_cjrxbn535hn",
+      "gatewaySettlementRecordId": "tx_qgo5ws9ooin",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T13:17:55.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_90nynhg7qhj",
+      "gatewaySettlementRecordId": "tx_ve0kw2dlx0m",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T21:42:45.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_njrdkxcdwq",
+      "gatewaySettlementRecordId": "tx_jvquiglvyhp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T17:52:51.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_zqtu927tjon",
+      "gatewaySettlementRecordId": "tx_52papoe019n",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T02:42:24.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_er94wz4gx4",
+      "gatewaySettlementRecordId": "tx_63ms3hteb69",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T05:03:05.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_zdq7el11kd",
+      "gatewaySettlementRecordId": "tx_owit16rtgn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T03:21:16.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_wzzi3hzjexh",
+      "gatewaySettlementRecordId": "tx_uoocmrvexs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T21:12:24.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_bgcp8susa4f",
+      "gatewaySettlementRecordId": "tx_3argrmtyctt",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T04:46:48.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_xi1a9byiazb",
+      "gatewaySettlementRecordId": "tx_nw8mobv01j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T14:55:41.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4q1c6z068oq",
+      "gatewaySettlementRecordId": "tx_4idik7b67vm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T20:39:05.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_25do5yc4yzy",
+      "gatewaySettlementRecordId": "tx_nwaxvsdtbbb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T10:24:40.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_24ce8i810j4",
+      "gatewaySettlementRecordId": "tx_8wzo3ev6fjf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-15T15:49:00.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_chjzj2vx1k",
+      "gatewaySettlementRecordId": "tx_cje58f4qjwq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T02:38:42.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_ol44zo7krx",
+      "gatewaySettlementRecordId": "tx_o76eb8tll2",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T12:49:29.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_3vf06l5nzok",
+      "gatewaySettlementRecordId": "tx_f7k9j5whm07",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-22T18:47:37.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_sf75rdwrkhm",
+      "gatewaySettlementRecordId": "tx_m9rto2z9aga",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-23T08:59:45.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_4jbijg143m4",
+      "gatewaySettlementRecordId": "tx_kz49avjuca",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-19T16:34:43.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_180cbs2ffcu",
+      "gatewaySettlementRecordId": "tx_aaepi6vehzr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-13T22:08:36.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_gh8n8muakw8",
+      "gatewaySettlementRecordId": "tx_fa1c0emvaib",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-14T18:44:54.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_e6045t60o2b",
+      "gatewaySettlementRecordId": "tx_94ag9nnqox",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-17T09:30:32.238Z"
+    },
+    {
+      "bankStatementRecordId": "tx_q0yw5eheve",
+      "gatewaySettlementRecordId": "tx_ivxbk03b1q",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-21T21:48:08.238Z"
+    }
+  ]
+}
