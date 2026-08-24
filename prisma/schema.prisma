@@ -101,6 +101,10 @@ model AuditTrail {
 
   metadata            Json?       // score breakdown, DP params, LLM prompt version, etc.
 
+  // Tamper-evident hash chaining
+  rowHash             String      // SHA-256 hash of previousRowHash + row content
+  previousRowHash     String      // rowHash of the preceding audit log entry
+
   @@index([decisionTimestamp])
   @@index([method, actor])
 }

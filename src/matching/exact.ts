@@ -1,10 +1,11 @@
 // Exact matching layer for ReconIQ payment reconciliation engine
 // Reads TransactionRecord rows across all 3 sources from CSV files
 // Matches by: identical amountPaise AND date within ±30 day window (no reference string requirement)
-// Creates MatchGroup and AuditTrail entries for each match
+// Creates MatchGroup and AuditTrail entries for each match, with tamper-evident hash chaining
 
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
+import { createHash } from 'node:crypto';
 
 // Types for reconciliation matching
 interface TransactionRecord {
@@ -39,6 +40,8 @@ interface AuditTrail {
   transactionRecordId: string | null;
   matchGroupId: string | null;
   metadata: string | null;
+  rowHash: string;
+  previousRowHash: string;
 }
 
 interface GroundTruthEntry {
@@ -284,6 +287,8 @@ function performExactMatching(
 
         auditTrailEntries.push(auditTrailEntry2);
 
+        // We'll compute hashes after collecting all audit entries
+
         // Mark both records as matched
         matchedTransactionIds.add(baseRecord.transactionRecordId);
         matchedTransactionIds.add(compareRecord.transactionRecordId);
@@ -366,7 +371,7 @@ function compareWithGroundTruth(
 }
 
 // Main function to run exact matching
-function runExactMatch(dataDirectory: string, groundTruthPath: string): {
+async function runExactMatch(dataDirectory: string, groundTruthPath: string): Promise<{
   matchGroups: MatchGroup[];
   auditTrailEntries: AuditTrail[];
   matchedCount: number;
@@ -374,7 +379,9 @@ function runExactMatch(dataDirectory: string, groundTruthPath: string): {
   recall: number;
   exactMatchCount: number;
   totalExpected: number;
-} {
+  correctMatchGroups: number;
+  totalExactExpected: number;
+}> {
   console.log("Starting exact matching layer for ReconIQ...");
 
   // Load all transactions
@@ -409,9 +416,71 @@ function runExactMatch(dataDirectory: string, groundTruthPath: string): {
   console.log("- Precision: " + (comparison.precision * 100).toFixed(1) + "%");
   console.log("- Recall: " + (comparison.recall * 100).toFixed(1) + "%");
 
+  // Compute tamper-evident hash chain for audit trail entries (in-memory)
+  const GENESIS_HASH = "0".repeat(64);
+  let previousHash = GENESIS_HASH;
+
+  // Add hash chain to audit trail entries
+  const auditTrailEntriesWithHash = auditTrailEntries.map(entry => {
+    // Compute rowHash: SHA256(previousHash + JSON.stringify of the entry's content)
+    const content = {
+      method: entry.method,
+      reason: entry.reason,
+      actor: entry.actor,
+      actorId: entry.actorId,
+      transactionRecordId: entry.transactionRecordId,
+      matchGroupId: entry.matchGroupId,
+      metadata: entry.metadata,
+      decisionTimestamp: entry.decisionTimestamp
+    };
+
+    const contentString = JSON.stringify(content);
+    const hashInput = previousHash + contentString;
+    const rowHash = createHash('sha256').update(hashInput, 'utf8').digest('hex');
+
+    // Return entry with hash fields
+    return {
+      ...entry,
+      rowHash,
+      previousRowHash: previousHash
+    };
+  });
+
+  // Update previousHash for next iteration would be handled by map's accumulator
+  // but we'll compute it manually since map doesn't pass state between iterations
+  const finalAuditTrailEntries = [];
+  let runningHash = GENESIS_HASH;
+
+  for (const entry of auditTrailEntries) {
+    const content = {
+      method: entry.method,
+      reason: entry.reason,
+      actor: entry.actor,
+      actorId: entry.actorId,
+      transactionRecordId: entry.transactionRecordId,
+      matchGroupId: entry.matchGroupId,
+      metadata: entry.metadata,
+      decisionTimestamp: entry.decisionTimestamp
+    };
+
+    const contentString = JSON.stringify(content);
+    const hashInput = runningHash + contentString;
+    const rowHash = createHash('sha256').update(hashInput, 'utf8').digest('hex');
+
+    finalAuditTrailEntries.push({
+      ...entry,
+      rowHash,
+      previousRowHash: runningHash
+    });
+
+    runningHash = rowHash;
+  }
+
+  console.log(`Generated hash chain for ${finalAuditTrailEntries.length} audit trail entries (in-memory only).`);
+
   return {
     matchGroups,
-    auditTrailEntries,
+    auditTrailEntries: finalAuditTrailEntries,
     matchedCount: matchedTransactionIds.size,
     matchedPairs,
     precision: comparison.precision,
@@ -438,23 +507,26 @@ if (import.meta.main) {
   const dataDirectory = process.env.DATA_DIRECTORY || "./scripts";
   const groundTruthPath = process.env.GROUND_TRUTH_PATH || "./ground_truth.json";
 
-  const results = runExactMatch(dataDirectory, groundTruthPath);
-
+  runExactMatch(dataDirectory, groundTruthPath).then(results => {
     // Write results to files
-  const outputPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
-  writeFileSync(outputPath, JSON.stringify({
-    matchGroups: results.matchGroups,
-    auditTrailEntries: results.auditTrailEntries.slice(0, 10), // Just first 10 for display
-    matchedPairs: results.matchedPairs.slice(0, 10), // Show first 10 matched pairs
-    summary: {
-      matchedCount: results.matchedCount,
-      precision: results.precision,
-      recall: results.recall,
-      correctMatchGroups: results.correctMatchGroups,
-      totalExactExpected: results.totalExactExpected
-    }
-  }, null, 2));
-  console.log("\nResults written to: " + outputPath);
+    const outputPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
+    writeFileSync(outputPath, JSON.stringify({
+      matchGroups: results.matchGroups,
+      auditTrailEntries: results.auditTrailEntries, // Include ALL audit trail entries with hash chain
+      matchedPairs: results.matchedPairs,
+      summary: {
+        matchedCount: results.matchedCount,
+        precision: results.precision,
+        recall: results.recall,
+        correctMatchGroups: results.correctMatchGroups,
+        totalExactExpected: results.totalExactExpected
+      }
+    }, null, 2));
+    console.log("\nResults written to: " + outputPath);
+  }).catch(error => {
+    console.error("Error running exact matching:", error);
+    process.exit(1);
+  });
 }
 
 // Also export for testing
