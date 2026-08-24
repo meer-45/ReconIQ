@@ -1,0 +1,1495 @@
+{
+  "matchGroups": [
+    {
+      "matchGroupId": "tx_6mn6v1pn24p",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.980Z",
+      "resolvedAt": "2026-08-24T11:14:00.980Z"
+    },
+    {
+      "matchGroupId": "tx_rsi21or312",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.980Z",
+      "resolvedAt": "2026-08-24T11:14:00.980Z"
+    },
+    {
+      "matchGroupId": "tx_z1huf1798i",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.980Z",
+      "resolvedAt": "2026-08-24T11:14:00.980Z"
+    },
+    {
+      "matchGroupId": "tx_7u5gvylz4r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.980Z",
+      "resolvedAt": "2026-08-24T11:14:00.980Z"
+    },
+    {
+      "matchGroupId": "tx_5xo27pqacms",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_0159qh89gv0p",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_galce2arxgc",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_x610bnudbp",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_bbukn0qig0b",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_k6cl39uw8u9",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_nqgj4lm4vds",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_yzi8rugmvts",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_4o84s9gwokl",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_ymnmgb68bol",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_zjsleijo30h",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_h6mjkr5mrms",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_vyu84owld",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_6jor6wn1xpd",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.981Z",
+      "resolvedAt": "2026-08-24T11:14:00.981Z"
+    },
+    {
+      "matchGroupId": "tx_2volecogxqo",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_01y831h1seih",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_aifjccw7vo4",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_w4n2xrwl0r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_ti4t8h0qzn",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_6md78w68m0s",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_38q2y584ips",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_bire8yqmpb",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_d5iehudmlh4",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_ol0d66pc35",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_bak2i8q32s",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_f3j2qw2d8jw",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.982Z",
+      "resolvedAt": "2026-08-24T11:14:00.982Z"
+    },
+    {
+      "matchGroupId": "tx_4zfsq9tnos3",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_0hcpf5kfs2ds",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_wnmuni1nsh",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_n910d9f312",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_g9yodwzagqa",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_jatefkv6ekj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_f3sz97s4dqo",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_2gpandg0op9",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_8yr8ps8ggx2",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_fyfwlh0dpds",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_pl94qkhi62o",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_1mlvkw00jsb",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_wmk11oqody",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_n6535gk8l",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_7ecqicclslt",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_yumumf0jaxf",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_7l438emg3g",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_q2ammd7fwwi",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_ltx5wcd5eri",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_i5oqr7jmkht",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_n5iu2p68dn",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_guci9ibuuie",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.983Z",
+      "resolvedAt": "2026-08-24T11:14:00.983Z"
+    },
+    {
+      "matchGroupId": "tx_uy8vijk3w3f",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_9jfmkdhqqfe",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_vj6saol480m",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_qokw90svste",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_vtw1y4eyjue",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_cub32j0l8f",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_dij2tqn2ktd",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_dzd9pay94ac",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_sqshut7v4fs",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_ry1hdoob9jm",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_w6kh8m3vwe8",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_6euikw5o33k",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_4qu3ghquy7r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_tr92hdsokvb",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_xnxmui3twj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_1oi4da850lj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_nq0jlz9lyzg",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_3xwbyggxrqh",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.984Z",
+      "resolvedAt": "2026-08-24T11:14:00.984Z"
+    },
+    {
+      "matchGroupId": "tx_b8zdt1iqfh",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_ygaryzbl36i",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_de9g8233c5t",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_yed8k1yuj3h",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_17u3zo702k8j",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_jaboxjrgfm",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_1vmx22i6t0i",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_pvn98ozatld",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_lvu3y3xksf",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_repws1l7akj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_oih24tvzhsm",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_d05bqjadwkk",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_wufum8q3rpe",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_v9rkoy95yfq",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_hs4mwnxn074",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_0v03nkpm6d9k",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_47qr3dxuzrz",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_7lsx9qx83xs",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_1to3g93pqrsi",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_iky1p1ouwop",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_p2ekma22wvh",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_3iufzzxrxa9",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_t2wf2nc4kke",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_v2ix1snzmo",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_62blib7d9pv",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_fnsln50dvhl",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_zqa2z2vam6",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.985Z",
+      "resolvedAt": "2026-08-24T11:14:00.985Z"
+    },
+    {
+      "matchGroupId": "tx_hnz7hv4umbi",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_qikavdtzbes",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_axegs6gxjuq",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_6xr0m8qjkb",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_a3jzbc0d4r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_89qbryya6yw",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_ppbddqy3pje",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_w27onrdfp3l",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_xv31xwtxdc",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_igf7o9i6f1g",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_aiiioifz4yl",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_w6kieq7fgeo",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_f19z6lryzbm",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_xw5jhgq5dbj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_iqru0xbxkik",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_1gko3gkf1j0j",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_eluea6wbv5f",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_6hrapvoxo12",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_yyc8iysm5p9",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_9kihvquprvh",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_b1vkr8iv3j",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_8ycwcfb4o2c",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_bb3sn5ixorp",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_j928zh4ueio",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_2qii6nv4yj7",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_kkafcxl6y8p",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_uuudxerx9n",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_7xtii99rf7k",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.986Z",
+      "resolvedAt": "2026-08-24T11:14:00.986Z"
+    },
+    {
+      "matchGroupId": "tx_yzi9d9ya7xe",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.987Z",
+      "resolvedAt": "2026-08-24T11:14:00.987Z"
+    },
+    {
+      "matchGroupId": "tx_mw8hb9l4ykp",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.987Z",
+      "resolvedAt": "2026-08-24T11:14:00.987Z"
+    },
+    {
+      "matchGroupId": "tx_qwi8fqhg6db",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.987Z",
+      "resolvedAt": "2026-08-24T11:14:00.987Z"
+    },
+    {
+      "matchGroupId": "tx_olac10q5iif",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.987Z",
+      "resolvedAt": "2026-08-24T11:14:00.987Z"
+    },
+    {
+      "matchGroupId": "tx_kr4asq0mpl",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.987Z",
+      "resolvedAt": "2026-08-24T11:14:00.987Z"
+    },
+    {
+      "matchGroupId": "tx_53lgzkmbrt7",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_ddni5b5ttc",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_suecpehvaeo",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_m7bax1n7l98",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_rncvciqx65",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_pm3a89vdr4l",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_x0c559x2h4",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_fptgh3dn6l4",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_nolhvlve2nf",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_ra1mg4p7rr",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_1ukvpj392a6",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_fzlnv514fpw",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_ltd0r6kpgeb",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_wk35l96w5y",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_36vegshw8z8",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_eeaq3bfv1fj",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_cb9bktygce4",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_nseuro8lehp",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_4dqkd784vlr",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_pr33u26p7u",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_ys0su2bo9zs",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_2tgho9z0d7r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_6yxieb1m4ob",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_67557yxi3sd",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_imh60vpc2r",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_k1ikzuzpq6o",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_szpm59bcp3i",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_t9ehc0sqfbf",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_m51jqjb8ux",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_wz4a9mg10a",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_94q6p8hcnt",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_aitw1jtz3p8",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_5kdqaysp81w",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_zkr1qnq728i",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    },
+    {
+      "matchGroupId": "tx_a16rp82nm9l",
+      "method": "EXACT",
+      "confidenceScore": 1,
+      "status": "matched",
+      "createdAt": "2026-08-24T11:14:00.993Z",
+      "resolvedAt": "2026-08-24T11:14:00.993Z"
+    }
+  ],
+  "auditTrailEntries": [
+    {
+      "auditTrailId": "tx_tz2kj15cb",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=337368 INR, dateWindow=30 days, reference matching skipped, datasources=[GATEWAY_SETTLEMENT, BANK_STATEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_qa1msz1he2o",
+      "matchGroupId": "tx_6mn6v1pn24p",
+      "metadata": "{\"matchedAmountPaise\":337368,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"GATEWAY_SETTLEMENT\",\"BANK_STATEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_tyh52x25yq",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=337368 INR, dateWindow=30 days, reference matching skipped, datasources=[BANK_STATEMENT, GATEWAY_SETTLEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_9l308c2jff",
+      "matchGroupId": "tx_6mn6v1pn24p",
+      "metadata": "{\"matchedAmountPaise\":337368,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"BANK_STATEMENT\",\"GATEWAY_SETTLEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_9fr7wlsma5",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=-1427253 INR, dateWindow=30 days, reference matching skipped, datasources=[GATEWAY_SETTLEMENT, BANK_STATEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_oxy5g8fb0fa",
+      "matchGroupId": "tx_rsi21or312",
+      "metadata": "{\"matchedAmountPaise\":-1427253,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"GATEWAY_SETTLEMENT\",\"BANK_STATEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_m0uulrzt64",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=-1427253 INR, dateWindow=30 days, reference matching skipped, datasources=[BANK_STATEMENT, GATEWAY_SETTLEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_hak2dhk9q1k",
+      "matchGroupId": "tx_rsi21or312",
+      "metadata": "{\"matchedAmountPaise\":-1427253,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"BANK_STATEMENT\",\"GATEWAY_SETTLEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_624pv3irq9o",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=-1135522 INR, dateWindow=30 days, reference matching skipped, datasources=[BANK_STATEMENT, GATEWAY_SETTLEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_fg7if8dod9b",
+      "matchGroupId": "tx_z1huf1798i",
+      "metadata": "{\"matchedAmountPaise\":-1135522,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"BANK_STATEMENT\",\"GATEWAY_SETTLEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_gwzqn8ataqo",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=-1135522 INR, dateWindow=30 days, reference matching skipped, datasources=[GATEWAY_SETTLEMENT, BANK_STATEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_zmubvmz2def",
+      "matchGroupId": "tx_z1huf1798i",
+      "metadata": "{\"matchedAmountPaise\":-1135522,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"GATEWAY_SETTLEMENT\",\"BANK_STATEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_xsk8dbsv7s",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=736259 INR, dateWindow=30 days, reference matching skipped, datasources=[BANK_STATEMENT, GATEWAY_SETTLEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_cfp2pj1uoug",
+      "matchGroupId": "tx_7u5gvylz4r",
+      "metadata": "{\"matchedAmountPaise\":736259,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"BANK_STATEMENT\",\"GATEWAY_SETTLEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_jwr9n6iekp",
+      "decisionTimestamp": "2026-08-24T11:14:00.980Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=736259 INR, dateWindow=30 days, reference matching skipped, datasources=[GATEWAY_SETTLEMENT, BANK_STATEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_hwdxapza9aq",
+      "matchGroupId": "tx_7u5gvylz4r",
+      "metadata": "{\"matchedAmountPaise\":736259,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"GATEWAY_SETTLEMENT\",\"BANK_STATEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_xkyog6ysolc",
+      "decisionTimestamp": "2026-08-24T11:14:00.981Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=682231 INR, dateWindow=30 days, reference matching skipped, datasources=[GATEWAY_SETTLEMENT, BANK_STATEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_s7maqhfzds",
+      "matchGroupId": "tx_5xo27pqacms",
+      "metadata": "{\"matchedAmountPaise\":682231,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"GATEWAY_SETTLEMENT\",\"BANK_STATEMENT\"]}"
+    },
+    {
+      "auditTrailId": "tx_7ftpuksbk19",
+      "decisionTimestamp": "2026-08-24T11:14:00.981Z",
+      "method": "EXACT",
+      "reason": "Exact match: amountPaise=682231 INR, dateWindow=30 days, reference matching skipped, datasources=[BANK_STATEMENT, GATEWAY_SETTLEMENT]",
+      "actor": "SYSTEM",
+      "actorId": "exact.ts",
+      "transactionRecordId": "tx_pg7vq3o9jn9",
+      "matchGroupId": "tx_5xo27pqacms",
+      "metadata": "{\"matchedAmountPaise\":682231,\"matchedDateWindowDays\":30,\"referenceMatchRequired\":false,\"datasources\":[\"BANK_STATEMENT\",\"GATEWAY_SETTLEMENT\"]}"
+    }
+  ],
+  "matchedPairs": [
+    {
+      "bankId": "tx_9l308c2jff",
+      "gatewayId": "tx_qa1msz1he2o",
+      "matchGroupId": "tx_6mn6v1pn24p"
+    },
+    {
+      "bankId": "tx_hak2dhk9q1k",
+      "gatewayId": "tx_oxy5g8fb0fa",
+      "matchGroupId": "tx_rsi21or312"
+    },
+    {
+      "bankId": "tx_fg7if8dod9b",
+      "gatewayId": "tx_zmubvmz2def",
+      "matchGroupId": "tx_z1huf1798i"
+    },
+    {
+      "bankId": "tx_cfp2pj1uoug",
+      "gatewayId": "tx_hwdxapza9aq",
+      "matchGroupId": "tx_7u5gvylz4r"
+    },
+    {
+      "bankId": "tx_pg7vq3o9jn9",
+      "gatewayId": "tx_s7maqhfzds",
+      "matchGroupId": "tx_5xo27pqacms"
+    },
+    {
+      "bankId": "tx_r71bvgjhsul",
+      "gatewayId": "tx_c14td8iv1mj",
+      "matchGroupId": "tx_0159qh89gv0p"
+    },
+    {
+      "bankId": "tx_2ipredi8non",
+      "gatewayId": "tx_zg40u7yca4b",
+      "matchGroupId": "tx_galce2arxgc"
+    },
+    {
+      "bankId": "tx_6dnvm0psujj",
+      "gatewayId": "tx_y2br4xqyoia",
+      "matchGroupId": "tx_x610bnudbp"
+    },
+    {
+      "bankId": "tx_c5wvqqv9g9",
+      "gatewayId": "tx_cxfad9vr9c",
+      "matchGroupId": "tx_bbukn0qig0b"
+    },
+    {
+      "bankId": "tx_6j2t2t4wgvi",
+      "gatewayId": "tx_kxvknvd9hws",
+      "matchGroupId": "tx_k6cl39uw8u9"
+    }
+  ],
+  "summary": {
+    "matchedCount": 330,
+    "precision": 1,
+    "recall": 0.8009708737864077,
+    "correctMatchGroups": 165,
+    "totalExactExpected": 206
+  }
+}
