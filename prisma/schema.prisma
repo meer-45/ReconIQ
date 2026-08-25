@@ -32,32 +32,46 @@ enum ActorType {
   HUMAN
 }
 
+enum ExceptionClassification {
+  AMBIGUOUS_MATCH
+  DUPLICATE
+  MISSING_COUNTERPART
+  TIMING_LAG
+  OTHER
+}
+
+enum MatchGroupStatus {
+  MATCHED
+  PENDING_REVIEW
+  REJECTED
+}
+
 // Single unified pool for every raw record, regardless of source.
 // subsetSum.ts and the embedding/fuzzy-match layer both query this
 // one table – no cross-table joins needed to find "everything unmatched."
 
 model TransactionRecord {
   transactionRecordId String     @id @default(uuid())
-  dataSource           DataSource
+  dataSource          DataSource
 
   // Original identifiers, kept as-is per source (UTR / gateway txn ID / ledger ref)
-  externalReference    String
-  amountPaise          Int        // signed: negative for refunds/chargebacks
-  currencyCode         String     @default("INR")
+  externalReference String
+  amountPaise       Int // signed: negative for refunds/chargebacks
+  currencyCode      String @default("INR")
 
-  transactionDate      DateTime
-  ingestedAt           DateTime   @default(now())
+  transactionDate DateTime
+  ingestedAt      DateTime @default(now())
 
-  rawDescription        String
-  rawPayload            Json       // full original row, for audit/debug
+  rawDescription String
+  rawPayload     Json // full original row, for audit/debug
 
   // Embedding for fuzzy text matching (Day 6-7). Populated after ingestion.
+  referenceEmbedding Unsupported("vector(1536)")?
 
-  matchGroupId          String?
-  matchGroup             MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
+  matchGroupId String?
+  matchGroup   MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
 
-  auditTrailEntries      AuditTrail[]
-  unresolvedExceptions   UnresolvedException[]
+  auditTrailEntries AuditTrail[]
 
   @@index([dataSource, transactionDate])
   @@index([matchGroupId])
@@ -68,16 +82,17 @@ model TransactionRecord {
 // across any combination of sources (this is what makes many-to-one
 // bundling representable without a junction table).
 model MatchGroup {
-  matchGroupId       String       @id @default(uuid())
-  method             MatchMethod
-  confidenceScore    Float        @default(1.0) // 1.0 for deterministic exact/subset_sum
-  status             String       @default("matched") // matched, pending_review, rejected
+  matchGroupId    String           @id @default(uuid())
+  method          MatchMethod
+  confidenceScore Float            @default(1.0) // 1.0 for deterministic exact/subset_sum
+  status          MatchGroupStatus @default(MATCHED) // matched, pending_review, rejected
 
-  createdAt          DateTime     @default(now())
-  resolvedAt         DateTime?
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
+  runId      String?
 
   transactionRecords TransactionRecord[]
-  auditTrailEntries   AuditTrail[]
+  auditTrailEntries  AuditTrail[]
 
   @@index([method])
   @@index([status, createdAt])
@@ -85,25 +100,25 @@ model MatchGroup {
 
 // Every decision, algorithmic or AI, gets one row here.
 model AuditTrail {
-  auditTrailId       String       @id @default(uuid())
-  decisionTimestamp  DateTime     @default(now())
+  auditTrailId      String   @id @default(uuid())
+  decisionTimestamp DateTime @default(now())
 
-  method             MatchMethod
-  reason             String       // plain-English explanation of the decision
-  actor              ActorType
-  actorId            String?      // e.g. "subsetSum.ts", "gpt-4o-classifier", or a human user id
+  method  MatchMethod
+  reason  String // plain-English explanation of the decision
+  actor   ActorType
+  actorId String? // e.g. "subsetSum.ts", "gpt-4o-classifier", or a human user id
 
   transactionRecordId String?
-  transactionRecord    TransactionRecord? @relation(fields: [transactionRecordId], references: [transactionRecordId])
+  transactionRecord   TransactionRecord? @relation(fields: [transactionRecordId], references: [transactionRecordId])
 
-  matchGroupId        String?
-  matchGroup           MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
+  matchGroupId String?
+  matchGroup   MatchGroup? @relation(fields: [matchGroupId], references: [matchGroupId])
 
-  metadata            Json?       // score breakdown, DP params, LLM prompt version, etc.
+  metadata Json? // score breakdown, DP params, LLM prompt version, etc.
 
   // Tamper-evident hash chaining
-  rowHash             String      // SHA-256 hash of previousRowHash + row content
-  previousRowHash     String      // rowHash of the preceding audit log entry
+  rowHash         String // SHA-256 hash of previousRowHash + row content
+  previousRowHash String // rowHash of the preceding audit log entry
 
   @@index([decisionTimestamp])
   @@index([method, actor])
@@ -111,20 +126,32 @@ model AuditTrail {
 
 // Anything Layer 1 (deterministic) and Layer 2 (AI) couldn't resolve.
 model UnresolvedException {
-  unresolvedExceptionId String     @id @default(uuid())
-  createdAt              DateTime   @default(now())
+  unresolvedExceptionId String   @id @default(uuid())
+  createdAt             DateTime @default(now())
 
-  classification          String?    // duplicate, missing_counterpart, timing_lag, other
-  rootCauseHypothesis     String?    // plain-English, from LLM classification step
-  riskScore                Float      @default(0.0) // amount magnitude x recurrence, 0.0-1.0
+  classification      ExceptionClassification? // duplicate, missing_counterpart, timing_lag, other
+  rootCauseHypothesis String? // plain-English, from LLM classification step
+  riskScore           Float                    @default(0.0) // amount magnitude x recurrence, 0.0-1.0
 
-  isResolved               Boolean    @default(false)
-  resolvedAt               DateTime?
-  resolvedBy                String?   // human actor id, or "auto" if system-resolved
+  isResolved Boolean   @default(false)
+  resolvedAt DateTime?
+  resolvedBy String? // human actor id, or "auto" if system-resolved
+  runId      String?
 
-  transactionRecordId      String?
-  transactionRecord         TransactionRecord? @relation(fields: [transactionRecordId], references: [transactionRecordId])
+  // Holds unenforced TransactionRecord ids by design (spans variable set across sources without junction table complexity)
+  transactionRecordIds String[]
+  candidateMetadata    Json? // stores candidate subsets, their scores, DP params
+  totalAmountPaise     Int      @default(0) // denormalized for fast cost-of-unmatched-cash
 
   @@index([isResolved, riskScore])
   @@index([classification])
+}
+
+// New model for storing examples of human-approved actions for LLM fine-tuning/few-shot
+model ExampleBank {
+  exampleBankId     String                       @id @default(uuid())
+  createdAt         DateTime                     @default(now())
+  exceptionSnapshot Json // the input the LLM saw
+  correctAction     Json // what the human approved
+  actionEmbedding   Unsupported("vector(1536)")?
 }

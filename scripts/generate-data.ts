@@ -1,44 +1,42 @@
 // Synthetic data generator for ReconIQ hackathon
-// Produces 3 CSV files and ground truth mapping with enterprise-grade data
-// Simulates realistic payment reconciliation scenarios across bank statements, gateway settlements, and merchant ledger entries
+// Produces 3 CSV files and ground truth mapping in the data/ directory
 
-import { writeFileSync } from "fs";
+import { writeFileSync, mkdirSync } from "fs";
 import { join } from "path";
 
-// Data generation utilities for enterprise naming conventions
+// Data generation utilities
 const generateRecordIdentifier = () => `tx_${Math.random().toString(36).substring(2, 14)}`;
-const generateReferenceCode = () => `ref_${Math.random().toString(36).substring(2, 12).toUpperCase()}`;
+const generateRootReferenceToken = () => Math.random().toString(36).substring(2, 10).toUpperCase();
 const generateAccountNumber = () => `acc_${Math.random().toString(36).substring(2, 14).toUpperCase()}`;
-const generateInvoiceNumber = () => `inv_${Math.random().toString(36).substring(2, 12).toUpperCase()}`;
-const generateGatewayTransactionIdentifier = () => `gtx_${Math.random().toString(36).substring(2, 14).toUpperCase()}`;
-const generateProductServiceIdentifier = () => `prod_${Math.random().toString(36).substring(2, 12).toUpperCase()}`;
+const generateInvoiceNumber = (root: string) => `ORD-${root}`;
+const generateGatewayTransactionIdentifier = (root: string, suffix?: string | number) => suffix !== undefined ? `pay_${root}_${suffix}` : `pay_${root}`;
+const generateBankReferenceIdentifier = (root: string) => `UTR${root}`;
 const generateCustomerIdentifier = () => `cust_${Math.random().toString(36).substring(2, 12).toUpperCase()}`;
 const generateProviderName = () => {
   const providers = ["STRIPE", "PAYPAL", "RAZORPAY", "SQUARE", "BRAINTREE"];
   return providers[Math.floor(Math.random() * providers.length)];
 };
-const generateTransactionStatus = () => {
-  const statuses = ["SUCCESS", "FAILED", "PENDING", "REFUNDED", "PARTIALLY_REFUNDED"];
-  return statuses[Math.floor(Math.random() * statuses.length)];
+
+// Fee schedule constants
+const FEE_SCHEDULE = {
+  mdrPercentage: 0.020, // 2.0% MDR
+  gstOnMdrPercentage: 0.18, // 18% GST on MDR
+  tdsPercentage: 0.010 // 1.0% TDS
 };
-const generateMatchingAlgorithm = () => {
-  const algorithms = ["EXACT", "SUBSET_SUM", "AI_FUZZY", "AI_CLASSIFIED", "MANUAL"];
-  return algorithms[Math.floor(Math.random() * algorithms.length)];
+
+// Date utilities
+const addDays = (dateStr: string, days: number): string => {
+  const d = new Date(dateStr);
+  d.setDate(d.getDate() + days);
+  return d.toISOString().split('T')[0];
 };
-const generateActorType = () => {
-  const actors = ["SYSTEM", "AI", "HUMAN"];
-  return actors[Math.floor(Math.random() * actors.length)];
-};
-const generateExceptionClassification = () => {
-  const classifications = ["DUPLICATE", "MISSING_COUNTERPART", "TIMING_LAG", "OTHER"];
-  return classifications[Math.floor(Math.random() * classifications.length)];
-};
-const generateRiskAssessment = () => Number((Math.random() * 100 / 100).toFixed(2)); // 0.00 to 1.00
+
 const generateRandomDate = (daysAgo: number) => {
   const date = new Date();
   date.setDate(date.getDate() - daysAgo);
   return date.toISOString().split('T')[0];
 };
+
 const generateRandomTimestamp = (daysAgo: number) => {
   const date = new Date();
   date.setDate(date.getDate() - daysAgo);
@@ -47,6 +45,7 @@ const generateRandomTimestamp = (daysAgo: number) => {
   date.setSeconds(Math.floor(Math.random() * 60));
   return date.toISOString();
 };
+
 const generatePaymentDescription = () => {
   const descriptions = [
     "ONLINE_SUBSCRIPTION_PURCHASE",
@@ -65,558 +64,436 @@ const generatePaymentDescription = () => {
   return descriptions[Math.floor(Math.random() * descriptions.length)];
 };
 
-// Generate Bank Statement records (500-600 rows)
-function generateBankStatementRecords() {
-  const bankStatementRecords = [];
-  const numberOfBankRecords = 550;
+// Corruption generator (~8% of references)
+function applyReferenceCorruption(reference: string): [string, string] {
+  const types = [
+    "SINGLE_TRANSPOSITION",
+    "CASE_CHANGE",
+    "PREFIX_DROPPED",
+    "WHITESPACE",
+    "VISUALLY_CONFUSABLE"
+  ];
+  const type = types[Math.floor(Math.random() * types.length)];
+  let corrupted = reference;
 
-  for (let recordIndex = 0; recordIndex < numberOfBankRecords; recordIndex++) {
-    const isReconciled = Math.random() > 0.3; // 70% reconciled, 30% unresolved
-    const amountInPaise = Math.floor(Math.random() * (5000000 - 100000 + 1)) + 100000; // ₹1,000 to ₹50,000
-    const transactionDate = generateRandomDate(Math.floor(Math.random() * 60)); // Last 60 days
-    const externalReferenceCode = generateReferenceCode();
-    const rawDescription = `BANK_CREDIT: ${amountInPaise / 100} INR - ${generatePaymentDescription()}`;
-
-    const bankStatementRecord = {
-      transactionRecordId: generateRecordIdentifier(),
-      dataSource: "BANK_STATEMENT",
-      externalReference: externalReferenceCode,
-      amountPaise: amountInPaise,
-      currencyCode: "INR",
-      transactionDate: transactionDate,
-      ingestedAt: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-      rawDescription: rawDescription,
-      rawPayload: JSON.stringify({
-        sourceAccountNumber: generateAccountNumber(),
-        destinationAccountNumber: "DEST_ACC_12345",
-        clearingCode: "CLG_001",
-        settlementMethod: "AUTO",
-        sourceBank: "HDFC",
-        swiftCode: "HDFCINBB"
-      }),
-      matchGroupId: null,
-      unresolvedExceptionIds: []
-    };
-
-    bankStatementRecords.push(bankStatementRecord);
+  switch (type) {
+    case "SINGLE_TRANSPOSITION":
+      if (corrupted.length > 3) {
+        const idx = Math.floor(Math.random() * (corrupted.length - 1));
+        const arr = corrupted.split('');
+        const temp = arr[idx];
+        arr[idx] = arr[idx + 1];
+        arr[idx + 1] = temp;
+        corrupted = arr.join('');
+      }
+      break;
+    case "CASE_CHANGE":
+      corrupted = Math.random() > 0.5 ? corrupted.toLowerCase() : corrupted.toUpperCase();
+      break;
+    case "PREFIX_DROPPED":
+      if (corrupted.startsWith("UTR")) corrupted = corrupted.substring(3);
+      else if (corrupted.startsWith("pay_")) corrupted = corrupted.substring(4);
+      else if (corrupted.startsWith("ORD-")) corrupted = corrupted.substring(4);
+      break;
+    case "WHITESPACE":
+      corrupted = ` ${corrupted} `;
+      break;
+    case "VISUALLY_CONFUSABLE":
+      corrupted = corrupted
+        .replace(/O/g, '0')
+        .replace(/0/g, 'O')
+        .replace(/I/g, '1')
+        .replace(/l/g, '1')
+        .replace(/S/g, '5')
+        .replace(/5/g, 'S');
+      break;
   }
-
-  return bankStatementRecords;
+  return [corrupted, type];
 }
 
-// Generate Gateway Settlement records (500-600 rows)
-function generateGatewaySettlementRecords() {
-  const gatewaySettlementRecords = [];
-  const numberOfGatewayRecords = 550;
+function generateSyntheticData() {
+  console.log("Starting synthetic data generation with fixes for Defect 1-4...");
 
-  for (let recordIndex = 0; recordIndex < numberOfGatewayRecords; recordIndex++) {
-    const status = generateTransactionStatus();
-    // Some records should have negative amounts (refunds/chargebacks)
-    const isRefund = Math.random() > 0.8; // 20% chance of refund/chargeback
-    const baseAmountInPaise = Math.floor(Math.random() * (2000000 - 50000 + 1)) + 50000;
-    const amountInPaise = isRefund ? -Math.floor(baseAmountInPaise * Math.random()) : baseAmountInPaise; // ₹500 to ₹20,000, sometimes negative
-    const gatewayFeeInPaise = isRefund ? Math.floor(Math.abs(amountInPaise) * 0.029) : Math.floor(amountInPaise * 0.029);
-    const netAmountInPaise = amountInPaise - gatewayFeeInPaise;
+  const bankRecords: any[] = [];
+  const gatewayRecords: any[] = [];
+  const merchantRecords: any[] = [];
+  const expectedMatches: any[] = [];
 
-    const settlementDate = generateRandomDate(Math.floor(Math.random() * 60));
-    const isReconciled = Math.random() > 0.25; // 75% reconciled, 25% unresolved
+  let exactMatchesCount = 0;
+  let manyToOneMatchesCount = 0;
+  let feeMismatchCount = 0;
+  let negativeRefundCount = 0;
+  let pureExceptionsCount = 0;
+  const corruptionCounts: Record<string, number> = {};
 
-    const hasTypo = Math.random() > 0.95;
-    const externalReferenceCode = hasTypo ?
-      `${generateGatewayTransactionIdentifier()}X` :
-      generateGatewayTransactionIdentifier();
+  const totalLogicalTransactions = 400;
 
-    const gatewaySettlementRecord = {
-      transactionRecordId: generateRecordIdentifier(),
-      dataSource: "GATEWAY_SETTLEMENT",
-      externalReference: externalReferenceCode,
-      amountPaise: amountInPaise,
-      currencyCode: "INR",
-      transactionDate: settlementDate,
-      ingestedAt: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-      rawDescription: `${generateProviderName()} ${isRefund ? 'REFUND' : 'PAYMENT'}: ${Math.abs(amountInPaise) / 100} INR - ${generatePaymentDescription()}`,
-      rawPayload: JSON.stringify({
-        merchantIdentifier: generateRecordIdentifier(),
-        gatewayProvider: generateProviderName(),
-        gatewayAccountIdentifier: generateRecordIdentifier(),
-        cardLast4Digits: `${Math.floor(Math.random() * 9000) + 1000}`,
-        status: status
-      }),
-      matchGroupId: null,
-      unresolvedExceptionIds: []
-    };
+  for (let i = 0; i < totalLogicalTransactions; i++) {
+    const rootRef = generateRootReferenceToken();
+    const baseDate = generateRandomDate(Math.floor(Math.random() * 45) + 5);
+    const amountPaise = Math.floor(Math.random() * (4500000 - 100000 + 1)) + 100000; // ₹1,000 to ₹45,000
 
-    gatewaySettlementRecords.push(gatewaySettlementRecord);
-  }
+    // Determine settlement lag: T+1 to T+3 for bulk (~97%), T+7 to T+15 for timing lag (~3%)
+    const isTimingLag = Math.random() < 0.03;
+    const lagDays = isTimingLag ? Math.floor(Math.random() * 9) + 7 : Math.floor(Math.random() * 3) + 1;
+    const settlementDate = addDays(baseDate, lagDays);
 
-  return gatewaySettlementRecords;
-}
+    // Determine case category
+    const randCase = Math.random();
+    let caseType = "EXACT_1_1";
+    if (randCase < 0.35) {
+      caseType = "EXACT_1_1";
+    } else if (randCase < 0.60) {
+      caseType = "MANY_TO_ONE";
+    } else if (randCase < 0.75) {
+      caseType = "FEE_MISMATCH";
+    } else if (randCase < 0.88) {
+      caseType = "NEGATIVE_REFUND";
+    } else {
+      caseType = "PURE_EXCEPTION";
+    }
 
-// Generate Merchant Ledger records (500-600 rows)
-function generateMerchantLedgerRecords() {
-  const merchantLedgerRecords = [];
-  const numberOfLedgerRecords = 550;
+    // References with independent corruption check (~8%)
+    let bankRef = generateBankReferenceIdentifier(rootRef);
+    let gatewayRef = generateGatewayTransactionIdentifier(rootRef);
+    const merchantRef = generateInvoiceNumber(rootRef);
 
-  for (let recordIndex = 0; recordIndex < numberOfLedgerRecords; recordIndex++) {
-    const amountInPaise = Math.floor(Math.random() * (2000000 - 50000 + 1)) + 50000;
-    const commissionRateInPaise = Math.floor(amountInPaise * 0.03);
-    const netAmountInPaise = amountInPaise - commissionRateInPaise;
+    let corruptionType: string | null = null;
+    if (Math.random() < 0.08 && caseType !== "PURE_EXCEPTION") {
+      const [corrRef, cType] = applyReferenceCorruption(gatewayRef);
+      gatewayRef = corrRef;
+      corruptionType = cType;
+      corruptionCounts[cType] = (corruptionCounts[cType] || 0) + 1;
+    }
 
-    const entryDate = generateRandomDate(Math.floor(Math.random() * 60));
-    const isReconciled = Math.random() > 0.3;
+    if (Math.random() < 0.08 && caseType !== "PURE_EXCEPTION") {
+      const [corrBank, cTypeBank] = applyReferenceCorruption(bankRef);
+      bankRef = corrBank;
+      corruptionCounts[`BANK_${cTypeBank}`] = (corruptionCounts[`BANK_${cTypeBank}`] || 0) + 1;
+    }
 
-    const hasFeeMismatch = Math.random() > 0.9;
-    const discrepancyReason = hasFeeMismatch ? "GATEWAY_FEE_ADJUSTMENT" : null;
+    if (caseType === "PURE_EXCEPTION") {
+      pureExceptionsCount++;
+      const isBankOnly = Math.random() > 0.5;
+      if (isBankOnly) {
+        bankRecords.push({
+          transactionRecordId: generateRecordIdentifier(),
+          dataSource: "BANK_STATEMENT",
+          externalReference: bankRef,
+          amountPaise: amountPaise,
+          currencyCode: "INR",
+          transactionDate: baseDate,
+          ingestedAt: generateRandomTimestamp(2),
+          rawDescription: `BANK_CREDIT: ${amountPaise / 100} INR`,
+          rawPayload: JSON.stringify({ sourceAccountNumber: generateAccountNumber() })
+        });
+      } else {
+        gatewayRecords.push({
+          transactionRecordId: generateRecordIdentifier(),
+          dataSource: "GATEWAY_SETTLEMENT",
+          externalReference: gatewayRef,
+          amountPaise: amountPaise,
+          currencyCode: "INR",
+          transactionDate: settlementDate,
+          ingestedAt: generateRandomTimestamp(2),
+          rawDescription: `${generateProviderName()} PAYMENT: ${amountPaise / 100} INR`,
+          rawPayload: JSON.stringify({ gatewayProvider: generateProviderName() })
+        });
+      }
+      continue;
+    }
 
-    const merchantLedgerRecord = {
-      transactionRecordId: generateRecordIdentifier(),
-      dataSource: "MERCHANT_LEDGER",
-      externalReference: generateInvoiceNumber(),
-      amountPaise: amountInPaise,
-      currencyCode: "INR",
-      transactionDate: entryDate,
-      ingestedAt: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-      rawDescription: `MERCHANT_LEDGER: ${amountInPaise / 100} INR - ${generatePaymentDescription()}`,
-      rawPayload: JSON.stringify({
-        merchantIdentifier: "MERCHANT_001",
-        customerIdentifier: generateCustomerIdentifier(),
-        productServiceIdentifier: generateProductServiceIdentifier(),
-        description: generatePaymentDescription(),
-        referenceNumber: generateReferenceCode(),
-        commissionRateInPaise: commissionRateInPaise
-      }),
-      matchGroupId: null,
-      unresolvedExceptionIds: []
-    };
+    // Fee calculation logic
+    let netBankAmount = amountPaise;
+    if (caseType !== "EXACT_1_1") {
+      const mdrAmount = amountPaise * FEE_SCHEDULE.mdrPercentage;
+      const gstAmount = mdrAmount * FEE_SCHEDULE.gstOnMdrPercentage;
+      const tdsAmount = amountPaise * FEE_SCHEDULE.tdsPercentage;
+      const totalDeductions = Math.round(mdrAmount + gstAmount + tdsAmount);
+      netBankAmount = amountPaise - totalDeductions;
 
-    merchantLedgerRecords.push(merchantLedgerRecord);
-  }
+      if (caseType === "FEE_MISMATCH") {
+        feeMismatchCount++;
+        netBankAmount += (Math.random() > 0.5 ? 500 : -500);
+      }
+    } else {
+      exactMatchesCount++;
+    }
 
-  return merchantLedgerRecords;
-}
+    const bankTxId = generateRecordIdentifier();
 
-// Create three categories of matches: many-to-one (SUBSET_SUM), 1:1 exact (EXACT), and reserve unmatched
-function createMatchGroups(bankStatementRecords: any[], gatewaySettlementRecords: any[], merchantLedgerRecords: any[]) {
-  // Shuffle arrays to randomize selection
-  const shuffledBankRecords = [...bankStatementRecords].sort(() => 0.5 - Math.random());
-  const shuffledGatewayRecords = [...gatewaySettlementRecords].sort(() => 0.5 - Math.random());
-  const shuffledMerchantLedgerRecords = [...merchantLedgerRecords].sort(() => 0.5 - Math.random());
+    if (caseType === "MANY_TO_ONE") {
+      manyToOneMatchesCount++;
+      // Split amount into N gateway rows (N sampled 2..5)
+      const nGateways = Math.floor(Math.random() * 4) + 2;
+      const gatewayIds: string[] = [];
+      let remainingGross = amountPaise;
 
-  const usedGatewayRecords = new Set(); // Track which gateway records have been used in matches
-  const usedMerchantLedgerRecords = new Set(); // Track which merchant ledger records have been used in matches
-  let exactMatchesCreated = 0;
-  let manyToOneMatchesCreated = 0;
+      for (let g = 0; g < nGateways; g++) {
+        const gtId = generateRecordIdentifier();
+        gatewayIds.push(gtId);
+        const partAmount = (g === nGateways - 1) ? remainingGross : Math.round(amountPaise / nGateways);
+        remainingGross -= partAmount;
 
-  // Reserve 35-40% of bank records for 1:1 exact matches
-  const targetExactMatches = Math.floor(bankStatementRecords.length * 0.375); // 37.5% of bank records for exact matches
-
-  for (let i = 0; i < targetExactMatches; i++) {
-    // Find an unused gateway record FIRST (not the other way around)
-    const availableGatewayRecords = shuffledGatewayRecords.filter(record =>
-      !usedGatewayRecords.has(record.transactionRecordId)
-    );
-
-    if (availableGatewayRecords.length === 0) break; // No more unused gateways
-
-    // Pick a random unused gateway record
-    const selectedGateway = availableGatewayRecords[
-      Math.floor(Math.random() * availableGatewayRecords.length)
-    ];
-
-    // Find an unmatched bank record from the existing pool
-    const availableBankRecords = bankStatementRecords.filter(record =>
-      !record.matchGroupId
-    );
-
-    if (availableBankRecords.length === 0) break; // No more unmatched bank records
-
-    // Pick a random unmatched bank record
-    const selectedBankRecord = availableBankRecords[
-      Math.floor(Math.random() * availableBankRecords.length)
-    ];
-
-    // Set the bank record's amount to match the gateway exactly (same as many-to-one logic)
-    selectedBankRecord.amountPaise = selectedGateway.amountPaise;
-
-    // Assign the matchGroupId to both records
-    const matchGroupId = generateRecordIdentifier();
-    selectedBankRecord.matchGroupId = matchGroupId;
-    selectedGateway.matchGroupId = matchGroupId;
-    usedGatewayRecords.add(selectedGateway.transactionRecordId);
-
-    exactMatchesCreated++;
-  }
-
-  // Process remaining bank records for many-to-one bundles (approximately 25% of total)
-  const remainingBankRecords = bankStatementRecords.filter(record => !record.matchGroupId);
-  const targetManyToOneMatches = Math.floor(bankStatementRecords.length * 0.25); // 25% of bank records for many-to-one
-
-  for (let i = 0; i < targetManyToOneMatches && i < remainingBankRecords.length; i++) {
-    const bankRecord = remainingBankRecords[i];
-    if (!bankRecord.matchGroupId) {
-      // Select 2-6 gateway settlement records to bundle into this match
-      const numberOfGatewayRecords = Math.floor(Math.random() * 5) + 2; // 2-6 records
-      const availableGatewayRecords = shuffledGatewayRecords.filter(record =>
-        !usedGatewayRecords.has(record.transactionRecordId) &&
-        record.transactionRecordId !== bankRecord.transactionRecordId
-      );
-
-      if (availableGatewayRecords.length >= numberOfGatewayRecords) {
-        const selectedGatewayRecords = availableGatewayRecords.slice(0, numberOfGatewayRecords);
-
-        // Calculate the sum of selected gateway records (including their fees)
-        const gatewaySum = selectedGatewayRecords.reduce((sum, record) => sum + record.amountPaise, 0);
-        const totalGatewayFees = Math.floor(Math.abs(gatewaySum) * 0.03); // Assume ~3% total fee
-        const targetBankAmount = gatewaySum + totalGatewayFees;
-
-        // Set the bank record's amount to match the gateway sum (plus fees)
-        bankRecord.amountPaise = targetBankAmount;
-
-        // Assign the matchGroupId to all matched records
-        const matchGroupId = generateRecordIdentifier();
-        bankRecord.matchGroupId = matchGroupId;
-        selectedGatewayRecords.forEach(gatewayRecord => {
-          gatewayRecord.matchGroupId = matchGroupId;
-          usedGatewayRecords.add(gatewayRecord.transactionRecordId);
+        const gRef = generateGatewayTransactionIdentifier(rootRef, g + 1);
+        gatewayRecords.push({
+          transactionRecordId: gtId,
+          dataSource: "GATEWAY_SETTLEMENT",
+          externalReference: gRef,
+          amountPaise: partAmount,
+          currencyCode: "INR",
+          transactionDate: baseDate,
+          ingestedAt: generateRandomTimestamp(1),
+          rawDescription: `GATEWAY_SPLIT_SETTLEMENT: ${partAmount / 100} INR`,
+          rawPayload: JSON.stringify({ reference: gRef })
         });
 
-        // For roughly half of the match groups, also include a merchant ledger record
-        if (Math.random() > 0.5) {
-          const availableMerchantRecords = shuffledMerchantLedgerRecords.filter(record =>
-            !usedMerchantLedgerRecords.has(record.transactionRecordId) &&
-            record.transactionRecordId !== bankRecord.transactionRecordId &&
-            !selectedGatewayRecords.some(gateway => gateway.transactionRecordId === record.transactionRecordId)
-          );
-
-          if (availableMerchantRecords.length > 0) {
-            const selectedMerchantRecord = availableMerchantRecords[0];
-            selectedMerchantRecord.matchGroupId = matchGroupId;
-            usedMerchantLedgerRecords.add(selectedMerchantRecord.transactionRecordId);
-          }
-        }
-
-        manyToOneMatchesCreated++;
+        merchantRecords.push({
+          transactionRecordId: generateRecordIdentifier(),
+          dataSource: "MERCHANT_LEDGER",
+          externalReference: `${merchantRef}-${g + 1}`,
+          amountPaise: partAmount,
+          currencyCode: "INR",
+          transactionDate: baseDate,
+          ingestedAt: generateRandomTimestamp(1),
+          rawDescription: `MERCHANT_LEDGER_SPLIT: ${partAmount / 100} INR`,
+          rawPayload: JSON.stringify({ reference: `${merchantRef}-${g + 1}` })
+        });
       }
-    }
-  }
 
-  return {
-    exactMatchesCreated,
-    manyToOneMatchesCreated,
-    usedGatewayRecords,
-    usedMerchantLedgerRecords
-  };
-}
+      // Recalculate net bank amount for the whole sum
+      const mdrAmount = amountPaise * FEE_SCHEDULE.mdrPercentage;
+      const gstAmount = mdrAmount * FEE_SCHEDULE.gstOnMdrPercentage;
+      const tdsAmount = amountPaise * FEE_SCHEDULE.tdsPercentage;
+      netBankAmount = amountPaise - Math.round(mdrAmount + gstAmount + tdsAmount);
 
-// Generate Audit Trail entries for reconciliation decisions
-function generateAuditTrailEntries(bankStatementRecords: any[], gatewaySettlementRecords: any[], merchantLedgerRecords: any[]) {
-  const auditTrailEntries = [];
-
-  // Create decisions for reconciled bank statement records
-  const reconciledBankRecords = bankStatementRecords.filter(record => record.matchGroupId);
-  reconciledBankRecords.forEach((record, index) => {
-    for (let decisionCount = 0; decisionCount < Math.floor(Math.random() * 3) + 1; decisionCount++) {
-      const method = record.matchGroupId ? "EXACT" : generateMatchingAlgorithm();
-      const auditTrailEntry = {
-        auditTrailId: generateRecordIdentifier(),
-        decisionTimestamp: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-        method: method,
-        reason: method === "EXACT" ? "Exact amount and date match" : `Automatic reconciliation using ${method} method`,
-        actor: generateActorType(),
-        actorIdentifier: generateRecordIdentifier(),
-        transactionRecordId: record.transactionRecordId,
-        matchGroupId: record.matchGroupId,
-        metadata: JSON.stringify({
-          confidenceScore: generateRiskAssessment(),
-          ruleApplied: method === "EXACT" ? "amount_and_date_exact_match" : "amount_and_date_match"
-        })
-      };
-      auditTrailEntries.push(auditTrailEntry);
-    }
-  });
-
-  // Create decisions for reconciled gateway settlement records
-  const reconciledGatewayRecords = gatewaySettlementRecords.filter(record => record.matchGroupId);
-  reconciledGatewayRecords.forEach((record, index) => {
-    for (let decisionCount = 0; decisionCount < Math.floor(Math.random() * 2) + 1; decisionCount++) {
-      const method = record.matchGroupId ? "EXACT" : generateMatchingAlgorithm();
-      const auditTrailEntry = {
-        auditTrailId: generateRecordIdentifier(),
-        decisionTimestamp: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-        method: method,
-        reason: record.amountPaise < 0 ? "Refund/chargeback matching" : `Exact ${record.matchGroupId ? "EXACT" : generateMatchingAlgorithm()} match`,
-        actor: generateActorType(),
-        actorIdentifier: generateRecordIdentifier(),
-        transactionRecordId: record.transactionRecordId,
-        matchGroupId: record.matchGroupId,
-        metadata: JSON.stringify({
-          gatewayFeeInPaise: Math.floor(Math.abs(record.amountPaise) * 0.029),
-          netAmount: record.amountPaise - Math.floor(Math.abs(record.amountPaise) * 0.029)
-        })
-      };
-      auditTrailEntries.push(auditTrailEntry);
-    }
-  });
-
-  return auditTrailEntries;
-}
-
-// Generate Unresolved Exception entries for unmatched/invalid records
-function generateUnresolvedExceptions(bankStatementRecords: any[], gatewaySettlementRecords: any[], merchantLedgerRecords: any[]) {
-  const unresolvedExceptions = [];
-
-  // Create unmatched residual exceptions for bank statement records
-  const unmatchedBankRecords = bankStatementRecords.filter(record => !record.matchGroupId);
-  unmatchedBankRecords.forEach((record, index) => {
-    if (index < 50) {
-      const exception = {
-        unresolvedExceptionId: generateRecordIdentifier(),
-        createdAt: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-        classification: generateExceptionClassification(),
-        rootCauseHypothesis: `Unable to find counterpart for ${record.dataSource} transaction with reference ${record.externalReference}`,
-        riskScore: generateRiskAssessment(),
-        isResolved: false,
-        resolvedAt: null,
-        resolvedBy: null,
-        transactionRecordId: record.transactionRecordId,
-        expectedAmountPaise: 0
-      };
-      unresolvedExceptions.push(exception);
-    }
-  });
-
-  // Create data quality exceptions for all record sources (ONLY for unmatched records)
-  const allUnmatchedRecords = [
-    ...bankStatementRecords.filter(r => !r.matchGroupId).map(record => ({ ...record, sourceType: "BankStatement" as const })),
-    ...gatewaySettlementRecords.filter(r => !r.matchGroupId).map(record => ({ ...record, sourceType: "GatewaySettlement" as const })),
-    ...merchantLedgerRecords.filter(r => !r.matchGroupId).map(record => ({ ...record, sourceType: "MerchantLedgerEntry" as const }))
-  ];
-
-  for (let exceptionIndex = 0; exceptionIndex < Math.floor(allUnmatchedRecords.length * 0.2); exceptionIndex++) {
-    const randomRecord = allUnmatchedRecords[Math.floor(Math.random() * allUnmatchedRecords.length)];
-    const exceptionClassification = generateExceptionClassification();
-
-    const exception = {
-      unresolvedExceptionId: generateRecordIdentifier(),
-      createdAt: generateRandomTimestamp(Math.floor(Math.random() * 10)),
-      classification: exceptionClassification,
-      rootCauseHypothesis: exceptionClassification === "DUPLICATE" ? `Duplicate entry detected for ${randomRecord.sourceType}` :
-                           exceptionClassification === "MISSING_COUNTERPART" ? `Counterpart transaction missing for ${randomRecord.sourceType}` :
-                           `Data quality issue in ${randomRecord.sourceType}`,
-      riskScore: generateRiskAssessment(),
-      isResolved: false,
-      resolvedAt: null,
-      resolvedBy: null,
-      transactionRecordId: randomRecord.transactionRecordId,
-      expectedAmountPaise: randomRecord.amountPaise
-    };
-    unresolvedExceptions.push(exception);
-  }
-
-  return unresolvedExceptions;
-}
-
-// Generate ground truth mapping for expected matches
-function generateGroundTruth(bankStatementRecords: any[], gatewaySettlementRecords: any[], merchantLedgerRecords: any[]) {
-  const groundTruth = {
-    version: "1.0",
-    generatedAt: new Date().toISOString(),
-    totalExpectedMatches: 0,
-    expectedMatches: []
-  };
-
-  // Create simulated matches based on grouping
-  const processedMatchGroups = new Set();
-
-  bankStatementRecords.forEach(bankRecord => {
-    if (bankRecord.matchGroupId && !processedMatchGroups.has(bankRecord.matchGroupId)) {
-      const matchGroupId = bankRecord.matchGroupId;
-      processedMatchGroups.add(matchGroupId);
-
-      // Find all gateway settlement records in this match group
-      const gatewayRecordsInGroup = gatewaySettlementRecords.filter(gs => gs.matchGroupId === matchGroupId);
-
-      // Find merchant ledger record if it exists in this match group
-      const merchantRecordInGroup = merchantLedgerRecords.find(ml => ml.matchGroupId === matchGroupId);
-
-      // Determine matching algorithm
-      const matchingAlgorithm = gatewayRecordsInGroup.length === 1 ? "EXACT" : "SUBSET_SUM";
-
-      // Create ground truth entry for each gateway record in the group
-      gatewayRecordsInGroup.forEach(gatewayRecord => {
-        const expectedMatch = {
-          bankStatementRecordId: bankRecord.transactionRecordId,
-          gatewaySettlementRecordId: gatewayRecord.transactionRecordId,
-          merchantLedgerRecordId: merchantRecordInGroup?.transactionRecordId || null,
-          matchingAlgorithm: matchingAlgorithm,
-          confidenceScore: matchingAlgorithm === "EXACT" ? 0.99 : 0.95,
-          expectedMatchedAt: bankRecord.ingestedAt
-        };
-
-        groundTruth.expectedMatches.push(expectedMatch);
-        groundTruth.totalExpectedMatches++;
+      bankRecords.push({
+        transactionRecordId: bankTxId,
+        dataSource: "BANK_STATEMENT",
+        externalReference: bankRef,
+        amountPaise: netBankAmount,
+        currencyCode: "INR",
+        transactionDate: settlementDate,
+        ingestedAt: generateRandomTimestamp(1),
+        rawDescription: `BANK_CREDIT_BUNDLE: ${netBankAmount / 100} INR`,
+        rawPayload: JSON.stringify({ reference: bankRef })
       });
+
+      expectedMatches.push({
+        bankStatementRecordId: bankTxId,
+        gatewaySettlementRecordIds: gatewayIds,
+        gatewaySettlementRecordId: gatewayIds[0], // backward compat
+        merchantLedgerRecordId: null,
+        matchingAlgorithm: "SUBSET_SUM",
+        confidenceScore: 0.95,
+        expectedMatchedAt: new Date().toISOString(),
+        caseType: caseType,
+        classification: null,
+        corruptionType: corruptionType,
+        rootReferenceToken: rootRef,
+        settlementLagDays: lagDays
+      });
+      continue;
     }
-  });
 
-  return groundTruth;
-}
+    if (caseType === "NEGATIVE_REFUND") {
+      negativeRefundCount++;
+      const posGatewayId = generateRecordIdentifier();
+      const negGatewayId = generateRecordIdentifier();
+      const refundAmount = -Math.round(amountPaise * 0.25);
+      const grossSum = amountPaise + refundAmount;
 
-// Strip internal-only fields before CSV export
-function prepareForCsvExport<T extends Record<string, any>>(data: T[]): T[] {
-  return data.map(record => {
-    const { matchGroupId, unresolvedExceptionIds, ...csvSafeRecord } = record;
-    return csvSafeRecord;
-  });
-}
+      const mdrAmount = grossSum * FEE_SCHEDULE.mdrPercentage;
+      const gstAmount = mdrAmount * FEE_SCHEDULE.gstOnMdrPercentage;
+      const tdsAmount = grossSum * FEE_SCHEDULE.tdsPercentage;
+      netBankAmount = grossSum - Math.round(mdrAmount + gstAmount + tdsAmount);
 
-// Write CSV files with proper escaping
-function writeCsvFile<T extends Record<string, any>>(data: T[], filename: string): void {
-  if (data.length === 0) return;
+      gatewayRecords.push({
+        transactionRecordId: posGatewayId,
+        dataSource: "GATEWAY_SETTLEMENT",
+        externalReference: gatewayRef,
+        amountPaise: amountPaise,
+        currencyCode: "INR",
+        transactionDate: baseDate,
+        ingestedAt: generateRandomTimestamp(1),
+        rawDescription: `GATEWAY_SALE: ${amountPaise / 100} INR`,
+        rawPayload: JSON.stringify({ reference: gatewayRef })
+      });
 
-  const headers = Object.keys(data[0]);
-  const escapedHeaders = headers.map(header => header.replace(/"/g, '""'));
-  const csvContent = [
-    escapedHeaders.map(header => `"${header}"`).join(','),
-    ...data.map(row => {
-      return headers.map(header => {
-        const value = row[header];
-        const stringValue = String(value);
+      gatewayRecords.push({
+        transactionRecordId: negGatewayId,
+        dataSource: "GATEWAY_SETTLEMENT",
+        externalReference: `${gatewayRef}-REF`,
+        amountPaise: refundAmount,
+        currencyCode: "INR",
+        transactionDate: baseDate,
+        ingestedAt: generateRandomTimestamp(1),
+        rawDescription: `GATEWAY_REFUND: ${refundAmount / 100} INR`,
+        rawPayload: JSON.stringify({ reference: `${gatewayRef}-REF` })
+      });
 
-        if (stringValue.includes(',') || stringValue.includes('\n') || stringValue.includes('"')) {
-          return `"${stringValue.replace(/"/g, '""')}"`;
-        }
-        return stringValue;
-      }).join(',');
-    })
-  ].join('\n');
+      bankRecords.push({
+        transactionRecordId: bankTxId,
+        dataSource: "BANK_STATEMENT",
+        externalReference: bankRef,
+        amountPaise: netBankAmount,
+        currencyCode: "INR",
+        transactionDate: settlementDate,
+        ingestedAt: generateRandomTimestamp(1),
+        rawDescription: `BANK_CREDIT_NET_REFUND: ${netBankAmount / 100} INR`,
+        rawPayload: JSON.stringify({ reference: bankRef })
+      });
 
-  const path = join(process.cwd(), 'scripts', filename);
-  writeFileSync(path, csvContent);
-  console.log(`Generated ${filename} with ${data.length} rows`);
-}
+      merchantRecords.push({
+        transactionRecordId: generateRecordIdentifier(),
+        dataSource: "MERCHANT_LEDGER",
+        externalReference: merchantRef,
+        amountPaise: amountPaise,
+        currencyCode: "INR",
+        transactionDate: baseDate,
+        ingestedAt: generateRandomTimestamp(1),
+        rawDescription: `MERCHANT_INVOICE: ${amountPaise / 100} INR`,
+        rawPayload: JSON.stringify({ reference: merchantRef })
+      });
 
-// Main function to generate all data files
-function main() {
-  console.log("Starting synthetic data generation for ReconIQ hackathon...");
+      expectedMatches.push({
+        bankStatementRecordId: bankTxId,
+        gatewaySettlementRecordIds: [posGatewayId, negGatewayId],
+        gatewaySettlementRecordId: posGatewayId, // backward compat
+        merchantLedgerRecordId: null,
+        matchingAlgorithm: "SUBSET_SUM",
+        confidenceScore: 0.94,
+        expectedMatchedAt: new Date().toISOString(),
+        caseType: caseType,
+        classification: null,
+        corruptionType: corruptionType,
+        rootReferenceToken: rootRef,
+        settlementLagDays: lagDays
+      });
+      continue;
+    }
 
-  // Step 1: Generate all raw transaction records independently
-  const bankStatementRecords = generateBankStatementRecords();
-  const gatewaySettlementRecords = generateGatewaySettlementRecords();
-  const merchantLedgerRecords = generateMerchantLedgerRecords();
+    // Default EXACT_1_1 or FEE_MISMATCH
+    const gatewayTxId = generateRecordIdentifier();
+    const merchantTxId = generateRecordIdentifier();
 
-  // Step 2: Create three categories of match groups
-  const { exactMatchesCreated, manyToOneMatchesCreated, usedGatewayRecords, usedMerchantLedgerRecords } = createMatchGroups(
-    bankStatementRecords, gatewaySettlementRecords, merchantLedgerRecords
-  );
+    bankRecords.push({
+      transactionRecordId: bankTxId,
+      dataSource: "BANK_STATEMENT",
+      externalReference: bankRef,
+      amountPaise: netBankAmount,
+      currencyCode: "INR",
+      transactionDate: settlementDate,
+      ingestedAt: generateRandomTimestamp(1),
+      rawDescription: `BANK_CREDIT: ${netBankAmount / 100} INR`,
+      rawPayload: JSON.stringify({ reference: bankRef })
+    });
 
-  // Step 3: Generate audit trail and exception data
-  const auditTrailEntries = generateAuditTrailEntries(bankStatementRecords, gatewaySettlementRecords, merchantLedgerRecords);
-  const unresolvedExceptions = generateUnresolvedExceptions(bankStatementRecords, gatewaySettlementRecords, merchantLedgerRecords);
+    gatewayRecords.push({
+      transactionRecordId: gatewayTxId,
+      dataSource: "GATEWAY_SETTLEMENT",
+      externalReference: gatewayRef,
+      amountPaise: amountPaise,
+      currencyCode: "INR",
+      transactionDate: baseDate,
+      ingestedAt: generateRandomTimestamp(1),
+      rawDescription: `GATEWAY_SETTLEMENT: ${amountPaise / 100} INR`,
+      rawPayload: JSON.stringify({ reference: gatewayRef })
+    });
 
-  // Step 4: Generate ground truth based on the created match groups
-  const groundTruth = generateGroundTruth(bankStatementRecords, gatewaySettlementRecords, merchantLedgerRecords);
+    merchantRecords.push({
+      transactionRecordId: merchantTxId,
+      dataSource: "MERCHANT_LEDGER",
+      externalReference: merchantRef,
+      amountPaise: amountPaise,
+      currencyCode: "INR",
+      transactionDate: baseDate,
+      ingestedAt: generateRandomTimestamp(1),
+      rawDescription: `MERCHANT_INVOICE: ${amountPaise / 100} INR`,
+      rawPayload: JSON.stringify({ reference: merchantRef })
+    });
 
-  // Step 5: Prepare CSV files (strip internal-only fields)
-  const bankCsvData = prepareForCsvExport(bankStatementRecords);
-  const gatewayCsvData = prepareForCsvExport(gatewaySettlementRecords);
-  const merchantCsvData = prepareForCsvExport(merchantLedgerRecords);
-
-  // Step 6: Write all files
-  writeCsvFile(bankCsvData, 'bank_statement.csv');
-  writeCsvFile(gatewayCsvData, 'gateway_settlement.csv');
-  writeCsvFile(merchantCsvData, 'merchant_ledger.csv');
-
-  const auditTrailPath = join(process.cwd(), 'scripts', 'audit_trail_entries.json');
-  writeFileSync(auditTrailPath, JSON.stringify(auditTrailEntries, null, 2));
-  console.log(`Generated audit_trail_entries.json with ${auditTrailEntries.length} records`);
-
-  const exceptionsPath = join(process.cwd(), 'scripts', 'unresolved_exceptions.json');
-  writeFileSync(exceptionsPath, JSON.stringify(unresolvedExceptions, null, 2));
-  console.log(`Generated unresolved_exceptions.json with ${unresolvedExceptions.length} records`);
-
-  const groundTruthPath = join(process.cwd(), 'ground_truth.json');
-  writeFileSync(groundTruthPath, JSON.stringify(groundTruth, null, 2));
-  console.log(`Generated ground_truth.json with ${groundTruth.totalExpectedMatches} expected matches`);
-
-  console.log("\nData generation complete!");
-  console.log(`\nSummary:`);
-  console.log("- Bank statement records: " + bankStatementRecords.length + " rows (generated)");
-  console.log("- Gateway settlement records: " + gatewaySettlementRecords.length + " rows (generated)");
-  console.log("- Merchant ledger records: " + merchantLedgerRecords.length + " rows (generated)");
-  console.log("- Exact 1:1 matches created: " + exactMatchesCreated);
-  console.log("- Many-to-one matches created: " + manyToOneMatchesCreated);
-  console.log("- Audit trail entries: " + auditTrailEntries.length + " records");
-  console.log("- Unresolved exceptions: " + unresolvedExceptions.length + " records");
-  console.log("- Ground truth expected matches: " + groundTruth.totalExpectedMatches);
-  console.log("- Gateway records used in matches: " + usedGatewayRecords.size);
-  console.log("- Merchant ledger records used in matches: " + usedMerchantLedgerRecords.size);
-
-  // Statistics about match categories
-  const manyToOneBankRecords = bankStatementRecords.filter(r => r.matchGroupId &&
-    groundTruth.expectedMatches.some(m => m.bankStatementRecordId === r.transactionRecordId && m.matchingAlgorithm === "SUBSET_SUM")
-  ).length;
-  const exactBankRecords = bankStatementRecords.filter(r => r.matchGroupId &&
-    groundTruth.expectedMatches.some(m => m.bankStatementRecordId === r.transactionRecordId && m.matchingAlgorithm === "EXACT")
-  ).length;
-  const unmatchedBankRecords = bankStatementRecords.filter(r => !r.matchGroupId).length;
-
-  console.log("\nMatch Category Statistics:");
-  console.log("- Exact 1:1 matches: " + exactBankRecords + " bank records");
-  console.log("- Many-to-one (SUBSET_SUM) matches: " + manyToOneBankRecords + " bank records");
-  console.log("- Unmatched (exceptions) bank records: " + unmatchedBankRecords);
-
-  // Verify data integrity
-  const totalMatchedRecords = Array.from(usedGatewayRecords).length + Array.from(usedMerchantLedgerRecords).length;
-  const totalExceptionRecords = unresolvedExceptions.length;
-  const hasConflictingRecords = bankStatementRecords.some(r => r.matchGroupId && unresolvedExceptions.some(e => e.transactionRecordId === r.transactionRecordId));
-
-  console.log("\nData Integrity Check:");
-  console.log("- Total matched records: " + totalMatchedRecords);
-  console.log("- Total exception records: " + totalExceptionRecords);
-  console.log("- Records with both match and exception: " + (hasConflictingRecords ? "YES (ERROR)" : "NO (GOOD)"));
-
-  // Check for negative amount examples in the data
-  const negativeAmountExamples = [];
-  bankStatementRecords.forEach(record => {
-    if (record.amountPaise < 0) negativeAmountExamples.push(record);
-  });
-  gatewaySettlementRecords.forEach(record => {
-    if (record.amountPaise < 0) negativeAmountExamples.push(record);
-  });
-  merchantLedgerRecords.forEach(record => {
-    if (record.amountPaise < 0) negativeAmountExamples.push(record);
-  });
-
-  if (negativeAmountExamples.length > 0) {
-    console.log("\nNegative amount examples found: " + negativeAmountExamples.length + " (refunds/chargebacks)");
-    negativeAmountExamples.slice(0, 3).forEach((record, index) => {
-      console.log("  Example " + (index + 1) + ": " + record.dataSource + " - Amount: " + record.amountPaise + " (ref): " + record.externalReference);
+    expectedMatches.push({
+      bankStatementRecordId: bankTxId,
+      gatewaySettlementRecordIds: [gatewayTxId],
+      gatewaySettlementRecordId: gatewayTxId,
+      merchantLedgerRecordId: merchantTxId,
+      matchingAlgorithm: isTimingLag ? "AI_FUZZY" : "EXACT",
+      confidenceScore: isTimingLag ? 0.88 : 0.99,
+      expectedMatchedAt: new Date().toISOString(),
+      caseType: caseType,
+      classification: isTimingLag ? "TIMING_LAG" : null,
+      corruptionType: corruptionType,
+      rootReferenceToken: rootRef,
+      settlementLagDays: lagDays
     });
   }
 
-  // Sample ground truth analysis
-  const sampleManyToOneMatches = groundTruth.expectedMatches.filter(m => m.matchingAlgorithm === "SUBSET_SUM" && m.merchantLedgerRecordId);
-  console.log("\nSample Analysis - Many-to-One with Merchant Ledger:");
-  console.log("- Total many-to-one matches with merchant ledger: " + sampleManyToOneMatches.length);
-  if (sampleManyToOneMatches.length > 0) {
-    console.log("\nSample entries (bank -> [gateways] + merchant):");
-    sampleManyToOneMatches.slice(0, 3).forEach((match, index) => {
-      const gatewayCount = groundTruth.expectedMatches.filter(m => m.bankStatementRecordId === match.bankStatementRecordId && m.matchingAlgorithm === "SUBSET_SUM").length;
-      console.log("  Match " + (index + 1) + ": " + match.bankStatementRecordId + " -> " + gatewayCount + " gateways + " + (match.merchantLedgerRecordId ? "merchant" : "none"));
-    });
+  const groundTruth = {
+    version: "2.1",
+    generatedAt: new Date().toISOString(),
+    feeSchedule: FEE_SCHEDULE,
+    totalExpectedMatches: expectedMatches.length,
+    expectedMatches: expectedMatches
+  };
+
+  // Ensure data/ directory exists
+  mkdirSync(join(process.cwd(), 'data'), { recursive: true });
+
+  // Write CSV helper (ensures matchGroupId is NOT present)
+  function writeCsv(data: any[], filename: string) {
+    if (data.length === 0) return;
+    const headers = Object.keys(data[0]).filter(h => h !== 'matchGroupId');
+    const csvLines = [
+      headers.map(h => `"${h}"`).join(','),
+      ...data.map(row => headers.map(h => {
+        const val = row[h] === null ? '' : String(row[h]);
+        return val.includes(',') || val.includes('"') || val.includes('\n') ? `"${val.replace(/"/g, '""')}"` : val;
+      }).join(','))
+    ];
+    const path = join(process.cwd(), 'data', filename);
+    writeFileSync(path, csvLines.join('\n'));
+    console.log(`Generated data/${filename} with ${data.length} rows`);
+  }
+
+  writeCsv(bankRecords, 'bank_statement.csv');
+  writeCsv(gatewayRecords, 'gateway_settlement.csv');
+  writeCsv(merchantRecords, 'merchant_ledger.csv');
+
+  const gtPath = join(process.cwd(), 'data', 'ground_truth.json');
+  writeFileSync(gtPath, JSON.stringify(groundTruth, null, 2));
+  console.log(`Generated data/ground_truth.json with ${expectedMatches.length} expected matches.`);
+
+  // Verification checks & Summary metrics
+  const actualBundlesProduced = expectedMatches.filter(m => m.caseType === "MANY_TO_ONE" && m.gatewaySettlementRecordIds && m.gatewaySettlementRecordIds.length > 1).length;
+  const actualNegativeGatewayRows = gatewayRecords.filter(r => r.amountPaise < 0).length;
+
+  // Grep check for matchGroupId in CSVs
+  const { execSync } = require('child_process');
+  const matchGroupGrep = execSync('grep -o "matchGroupId" data/*.csv | wc -l', { encoding: 'utf-8' }).trim();
+
+  console.log("\n--- GENERATION SUMMARY ---");
+  console.log(`- Bank Statement records:     ${bankRecords.length}`);
+  console.log(`- Gateway Settlement records: ${gatewayRecords.length}`);
+  console.log(`- Merchant Ledger records:    ${merchantRecords.length}`);
+  console.log(`- Case Type Counts:`);
+  console.log(`  * EXACT_1_1:         ${exactMatchesCount}`);
+  console.log(`  * MANY_TO_ONE:       ${manyToOneMatchesCount}`);
+  console.log(`  * FEE_MISMATCH:      ${feeMismatchCount}`);
+  console.log(`  * NEGATIVE_REFUND:   ${negativeRefundCount}`);
+  console.log(`  * PURE_EXCEPTION:    ${pureExceptionsCount}`);
+  console.log(`- actual bundles produced: ${actualBundlesProduced}`);
+  console.log(`- actual negative gateway rows: ${actualNegativeGatewayRows}`);
+  console.log(`- matchGroupId occurrences in CSVs: ${matchGroupGrep}`);
+  console.log(`- Fee Schedule Used:`, FEE_SCHEDULE);
+
+  const sampleManyToOne = expectedMatches.find(m => m.caseType === "MANY_TO_ONE");
+  if (sampleManyToOne) {
+    console.log("\n--- SAMPLE MANY_TO_ONE GROUND-TRUTH ENTRY ---");
+    console.log(JSON.stringify(sampleManyToOne, null, 2));
   }
 }
 
-// Run if executed directly
-main();
+generateSyntheticData();
 
-export {
-  main,
-  generateBankStatementRecords,
-  generateGatewaySettlementRecords,
-  generateMerchantLedgerRecords,
-  generateAuditTrailEntries,
-  generateUnresolvedExceptions,
-  generateGroundTruth
-};
+export { generateSyntheticData };

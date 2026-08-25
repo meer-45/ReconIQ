@@ -1,0 +1,5901 @@
+{
+  "version": "2.1",
+  "generatedAt": "2026-08-24T18:00:29.997Z",
+  "feeSchedule": {
+    "mdrPercentage": 0.02,
+    "gstOnMdrPercentage": 0.18,
+    "tdsPercentage": 0.01
+  },
+  "totalExpectedMatches": 351,
+  "expectedMatches": [
+    {
+      "bankStatementRecordId": "tx_xszccpn85oo",
+      "gatewaySettlementRecordIds": [
+        "tx_mm7r5t6gfj"
+      ],
+      "gatewaySettlementRecordId": "tx_mm7r5t6gfj",
+      "merchantLedgerRecordId": "tx_yw602bftn6s",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ZT4YOOO4",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_5ekesa0pv59",
+      "gatewaySettlementRecordIds": [
+        "tx_9lhq9xrixk8"
+      ],
+      "gatewaySettlementRecordId": "tx_9lhq9xrixk8",
+      "merchantLedgerRecordId": "tx_rh092utnimc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "7BGYCZAI",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_hfglo844e2m",
+      "gatewaySettlementRecordIds": [
+        "tx_qz5vt71a1fq"
+      ],
+      "gatewaySettlementRecordId": "tx_qz5vt71a1fq",
+      "merchantLedgerRecordId": "tx_sllwpk1z52s",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "KAGBNX8U",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0cpybumsfkvn",
+      "gatewaySettlementRecordIds": [
+        "tx_59scc5mft8r",
+        "tx_nvridh46fp",
+        "tx_55gxo4uc6ga"
+      ],
+      "gatewaySettlementRecordId": "tx_59scc5mft8r",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KI5C5SXO",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_736ena4wex8",
+      "gatewaySettlementRecordIds": [
+        "tx_ylm4jspd19"
+      ],
+      "gatewaySettlementRecordId": "tx_ylm4jspd19",
+      "merchantLedgerRecordId": "tx_ja2bo7lfvd",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MO611ZN7",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_5zvbef3h38s",
+      "gatewaySettlementRecordIds": [
+        "tx_tzzn0f1f3om",
+        "tx_9h5asmravzl"
+      ],
+      "gatewaySettlementRecordId": "tx_tzzn0f1f3om",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HEHKPJ3F",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_jh1dn5t9kzs",
+      "gatewaySettlementRecordIds": [
+        "tx_xy0qdook89e",
+        "tx_ljvz5hkdveo"
+      ],
+      "gatewaySettlementRecordId": "tx_xy0qdook89e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "CT8UKVOB",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_101b8ivuzia",
+      "gatewaySettlementRecordIds": [
+        "tx_rt9byu4z4wh",
+        "tx_ji3o37wlfp9",
+        "tx_ci95egaycnv",
+        "tx_kdd01278nor",
+        "tx_vr0rz42xcen"
+      ],
+      "gatewaySettlementRecordId": "tx_rt9byu4z4wh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8CE2F7G1",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_78s2iy0ewt2",
+      "gatewaySettlementRecordIds": [
+        "tx_4h5rlz0jcj5",
+        "tx_qdgt79nesg8"
+      ],
+      "gatewaySettlementRecordId": "tx_4h5rlz0jcj5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "76R1YU2H",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ej7b80gq8ff",
+      "gatewaySettlementRecordIds": [
+        "tx_4bhvvwlnxzd"
+      ],
+      "gatewaySettlementRecordId": "tx_4bhvvwlnxzd",
+      "merchantLedgerRecordId": "tx_9imy91v4j9",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0Q75DLW2",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0tjcazun76u",
+      "gatewaySettlementRecordIds": [
+        "tx_9w4w7l64n8e"
+      ],
+      "gatewaySettlementRecordId": "tx_9w4w7l64n8e",
+      "merchantLedgerRecordId": "tx_1pg7jnyfqhr",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "VRL3GHR0",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_9fdhl3ki9br",
+      "gatewaySettlementRecordIds": [
+        "tx_qk1qrdtdqz"
+      ],
+      "gatewaySettlementRecordId": "tx_qk1qrdtdqz",
+      "merchantLedgerRecordId": "tx_eomwr6ccf5v",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "N28Q498W",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ov98nwknxq",
+      "gatewaySettlementRecordIds": [
+        "tx_bgjdyi9iqig"
+      ],
+      "gatewaySettlementRecordId": "tx_bgjdyi9iqig",
+      "merchantLedgerRecordId": "tx_ssxjzvoxpeq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HCCD77KJ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_o1s804efxa",
+      "gatewaySettlementRecordIds": [
+        "tx_knedd71cz6",
+        "tx_eb3kth8uiab",
+        "tx_e3hjhvra64n"
+      ],
+      "gatewaySettlementRecordId": "tx_knedd71cz6",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A2GZX8U6",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_4pso8b1c10p",
+      "gatewaySettlementRecordIds": [
+        "tx_8rbahia7wrt"
+      ],
+      "gatewaySettlementRecordId": "tx_8rbahia7wrt",
+      "merchantLedgerRecordId": "tx_h7hzjl8z3tm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0F5YO9UJ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_kk3gwu2t4q",
+      "gatewaySettlementRecordIds": [
+        "tx_w3xn5xf7r4p"
+      ],
+      "gatewaySettlementRecordId": "tx_w3xn5xf7r4p",
+      "merchantLedgerRecordId": "tx_rgket5hyeth",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "OAXEO1MX",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_u0fb142h3x",
+      "gatewaySettlementRecordIds": [
+        "tx_rchvqggtjnb"
+      ],
+      "gatewaySettlementRecordId": "tx_rchvqggtjnb",
+      "merchantLedgerRecordId": "tx_r936fglulpk",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "S8OPCZPC",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0u1m4vai8fc",
+      "gatewaySettlementRecordIds": [
+        "tx_8u1r19yltnc",
+        "tx_tl0ykpx1aaq"
+      ],
+      "gatewaySettlementRecordId": "tx_8u1r19yltnc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3EK2F5PG",
+      "settlementLagDays": 12
+    },
+    {
+      "bankStatementRecordId": "tx_6hsthz1tzw3",
+      "gatewaySettlementRecordIds": [
+        "tx_3pzv9eou3y",
+        "tx_r6kjn3fg4gp"
+      ],
+      "gatewaySettlementRecordId": "tx_3pzv9eou3y",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "REV9VOM1",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_pbilac2l83t",
+      "gatewaySettlementRecordIds": [
+        "tx_9f42qjh7jkh"
+      ],
+      "gatewaySettlementRecordId": "tx_9f42qjh7jkh",
+      "merchantLedgerRecordId": "tx_2f388jxh5lw",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DEVGD0OL",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_wtgho2thbs",
+      "gatewaySettlementRecordIds": [
+        "tx_07qrr8oogg8y",
+        "tx_m6gfexeyyjn"
+      ],
+      "gatewaySettlementRecordId": "tx_07qrr8oogg8y",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LIULTLDJ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_n31f4w2lp9q",
+      "gatewaySettlementRecordIds": [
+        "tx_4bib850xfa6"
+      ],
+      "gatewaySettlementRecordId": "tx_4bib850xfa6",
+      "merchantLedgerRecordId": "tx_bee50wd85q",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "409N0BG2",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_vyismk47bp",
+      "gatewaySettlementRecordIds": [
+        "tx_0e7c57nm39mi"
+      ],
+      "gatewaySettlementRecordId": "tx_0e7c57nm39mi",
+      "merchantLedgerRecordId": "tx_r1mufi0gyl",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.993Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TC3SYZ6P",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_dim6kpzlnw5",
+      "gatewaySettlementRecordIds": [
+        "tx_s8vsubxlk7g"
+      ],
+      "gatewaySettlementRecordId": "tx_s8vsubxlk7g",
+      "merchantLedgerRecordId": "tx_0znkv84ihx9i",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "P0N96I18",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ma7qy6n9p9d",
+      "gatewaySettlementRecordIds": [
+        "tx_d47gdaesfqt"
+      ],
+      "gatewaySettlementRecordId": "tx_d47gdaesfqt",
+      "merchantLedgerRecordId": "tx_cmwlymksd1j",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A1CKORE7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_igw61d0m4v",
+      "gatewaySettlementRecordIds": [
+        "tx_o9elj3jb1aj"
+      ],
+      "gatewaySettlementRecordId": "tx_o9elj3jb1aj",
+      "merchantLedgerRecordId": "tx_dxud3l557a",
+      "matchingAlgorithm": "AI_FUZZY",
+      "confidenceScore": 0.88,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": "TIMING_LAG",
+      "corruptionType": null,
+      "rootReferenceToken": "U7U20URX",
+      "settlementLagDays": 15
+    },
+    {
+      "bankStatementRecordId": "tx_92xsb93uwn",
+      "gatewaySettlementRecordIds": [
+        "tx_d8xn8htqopt"
+      ],
+      "gatewaySettlementRecordId": "tx_d8xn8htqopt",
+      "merchantLedgerRecordId": "tx_ailtv829plu",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "W1HW0PU2",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_4x5o2x5hw8",
+      "gatewaySettlementRecordIds": [
+        "tx_smr9jprbd3"
+      ],
+      "gatewaySettlementRecordId": "tx_smr9jprbd3",
+      "merchantLedgerRecordId": "tx_1k59v91auy9",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "D7DHR6ZF",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_1g2ldnk8d4q",
+      "gatewaySettlementRecordIds": [
+        "tx_8wwfrqn2f1u"
+      ],
+      "gatewaySettlementRecordId": "tx_8wwfrqn2f1u",
+      "merchantLedgerRecordId": "tx_dpwddvlq1yj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1VSXFBIN",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_n4rib6errq",
+      "gatewaySettlementRecordIds": [
+        "tx_0gbc96unwamd",
+        "tx_acjffptehd"
+      ],
+      "gatewaySettlementRecordId": "tx_0gbc96unwamd",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "PGGIZ5QI",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_p5kzxgra1h",
+      "gatewaySettlementRecordIds": [
+        "tx_gtqcr04ml0w",
+        "tx_nx3iwrgu2vp",
+        "tx_cd5o4tb9gjh",
+        "tx_mawc9mblebc"
+      ],
+      "gatewaySettlementRecordId": "tx_gtqcr04ml0w",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "NL654JBK",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_tuf2y2hgw4e",
+      "gatewaySettlementRecordIds": [
+        "tx_tv5lvynz87"
+      ],
+      "gatewaySettlementRecordId": "tx_tv5lvynz87",
+      "merchantLedgerRecordId": "tx_6dvvsvx998v",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9WXUYHNT",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_xz75vvkj6rp",
+      "gatewaySettlementRecordIds": [
+        "tx_198jiw15rjs"
+      ],
+      "gatewaySettlementRecordId": "tx_198jiw15rjs",
+      "merchantLedgerRecordId": "tx_l1ykilvazw",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "S0VVVDJ8",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_5ple18v5d1d",
+      "gatewaySettlementRecordIds": [
+        "tx_ynbhj7qaqw"
+      ],
+      "gatewaySettlementRecordId": "tx_ynbhj7qaqw",
+      "merchantLedgerRecordId": "tx_uwg05kgfupd",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "N4NRR4GS",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_j8qkgivc0pg",
+      "gatewaySettlementRecordIds": [
+        "tx_hznnpdwmgje"
+      ],
+      "gatewaySettlementRecordId": "tx_hznnpdwmgje",
+      "merchantLedgerRecordId": "tx_mkk02ssaviq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "SU1J4RUU",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_t0c0dssia3s",
+      "gatewaySettlementRecordIds": [
+        "tx_h9jtzdvb1xl"
+      ],
+      "gatewaySettlementRecordId": "tx_h9jtzdvb1xl",
+      "merchantLedgerRecordId": "tx_fk7067zym5",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "EMUP6B7E",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_6bt4qqzcds4",
+      "gatewaySettlementRecordIds": [
+        "tx_8pdj37no2ae"
+      ],
+      "gatewaySettlementRecordId": "tx_8pdj37no2ae",
+      "merchantLedgerRecordId": "tx_t7ubr0gdfsq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8RMKSZHL",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_j4956zuhto8",
+      "gatewaySettlementRecordIds": [
+        "tx_f8d8pi5v4ju"
+      ],
+      "gatewaySettlementRecordId": "tx_f8d8pi5v4ju",
+      "merchantLedgerRecordId": "tx_97fiipfr94v",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8E0Q39ZV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_iekmrbt3r1t",
+      "gatewaySettlementRecordIds": [
+        "tx_0hlck6hqkjua"
+      ],
+      "gatewaySettlementRecordId": "tx_0hlck6hqkjua",
+      "merchantLedgerRecordId": "tx_80d65eiiof",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A98NQ80W",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_sbl12hz383",
+      "gatewaySettlementRecordIds": [
+        "tx_2nofjh9g4k7"
+      ],
+      "gatewaySettlementRecordId": "tx_2nofjh9g4k7",
+      "merchantLedgerRecordId": "tx_t403yywqur",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TJ1KRMIK",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_nqa2wn2ehe",
+      "gatewaySettlementRecordIds": [
+        "tx_g790ci81xi7"
+      ],
+      "gatewaySettlementRecordId": "tx_g790ci81xi7",
+      "merchantLedgerRecordId": "tx_0gv5ug963zdh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "7ZZT7HJ5",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_pzj11jzas38",
+      "gatewaySettlementRecordIds": [
+        "tx_2k7gq6qklfr",
+        "tx_fx2kiy54chr"
+      ],
+      "gatewaySettlementRecordId": "tx_2k7gq6qklfr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "JDM9DHVF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_n2tq7kv1ot",
+      "gatewaySettlementRecordIds": [
+        "tx_ic77cyy9g8",
+        "tx_11vhfx7v4s1d"
+      ],
+      "gatewaySettlementRecordId": "tx_ic77cyy9g8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KWSRBSYP",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_bm3k8z7fkxw",
+      "gatewaySettlementRecordIds": [
+        "tx_syk73gnxles"
+      ],
+      "gatewaySettlementRecordId": "tx_syk73gnxles",
+      "merchantLedgerRecordId": "tx_zicyu5slwps",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GPMA9W1Y",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_rxkcgvvo15i",
+      "gatewaySettlementRecordIds": [
+        "tx_i4yvfr0jkl"
+      ],
+      "gatewaySettlementRecordId": "tx_i4yvfr0jkl",
+      "merchantLedgerRecordId": "tx_p90fgsw5zip",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "80A8KVFY",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_2t4ran016se",
+      "gatewaySettlementRecordIds": [
+        "tx_kvoxed3lv6"
+      ],
+      "gatewaySettlementRecordId": "tx_kvoxed3lv6",
+      "merchantLedgerRecordId": "tx_bmkoii0qqgn",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IAN7O2P8",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_0o0nipobxhij",
+      "gatewaySettlementRecordIds": [
+        "tx_dqhcgx50yne"
+      ],
+      "gatewaySettlementRecordId": "tx_dqhcgx50yne",
+      "merchantLedgerRecordId": "tx_bd2jfc7l788",
+      "matchingAlgorithm": "AI_FUZZY",
+      "confidenceScore": 0.88,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": "TIMING_LAG",
+      "corruptionType": null,
+      "rootReferenceToken": "PJ3ELNDC",
+      "settlementLagDays": 14
+    },
+    {
+      "bankStatementRecordId": "tx_2xhwuyb2ujv",
+      "gatewaySettlementRecordIds": [
+        "tx_1w82zwgkf0e"
+      ],
+      "gatewaySettlementRecordId": "tx_1w82zwgkf0e",
+      "merchantLedgerRecordId": "tx_7k5aeefnmh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KVARVEHF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_l3poge24r5a",
+      "gatewaySettlementRecordIds": [
+        "tx_r710wnojab",
+        "tx_vmq5oxxhhqn"
+      ],
+      "gatewaySettlementRecordId": "tx_r710wnojab",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LVGKDFWA",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ydhyz65wemb",
+      "gatewaySettlementRecordIds": [
+        "tx_c54dlo8h2k",
+        "tx_31d5wo95nc1"
+      ],
+      "gatewaySettlementRecordId": "tx_c54dlo8h2k",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "K9RQXKIP",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_t4908mkak",
+      "gatewaySettlementRecordIds": [
+        "tx_mzxonislo3p"
+      ],
+      "gatewaySettlementRecordId": "tx_mzxonislo3p",
+      "merchantLedgerRecordId": "tx_mm7fbzufyjb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KV9SS81I",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_407y14iybgg",
+      "gatewaySettlementRecordIds": [
+        "tx_xbf7zv6qoub"
+      ],
+      "gatewaySettlementRecordId": "tx_xbf7zv6qoub",
+      "merchantLedgerRecordId": "tx_s7e3hkzpotj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "U6QL4MAM",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_j6c211hd8c",
+      "gatewaySettlementRecordIds": [
+        "tx_32dsq3kgv03"
+      ],
+      "gatewaySettlementRecordId": "tx_32dsq3kgv03",
+      "merchantLedgerRecordId": "tx_s8j5eyjts1",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "PRCSHLHF",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_zhjnz45umrg",
+      "gatewaySettlementRecordIds": [
+        "tx_6zh0dejai0y"
+      ],
+      "gatewaySettlementRecordId": "tx_6zh0dejai0y",
+      "merchantLedgerRecordId": "tx_yt6t6rqi4a",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "UZ7KQJG7",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_w10hcfo402",
+      "gatewaySettlementRecordIds": [
+        "tx_zynnjmy586",
+        "tx_x57e2un7ugf",
+        "tx_t8f3a444aj",
+        "tx_ywo3nev7x7"
+      ],
+      "gatewaySettlementRecordId": "tx_zynnjmy586",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RC5BDA86",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_vw310j1lebk",
+      "gatewaySettlementRecordIds": [
+        "tx_zlvjthbywag"
+      ],
+      "gatewaySettlementRecordId": "tx_zlvjthbywag",
+      "merchantLedgerRecordId": "tx_yni53rj195q",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VE56CUCD",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_556gnaafha",
+      "gatewaySettlementRecordIds": [
+        "tx_65layf8vu56"
+      ],
+      "gatewaySettlementRecordId": "tx_65layf8vu56",
+      "merchantLedgerRecordId": "tx_647xtmgcn3c",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "20KXW0O0",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_bnl3yz7pgzd",
+      "gatewaySettlementRecordIds": [
+        "tx_wexs35smfjk",
+        "tx_guzjf1rox84",
+        "tx_hqffv5jwx8o"
+      ],
+      "gatewaySettlementRecordId": "tx_wexs35smfjk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "J585GT2H",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ouqar3hvnkg",
+      "gatewaySettlementRecordIds": [
+        "tx_e5mmunyzd1t"
+      ],
+      "gatewaySettlementRecordId": "tx_e5mmunyzd1t",
+      "merchantLedgerRecordId": "tx_7gl2waf2d58",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0IGFWUZX",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_rp9lcjmkl3m",
+      "gatewaySettlementRecordIds": [
+        "tx_4hnbh4qtuuy"
+      ],
+      "gatewaySettlementRecordId": "tx_4hnbh4qtuuy",
+      "merchantLedgerRecordId": "tx_13zwl55d1ra8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YLJWSAEP",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_v6lwm9mrw5",
+      "gatewaySettlementRecordIds": [
+        "tx_q614rmx6j0g"
+      ],
+      "gatewaySettlementRecordId": "tx_q614rmx6j0g",
+      "merchantLedgerRecordId": "tx_yfajxp0g4v8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IVEME1BO",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_g2j4sqc58np",
+      "gatewaySettlementRecordIds": [
+        "tx_zzhfvzd6i1n"
+      ],
+      "gatewaySettlementRecordId": "tx_zzhfvzd6i1n",
+      "merchantLedgerRecordId": "tx_uplsbxuw83f",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YM60JJGK",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_shokadcm7kj",
+      "gatewaySettlementRecordIds": [
+        "tx_woztk4eys5n"
+      ],
+      "gatewaySettlementRecordId": "tx_woztk4eys5n",
+      "merchantLedgerRecordId": "tx_7crgcxf8wmn",
+      "matchingAlgorithm": "AI_FUZZY",
+      "confidenceScore": 0.88,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": "TIMING_LAG",
+      "corruptionType": null,
+      "rootReferenceToken": "PIKS461B",
+      "settlementLagDays": 15
+    },
+    {
+      "bankStatementRecordId": "tx_lplf58vsbo",
+      "gatewaySettlementRecordIds": [
+        "tx_1t0zay8fi7p"
+      ],
+      "gatewaySettlementRecordId": "tx_1t0zay8fi7p",
+      "merchantLedgerRecordId": "tx_rpwxp9qq1pj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RFQ1XIY6",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_7wwkmch6trs",
+      "gatewaySettlementRecordIds": [
+        "tx_y1dpcgm6zh"
+      ],
+      "gatewaySettlementRecordId": "tx_y1dpcgm6zh",
+      "merchantLedgerRecordId": "tx_tmjq6yd0jm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ZSGV56Z9",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_662ieszommp",
+      "gatewaySettlementRecordIds": [
+        "tx_rjdap1t6du",
+        "tx_m19r09l4h8k"
+      ],
+      "gatewaySettlementRecordId": "tx_rjdap1t6du",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2220GNI5",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_w33kzxn8l28",
+      "gatewaySettlementRecordIds": [
+        "tx_ut61klc9ete",
+        "tx_oz9zj8qsuw"
+      ],
+      "gatewaySettlementRecordId": "tx_ut61klc9ete",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VX97NJW7",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_6qg6un86p7x",
+      "gatewaySettlementRecordIds": [
+        "tx_t9zkmesb9hs",
+        "tx_uo23nsytvw"
+      ],
+      "gatewaySettlementRecordId": "tx_t9zkmesb9hs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": "CASE_CHANGE",
+      "rootReferenceToken": "SJ9BM052",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_2j1oyo894te",
+      "gatewaySettlementRecordIds": [
+        "tx_s8wnoojg37",
+        "tx_qvf12yw0k29",
+        "tx_ndshshmh75q",
+        "tx_95vnmpa0477"
+      ],
+      "gatewaySettlementRecordId": "tx_s8wnoojg37",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GKQQHGJ4",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_vklue7ga08q",
+      "gatewaySettlementRecordIds": [
+        "tx_e8ztbwi9omr",
+        "tx_62kowbevt9k",
+        "tx_mmpsxtpow4"
+      ],
+      "gatewaySettlementRecordId": "tx_e8ztbwi9omr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "NYHU7MBQ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_88difq8yta8",
+      "gatewaySettlementRecordIds": [
+        "tx_9iwmrgiswr"
+      ],
+      "gatewaySettlementRecordId": "tx_9iwmrgiswr",
+      "merchantLedgerRecordId": "tx_htuljec23jw",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "7DKPOZOO",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_6hh662mzlh2",
+      "gatewaySettlementRecordIds": [
+        "tx_msy8bjo4mk8",
+        "tx_foc2i9ur49c"
+      ],
+      "gatewaySettlementRecordId": "tx_msy8bjo4mk8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1N0I7R51",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_tee5s4ez77",
+      "gatewaySettlementRecordIds": [
+        "tx_mgkp23xgm8b"
+      ],
+      "gatewaySettlementRecordId": "tx_mgkp23xgm8b",
+      "merchantLedgerRecordId": "tx_b2dea60ulof",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GMFWMVM7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_2829ied0zcr",
+      "gatewaySettlementRecordIds": [
+        "tx_opyitqit9lc",
+        "tx_2ujyorxcz1y"
+      ],
+      "gatewaySettlementRecordId": "tx_opyitqit9lc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YTD898TK",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_cvwisjz8s68",
+      "gatewaySettlementRecordIds": [
+        "tx_kcl74hllkq",
+        "tx_28z1lvsxzum"
+      ],
+      "gatewaySettlementRecordId": "tx_kcl74hllkq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MTIUQFTL",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_jkmadesskr",
+      "gatewaySettlementRecordIds": [
+        "tx_hy1zylm441"
+      ],
+      "gatewaySettlementRecordId": "tx_hy1zylm441",
+      "merchantLedgerRecordId": "tx_x79dxromt3b",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "N5XLAD62",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_36evfcxcp6t",
+      "gatewaySettlementRecordIds": [
+        "tx_pjr545dmi69",
+        "tx_okk041kr2ua"
+      ],
+      "gatewaySettlementRecordId": "tx_pjr545dmi69",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "FM1E6U76",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_q51rm4414k",
+      "gatewaySettlementRecordIds": [
+        "tx_ffufehuh2x5",
+        "tx_tg1txdfspvq",
+        "tx_4x7jbyf1w3p",
+        "tx_dqvmdelxbp",
+        "tx_6xh8alx6qmv"
+      ],
+      "gatewaySettlementRecordId": "tx_ffufehuh2x5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A9YRUAA7",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_qqmuhmm2d9i",
+      "gatewaySettlementRecordIds": [
+        "tx_hiqzwahbnwv",
+        "tx_wesy0p5esl",
+        "tx_8bbznkbjuji"
+      ],
+      "gatewaySettlementRecordId": "tx_hiqzwahbnwv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HO8FKG07",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_qvg4zqbcpc",
+      "gatewaySettlementRecordIds": [
+        "tx_rvtod0glq5"
+      ],
+      "gatewaySettlementRecordId": "tx_rvtod0glq5",
+      "merchantLedgerRecordId": "tx_8hnq92awmz",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "66N7JFL1",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_w8nwz272hk",
+      "gatewaySettlementRecordIds": [
+        "tx_0tdy6wszq08n",
+        "tx_3ta6yzqxv05"
+      ],
+      "gatewaySettlementRecordId": "tx_0tdy6wszq08n",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "YQD4I6D7",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_lr5wwbfyt4",
+      "gatewaySettlementRecordIds": [
+        "tx_91guwthkm76",
+        "tx_fkw94jcy6xv",
+        "tx_lqw15labf7"
+      ],
+      "gatewaySettlementRecordId": "tx_91guwthkm76",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "BX4NKMI5",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_teqlk2z31xi",
+      "gatewaySettlementRecordIds": [
+        "tx_6q0kdcz7grw"
+      ],
+      "gatewaySettlementRecordId": "tx_6q0kdcz7grw",
+      "merchantLedgerRecordId": "tx_9u97didk8mi",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "5UFEWB7Y",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ceqozdfpey9",
+      "gatewaySettlementRecordIds": [
+        "tx_j9nqvk7i3f",
+        "tx_8lz7m1g5j3"
+      ],
+      "gatewaySettlementRecordId": "tx_j9nqvk7i3f",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3K886A1M",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_o8a7w3a5oo",
+      "gatewaySettlementRecordIds": [
+        "tx_l5ix0fwjz",
+        "tx_uluq1deg9fe",
+        "tx_n0ha4cxhd9",
+        "tx_gwnydxagcpi"
+      ],
+      "gatewaySettlementRecordId": "tx_l5ix0fwjz",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "JDJ159RX",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_tpp6uf445ga",
+      "gatewaySettlementRecordIds": [
+        "tx_mzto7whcekk"
+      ],
+      "gatewaySettlementRecordId": "tx_mzto7whcekk",
+      "merchantLedgerRecordId": "tx_f15w5ao1bs",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "90D52PNW",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_e8gt0ocv9pd",
+      "gatewaySettlementRecordIds": [
+        "tx_zaxncmiggq",
+        "tx_xmelatdjla8"
+      ],
+      "gatewaySettlementRecordId": "tx_zaxncmiggq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3C2052CW",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_dz31b2c1n7",
+      "gatewaySettlementRecordIds": [
+        "tx_ujjym7439o",
+        "tx_u8ivkwp54em",
+        "tx_hmiqksml5ek"
+      ],
+      "gatewaySettlementRecordId": "tx_ujjym7439o",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Y2I1A4P9",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_5mbcbae31tc",
+      "gatewaySettlementRecordIds": [
+        "tx_9kcg4tce13"
+      ],
+      "gatewaySettlementRecordId": "tx_9kcg4tce13",
+      "merchantLedgerRecordId": "tx_a7h7fkgcjx8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "QJ33L4M0",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ywvtg2443c",
+      "gatewaySettlementRecordIds": [
+        "tx_20mdccr70p5",
+        "tx_y6j6f7751hl"
+      ],
+      "gatewaySettlementRecordId": "tx_20mdccr70p5",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1CWHSY43",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_arq8xt171a",
+      "gatewaySettlementRecordIds": [
+        "tx_2epixnitfjq",
+        "tx_tw7kttmenz",
+        "tx_qqcp49lwzx9"
+      ],
+      "gatewaySettlementRecordId": "tx_2epixnitfjq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "S6RHU0KF",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_a5iojcyq2ql",
+      "gatewaySettlementRecordIds": [
+        "tx_2toao1bw3qp"
+      ],
+      "gatewaySettlementRecordId": "tx_2toao1bw3qp",
+      "merchantLedgerRecordId": "tx_j3yzr4qetkh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "XNIV088T",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_tbltazbe20m",
+      "gatewaySettlementRecordIds": [
+        "tx_14gvgkvsq7"
+      ],
+      "gatewaySettlementRecordId": "tx_14gvgkvsq7",
+      "merchantLedgerRecordId": "tx_qqbsip2kq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8WH6XDY2",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_yqntwh9pozc",
+      "gatewaySettlementRecordIds": [
+        "tx_1q01ykwqtzb"
+      ],
+      "gatewaySettlementRecordId": "tx_1q01ykwqtzb",
+      "merchantLedgerRecordId": "tx_xhb42x1nqx",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HTC8V42C",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ptt32u0ljz",
+      "gatewaySettlementRecordIds": [
+        "tx_lyk90naaxr",
+        "tx_n1xpcj59fo"
+      ],
+      "gatewaySettlementRecordId": "tx_lyk90naaxr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KDXJN1FF",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ut209ua9zpi",
+      "gatewaySettlementRecordIds": [
+        "tx_znejiojti",
+        "tx_oischw7369",
+        "tx_mm6rkecol5",
+        "tx_fdww0su0qfu"
+      ],
+      "gatewaySettlementRecordId": "tx_znejiojti",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GLV1QSUF",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_sns0gy2gfjo",
+      "gatewaySettlementRecordIds": [
+        "tx_oxl4ot0b8es"
+      ],
+      "gatewaySettlementRecordId": "tx_oxl4ot0b8es",
+      "merchantLedgerRecordId": "tx_b1j0cy7kbxh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VK7K9KFQ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ls9hgpg1k5",
+      "gatewaySettlementRecordIds": [
+        "tx_ztfj3n29apq"
+      ],
+      "gatewaySettlementRecordId": "tx_ztfj3n29apq",
+      "merchantLedgerRecordId": "tx_yg1zfuw04o7",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "X2W5DKPW",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_6v1gpi4jyvj",
+      "gatewaySettlementRecordIds": [
+        "tx_1rwibcv1y9b"
+      ],
+      "gatewaySettlementRecordId": "tx_1rwibcv1y9b",
+      "merchantLedgerRecordId": "tx_vzhm8g2uibf",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VO05IXVB",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_uvichr2fdbg",
+      "gatewaySettlementRecordIds": [
+        "tx_mfg3fjsq44d",
+        "tx_dl64fpw3lie"
+      ],
+      "gatewaySettlementRecordId": "tx_mfg3fjsq44d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1992DLA6",
+      "settlementLagDays": 7
+    },
+    {
+      "bankStatementRecordId": "tx_648x4uzp4xw",
+      "gatewaySettlementRecordIds": [
+        "tx_vyl84blc83k"
+      ],
+      "gatewaySettlementRecordId": "tx_vyl84blc83k",
+      "merchantLedgerRecordId": "tx_or5egsw9udp",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "7GZPZ9AG",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_g4o2pmzbs1g",
+      "gatewaySettlementRecordIds": [
+        "tx_xe2bfxfmr9e"
+      ],
+      "gatewaySettlementRecordId": "tx_xe2bfxfmr9e",
+      "merchantLedgerRecordId": "tx_9f1nzctc5v",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IXJMDDWX",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_v4384q2vey",
+      "gatewaySettlementRecordIds": [
+        "tx_pizyxhl74ab",
+        "tx_s4ebzmqfgag",
+        "tx_1aejvp41crj",
+        "tx_eknf591q06l",
+        "tx_j7jt8uxf0ra"
+      ],
+      "gatewaySettlementRecordId": "tx_pizyxhl74ab",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "61T2HRDQ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_a9jvg6dxro",
+      "gatewaySettlementRecordIds": [
+        "tx_tdd7eedj77q"
+      ],
+      "gatewaySettlementRecordId": "tx_tdd7eedj77q",
+      "merchantLedgerRecordId": "tx_7kito46wvfi",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "I5JLN6EE",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_db8yq7xe684",
+      "gatewaySettlementRecordIds": [
+        "tx_f4ag41f42y"
+      ],
+      "gatewaySettlementRecordId": "tx_f4ag41f42y",
+      "merchantLedgerRecordId": "tx_18uzv3g1cgg",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "QVJ0MG1X",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_e5rl1herwjv",
+      "gatewaySettlementRecordIds": [
+        "tx_l9tcwtrtpfm",
+        "tx_t9otb0eawq",
+        "tx_8eohj3c2onb"
+      ],
+      "gatewaySettlementRecordId": "tx_l9tcwtrtpfm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "76EMB77M",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_b8keorc9ers",
+      "gatewaySettlementRecordIds": [
+        "tx_0hkqcosmwmyi"
+      ],
+      "gatewaySettlementRecordId": "tx_0hkqcosmwmyi",
+      "merchantLedgerRecordId": "tx_28m619j56n8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HTBLOF02",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_u4qwsh2u6xr",
+      "gatewaySettlementRecordIds": [
+        "tx_yhe6noz789b",
+        "tx_73s85lai1zj"
+      ],
+      "gatewaySettlementRecordId": "tx_yhe6noz789b",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "FCE5G7Y3",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_9cp0o8e4icu",
+      "gatewaySettlementRecordIds": [
+        "tx_4edw8uy58cy"
+      ],
+      "gatewaySettlementRecordId": "tx_4edw8uy58cy",
+      "merchantLedgerRecordId": "tx_1el90cbfmuu",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ETLZJJOJ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_r5i7xwhai2l",
+      "gatewaySettlementRecordIds": [
+        "tx_juqpgjywff"
+      ],
+      "gatewaySettlementRecordId": "tx_juqpgjywff",
+      "merchantLedgerRecordId": "tx_c5jcs7ygl07",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LLREHTDZ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_v4e3qoozg8",
+      "gatewaySettlementRecordIds": [
+        "tx_zomvgit0qrb",
+        "tx_1pu7p2clebb"
+      ],
+      "gatewaySettlementRecordId": "tx_zomvgit0qrb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "6YWDR6VW",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_uxlid3tvlas",
+      "gatewaySettlementRecordIds": [
+        "tx_97ykki7j424",
+        "tx_odftvc6qcq"
+      ],
+      "gatewaySettlementRecordId": "tx_97ykki7j424",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WRSDQ9FD",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_tujyp9xuvl",
+      "gatewaySettlementRecordIds": [
+        "tx_0n25yagfp4ij"
+      ],
+      "gatewaySettlementRecordId": "tx_0n25yagfp4ij",
+      "merchantLedgerRecordId": "tx_7uj5vq5gwn",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.994Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BK1V2WH2",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ftqxh6fau5p",
+      "gatewaySettlementRecordIds": [
+        "tx_hw49zzvzal"
+      ],
+      "gatewaySettlementRecordId": "tx_hw49zzvzal",
+      "merchantLedgerRecordId": "tx_reaco4kta4",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4JFW2L8R",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ugtcebf2qs9",
+      "gatewaySettlementRecordIds": [
+        "tx_rzpe56mbqc"
+      ],
+      "gatewaySettlementRecordId": "tx_rzpe56mbqc",
+      "merchantLedgerRecordId": "tx_8cpz1311cqu",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BGI10K3Y",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_bdvm3k600hd",
+      "gatewaySettlementRecordIds": [
+        "tx_0vzuamx6goai"
+      ],
+      "gatewaySettlementRecordId": "tx_0vzuamx6goai",
+      "merchantLedgerRecordId": "tx_t2txd2ybpt8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MA0DMLV7",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_tiroyo5kl3",
+      "gatewaySettlementRecordIds": [
+        "tx_6dzyhnbeetn",
+        "tx_td5zsn53p"
+      ],
+      "gatewaySettlementRecordId": "tx_6dzyhnbeetn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VN687AHO",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_fwuut7c0yl",
+      "gatewaySettlementRecordIds": [
+        "tx_k2b73pxv8ni",
+        "tx_xfv8j8e9fzo",
+        "tx_cuq5pepy567",
+        "tx_zdg1igaeayr"
+      ],
+      "gatewaySettlementRecordId": "tx_k2b73pxv8ni",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HTIW3LB8",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_cgmxw130pl9",
+      "gatewaySettlementRecordIds": [
+        "tx_slrocxrcfn",
+        "tx_6m6wt9nk8ko",
+        "tx_la49c0ugbph",
+        "tx_axrg7je6nxm"
+      ],
+      "gatewaySettlementRecordId": "tx_slrocxrcfn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IX9NMKKT",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_769v3h7s7c8",
+      "gatewaySettlementRecordIds": [
+        "tx_b4z89yby4wa"
+      ],
+      "gatewaySettlementRecordId": "tx_b4z89yby4wa",
+      "merchantLedgerRecordId": "tx_0lzh18jx9azi",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "403HDNB4",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_4x9e8kbjghn",
+      "gatewaySettlementRecordIds": [
+        "tx_zh303bgxlno"
+      ],
+      "gatewaySettlementRecordId": "tx_zh303bgxlno",
+      "merchantLedgerRecordId": "tx_7tquzy7av3n",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VUCX42ER",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_65hay9jkp9g",
+      "gatewaySettlementRecordIds": [
+        "tx_4a31xvzuom4"
+      ],
+      "gatewaySettlementRecordId": "tx_4a31xvzuom4",
+      "merchantLedgerRecordId": "tx_v4iybev754m",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MUMF37TE",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_vixnwjq756",
+      "gatewaySettlementRecordIds": [
+        "tx_6jayidozqmp"
+      ],
+      "gatewaySettlementRecordId": "tx_6jayidozqmp",
+      "merchantLedgerRecordId": "tx_8pn9dwfudrc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "SD8KJVGU",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_avi6wpgeoa",
+      "gatewaySettlementRecordIds": [
+        "tx_hp9ygzc3aom"
+      ],
+      "gatewaySettlementRecordId": "tx_hp9ygzc3aom",
+      "merchantLedgerRecordId": "tx_zqk6x3os9dc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "EP0GU7H6",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_usx17eww19a",
+      "gatewaySettlementRecordIds": [
+        "tx_3qn5lokxxny",
+        "tx_bfmo6lqndw"
+      ],
+      "gatewaySettlementRecordId": "tx_3qn5lokxxny",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8CXAJATD",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_fty1lsf4oyu",
+      "gatewaySettlementRecordIds": [
+        "tx_296oryw3v4",
+        "tx_9g3jaah8j8",
+        "tx_pe820nmcjte",
+        "tx_peh61d698h",
+        "tx_ln27wre0rsa"
+      ],
+      "gatewaySettlementRecordId": "tx_296oryw3v4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "I1A5789B",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_znha1k1ufv",
+      "gatewaySettlementRecordIds": [
+        "tx_ob3q5itbba9"
+      ],
+      "gatewaySettlementRecordId": "tx_ob3q5itbba9",
+      "merchantLedgerRecordId": "tx_gvzdiaif2tp",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "J9B8BPAF",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_dsdh22yklp6",
+      "gatewaySettlementRecordIds": [
+        "tx_vk7yqtoid5k",
+        "tx_1icddspzou1"
+      ],
+      "gatewaySettlementRecordId": "tx_vk7yqtoid5k",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "5Q5E8PUM",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_w17p9h3xcrg",
+      "gatewaySettlementRecordIds": [
+        "tx_1urangqzxbv"
+      ],
+      "gatewaySettlementRecordId": "tx_1urangqzxbv",
+      "merchantLedgerRecordId": "tx_15nnu5kc1vl",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3MQTP0SV",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ma7810gqk5j",
+      "gatewaySettlementRecordIds": [
+        "tx_2nzbr369wmk"
+      ],
+      "gatewaySettlementRecordId": "tx_2nzbr369wmk",
+      "merchantLedgerRecordId": "tx_3kapzw7rzm5",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "SSUP61NF",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_qdtf29ugvma",
+      "gatewaySettlementRecordIds": [
+        "tx_sra3zxrhx4"
+      ],
+      "gatewaySettlementRecordId": "tx_sra3zxrhx4",
+      "merchantLedgerRecordId": "tx_g9d6k3jexo",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WRHOHBEY",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_y3l351vfrw",
+      "gatewaySettlementRecordIds": [
+        "tx_6iwsxigio0t"
+      ],
+      "gatewaySettlementRecordId": "tx_6iwsxigio0t",
+      "merchantLedgerRecordId": "tx_iau8daxyemr",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "49YQF4OF",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_jlbq295uno",
+      "gatewaySettlementRecordIds": [
+        "tx_87lj231vx5v",
+        "tx_8kt3fcjnauj",
+        "tx_ae881m72g2"
+      ],
+      "gatewaySettlementRecordId": "tx_87lj231vx5v",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "O28SH648",
+      "settlementLagDays": 10
+    },
+    {
+      "bankStatementRecordId": "tx_qhr77aoi8v",
+      "gatewaySettlementRecordIds": [
+        "tx_73ifx7kbovf",
+        "tx_t96msyf1r5n"
+      ],
+      "gatewaySettlementRecordId": "tx_73ifx7kbovf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1SNMKSNO",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_7mecje9bhob",
+      "gatewaySettlementRecordIds": [
+        "tx_91h68y4es2l",
+        "tx_ccwqk6ev4ci"
+      ],
+      "gatewaySettlementRecordId": "tx_91h68y4es2l",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "C2OMCZ9D",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_m32kcog9wm",
+      "gatewaySettlementRecordIds": [
+        "tx_iesunyev42",
+        "tx_4vpcwt3c0lv",
+        "tx_u0na91t0h8q",
+        "tx_6f0sv4avz6v",
+        "tx_h13rpmu28hs"
+      ],
+      "gatewaySettlementRecordId": "tx_iesunyev42",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HAZQRC6R",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_qbui4j2nb9",
+      "gatewaySettlementRecordIds": [
+        "tx_p3can194j2p",
+        "tx_ctazmhkqbm4",
+        "tx_dcpxv65a9x"
+      ],
+      "gatewaySettlementRecordId": "tx_p3can194j2p",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "5XOY5EZW",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_airat9ks71",
+      "gatewaySettlementRecordIds": [
+        "tx_l7xzol8jpn"
+      ],
+      "gatewaySettlementRecordId": "tx_l7xzol8jpn",
+      "merchantLedgerRecordId": "tx_n34wmizroi",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "CUCRRP81",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_psi7wp0o96q",
+      "gatewaySettlementRecordIds": [
+        "tx_bgo2r5vqj5r"
+      ],
+      "gatewaySettlementRecordId": "tx_bgo2r5vqj5r",
+      "merchantLedgerRecordId": "tx_1yc437nglu2",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ZFZERBN9",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_3oj0fpo2my9",
+      "gatewaySettlementRecordIds": [
+        "tx_cyum34dnggt"
+      ],
+      "gatewaySettlementRecordId": "tx_cyum34dnggt",
+      "merchantLedgerRecordId": "tx_c5wlugynij7",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "6O1HX8B1",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_nmqgwu6r4hm",
+      "gatewaySettlementRecordIds": [
+        "tx_bsix0e3j3yf"
+      ],
+      "gatewaySettlementRecordId": "tx_bsix0e3j3yf",
+      "merchantLedgerRecordId": "tx_fzjg9qmt0ua",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "F9B2EZ27",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_refunoywx87",
+      "gatewaySettlementRecordIds": [
+        "tx_hnnawxnrrss"
+      ],
+      "gatewaySettlementRecordId": "tx_hnnawxnrrss",
+      "merchantLedgerRecordId": "tx_z2xeymulcm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "D9TTVFKC",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_9m5thqtb47",
+      "gatewaySettlementRecordIds": [
+        "tx_cg6wb13v29q"
+      ],
+      "gatewaySettlementRecordId": "tx_cg6wb13v29q",
+      "merchantLedgerRecordId": "tx_l9vtmdxr8z",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BZXTYF8V",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_miw2dl1xaq",
+      "gatewaySettlementRecordIds": [
+        "tx_fo2ctbmgwr",
+        "tx_7a52rrqru5s"
+      ],
+      "gatewaySettlementRecordId": "tx_fo2ctbmgwr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "5VUT0Z2H",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_wzsam0q04zo",
+      "gatewaySettlementRecordIds": [
+        "tx_ql6976a1btj"
+      ],
+      "gatewaySettlementRecordId": "tx_ql6976a1btj",
+      "merchantLedgerRecordId": "tx_eds1et0ngqu",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3J26ZPTW",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_99p2c2qe3ke",
+      "gatewaySettlementRecordIds": [
+        "tx_txiivcak7z8"
+      ],
+      "gatewaySettlementRecordId": "tx_txiivcak7z8",
+      "merchantLedgerRecordId": "tx_du4ediqo21v",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RTAV9UG6",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_kfrh5ttjvts",
+      "gatewaySettlementRecordIds": [
+        "tx_8w1ej3y6yq"
+      ],
+      "gatewaySettlementRecordId": "tx_8w1ej3y6yq",
+      "merchantLedgerRecordId": "tx_sh0ydkfhcdj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "4U0W060Q",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_hgexz5e44eh",
+      "gatewaySettlementRecordIds": [
+        "tx_bjnycqeo7lc",
+        "tx_udegdcrxyy"
+      ],
+      "gatewaySettlementRecordId": "tx_bjnycqeo7lc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8ZCG81ES",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0yiqn5v5d9ll",
+      "gatewaySettlementRecordIds": [
+        "tx_1qibssv3mn"
+      ],
+      "gatewaySettlementRecordId": "tx_1qibssv3mn",
+      "merchantLedgerRecordId": "tx_zrp6pi9e68f",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "91V5Y9KK",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_dwmx8p6jznk",
+      "gatewaySettlementRecordIds": [
+        "tx_d2ou3rlbgyw"
+      ],
+      "gatewaySettlementRecordId": "tx_d2ou3rlbgyw",
+      "merchantLedgerRecordId": "tx_7k7qdx8em9d",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "CASE_CHANGE",
+      "rootReferenceToken": "2MCBYCBJ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_dv2nhf7vszk",
+      "gatewaySettlementRecordIds": [
+        "tx_dvinzuvfwnt"
+      ],
+      "gatewaySettlementRecordId": "tx_dvinzuvfwnt",
+      "merchantLedgerRecordId": "tx_w1uq8jz9sk8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "981R96QB",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_8uh7ukmv31i",
+      "gatewaySettlementRecordIds": [
+        "tx_6i3ov1ero8",
+        "tx_763afd25n3",
+        "tx_6tlrelhmwz6",
+        "tx_qgms7hblx1",
+        "tx_oiqp639aw3"
+      ],
+      "gatewaySettlementRecordId": "tx_6i3ov1ero8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RE5ARAHD",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_hg1j5n5rvr",
+      "gatewaySettlementRecordIds": [
+        "tx_o5ychugx9e",
+        "tx_xm6gfy0i2tp",
+        "tx_8j5x7k4pgfl"
+      ],
+      "gatewaySettlementRecordId": "tx_o5ychugx9e",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "243WHJEZ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_2lph3a9wjfs",
+      "gatewaySettlementRecordIds": [
+        "tx_5n1rdz5c6yc",
+        "tx_0u81kpa1rw9m",
+        "tx_zvda3q1m8pj",
+        "tx_zgzy1zito0r"
+      ],
+      "gatewaySettlementRecordId": "tx_5n1rdz5c6yc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LC4PLS3S",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_79luopwebax",
+      "gatewaySettlementRecordIds": [
+        "tx_63algrqu1h3",
+        "tx_a2g47y7dfv"
+      ],
+      "gatewaySettlementRecordId": "tx_63algrqu1h3",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RQ41LFDM",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_d33628tf8uo",
+      "gatewaySettlementRecordIds": [
+        "tx_cjvz7u8rwdo"
+      ],
+      "gatewaySettlementRecordId": "tx_cjvz7u8rwdo",
+      "merchantLedgerRecordId": "tx_5rm7lotw3p8",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IF5XLYJY",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ls4kdcjdwmq",
+      "gatewaySettlementRecordIds": [
+        "tx_5nf3wjuwivs",
+        "tx_gsbs2grdxqn",
+        "tx_tlfddzaung",
+        "tx_taudanu2l89",
+        "tx_1w6t81sabj8"
+      ],
+      "gatewaySettlementRecordId": "tx_5nf3wjuwivs",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ISMFATWQ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_4390qalsfm8",
+      "gatewaySettlementRecordIds": [
+        "tx_3agq4e2yyw"
+      ],
+      "gatewaySettlementRecordId": "tx_3agq4e2yyw",
+      "merchantLedgerRecordId": "tx_ro9a7ty7ope",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LZJ765TL",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_xmr34iakp5",
+      "gatewaySettlementRecordIds": [
+        "tx_3t1iktl62b3"
+      ],
+      "gatewaySettlementRecordId": "tx_3t1iktl62b3",
+      "merchantLedgerRecordId": "tx_rrl2jqwfc3s",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "J3FDVTBV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_1k3w1r67ooi",
+      "gatewaySettlementRecordIds": [
+        "tx_mysj1icqo89"
+      ],
+      "gatewaySettlementRecordId": "tx_mysj1icqo89",
+      "merchantLedgerRecordId": "tx_ec0jrf44fdc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1L3ZZ4WB",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_s4bmvi97tp",
+      "gatewaySettlementRecordIds": [
+        "tx_xakwnamcpja"
+      ],
+      "gatewaySettlementRecordId": "tx_xakwnamcpja",
+      "merchantLedgerRecordId": "tx_lo9qgrpiuvs",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "6IU11G17",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_dx5l5v351gp",
+      "gatewaySettlementRecordIds": [
+        "tx_g0q3hk8l8d9"
+      ],
+      "gatewaySettlementRecordId": "tx_g0q3hk8l8d9",
+      "merchantLedgerRecordId": "tx_02i24jqi38up",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4JGIN952",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_oy0235f9a6",
+      "gatewaySettlementRecordIds": [
+        "tx_jhm1dlw7vq",
+        "tx_mfa6xx0o77s",
+        "tx_7x17iaeo50w"
+      ],
+      "gatewaySettlementRecordId": "tx_jhm1dlw7vq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9HEAP62U",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_kzauubsiuyq",
+      "gatewaySettlementRecordIds": [
+        "tx_j0p4of12k8",
+        "tx_xgpmptljisj"
+      ],
+      "gatewaySettlementRecordId": "tx_j0p4of12k8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0LQBDOVU",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_2bkngjnj182",
+      "gatewaySettlementRecordIds": [
+        "tx_ds74u0lohc8",
+        "tx_p5zcn1wln7a",
+        "tx_6luvilff78k",
+        "tx_4wqd72lr9q4",
+        "tx_i4ateq2czz"
+      ],
+      "gatewaySettlementRecordId": "tx_ds74u0lohc8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8H3E5HTP",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_wjcstgiqlq",
+      "gatewaySettlementRecordIds": [
+        "tx_0fccvax1hy3u"
+      ],
+      "gatewaySettlementRecordId": "tx_0fccvax1hy3u",
+      "merchantLedgerRecordId": "tx_zzme7bd5chf",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "C09T3RQT",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_8n6c8vj91n4",
+      "gatewaySettlementRecordIds": [
+        "tx_3zttn2ipn76"
+      ],
+      "gatewaySettlementRecordId": "tx_3zttn2ipn76",
+      "merchantLedgerRecordId": "tx_xrerfg6gqrc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4AVRJHLF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_xafjgyammr",
+      "gatewaySettlementRecordIds": [
+        "tx_wfdkkrtlzz"
+      ],
+      "gatewaySettlementRecordId": "tx_wfdkkrtlzz",
+      "merchantLedgerRecordId": "tx_ca9watfgkpa",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "EATWR1ZB",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_gxhk7z1yxtt",
+      "gatewaySettlementRecordIds": [
+        "tx_xs56jft7ic"
+      ],
+      "gatewaySettlementRecordId": "tx_xs56jft7ic",
+      "merchantLedgerRecordId": "tx_0f73s9tl8z8q",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "N61QQA82",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_pg20yzqtj5i",
+      "gatewaySettlementRecordIds": [
+        "tx_0qhp4ov9mijn",
+        "tx_q0c4jgp5ks",
+        "tx_pyq3e5gpw5q",
+        "tx_8t7bytiiml8",
+        "tx_qn8t080wu0e"
+      ],
+      "gatewaySettlementRecordId": "tx_0qhp4ov9mijn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "F95YGCGD",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_mzygzqko9pb",
+      "gatewaySettlementRecordIds": [
+        "tx_5w9y2fzjv6r"
+      ],
+      "gatewaySettlementRecordId": "tx_5w9y2fzjv6r",
+      "merchantLedgerRecordId": "tx_8axjgjtyf1n",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "B374ZGAO",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_cnnwp5uv2ro",
+      "gatewaySettlementRecordIds": [
+        "tx_17lr378i5jn"
+      ],
+      "gatewaySettlementRecordId": "tx_17lr378i5jn",
+      "merchantLedgerRecordId": "tx_ezip0m5n2pb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VGEGWVRS",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_t55wn8u1cm",
+      "gatewaySettlementRecordIds": [
+        "tx_s8yd94u49s"
+      ],
+      "gatewaySettlementRecordId": "tx_s8yd94u49s",
+      "merchantLedgerRecordId": "tx_74g64dwx44",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "XM30UEQC",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_iu04j5oj8y",
+      "gatewaySettlementRecordIds": [
+        "tx_09zpqhxcav6i"
+      ],
+      "gatewaySettlementRecordId": "tx_09zpqhxcav6i",
+      "merchantLedgerRecordId": "tx_47ozg7ieu0x",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "POIL0INF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_bbl3qngy78r",
+      "gatewaySettlementRecordIds": [
+        "tx_jb91a1640zb",
+        "tx_jbj5fj1mhm",
+        "tx_xfvtrs3spts",
+        "tx_jonydiv1lf"
+      ],
+      "gatewaySettlementRecordId": "tx_jb91a1640zb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "D61K4FLL",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_v31c7xwtcy",
+      "gatewaySettlementRecordIds": [
+        "tx_zwpz6r6m4ti",
+        "tx_a60i8lbu8yw",
+        "tx_u7rui7n9ula"
+      ],
+      "gatewaySettlementRecordId": "tx_zwpz6r6m4ti",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Z62XVYVP",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_g4dpnzdxj4",
+      "gatewaySettlementRecordIds": [
+        "tx_kzrrsjlgcai"
+      ],
+      "gatewaySettlementRecordId": "tx_kzrrsjlgcai",
+      "merchantLedgerRecordId": "tx_jm6z1fzd3lb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "E13Y7FMP",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_l3j8jvv3vg",
+      "gatewaySettlementRecordIds": [
+        "tx_0acbsxheok1"
+      ],
+      "gatewaySettlementRecordId": "tx_0acbsxheok1",
+      "merchantLedgerRecordId": "tx_ti5j5t9xmci",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "J6TW8Q7X",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_xhip3bh5oj",
+      "gatewaySettlementRecordIds": [
+        "tx_hym3i37b9z4"
+      ],
+      "gatewaySettlementRecordId": "tx_hym3i37b9z4",
+      "merchantLedgerRecordId": "tx_tceked78lj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DS1JP7MI",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_20hczwtdo7u",
+      "gatewaySettlementRecordIds": [
+        "tx_lmj823vmxq",
+        "tx_b0qdcbrndrr"
+      ],
+      "gatewaySettlementRecordId": "tx_lmj823vmxq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "M7ANTIPU",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_wmjb5uqe2ir",
+      "gatewaySettlementRecordIds": [
+        "tx_mswo96rz1qd",
+        "tx_a2f61pwzkqt"
+      ],
+      "gatewaySettlementRecordId": "tx_mswo96rz1qd",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VGPWG5SU",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_pxy4dd4eeeo",
+      "gatewaySettlementRecordIds": [
+        "tx_gz8swwzz0jl",
+        "tx_qh5oisk3qln"
+      ],
+      "gatewaySettlementRecordId": "tx_gz8swwzz0jl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "H5I8I8OQ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_eh43p90a8w",
+      "gatewaySettlementRecordIds": [
+        "tx_m7755iyxjz",
+        "tx_4j1iiawy2v"
+      ],
+      "gatewaySettlementRecordId": "tx_m7755iyxjz",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Z2U251FZ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_4tzf90ze60d",
+      "gatewaySettlementRecordIds": [
+        "tx_8sdp6j0uy33"
+      ],
+      "gatewaySettlementRecordId": "tx_8sdp6j0uy33",
+      "merchantLedgerRecordId": "tx_xw9t11vswjk",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "F9X2PAJL",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_x4v3r19pvz",
+      "gatewaySettlementRecordIds": [
+        "tx_xo1vvkvzwcp"
+      ],
+      "gatewaySettlementRecordId": "tx_xo1vvkvzwcp",
+      "merchantLedgerRecordId": "tx_ldmbeper0mg",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "OJKZ6PJQ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_xqygc21wjpp",
+      "gatewaySettlementRecordIds": [
+        "tx_4vaz6twqiq"
+      ],
+      "gatewaySettlementRecordId": "tx_4vaz6twqiq",
+      "merchantLedgerRecordId": "tx_6htpp87kv48",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8O5WN7P8",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_u7vcrc3ddj",
+      "gatewaySettlementRecordIds": [
+        "tx_1uqmpiaowli"
+      ],
+      "gatewaySettlementRecordId": "tx_1uqmpiaowli",
+      "merchantLedgerRecordId": "tx_4v7pa97e7ls",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WQDCDXYH",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_kiabiejfi3",
+      "gatewaySettlementRecordIds": [
+        "tx_iy9xt9021wr"
+      ],
+      "gatewaySettlementRecordId": "tx_iy9xt9021wr",
+      "merchantLedgerRecordId": "tx_9gja94xr7g6",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "AORQFXW3",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_x0uyaue9rc",
+      "gatewaySettlementRecordIds": [
+        "tx_udhxfenj548",
+        "tx_d7rqgewyzt7"
+      ],
+      "gatewaySettlementRecordId": "tx_udhxfenj548",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "P18B802A",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_o7uhggh2d1",
+      "gatewaySettlementRecordIds": [
+        "tx_vdb30jerwf"
+      ],
+      "gatewaySettlementRecordId": "tx_vdb30jerwf",
+      "merchantLedgerRecordId": "tx_xanq8s7ee3",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VJOZRRU0",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_61591m3cofh",
+      "gatewaySettlementRecordIds": [
+        "tx_1pz6e96n82k"
+      ],
+      "gatewaySettlementRecordId": "tx_1pz6e96n82k",
+      "merchantLedgerRecordId": "tx_39y6ilq12qz",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MREHVDMP",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_mvji212a7s",
+      "gatewaySettlementRecordIds": [
+        "tx_cpinc6w90o"
+      ],
+      "gatewaySettlementRecordId": "tx_cpinc6w90o",
+      "merchantLedgerRecordId": "tx_ec2wyuq0gm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "CASE_CHANGE",
+      "rootReferenceToken": "3S5M6VVZ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_37jwhhnf79d",
+      "gatewaySettlementRecordIds": [
+        "tx_fqqhfnhlt3",
+        "tx_ye7wbwwk8v8",
+        "tx_zvtjnxe8nws"
+      ],
+      "gatewaySettlementRecordId": "tx_fqqhfnhlt3",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "HOPMBSFA",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_qdstpn39c1",
+      "gatewaySettlementRecordIds": [
+        "tx_byv439o7sab",
+        "tx_yfshpy8ptdj",
+        "tx_xd3a3d4poqj"
+      ],
+      "gatewaySettlementRecordId": "tx_byv439o7sab",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YR863JO9",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_4o8s65fp3sn",
+      "gatewaySettlementRecordIds": [
+        "tx_e5u22658kwn"
+      ],
+      "gatewaySettlementRecordId": "tx_e5u22658kwn",
+      "merchantLedgerRecordId": "tx_ao11npgi1w",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9045WJ95",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_88f3oz4ndo9",
+      "gatewaySettlementRecordIds": [
+        "tx_cqldpjembc",
+        "tx_5ra62f7pueh"
+      ],
+      "gatewaySettlementRecordId": "tx_cqldpjembc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VUKF3EZW",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_sgjrxq2k8ir",
+      "gatewaySettlementRecordIds": [
+        "tx_j2t4kfoxgw"
+      ],
+      "gatewaySettlementRecordId": "tx_j2t4kfoxgw",
+      "merchantLedgerRecordId": "tx_beuenjyvxc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9CSKP3XW",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_6qqce1hv5ew",
+      "gatewaySettlementRecordIds": [
+        "tx_dwgrnxzoxnl"
+      ],
+      "gatewaySettlementRecordId": "tx_dwgrnxzoxnl",
+      "merchantLedgerRecordId": "tx_avtzd46am2w",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "B27XGBN9",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_sp1pwyf18wh",
+      "gatewaySettlementRecordIds": [
+        "tx_xhxpp304u2"
+      ],
+      "gatewaySettlementRecordId": "tx_xhxpp304u2",
+      "merchantLedgerRecordId": "tx_i9d8zltyrm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "HECIH9FO",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_xp678wfp80a",
+      "gatewaySettlementRecordIds": [
+        "tx_oddss9acbrd"
+      ],
+      "gatewaySettlementRecordId": "tx_oddss9acbrd",
+      "merchantLedgerRecordId": "tx_ehi46pynfz6",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "365IJZPS",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_3sdpeuyocmv",
+      "gatewaySettlementRecordIds": [
+        "tx_9u7y1gkfbp",
+        "tx_8f0r9znkf62"
+      ],
+      "gatewaySettlementRecordId": "tx_9u7y1gkfbp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4I6XQA9Y",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_9rkun6nq3j5",
+      "gatewaySettlementRecordIds": [
+        "tx_gugub21twj"
+      ],
+      "gatewaySettlementRecordId": "tx_gugub21twj",
+      "merchantLedgerRecordId": "tx_uutsv7lwdf",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KQQICCXE",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ztwhe70a6c",
+      "gatewaySettlementRecordIds": [
+        "tx_y59n5m1qtmj",
+        "tx_6zqum0r7bw",
+        "tx_pdumsyhw9te"
+      ],
+      "gatewaySettlementRecordId": "tx_y59n5m1qtmj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DCCXNX8W",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_o0got1hdlqp",
+      "gatewaySettlementRecordIds": [
+        "tx_voq0tztwoq9"
+      ],
+      "gatewaySettlementRecordId": "tx_voq0tztwoq9",
+      "merchantLedgerRecordId": "tx_73vyocyiay",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "O5Z958WM",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0efge2pciph",
+      "gatewaySettlementRecordIds": [
+        "tx_c4a27ddt98v",
+        "tx_3nvq8mkejqt",
+        "tx_xm9ywz2h5y",
+        "tx_50aclz6n4k7",
+        "tx_jqw7ajzywbs"
+      ],
+      "gatewaySettlementRecordId": "tx_c4a27ddt98v",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "Q1I5XM7C",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ddkwo8z6b9",
+      "gatewaySettlementRecordIds": [
+        "tx_a4wuhdn06gr"
+      ],
+      "gatewaySettlementRecordId": "tx_a4wuhdn06gr",
+      "merchantLedgerRecordId": "tx_3lr28gocdhe",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "CWZWLIRO",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_fei212rd0rb",
+      "gatewaySettlementRecordIds": [
+        "tx_87b6l0pl0pi"
+      ],
+      "gatewaySettlementRecordId": "tx_87b6l0pl0pi",
+      "merchantLedgerRecordId": "tx_9utggawqn77",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "CL5S52V8",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_jrttm0bzw2",
+      "gatewaySettlementRecordIds": [
+        "tx_ki583swc16g"
+      ],
+      "gatewaySettlementRecordId": "tx_ki583swc16g",
+      "merchantLedgerRecordId": "tx_l16a33teu5a",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "EZ6XYKEO",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_vhe4kq3by8h",
+      "gatewaySettlementRecordIds": [
+        "tx_g8vrocimzbk",
+        "tx_vnfwg7s10ke"
+      ],
+      "gatewaySettlementRecordId": "tx_g8vrocimzbk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "NTFQJ7NT",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_vvp225k74eb",
+      "gatewaySettlementRecordIds": [
+        "tx_rp9jwroaodd"
+      ],
+      "gatewaySettlementRecordId": "tx_rp9jwroaodd",
+      "merchantLedgerRecordId": "tx_k6uulxyuu5",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Z9BFMCQV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_krnw2ul4sf",
+      "gatewaySettlementRecordIds": [
+        "tx_6o7n5slf5g6",
+        "tx_20dl2q4y5qh",
+        "tx_ju15bmwtuom",
+        "tx_1v6yp62l8ylj"
+      ],
+      "gatewaySettlementRecordId": "tx_6o7n5slf5g6",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TU42B3C6",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_xugmidkluyj",
+      "gatewaySettlementRecordIds": [
+        "tx_0jqwzxmea5x7"
+      ],
+      "gatewaySettlementRecordId": "tx_0jqwzxmea5x7",
+      "merchantLedgerRecordId": "tx_towh4ntys9d",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "G7TB5W58",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_u25vg7f6xm",
+      "gatewaySettlementRecordIds": [
+        "tx_1rqbqqh4d1k"
+      ],
+      "gatewaySettlementRecordId": "tx_1rqbqqh4d1k",
+      "merchantLedgerRecordId": "tx_3szwwiji0i9",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "N884HD9S",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ana2iey35sf",
+      "gatewaySettlementRecordIds": [
+        "tx_pzghdmdmreo",
+        "tx_qxy308qe0bf"
+      ],
+      "gatewaySettlementRecordId": "tx_pzghdmdmreo",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2HMJ7H5V",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_p38d1bc6ecc",
+      "gatewaySettlementRecordIds": [
+        "tx_thm09vi5gph"
+      ],
+      "gatewaySettlementRecordId": "tx_thm09vi5gph",
+      "merchantLedgerRecordId": "tx_uidwwbawvlh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YCN4LT3S",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_25m9h53vbkc",
+      "gatewaySettlementRecordIds": [
+        "tx_x11ad092p1",
+        "tx_p27iwaoxfzl",
+        "tx_i4g3vvcijq",
+        "tx_a4vprvqod1",
+        "tx_e2x8hwxc3yp"
+      ],
+      "gatewaySettlementRecordId": "tx_x11ad092p1",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "O9NEW2QC",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_djmd0xi0jgp",
+      "gatewaySettlementRecordIds": [
+        "tx_50uli296vuu"
+      ],
+      "gatewaySettlementRecordId": "tx_50uli296vuu",
+      "merchantLedgerRecordId": "tx_f42yyz9ljhq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BMW1S5JT",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_wa17rgy4t0a",
+      "gatewaySettlementRecordIds": [
+        "tx_qu4z7e4wmbj"
+      ],
+      "gatewaySettlementRecordId": "tx_qu4z7e4wmbj",
+      "merchantLedgerRecordId": "tx_wwaeunvsfue",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.995Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BX22IER0",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_1njfowwf4m4h",
+      "gatewaySettlementRecordIds": [
+        "tx_hglphrvymsn",
+        "tx_60zi2m48h9r",
+        "tx_p1bme803qae",
+        "tx_q1l9b6yyao",
+        "tx_7kg7meblr2q"
+      ],
+      "gatewaySettlementRecordId": "tx_hglphrvymsn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "R20C0TFK",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_c6fet4ypz7b",
+      "gatewaySettlementRecordIds": [
+        "tx_pe5mvkxhe2k"
+      ],
+      "gatewaySettlementRecordId": "tx_pe5mvkxhe2k",
+      "merchantLedgerRecordId": "tx_3cdoytetd3d",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DHUG0A1Q",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_568xx1k5j4u",
+      "gatewaySettlementRecordIds": [
+        "tx_nadm1jrxkuc",
+        "tx_4hkt3eiyu93"
+      ],
+      "gatewaySettlementRecordId": "tx_nadm1jrxkuc",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "F8ZIMD82",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_o3so7ytaeo9",
+      "gatewaySettlementRecordIds": [
+        "tx_s0l312ao3z"
+      ],
+      "gatewaySettlementRecordId": "tx_s0l312ao3z",
+      "merchantLedgerRecordId": "tx_ssbekyoi9a",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "X5DGNBCB",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ibb9x29vdr",
+      "gatewaySettlementRecordIds": [
+        "tx_uffcef005t"
+      ],
+      "gatewaySettlementRecordId": "tx_uffcef005t",
+      "merchantLedgerRecordId": "tx_8vq3t14w17",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MO9GZJJZ",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_rjbxsx6d5tn",
+      "gatewaySettlementRecordIds": [
+        "tx_jo1slq68jt",
+        "tx_xn6m6nisq1a"
+      ],
+      "gatewaySettlementRecordId": "tx_jo1slq68jt",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "AH35DMX6",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_npkutw09la",
+      "gatewaySettlementRecordIds": [
+        "tx_eorb9ss37w",
+        "tx_iuq8d5312t",
+        "tx_0lwbrhsc0lh",
+        "tx_lvwbgajyleg",
+        "tx_z7ub6olo58h"
+      ],
+      "gatewaySettlementRecordId": "tx_eorb9ss37w",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1WVX0P9D",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_cyughwzbqth",
+      "gatewaySettlementRecordIds": [
+        "tx_305nb4xholf",
+        "tx_cf61lt65tq",
+        "tx_4a3nyqmyl4l",
+        "tx_dy4ihj8uje",
+        "tx_bhrv2tms42"
+      ],
+      "gatewaySettlementRecordId": "tx_305nb4xholf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "OCZTC9IE",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_96bm2i71ye5",
+      "gatewaySettlementRecordIds": [
+        "tx_rsnuvk5roei"
+      ],
+      "gatewaySettlementRecordId": "tx_rsnuvk5roei",
+      "merchantLedgerRecordId": "tx_4gsp2iramq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "84GYWRR6",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_5uow9x7axqs",
+      "gatewaySettlementRecordIds": [
+        "tx_25giwwcbjcp",
+        "tx_dsb3roy182"
+      ],
+      "gatewaySettlementRecordId": "tx_25giwwcbjcp",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "217MJX3R",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_281qnuninbt",
+      "gatewaySettlementRecordIds": [
+        "tx_zkpio3c5dwh",
+        "tx_64n4n1pwt2n",
+        "tx_33bnzz34kp5",
+        "tx_fjaa1dwxu8l",
+        "tx_0rpfyja510tn"
+      ],
+      "gatewaySettlementRecordId": "tx_zkpio3c5dwh",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VGOVJJJJ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_d7o4xqgsilt",
+      "gatewaySettlementRecordIds": [
+        "tx_c65fs3vjvb7"
+      ],
+      "gatewaySettlementRecordId": "tx_c65fs3vjvb7",
+      "merchantLedgerRecordId": "tx_rt4kktlfezo",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A8UUAQLN",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_cb978xnav66",
+      "gatewaySettlementRecordIds": [
+        "tx_mxzdpdcy1lf",
+        "tx_xtsb9c0u14"
+      ],
+      "gatewaySettlementRecordId": "tx_mxzdpdcy1lf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VPJALH62",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_v2ro7p4v31o",
+      "gatewaySettlementRecordIds": [
+        "tx_4zq0q2s70ot",
+        "tx_yg1h4spk4wi",
+        "tx_r1jyyienx3c",
+        "tx_8sz91opqo0t"
+      ],
+      "gatewaySettlementRecordId": "tx_4zq0q2s70ot",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "JJCRUNHQ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_j4eoepyee6j",
+      "gatewaySettlementRecordIds": [
+        "tx_fn73enwv9nm",
+        "tx_6a6rj4q3e9j"
+      ],
+      "gatewaySettlementRecordId": "tx_fn73enwv9nm",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "18C5LW1J",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_8sqfx9ztz6u",
+      "gatewaySettlementRecordIds": [
+        "tx_vjiuf3n33l",
+        "tx_1rlg5uz964o",
+        "tx_0lcfsue1tohj"
+      ],
+      "gatewaySettlementRecordId": "tx_vjiuf3n33l",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TDKJQENV",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_gbatiwf2g28",
+      "gatewaySettlementRecordIds": [
+        "tx_ej7wvuus4ng",
+        "tx_2bunps2er79",
+        "tx_ffrwwpiy7x",
+        "tx_3rcv1pljxql"
+      ],
+      "gatewaySettlementRecordId": "tx_ej7wvuus4ng",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ZUCHG1C7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_a1clsdg3ebr",
+      "gatewaySettlementRecordIds": [
+        "tx_4u4h60ic06c"
+      ],
+      "gatewaySettlementRecordId": "tx_4u4h60ic06c",
+      "merchantLedgerRecordId": "tx_vf0oibwqixm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "OLXXXKVR",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_rgh34a3v1z",
+      "gatewaySettlementRecordIds": [
+        "tx_8m5eynm7px4",
+        "tx_vchwl4gv2r",
+        "tx_p5h9miy7ba",
+        "tx_i5jh9pixar",
+        "tx_djx9we4xde"
+      ],
+      "gatewaySettlementRecordId": "tx_8m5eynm7px4",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VJHVIB8C",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_wqx9mvyukgg",
+      "gatewaySettlementRecordIds": [
+        "tx_p01dwf7o1o"
+      ],
+      "gatewaySettlementRecordId": "tx_p01dwf7o1o",
+      "merchantLedgerRecordId": "tx_i1yhqp34ao",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TQ109FCU",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_n5apkrmuw1l",
+      "gatewaySettlementRecordIds": [
+        "tx_8nwtl5prbc8"
+      ],
+      "gatewaySettlementRecordId": "tx_8nwtl5prbc8",
+      "merchantLedgerRecordId": "tx_zt38c87lp7q",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MN6BHYDZ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_lt1d63sjqrd",
+      "gatewaySettlementRecordIds": [
+        "tx_2n7s8gnb66t",
+        "tx_ibsxj28aofj",
+        "tx_m6txtgx0sk",
+        "tx_98czp9qkqeo",
+        "tx_9uh7v7220xg"
+      ],
+      "gatewaySettlementRecordId": "tx_2n7s8gnb66t",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "QY8LJ0Q6",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_wmlzl4vdlm",
+      "gatewaySettlementRecordIds": [
+        "tx_hhzl0n7ecet"
+      ],
+      "gatewaySettlementRecordId": "tx_hhzl0n7ecet",
+      "merchantLedgerRecordId": "tx_pjliiswdhoo",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "EQIXO059",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_41kpdnyfoi4",
+      "gatewaySettlementRecordIds": [
+        "tx_1wu6qnmq29t"
+      ],
+      "gatewaySettlementRecordId": "tx_1wu6qnmq29t",
+      "merchantLedgerRecordId": "tx_y5q247wbpfd",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KX7IGXZK",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_b61isk1ehcc",
+      "gatewaySettlementRecordIds": [
+        "tx_ru5e3wf2hme",
+        "tx_f9dsguv6d4q",
+        "tx_i10iitcnetg",
+        "tx_dfzc4lg520m"
+      ],
+      "gatewaySettlementRecordId": "tx_ru5e3wf2hme",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "PCHEPSCZ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_la5w16n7h9",
+      "gatewaySettlementRecordIds": [
+        "tx_0ikv92elg3d"
+      ],
+      "gatewaySettlementRecordId": "tx_0ikv92elg3d",
+      "merchantLedgerRecordId": "tx_prtrfirfzne",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0M8D263Y",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_bztrybrhl7j",
+      "gatewaySettlementRecordIds": [
+        "tx_6ft1zzpkk6"
+      ],
+      "gatewaySettlementRecordId": "tx_6ft1zzpkk6",
+      "merchantLedgerRecordId": "tx_i6nd7fz2cuh",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2SBPX8PT",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ntcx65gg0ho",
+      "gatewaySettlementRecordIds": [
+        "tx_k4lt01o7w7f",
+        "tx_zop1na4e6t",
+        "tx_7hmn65o1k66",
+        "tx_j5nhsooifts",
+        "tx_vlurzl1016"
+      ],
+      "gatewaySettlementRecordId": "tx_k4lt01o7w7f",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KRAENBI1",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_02yromb7mudt",
+      "gatewaySettlementRecordIds": [
+        "tx_24x1e6jfonj"
+      ],
+      "gatewaySettlementRecordId": "tx_24x1e6jfonj",
+      "merchantLedgerRecordId": "tx_baolcfupjk",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0WXMW4Q6",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_x6vu2uya12k",
+      "gatewaySettlementRecordIds": [
+        "tx_54cj2m4ut35"
+      ],
+      "gatewaySettlementRecordId": "tx_54cj2m4ut35",
+      "merchantLedgerRecordId": "tx_n9yorjz9lop",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "E2YEG7Q2",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_1h9tca1lx05",
+      "gatewaySettlementRecordIds": [
+        "tx_su806ou9y4j",
+        "tx_1nihh62q3p7"
+      ],
+      "gatewaySettlementRecordId": "tx_su806ou9y4j",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TWIGYJWE",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_zj62pk5tfk",
+      "gatewaySettlementRecordIds": [
+        "tx_8qz7ubd63dl",
+        "tx_x581ntgnnbn",
+        "tx_xwwmiov9ccc",
+        "tx_9c8d43ud8gg",
+        "tx_96jzawz71h"
+      ],
+      "gatewaySettlementRecordId": "tx_8qz7ubd63dl",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "UEM87O19",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_vo2lm2uc44q",
+      "gatewaySettlementRecordIds": [
+        "tx_3fgfjlwcl9",
+        "tx_izg22jlueeq"
+      ],
+      "gatewaySettlementRecordId": "tx_3fgfjlwcl9",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3EXKS1EZ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_041zpw9uscd6",
+      "gatewaySettlementRecordIds": [
+        "tx_1ig8nczy5o6",
+        "tx_pncjx9ltcuc"
+      ],
+      "gatewaySettlementRecordId": "tx_1ig8nczy5o6",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3A56VCMK",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_32e3e8v78mu",
+      "gatewaySettlementRecordIds": [
+        "tx_op0d65k6o5c"
+      ],
+      "gatewaySettlementRecordId": "tx_op0d65k6o5c",
+      "merchantLedgerRecordId": "tx_x3cx68f5ma",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9CRTWD0R",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_utewwflwjk",
+      "gatewaySettlementRecordIds": [
+        "tx_h7mds8oogs6",
+        "tx_i4n8fozr1ba"
+      ],
+      "gatewaySettlementRecordId": "tx_h7mds8oogs6",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8M1Z4CMY",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_0it0ti3wlwfl",
+      "gatewaySettlementRecordIds": [
+        "tx_08jw5799hs9w",
+        "tx_a83a9nu3y9a",
+        "tx_8ljx3e0zpv5"
+      ],
+      "gatewaySettlementRecordId": "tx_08jw5799hs9w",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "08L2D4Y3",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_4twnhmlp74j",
+      "gatewaySettlementRecordIds": [
+        "tx_exw8svmqsyo"
+      ],
+      "gatewaySettlementRecordId": "tx_exw8svmqsyo",
+      "merchantLedgerRecordId": "tx_q37o4v4lxj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "L36L3T3E",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_np3udg4tv8p",
+      "gatewaySettlementRecordIds": [
+        "tx_bg231xjvqs5"
+      ],
+      "gatewaySettlementRecordId": "tx_bg231xjvqs5",
+      "merchantLedgerRecordId": "tx_h0vd1sl87yo",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1UB4HK7K",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_fba1nosqkvp",
+      "gatewaySettlementRecordIds": [
+        "tx_6ouoiethjqj"
+      ],
+      "gatewaySettlementRecordId": "tx_6ouoiethjqj",
+      "merchantLedgerRecordId": "tx_y2o34x05hbq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ZXS40WSY",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_j7ts4kh8eh",
+      "gatewaySettlementRecordIds": [
+        "tx_xo71my4dtk",
+        "tx_79ock5cafgl"
+      ],
+      "gatewaySettlementRecordId": "tx_xo71my4dtk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GSXA9ZCA",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_sxuxytpwkcp",
+      "gatewaySettlementRecordIds": [
+        "tx_27jh2vnhtzb",
+        "tx_zou9n2n0e"
+      ],
+      "gatewaySettlementRecordId": "tx_27jh2vnhtzb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "LV4PJYS5",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_0f2mp147rrh",
+      "gatewaySettlementRecordIds": [
+        "tx_8sq623opg0q"
+      ],
+      "gatewaySettlementRecordId": "tx_8sq623opg0q",
+      "merchantLedgerRecordId": "tx_k3u5ib4y0uo",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "C7I37WZW",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_jo4l8hk6f2c",
+      "gatewaySettlementRecordIds": [
+        "tx_zala8klbm9h"
+      ],
+      "gatewaySettlementRecordId": "tx_zala8klbm9h",
+      "merchantLedgerRecordId": "tx_wi4m4yh31j",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TQDWMFTM",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_k3etj2qsnh",
+      "gatewaySettlementRecordIds": [
+        "tx_h32cuqbk4ph"
+      ],
+      "gatewaySettlementRecordId": "tx_h32cuqbk4ph",
+      "merchantLedgerRecordId": "tx_hngrtdl5ir7",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "A66QMEWL",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_z1xyw49zmd",
+      "gatewaySettlementRecordIds": [
+        "tx_b8qr7kanuab"
+      ],
+      "gatewaySettlementRecordId": "tx_b8qr7kanuab",
+      "merchantLedgerRecordId": "tx_7sfxdzecjfj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "FNFHEF2G",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_1amlyldrdz9",
+      "gatewaySettlementRecordIds": [
+        "tx_b3a42ixac1q",
+        "tx_1ftbgx7hj7u",
+        "tx_pkwsd92vgqj"
+      ],
+      "gatewaySettlementRecordId": "tx_b3a42ixac1q",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "RHZ0LJNR",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_yj7pv6a5j9j",
+      "gatewaySettlementRecordIds": [
+        "tx_z94nn465yc"
+      ],
+      "gatewaySettlementRecordId": "tx_z94nn465yc",
+      "merchantLedgerRecordId": "tx_wbdjb7tfqg9",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "QWQY4QO7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_xaw6itdtlaa",
+      "gatewaySettlementRecordIds": [
+        "tx_6lqg9dumvrq"
+      ],
+      "gatewaySettlementRecordId": "tx_6lqg9dumvrq",
+      "merchantLedgerRecordId": "tx_o2nwlyef9g",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "PEQM470K",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_elgub7ceab9",
+      "gatewaySettlementRecordIds": [
+        "tx_5q35cbo5usn"
+      ],
+      "gatewaySettlementRecordId": "tx_5q35cbo5usn",
+      "merchantLedgerRecordId": "tx_nq0bpp4evf",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "SWDBY7Y8",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_p6rb58cxxo9",
+      "gatewaySettlementRecordIds": [
+        "tx_5xsf0q75m2l",
+        "tx_y8n690t93hi",
+        "tx_gn0fgjm83p5"
+      ],
+      "gatewaySettlementRecordId": "tx_5xsf0q75m2l",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4ZJ2NQ7D",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ji36vlx53ir",
+      "gatewaySettlementRecordIds": [
+        "tx_fgj54m2jxwd"
+      ],
+      "gatewaySettlementRecordId": "tx_fgj54m2jxwd",
+      "merchantLedgerRecordId": "tx_q1z15w8sge9",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IUO3SN65",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_f47xlfggher",
+      "gatewaySettlementRecordIds": [
+        "tx_kuu5851jaqr",
+        "tx_msgfws95gmd",
+        "tx_bq83h0zham5"
+      ],
+      "gatewaySettlementRecordId": "tx_kuu5851jaqr",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "56AU3NO4",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_otstj92gii",
+      "gatewaySettlementRecordIds": [
+        "tx_6qgxnunsi0a",
+        "tx_nqe46cfd6ue"
+      ],
+      "gatewaySettlementRecordId": "tx_6qgxnunsi0a",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "G3Q1G2BZ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_g0ewdebjm6",
+      "gatewaySettlementRecordIds": [
+        "tx_wnhrpjshsd",
+        "tx_x1fjljd8rtf",
+        "tx_jec4y488mui"
+      ],
+      "gatewaySettlementRecordId": "tx_wnhrpjshsd",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "T87D0TWV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_gf89czsydy6",
+      "gatewaySettlementRecordIds": [
+        "tx_21a9kptutmhg"
+      ],
+      "gatewaySettlementRecordId": "tx_21a9kptutmhg",
+      "merchantLedgerRecordId": "tx_crrxl3zcxof",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Y2VT9ID0",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_6iw7lzpq6fi",
+      "gatewaySettlementRecordIds": [
+        "tx_gjrt8i9bw1b"
+      ],
+      "gatewaySettlementRecordId": "tx_gjrt8i9bw1b",
+      "merchantLedgerRecordId": "tx_3wuq931ppfe",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "B846KPL8",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_d6hh7pi6nz8",
+      "gatewaySettlementRecordIds": [
+        "tx_oym0q9lqsed"
+      ],
+      "gatewaySettlementRecordId": "tx_oym0q9lqsed",
+      "merchantLedgerRecordId": "tx_lnngphcbhas",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "Y8QZ9V0P",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_r7frrkj3d8m",
+      "gatewaySettlementRecordIds": [
+        "tx_2j6ij377bg6"
+      ],
+      "gatewaySettlementRecordId": "tx_2j6ij377bg6",
+      "merchantLedgerRecordId": "tx_tvlaj7t5jul",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "UFJLRH8C",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_8fttd0ple1s",
+      "gatewaySettlementRecordIds": [
+        "tx_wj2u5q0ydn"
+      ],
+      "gatewaySettlementRecordId": "tx_wj2u5q0ydn",
+      "merchantLedgerRecordId": "tx_ez7siom3199",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WNXCD31Z",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_gytx3r6sj2t",
+      "gatewaySettlementRecordIds": [
+        "tx_xzmvij6b8zj"
+      ],
+      "gatewaySettlementRecordId": "tx_xzmvij6b8zj",
+      "merchantLedgerRecordId": "tx_7088gfym5hj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "C0BU9JEF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_g77n8y8ajw9",
+      "gatewaySettlementRecordIds": [
+        "tx_6b3x1xif9ep",
+        "tx_gq5z25av5it"
+      ],
+      "gatewaySettlementRecordId": "tx_6b3x1xif9ep",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "U8G4ARU1",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_dez2prhi2t",
+      "gatewaySettlementRecordIds": [
+        "tx_sftn47mx75f",
+        "tx_d18tbjgwav9",
+        "tx_sus7q3qpjfi",
+        "tx_qa1v8rm3o5o",
+        "tx_9h4wa0mk89"
+      ],
+      "gatewaySettlementRecordId": "tx_sftn47mx75f",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VUVWMYLN",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ox5dge9d77h",
+      "gatewaySettlementRecordIds": [
+        "tx_u0peuk5z38o"
+      ],
+      "gatewaySettlementRecordId": "tx_u0peuk5z38o",
+      "merchantLedgerRecordId": "tx_awkj15tlxgb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "S60MSU2N",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_0kca0bss83bq",
+      "gatewaySettlementRecordIds": [
+        "tx_aagxuq5ij2d"
+      ],
+      "gatewaySettlementRecordId": "tx_aagxuq5ij2d",
+      "merchantLedgerRecordId": "tx_e0ykb9jarf",
+      "matchingAlgorithm": "AI_FUZZY",
+      "confidenceScore": 0.88,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": "TIMING_LAG",
+      "corruptionType": null,
+      "rootReferenceToken": "83QONKF6",
+      "settlementLagDays": 14
+    },
+    {
+      "bankStatementRecordId": "tx_hnighgh4moc",
+      "gatewaySettlementRecordIds": [
+        "tx_olp9u06z0na"
+      ],
+      "gatewaySettlementRecordId": "tx_olp9u06z0na",
+      "merchantLedgerRecordId": "tx_w2rthdywulq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": "WHITESPACE",
+      "rootReferenceToken": "0CSWHJ98",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0pmhtx2t7zw",
+      "gatewaySettlementRecordIds": [
+        "tx_b6twtugem4v",
+        "tx_a8gskdf0wb"
+      ],
+      "gatewaySettlementRecordId": "tx_b6twtugem4v",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "1BHVSV0S",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_al51vmmm9f7",
+      "gatewaySettlementRecordIds": [
+        "tx_sa1065t3fjk",
+        "tx_8ciewzw5wnl"
+      ],
+      "gatewaySettlementRecordId": "tx_sa1065t3fjk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "0180OJZQ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_hm8ves7ri2",
+      "gatewaySettlementRecordIds": [
+        "tx_you274wgpf",
+        "tx_y4vm7iaz5b"
+      ],
+      "gatewaySettlementRecordId": "tx_you274wgpf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "30NCGJL3",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_lv68sihrt4b",
+      "gatewaySettlementRecordIds": [
+        "tx_qbqxmziwdcf",
+        "tx_9fb146xoom"
+      ],
+      "gatewaySettlementRecordId": "tx_qbqxmziwdcf",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "I4MJO6BW",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_y67wbxipphd",
+      "gatewaySettlementRecordIds": [
+        "tx_ta5w0909x",
+        "tx_b1wt6kjaa6"
+      ],
+      "gatewaySettlementRecordId": "tx_ta5w0909x",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "931LCZ48",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_0qmq9jv8ue6",
+      "gatewaySettlementRecordIds": [
+        "tx_o43mxh5uli"
+      ],
+      "gatewaySettlementRecordId": "tx_o43mxh5uli",
+      "merchantLedgerRecordId": "tx_yiaty7p94o",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "TUKX71LI",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_d3grkcym95j",
+      "gatewaySettlementRecordIds": [
+        "tx_qos6urjryx"
+      ],
+      "gatewaySettlementRecordId": "tx_qos6urjryx",
+      "merchantLedgerRecordId": "tx_cbhjl25v76h",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "5T7JMXSC",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_6z78r00mr1x",
+      "gatewaySettlementRecordIds": [
+        "tx_cs98oypyrnh"
+      ],
+      "gatewaySettlementRecordId": "tx_cs98oypyrnh",
+      "merchantLedgerRecordId": "tx_3275r1z93o2",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2FJ37CTJ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_juz6bi8laqa",
+      "gatewaySettlementRecordIds": [
+        "tx_oyhh8z4wk4q"
+      ],
+      "gatewaySettlementRecordId": "tx_oyhh8z4wk4q",
+      "merchantLedgerRecordId": "tx_1a6isk1qw5e",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9AD6ZZS8",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_0g7rlnc1w53q",
+      "gatewaySettlementRecordIds": [
+        "tx_f1tq0oro89n",
+        "tx_uebcqun7d7"
+      ],
+      "gatewaySettlementRecordId": "tx_f1tq0oro89n",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2LEHP2F7",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_eb9s1pu6fg",
+      "gatewaySettlementRecordIds": [
+        "tx_swbangdey",
+        "tx_7shfkgf0bt8"
+      ],
+      "gatewaySettlementRecordId": "tx_swbangdey",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "GKG3SJ51",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_sp8xihcmagk",
+      "gatewaySettlementRecordIds": [
+        "tx_iuaeqye1jaj",
+        "tx_w29th1lc2xp",
+        "tx_x5k5epyp4rq"
+      ],
+      "gatewaySettlementRecordId": "tx_iuaeqye1jaj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "T7IVTXU2",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_c4nb5jutf1h",
+      "gatewaySettlementRecordIds": [
+        "tx_9lqzc6vgygo"
+      ],
+      "gatewaySettlementRecordId": "tx_9lqzc6vgygo",
+      "merchantLedgerRecordId": "tx_it787pc43fc",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "55J81EEP",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_palqkk24ch",
+      "gatewaySettlementRecordIds": [
+        "tx_ay08gidibj9"
+      ],
+      "gatewaySettlementRecordId": "tx_ay08gidibj9",
+      "merchantLedgerRecordId": "tx_edvj7nfvihj",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "F2LJOOWM",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_57hq5wghk15",
+      "gatewaySettlementRecordIds": [
+        "tx_tshy0pt3y9d",
+        "tx_nvbwggogn8p",
+        "tx_y9ono3q7nx"
+      ],
+      "gatewaySettlementRecordId": "tx_tshy0pt3y9d",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "01JN20XY",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_760kjjuifdt",
+      "gatewaySettlementRecordIds": [
+        "tx_9iraao3e2t"
+      ],
+      "gatewaySettlementRecordId": "tx_9iraao3e2t",
+      "merchantLedgerRecordId": "tx_5scjfvs43f",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "PTAXMX2N",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_bl7l7kler5e",
+      "gatewaySettlementRecordIds": [
+        "tx_hdaxbhl3z7r"
+      ],
+      "gatewaySettlementRecordId": "tx_hdaxbhl3z7r",
+      "merchantLedgerRecordId": "tx_c653x81menn",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "NF7B54QK",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_yrrvr08hdos",
+      "gatewaySettlementRecordIds": [
+        "tx_q1u1bbak58j"
+      ],
+      "gatewaySettlementRecordId": "tx_q1u1bbak58j",
+      "merchantLedgerRecordId": "tx_qy8r36k79vp",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "UO66J6LI",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_lifp8oeax4p",
+      "gatewaySettlementRecordIds": [
+        "tx_54tu7hah4u"
+      ],
+      "gatewaySettlementRecordId": "tx_54tu7hah4u",
+      "merchantLedgerRecordId": "tx_f3akvdt55e5",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "95WFQMR8",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_sfca87vrwh",
+      "gatewaySettlementRecordIds": [
+        "tx_rctqyhgpu3"
+      ],
+      "gatewaySettlementRecordId": "tx_rctqyhgpu3",
+      "merchantLedgerRecordId": "tx_28i5lxcn0pt",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "407BIUD8",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ip6okgwxcf",
+      "gatewaySettlementRecordIds": [
+        "tx_ff236vqexch"
+      ],
+      "gatewaySettlementRecordId": "tx_ff236vqexch",
+      "merchantLedgerRecordId": "tx_a3ru3ycsh2",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BEN984ZB",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_hf10kye877h",
+      "gatewaySettlementRecordIds": [
+        "tx_ubntjgbycso"
+      ],
+      "gatewaySettlementRecordId": "tx_ubntjgbycso",
+      "merchantLedgerRecordId": "tx_beh450py3od",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MX8HGXYU",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_7etpgzn0zmp",
+      "gatewaySettlementRecordIds": [
+        "tx_rpfsnz1feg9"
+      ],
+      "gatewaySettlementRecordId": "tx_rpfsnz1feg9",
+      "merchantLedgerRecordId": "tx_umsc1mznvqs",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "UT51GTGA",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_mfjsn53yv1a",
+      "gatewaySettlementRecordIds": [
+        "tx_kluq24hq89r"
+      ],
+      "gatewaySettlementRecordId": "tx_kluq24hq89r",
+      "merchantLedgerRecordId": "tx_6ckq8u15ip2",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "CASE_CHANGE",
+      "rootReferenceToken": "SIB1EWSI",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_t39w40x6qpd",
+      "gatewaySettlementRecordIds": [
+        "tx_w70pc9ajkv",
+        "tx_bru65y0a4j9"
+      ],
+      "gatewaySettlementRecordId": "tx_w70pc9ajkv",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DWZDH5SV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_qnlkbzaipo8",
+      "gatewaySettlementRecordIds": [
+        "tx_uc9nbtq72x",
+        "tx_kblfx69cl1",
+        "tx_ib76mprd90q",
+        "tx_phpdbtwf8",
+        "tx_ble7emu7dkp"
+      ],
+      "gatewaySettlementRecordId": "tx_uc9nbtq72x",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "9F4790J7",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_twydz7fim6r",
+      "gatewaySettlementRecordIds": [
+        "tx_0eqsloh5e9k"
+      ],
+      "gatewaySettlementRecordId": "tx_0eqsloh5e9k",
+      "merchantLedgerRecordId": "tx_f8qm6enyj9j",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "S2V0QBCN",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_sre6cnezzai",
+      "gatewaySettlementRecordIds": [
+        "tx_21mb61zipoj"
+      ],
+      "gatewaySettlementRecordId": "tx_21mb61zipoj",
+      "merchantLedgerRecordId": "tx_oq6x4rqbub",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "EKFKL7G7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_flassldyle",
+      "gatewaySettlementRecordIds": [
+        "tx_rlo0qhcmdse"
+      ],
+      "gatewaySettlementRecordId": "tx_rlo0qhcmdse",
+      "merchantLedgerRecordId": "tx_7ijgfb9sgxq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "BN6NLNTP",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_zwk8fldofz",
+      "gatewaySettlementRecordIds": [
+        "tx_a3gxjkzr35",
+        "tx_71rsnprglxv",
+        "tx_nq9yxxm839i",
+        "tx_szj9s01x2ls"
+      ],
+      "gatewaySettlementRecordId": "tx_a3gxjkzr35",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WZ93HDPQ",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_ud7c921awb",
+      "gatewaySettlementRecordIds": [
+        "tx_bd93wztjx6f",
+        "tx_8ba3bguaf9h",
+        "tx_9q4s62nd0bi",
+        "tx_exefq1am3po"
+      ],
+      "gatewaySettlementRecordId": "tx_bd93wztjx6f",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "DY1UWS2C",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_j5uwyzcel8r",
+      "gatewaySettlementRecordIds": [
+        "tx_bi443277vgn"
+      ],
+      "gatewaySettlementRecordId": "tx_bi443277vgn",
+      "merchantLedgerRecordId": "tx_qhbe8xms2o",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "PREFIX_DROPPED",
+      "rootReferenceToken": "A0VYAWV3",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_d45km6ukr9d",
+      "gatewaySettlementRecordIds": [
+        "tx_3fizl6sqd9q"
+      ],
+      "gatewaySettlementRecordId": "tx_3fizl6sqd9q",
+      "merchantLedgerRecordId": "tx_j0nbpcny76",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "7NQ4NYKA",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_v9lhvtwe3a",
+      "gatewaySettlementRecordIds": [
+        "tx_ofy5mh5ghiq",
+        "tx_lggbttdi91n",
+        "tx_4qqryv0v7wk"
+      ],
+      "gatewaySettlementRecordId": "tx_ofy5mh5ghiq",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.996Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "SW3PM4PH",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_z2f9ypby5ft",
+      "gatewaySettlementRecordIds": [
+        "tx_04ss8qxucsth",
+        "tx_qk6w3mu8oq",
+        "tx_zpwz7u3m5m",
+        "tx_m0r6oi0mzk",
+        "tx_d4i2urhrzrj"
+      ],
+      "gatewaySettlementRecordId": "tx_04ss8qxucsth",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "OWWYE7OF",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_porysfnome",
+      "gatewaySettlementRecordIds": [
+        "tx_igu91jg5w8s"
+      ],
+      "gatewaySettlementRecordId": "tx_igu91jg5w8s",
+      "merchantLedgerRecordId": "tx_revsv49lzf",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "W2MJFENP",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_d3oz6s9lh6d",
+      "gatewaySettlementRecordIds": [
+        "tx_yuhl15oob2p"
+      ],
+      "gatewaySettlementRecordId": "tx_yuhl15oob2p",
+      "merchantLedgerRecordId": "tx_3jf4wiod7ga",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "MLJ5FUSN",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_8w0imcyhn18",
+      "gatewaySettlementRecordIds": [
+        "tx_z10e6og6a7"
+      ],
+      "gatewaySettlementRecordId": "tx_z10e6og6a7",
+      "merchantLedgerRecordId": "tx_hu70ogejt5",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "39DWDPV6",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_trcwznm50fh",
+      "gatewaySettlementRecordIds": [
+        "tx_2us2mixd4kb",
+        "tx_iuis41wddi",
+        "tx_aetpfomc4kw",
+        "tx_yx0t7trnk6b"
+      ],
+      "gatewaySettlementRecordId": "tx_2us2mixd4kb",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": "SINGLE_TRANSPOSITION",
+      "rootReferenceToken": "5MUQGQ8Y",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_cudcrzwziwb",
+      "gatewaySettlementRecordIds": [
+        "tx_54tmrwlize",
+        "tx_ip33i294dlq"
+      ],
+      "gatewaySettlementRecordId": "tx_54tmrwlize",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "25DJE7KA",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_domkz8ohvpa",
+      "gatewaySettlementRecordIds": [
+        "tx_1j8yzc1p2da"
+      ],
+      "gatewaySettlementRecordId": "tx_1j8yzc1p2da",
+      "merchantLedgerRecordId": "tx_86y86vdffvm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "8MQY4M2I",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_wq9lh2kjkro",
+      "gatewaySettlementRecordIds": [
+        "tx_afiyg60t0w"
+      ],
+      "gatewaySettlementRecordId": "tx_afiyg60t0w",
+      "merchantLedgerRecordId": "tx_7plikmcjgzi",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "XXA3YHTC",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_izc4unm7g3",
+      "gatewaySettlementRecordIds": [
+        "tx_blmhbfmiu1o"
+      ],
+      "gatewaySettlementRecordId": "tx_blmhbfmiu1o",
+      "merchantLedgerRecordId": "tx_t1qd6qrtl1h",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": "VISUALLY_CONFUSABLE",
+      "rootReferenceToken": "HPYS99O4",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_66l0xp1pi4a",
+      "gatewaySettlementRecordIds": [
+        "tx_qhosuz8bqib"
+      ],
+      "gatewaySettlementRecordId": "tx_qhosuz8bqib",
+      "merchantLedgerRecordId": "tx_4v8deo6e5jq",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KLSSK171",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_jsm39zpnzq",
+      "gatewaySettlementRecordIds": [
+        "tx_im9fd6q3ouj",
+        "tx_hfj2k3alogf",
+        "tx_mq2lf602kqf",
+        "tx_fybu70ckgo6",
+        "tx_qvgr5qtevva"
+      ],
+      "gatewaySettlementRecordId": "tx_im9fd6q3ouj",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "53WW9BVH",
+      "settlementLagDays": 14
+    },
+    {
+      "bankStatementRecordId": "tx_6g5ga4abud4",
+      "gatewaySettlementRecordIds": [
+        "tx_8xa8muzwteg"
+      ],
+      "gatewaySettlementRecordId": "tx_8xa8muzwteg",
+      "merchantLedgerRecordId": "tx_dd70ha7oxq",
+      "matchingAlgorithm": "AI_FUZZY",
+      "confidenceScore": 0.88,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": "TIMING_LAG",
+      "corruptionType": null,
+      "rootReferenceToken": "WVN6J06Q",
+      "settlementLagDays": 15
+    },
+    {
+      "bankStatementRecordId": "tx_y5iaespg3n",
+      "gatewaySettlementRecordIds": [
+        "tx_4c8zzxbsyb3"
+      ],
+      "gatewaySettlementRecordId": "tx_4c8zzxbsyb3",
+      "merchantLedgerRecordId": "tx_5c27610c1w7",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YU1QXZBE",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_tau5bd3k",
+      "gatewaySettlementRecordIds": [
+        "tx_mpu219rh93r"
+      ],
+      "gatewaySettlementRecordId": "tx_mpu219rh93r",
+      "merchantLedgerRecordId": "tx_h09cn35lqb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "D1WIJTMP",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_wa8108zziyp",
+      "gatewaySettlementRecordIds": [
+        "tx_7809cbcze8m"
+      ],
+      "gatewaySettlementRecordId": "tx_7809cbcze8m",
+      "merchantLedgerRecordId": "tx_2k3volsj3rw",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3MILUFCP",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_bfmy8dh12xm",
+      "gatewaySettlementRecordIds": [
+        "tx_lkm53qa99i"
+      ],
+      "gatewaySettlementRecordId": "tx_lkm53qa99i",
+      "merchantLedgerRecordId": "tx_xn4ojlx4ar",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "G7UX3BOE",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_llsdm754itn",
+      "gatewaySettlementRecordIds": [
+        "tx_i2q21vd36ze"
+      ],
+      "gatewaySettlementRecordId": "tx_i2q21vd36ze",
+      "merchantLedgerRecordId": "tx_esc9j7f31el",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "U10DF0X2",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_wcume4wn5p",
+      "gatewaySettlementRecordIds": [
+        "tx_wri0k8zpb8"
+      ],
+      "gatewaySettlementRecordId": "tx_wri0k8zpb8",
+      "merchantLedgerRecordId": "tx_idk0szh6ftg",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "SRPEWQG7",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_aa5ltds16g",
+      "gatewaySettlementRecordIds": [
+        "tx_62psxzci7m",
+        "tx_lvnujgit82"
+      ],
+      "gatewaySettlementRecordId": "tx_62psxzci7m",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "CWQ0E2JH",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_lo1yhvr9thk",
+      "gatewaySettlementRecordIds": [
+        "tx_i2o397pxzb8"
+      ],
+      "gatewaySettlementRecordId": "tx_i2o397pxzb8",
+      "merchantLedgerRecordId": "tx_k7l538w486",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "KTTI9XZ0",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_ttlgrolofja",
+      "gatewaySettlementRecordIds": [
+        "tx_wqiotdlmon",
+        "tx_tkmqvxw2d",
+        "tx_j872ojprgc8",
+        "tx_y047rolelv",
+        "tx_iyjr8oxe2rh"
+      ],
+      "gatewaySettlementRecordId": "tx_wqiotdlmon",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "T4URQX38",
+      "settlementLagDays": 15
+    },
+    {
+      "bankStatementRecordId": "tx_c6y51lurlpc",
+      "gatewaySettlementRecordIds": [
+        "tx_nhk8ve9wccp"
+      ],
+      "gatewaySettlementRecordId": "tx_nhk8ve9wccp",
+      "merchantLedgerRecordId": "tx_5ccwv080alm",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "VM5EOB36",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_wx87p5sn8bj",
+      "gatewaySettlementRecordIds": [
+        "tx_3vkciipj4fc"
+      ],
+      "gatewaySettlementRecordId": "tx_3vkciipj4fc",
+      "merchantLedgerRecordId": "tx_5e9vtjhqxj7",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "ICBYGFEV",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ekxhza5zwh9",
+      "gatewaySettlementRecordIds": [
+        "tx_il0uyo1p8qi"
+      ],
+      "gatewaySettlementRecordId": "tx_il0uyo1p8qi",
+      "merchantLedgerRecordId": "tx_qcxcghfy3qa",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "IT9VEQMY",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_f5ht6cu6h1r",
+      "gatewaySettlementRecordIds": [
+        "tx_7jd6amg7atw"
+      ],
+      "gatewaySettlementRecordId": "tx_7jd6amg7atw",
+      "merchantLedgerRecordId": "tx_3kz3kwgbadb",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "AMOZTN1J",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_0njfe7iazppc",
+      "gatewaySettlementRecordIds": [
+        "tx_asjgqvsawun"
+      ],
+      "gatewaySettlementRecordId": "tx_asjgqvsawun",
+      "merchantLedgerRecordId": "tx_z160rxtwhss",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "3BP82SJC",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_4m1wsrkx7d3",
+      "gatewaySettlementRecordIds": [
+        "tx_inmi88exdhn",
+        "tx_rw4z73hpngo"
+      ],
+      "gatewaySettlementRecordId": "tx_inmi88exdhn",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "2O0UXFLS",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_v9q2ba0mm1",
+      "gatewaySettlementRecordIds": [
+        "tx_83ye86ymrcx",
+        "tx_az47vlv6ij7"
+      ],
+      "gatewaySettlementRecordId": "tx_83ye86ymrcx",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.94,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "NEGATIVE_REFUND",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "WHS720WZ",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_7a8022hn9v4",
+      "gatewaySettlementRecordIds": [
+        "tx_wjeyiehxzsa"
+      ],
+      "gatewaySettlementRecordId": "tx_wjeyiehxzsa",
+      "merchantLedgerRecordId": "tx_j1eyvg1nkd",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "FEE_MISMATCH",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "YXWWAMOO",
+      "settlementLagDays": 1
+    },
+    {
+      "bankStatementRecordId": "tx_ozxnve0piye",
+      "gatewaySettlementRecordIds": [
+        "tx_tiu2hv3w64",
+        "tx_3uwpiogkqll",
+        "tx_a8wmayfo14",
+        "tx_hkg2c8b184l"
+      ],
+      "gatewaySettlementRecordId": "tx_tiu2hv3w64",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "X9V8RWBE",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_3t3xkzsuwjl",
+      "gatewaySettlementRecordIds": [
+        "tx_9p9szgo3q8",
+        "tx_xv5fcgj2o2j",
+        "tx_gumiglfeeu9",
+        "tx_95vl5rf2w3v"
+      ],
+      "gatewaySettlementRecordId": "tx_9p9szgo3q8",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "295ZCCM9",
+      "settlementLagDays": 2
+    },
+    {
+      "bankStatementRecordId": "tx_iuoaiwl94dh",
+      "gatewaySettlementRecordIds": [
+        "tx_yqpf4o6l4vk",
+        "tx_hahurhmuoc"
+      ],
+      "gatewaySettlementRecordId": "tx_yqpf4o6l4vk",
+      "merchantLedgerRecordId": null,
+      "matchingAlgorithm": "SUBSET_SUM",
+      "confidenceScore": 0.95,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "MANY_TO_ONE",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "4M7Q5COA",
+      "settlementLagDays": 3
+    },
+    {
+      "bankStatementRecordId": "tx_6kgh70ux2uc",
+      "gatewaySettlementRecordIds": [
+        "tx_gqb95ygyk5"
+      ],
+      "gatewaySettlementRecordId": "tx_gqb95ygyk5",
+      "merchantLedgerRecordId": "tx_ag412hnpjur",
+      "matchingAlgorithm": "EXACT",
+      "confidenceScore": 0.99,
+      "expectedMatchedAt": "2026-08-24T18:00:29.997Z",
+      "caseType": "EXACT_1_1",
+      "classification": null,
+      "corruptionType": null,
+      "rootReferenceToken": "37N9FI2Q",
+      "settlementLagDays": 1
+    }
+  ]
+}
