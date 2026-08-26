@@ -34,31 +34,11 @@ function buildTx(
 const defaultConfig: SubsetSumConfig = {
   toleranceBasisPoints: 0,
   maxSubsetSize: 5,
+  minSubsetSize: 2,
   dateWindowDays: 3,
   maxCandidatesToEnumerate: 5,
   minimumScoreGap: 0.1
 };
-
-// Safe wrapper to assert exact contract shape even while performSubsetSumMatching is unimplemented
-function assertMatchingContract(
-  bankRecords: TransactionRecord[],
-  gatewayRecords: TransactionRecord[],
-  merchantRecords: TransactionRecord[],
-  config: SubsetSumConfig,
-  assertions: (results: SubsetSumCandidate[]) => void
-) {
-  try {
-    const results = performSubsetSumMatching(bankRecords, gatewayRecords, merchantRecords, config);
-    assertions(results);
-  } catch (err: any) {
-    if (err.message.includes("NOT IMPLEMENTED")) {
-      // Unimplemented currently, pass so Meer can drop implementation later
-      expect(true).toBe(true);
-      return;
-    }
-    throw err;
-  }
-}
 
 test("Deterministic calculateScore: perfect amount, date, and subset size factors", () => {
   const bank = buildTx("bank_1", "BANK_STATEMENT", 1000000, "2026-08-20"); // ₹10,000
@@ -99,14 +79,13 @@ test("Unambiguous 2-transaction bundle match contract", () => {
   const bank = [buildTx("bank_1", "BANK_STATEMENT", 1000000, "2026-08-20")]; // ₹10,000
   const gateways = [
     buildTx("g_1", "GATEWAY_SETTLEMENT", 400000, "2026-08-19"), // ₹4,000
-    buildTx("g_2", "GATEWAY_SETTLEMENT", 600000, "2026-08-19")  // ₹6,000
+    buildTx("g_2", "GATEWAY_SETTLEMENT", 600000, "2026-08-19")   // ₹6,000
   ];
 
-  assertMatchingContract(bank, gateways, [], defaultConfig, (results) => {
-    expect(results.length).toBe(1);
-    expect(results[0].bankRecord.transactionRecordId).toBe("bank_1");
-    expect(results[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_1", "g_2"]);
-  });
+  const result = performSubsetSumMatching(bank, gateways, [], defaultConfig);
+  expect(result.matches.length).toBe(1);
+  expect(result.matches[0].bankRecord.transactionRecordId).toBe("bank_1");
+  expect(result.matches[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_1", "g_2"]);
 });
 
 test("Ambiguous subsets contract: smallest subset wins", () => {
@@ -118,12 +97,9 @@ test("Ambiguous subsets contract: smallest subset wins", () => {
     buildTx("g_4", "GATEWAY_SETTLEMENT", 600000, "2026-08-19")  // ₹6,000
   ];
 
-  // Candidates: {g_1, g_2, g_3} (size 3) vs {g_3, g_4} (size 2)
-  // Scoring size penalty: 1/3 (0.33) vs 1/2 (0.50). Size 2 must score higher and win.
-  assertMatchingContract(bank, gateways, [], defaultConfig, (results) => {
-    expect(results.length).toBe(1);
-    expect(results[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_3", "g_4"]);
-  });
+  const result = performSubsetSumMatching(bank, gateways, [], defaultConfig);
+  expect(result.matches.length).toBe(1);
+  expect(result.matches[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_3", "g_4"]);
 });
 
 test("Signed refund bundle matching contract", () => {
@@ -133,10 +109,9 @@ test("Signed refund bundle matching contract", () => {
     buildTx("g_2", "GATEWAY_SETTLEMENT", -200000, "2026-08-19") // -₹2,000 refund/chargeback
   ];
 
-  assertMatchingContract(bank, gateways, [], defaultConfig, (results) => {
-    expect(results.length).toBe(1);
-    expect(results[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_1", "g_2"]);
-  });
+  const result = performSubsetSumMatching(bank, gateways, [], defaultConfig);
+  expect(result.matches.length).toBe(1);
+  expect(result.matches[0].gatewaySubset.map(g => g.transactionRecordId).sort()).toEqual(["g_1", "g_2"]);
 });
 
 test("Pathological pre-filter complexity cap triggers bank record skip", () => {

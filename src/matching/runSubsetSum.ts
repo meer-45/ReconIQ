@@ -1,10 +1,34 @@
 // Subset-Sum execution harness with hash-chain continuity
 // Reads previous exact match audit trail for hash chain continuation
+// Generates MatchGroup and AuditTrail entries for matches and exceptions
 
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import { performSubsetSumMatching, SubsetSumConfig, TransactionRecord } from "./subsetSum";
+import { createHash } from 'node:crypto';
+import {
+  performSubsetSumMatching,
+  SubsetSumConfig,
+  TransactionRecord,
+  SubsetSumCandidate,
+  PendingException,
+  MatchGroup,
+  AuditTrail
+} from "./subsetSum";
 import { loadAllTransactions } from "./exact"; // reusing exact's loader
+
+interface GroundTruthEntry {
+  bankStatementRecordId: string;
+  gatewaySettlementRecordIds?: string[];
+  gatewaySettlementRecordId: string;
+  merchantLedgerRecordId: string | null;
+  matchingAlgorithm: string;
+  confidenceScore: number;
+  expectedMatchedAt: string;
+  caseType?: string;
+  classification?: string | null;
+  corruptionType?: string | null;
+  settlementLagDays?: number;
+}
 
 async function runSubsetSum(dataDirectory: string) {
   console.log("Starting Subset-Sum matching layer...");
@@ -32,24 +56,223 @@ async function runSubsetSum(dataDirectory: string) {
   const gatewayRecords = allTransactions.filter(t => t.dataSource === "GATEWAY_SETTLEMENT");
   const merchantRecords = allTransactions.filter(t => t.dataSource === "MERCHANT_LEDGER");
 
+  // Bug 1 Fix: Mark records claimed by exact.ts so subset-sum knows to exclude them
+  let exactClaimedCount = 0;
+  try {
+    const exactResultsPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
+    const exactResultsContent = readFileSync(exactResultsPath, 'utf-8');
+    const exactResults = JSON.parse(exactResultsContent);
+
+    // Extract from audit trail entries which have the actual transactionRecordId
+    const claimedByExact = new Set<string>();
+    exactResults.auditTrailEntries.forEach(entry => {
+      if (entry.transactionRecordId) {
+        claimedByExact.add(entry.transactionRecordId);
+      }
+    });
+
+    // Apply the EXACT_CLAIMED marker to records
+    allTransactions.forEach(record => {
+      if (claimedByExact.has(record.transactionRecordId)) {
+        record.matchGroupId = "EXACT_CLAIMED";
+        exactClaimedCount++;
+      }
+    });
+
+    console.log(`[EXACT CLAIM] Marked ${exactClaimedCount} records as claimed by exact.ts`);
+  } catch (err) {
+    console.error("Failed to load exact match results for claiming:", err);
+    // Continue without claiming - fallback to original behavior
+  }
+
   const config: SubsetSumConfig = {
     // Set to 400 basis points (4%) to accommodate realistic MDR (2.0%) + GST (0.36%) + TDS (1.0%) = ~3.36% net deduction
     toleranceBasisPoints: 400,
     maxSubsetSize: 5,
-    dateWindowDays: 3,
+    minSubsetSize: 2,
+    dateWindowDays: 5,
     maxCandidatesToEnumerate: 5,
-    minimumScoreGap: 0.1
+    minimumScoreGap: 0.05
   };
 
   // 3. Perform Subset-Sum
-  const candidates = performSubsetSumMatching(bankRecords, gatewayRecords, merchantRecords, config);
+  const result = performSubsetSumMatching(bankRecords, gatewayRecords, merchantRecords, config);
+  const matches = result.matches;
+  const exceptions = result.exceptions;
 
-  console.log(`Subset-Sum complete: found ${candidates.length} candidates.`);
+  console.log(`Subset-Sum complete: found ${matches.length} matches, ${exceptions.length} exceptions (ambiguous).`);
 
-  // 4. Record decision and compute AuditTrail rowHash (stubbed until Meer writes the logic)
-  console.log("AuditTrail hash-chaining continuation seeded with genesis:", genesisHash);
+  // 4. Build AuditTrail entries and compute hash chain
+  let runningHash = genesisHash;
+  const finalAuditTrailEntries: AuditTrail[] = [];
 
-  return { candidates };
+  // Helper to push an audit entry and update hash
+  const pushAuditEntry = (entry: Omit<AuditTrail, 'rowHash' | 'previousRowHash'>) => {
+    const content = {
+      method: entry.method,
+      reason: entry.reason,
+      actor: entry.actor,
+      actorId: entry.actorId,
+      transactionRecordId: entry.transactionRecordId,
+      matchGroupId: entry.matchGroupId,
+      metadata: entry.metadata,
+      decisionTimestamp: entry.decisionTimestamp
+    };
+    const contentString = JSON.stringify(content);
+    const hashInput = runningHash + contentString;
+    const rowHash = createHash('sha256').update(hashInput, 'utf8').digest('hex');
+
+    finalAuditTrailEntries.push({
+      ...entry,
+      rowHash,
+      previousRowHash: runningHash
+    });
+    runningHash = rowHash;
+  };
+
+  // Process matches
+  for (const match of matches) {
+    const matchGroupId = `tx_${Math.random().toString(36).substring(2, 14)}`;
+    const nowISO = new Date().toISOString();
+
+    const matchGroup: MatchGroup = {
+      matchGroupId,
+      method: "SUBSET_SUM",
+      confidenceScore: match.score.finalScore,
+      status: "MATCHED",
+      createdAt: nowISO,
+      resolvedAt: nowISO
+    };
+
+    // Assign matchGroupId to records (for downstream use, though not persisted)
+    match.bankRecord.matchGroupId = matchGroupId;
+    match.gatewaySubset.forEach(gw => {
+      gw.matchGroupId = matchGroupId;
+    });
+
+    // Build audit trail entry (one per match, representing the bundle)
+    const gatewayIds = match.gatewaySubset.map(g => g.transactionRecordId).join(", ");
+    pushAuditEntry({
+      auditTrailId: `at_${Math.random().toString(36).substring(2, 14)}`,
+      decisionTimestamp: nowISO,
+      method: "SUBSET_SUM",
+      reason: `Subset-sum match: bank=${match.bankRecord.transactionRecordId} (${match.bankRecord.amountPaise}) = sum(${gatewayIds})`,
+      actor: "SYSTEM",
+      actorId: "subsetSum.ts",
+      transactionRecordId: match.bankRecord.transactionRecordId, // could also pick first gateway; we choose bank as anchor
+      matchGroupId,
+      metadata: JSON.stringify({
+        matchedAmountPaise: match.bankRecord.amountPaise,
+        subsetSize: match.gatewaySubset.length,
+        score: match.score.finalScore,
+        amountPrecision: match.score.amountPrecision,
+        dateProximity: match.score.dateProximity,
+        subsetSizePenalty: match.score.subsetSizePenalty,
+        gatewayIds: match.gatewaySubset.map(g => g.transactionRecordId)
+      })
+    });
+
+    // Also create audit entries for each gateway? Exact.ts created one per transaction in the pair.
+    // For consistency, we'll create one audit entry per transaction in the bundle (bank + each gateway).
+    // Bank already done above; now for each gateway:
+    match.gatewaySubset.forEach(gw => {
+      pushAuditEntry({
+        auditTrailId: `at_${Math.random().toString(36).substring(2, 14)}`,
+        decisionTimestamp: nowISO,
+        method: "SUBSET_SUM",
+        reason: `Subset-sum match: bank=${match.bankRecord.transactionRecordId} (${match.bankRecord.amountPaise}) = sum(${gatewayIds})`,
+        actor: "SYSTEM",
+        actorId: "subsetSum.ts",
+        transactionRecordId: gw.transactionRecordId,
+        matchGroupId,
+        metadata: JSON.stringify({
+          matchedAmountPaise: match.bankRecord.amountPaise,
+          gatewayAmountPaise: gw.amountPaise,
+          subsetSize: match.gatewaySubset.length,
+          score: match.score.finalScore
+        })
+      });
+    });
+  }
+
+  // Process exceptions (ambiguous cases)
+  for (const exc of exceptions) {
+    const nowISO = new Date().toISOString();
+    const candidateSummary = exc.candidates.map(c => ({
+      subset: c.gatewaySubset.map(g => g.transactionRecordId).join("+"),
+      score: c.score.finalScore
+    }));
+    pushAuditEntry({
+      auditTrailId: `at_${Math.random().toString(36).substring(2, 14)}`,
+      decisionTimestamp: nowISO,
+      method: "SUBSET_SUM",
+      reason: `Ambiguous subset-sum: bank=${exc.bankRecord.transactionRecordId} has ${exc.candidates.length} valid subsets`,
+      actor: "SYSTEM",
+      actorId: "subsetSum.ts",
+      transactionRecordId: exc.bankRecord.transactionRecordId,
+      matchGroupId: null,
+      metadata: JSON.stringify({
+        bankAmountPaise: exc.bankRecord.amountPaise,
+        candidateCount: exc.candidates.length,
+        candidates: candidateSummary
+      })
+    });
+  }
+
+  // 5. Score against Ground Truth v2.1
+  const gtPath = join(process.cwd(), 'data', 'ground_truth.json');
+  const gtContent = readFileSync(gtPath, 'utf-8');
+  const groundTruth: { expectedMatches: GroundTruthEntry[] } = JSON.parse(gtContent);
+
+  // Build set of matched transaction IDs from our matches
+  const matchedTransactionIds = new Set<string>();
+  matches.forEach(m => {
+    matchedTransactionIds.add(m.bankRecord.transactionRecordId);
+    m.gatewaySubset.forEach(gw => matchedTransactionIds.add(gw.transactionRecordId));
+  });
+
+  // Subset of ground truth entries expected to be matched by SUBSET_SUM (MANY_TO_ONE + NEGATIVE_REFUND)
+  const subsetSumGtEntries = groundTruth.expectedMatches.filter(e =>
+    e.matchingAlgorithm === "SUBSET_SUM"
+  );
+
+  let correctMatches = 0;
+  subsetSumGtEntries.forEach(entry => {
+    const bankId = entry.bankStatementRecordId;
+    const gatewayIds = entry.gatewaySettlementRecordIds || [entry.gatewaySettlementRecordId];
+    const allIds = [bankId, ...gatewayIds];
+    const allMatched = allIds.every(id => matchedTransactionIds.has(id));
+    if (allMatched) {
+      correctMatches++;
+    }
+  });
+
+  const totalExpected = subsetSumGtEntries.length;
+  const catchRate = totalExpected > 0 ? correctMatches / totalExpected : 0;
+
+  console.log("\n--- GROUND TRUTH EVALUATION (SUBSET_SUM SUBSET) ---");
+  console.log(`- Total GT SUBSET_SUM Expected:  ${totalExpected} (MANY_TO_ONE + NEGATIVE_REFUND)`);
+  console.log(`- Correct Matches (exact bundle): ${correctMatches}`);
+  console.log(`- Catch Rate:                    ${(catchRate * 100).toFixed(1)}%`);
+
+  // 6. Write results to file
+  const outPath = join(process.cwd(), 'src', 'matching', 'subset_sum_results.json');
+  writeFileSync(outPath, JSON.stringify({
+    matches,
+    exceptions,
+    auditTrail: finalAuditTrailEntries,
+    summary: {
+      matchedCount: matches.length,
+      exceptionCount: exceptions.length,
+      catchRate,
+      totalExpectedSubsetSum: totalExpected,
+      correctMatches
+    }
+  }, null, 2));
+  console.log(`\nResults written to ${outPath}`);
+
+  // 7. Return for potential further use
+  return { matches, exceptions, auditTrail: finalAuditTrailEntries };
 }
 
 if (import.meta.main) {
