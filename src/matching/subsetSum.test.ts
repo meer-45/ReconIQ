@@ -117,7 +117,7 @@ test("Signed refund bundle matching contract", () => {
 test("Pathological pre-filter complexity cap triggers bank record skip", () => {
   const bank = buildTx("bank_1", "BANK_STATEMENT", 500000, "2026-08-20");
   const gateways: TransactionRecord[] = [];
-  for (let idx = 0; idx < 45; idx++) {
+  for (let idx = 0; idx < 250; idx++) {
     gateways.push(buildTx(`g_${idx}`, "GATEWAY_SETTLEMENT", 100000, "2026-08-20"));
   }
 
