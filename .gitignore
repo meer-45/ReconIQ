@@ -11,3 +11,4 @@ src/matching/*_results.json
 # Deprecated pre-Day-3 data location
 scripts/*.csv
 scripts/ground_truth.json
+package-lock.json
