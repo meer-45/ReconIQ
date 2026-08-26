@@ -51,6 +51,7 @@ export interface SubsetSumConfig {
   dateWindowDays: number; // ±N days window
   maxCandidatesToEnumerate: number;
   minimumScoreGap: number; // For separating ambiguous subsets
+  netFactor?: number; // Optional fee adjustment: expected net = gross * netFactor. Defaults to 1.0 (no fee)
 }
 
 export interface SubsetSumCandidate {
@@ -163,11 +164,13 @@ export function calculateScore(
 ): CandidateScore {
   // Compute raw sum of gateway amounts (no fee conversion)
   const gatewaySum = gatewaySubset.reduce((sum, g) => sum + g.amountPaise, 0);
+  const netFactor = config.netFactor ?? 1.0;
+  const adjustedSum = gatewaySum * netFactor;
 
   // Amount precision: step-with-decay if inside tolerance
   const tolerancePercent = config.toleranceBasisPoints / 10000;
   const toleranceBand = Math.abs(bank.amountPaise) * tolerancePercent;
-  const diff = Math.abs(bank.amountPaise - gatewaySum);
+  const diff = Math.abs(bank.amountPaise - adjustedSum);
   let amountPrecision = 0.0;
 
   if (toleranceBand > 0) {
@@ -177,7 +180,7 @@ export function calculateScore(
       amountPrecision = 0.0;
     }
   } else {
-    amountPrecision = bank.amountPaise === gatewaySum ? 1.0 : 0.0;
+    amountPrecision = bank.amountPaise === adjustedSum ? 1.0 : 0.0;
   }
   amountPrecision = Math.max(0, Math.min(1, amountPrecision));
 
@@ -233,12 +236,14 @@ function findCandidatesForBank(
   const subsetSize = currentOrig.length;
   if (subsetSize >= config.minSubsetSize && subsetSize <= config.maxSubsetSize) {
     const tolerancePercent = config.toleranceBasisPoints / 10000;
+    const netFactor = config.netFactor ?? 1.0;
+    const adjustedSum = currentSum * netFactor;
     const toleranceBand = Math.abs(bank.amountPaise) * tolerancePercent;
     let inTolerance = false;
     if (toleranceBand > 0) {
-      inTolerance = Math.abs(bank.amountPaise - currentSum) <= toleranceBand;
+      inTolerance = Math.abs(bank.amountPaise - adjustedSum) <= toleranceBand;
     } else {
-      inTolerance = bank.amountPaise === currentSum;
+      inTolerance = bank.amountPaise === adjustedSum;
     }
     if (inTolerance) {
       results.push({
@@ -321,8 +326,11 @@ export function performSubsetSumMatching(
       return 0;
     });
 
-    const topCandidate = rawCandidates[0];
-    const secondBest = rawCandidates[1];
+    // Keep top-5 by score for downstream decision; full enumeration only affects sorting
+    const topN = rawCandidates.slice(0, 5);
+
+    const topCandidate = topN[0];
+    const secondBest = topN[1];
 
     // Determine if we have a clear winner
     const isClearWinner =

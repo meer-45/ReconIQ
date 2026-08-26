@@ -85,14 +85,29 @@ async function runSubsetSum(dataDirectory: string) {
     // Continue without claiming - fallback to original behavior
   }
 
+  // Load fee inference results if available
+  let netFactor = 1.0;
+  let toleranceBasisPoints = 400; // default, will be overridden if fee inference results exist
+  const feeInferencePath = join(process.cwd(), 'src', 'matching', 'fee_inference_results.json');
+  try {
+    const feeContent = readFileSync(feeInferencePath, 'utf-8');
+    const feeResults = JSON.parse(feeContent);
+    netFactor = feeResults.netFactor;
+    // After fee is handled explicitly, tolerance only needs to absorb paise rounding
+    toleranceBasisPoints = 50;
+    console.log(`[FEE_CONFIG] Loaded netFactor=${netFactor} from fee inference results, setting toleranceBasisPoints=${toleranceBasisPoints}`);
+  } catch (err) {
+    console.log(`[FEE_CONFIG] No fee inference results found, using defaults (netFactor=1.0, toleranceBasisPoints=400)`);
+  }
+
   const config: SubsetSumConfig = {
-    // Set to 400 basis points (4%) to accommodate realistic MDR (2.0%) + GST (0.36%) + TDS (1.0%) = ~3.36% net deduction
-    toleranceBasisPoints: 400,
+    toleranceBasisPoints,
     maxSubsetSize: 5,
     minSubsetSize: 2,
     dateWindowDays: 5,
-    maxCandidatesToEnumerate: 5,
-    minimumScoreGap: 0.05
+    maxCandidatesToEnumerate: 200,
+    minimumScoreGap: 0.05,
+    netFactor
   };
 
   // 3. Perform Subset-Sum
