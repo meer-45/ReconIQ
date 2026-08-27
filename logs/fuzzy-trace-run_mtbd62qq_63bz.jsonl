@@ -1,0 +1,2 @@
+{"runId":"run_mtbd62qq_63bz","batchLabel":"resolveExactResiduals","wallClockMs":85.60747500000002,"embeddingsComputed":1024,"similaritiesComputed":242263,"proposalsEmitted":202,"tokens":null,"costRupees":null,"modelId":null,"timestamp":"2026-08-27T10:12:25.504Z"}
+{"runId":"run_mtbd62qq_63bz","batchLabel":"disambiguateSubsetSumExceptions","wallClockMs":741.97468,"embeddingsComputed":215806,"similaritiesComputed":215591,"proposalsEmitted":0,"tokens":null,"costRupees":null,"modelId":null,"timestamp":"2026-08-27T10:12:26.250Z"}
