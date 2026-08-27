@@ -19,15 +19,29 @@ export interface TracerEntry {
   timestamp:          string;
 }
 
+export interface LlmTracerEntry {
+  runId:              string;
+  batchLabel:         string;
+  wallClockMs:        number;
+  modelId:            string | null;
+  promptTokens:       number;
+  completionTokens:   number;
+  costRupees:         number;
+  cacheHit:           boolean;
+  timestamp:          string;
+}
+
 export class FuzzyTracer {
-  private runId:   string;
-  private logPath: string;
+  private runId:      string;
+  private logPath:    string;
+  private llmLogPath: string;
 
   constructor(runId: string) {
-    this.runId   = runId;
-    const logsDir = join(process.cwd(), "logs");
+    this.runId      = runId;
+    const logsDir    = join(process.cwd(), "logs");
     mkdirSync(logsDir, { recursive: true });
-    this.logPath = join(logsDir, `fuzzy-trace-${runId}.jsonl`);
+    this.logPath    = join(logsDir, `fuzzy-trace-${runId}.jsonl`);
+    this.llmLogPath = join(logsDir, `llm-trace-${runId}.jsonl`);
   }
 
   log(entry: Omit<TracerEntry, "runId" | "timestamp" | "tokens" | "costRupees" | "modelId">): void {
@@ -40,5 +54,15 @@ export class FuzzyTracer {
       timestamp:  new Date().toISOString(),
     };
     appendFileSync(this.logPath, JSON.stringify(full) + "\n", "utf-8");
+  }
+
+  /** Extended for Day 7 — logs LLM call telemetry to a separate file */
+  logLlm(entry: Omit<LlmTracerEntry, "runId" | "timestamp">): void {
+    const full: LlmTracerEntry = {
+      runId:     this.runId,
+      ...entry,
+      timestamp: new Date().toISOString(),
+    };
+    appendFileSync(this.llmLogPath, JSON.stringify(full) + "\n", "utf-8");
   }
 }

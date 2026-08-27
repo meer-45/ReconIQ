@@ -12,3 +12,4 @@ src/matching/*_results.json
 scripts/*.csv
 scripts/ground_truth.json
 package-lock.json
+logs/llm-cache/
