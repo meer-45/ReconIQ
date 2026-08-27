@@ -7,6 +7,8 @@ coverage/
 
 # Generated matcher output — regenerated on every run
 src/matching/*_results.json
+src/metrics/metrics_report.json
+src/baseline/baseline_report.json
 
 # Deprecated pre-Day-3 data location
 scripts/*.csv

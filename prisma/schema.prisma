@@ -21,8 +21,10 @@ enum DataSource {
 enum MatchMethod {
   EXACT
   SUBSET_SUM
+  FEE_INFERENCE
   AI_FUZZY
   AI_CLASSIFIED
+  AGENT_QUERY
   MANUAL
 }
 
