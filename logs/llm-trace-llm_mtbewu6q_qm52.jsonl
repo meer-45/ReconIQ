@@ -1,2 +1,0 @@
-{"runId":"llm_mtbewu6q_qm52","batchLabel":"gemini-call","wallClockMs":3561,"modelId":"gemini-3.6-flash","promptTokens":955,"completionTokens":12,"costRupees":0,"cacheHit":false,"timestamp":"2026-08-27T11:01:19.682Z"}
-{"runId":"llm_mtbewu6q_qm52","batchLabel":"gemini-call","wallClockMs":3965,"modelId":"gemini-3.6-flash","promptTokens":970,"completionTokens":11,"costRupees":0,"cacheHit":false,"timestamp":"2026-08-27T11:01:23.649Z"}

@@ -13,3 +13,5 @@ scripts/*.csv
 scripts/ground_truth.json
 package-lock.json
 logs/llm-cache/
+logs/*.jsonl
+logs/rate-limiter-state.json
