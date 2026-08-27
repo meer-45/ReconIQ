@@ -260,59 +260,94 @@ async function seedMatchGroups(knownIds: Set<string>): Promise<{ count: number; 
 
 // ── Step 3: UnresolvedExceptions ──────────────────────────────────────────────
 async function seedExceptions(knownIds: Set<string>): Promise<number> {
-  const classMap: Record<string, string> = {
-    TIMING_LAG: "TIMING_LAG", MISSING_COUNTERPART: "MISSING_COUNTERPART",
-    DUPLICATE: "DUPLICATE", OTHER: "OTHER", AMBIGUOUS_MATCH: "AMBIGUOUS_MATCH",
+  const classMap: Record<string, any> = {
+    TIMING_LAG:          "TIMING_LAG",
+    MISSING_COUNTERPART: "MISSING_COUNTERPART",
+    DUPLICATE:           "DUPLICATE",
+    OTHER:               "OTHER",
+    AMBIGUOUS_MATCH:     "AMBIGUOUS_MATCH",
   };
 
   // Load LLM hypotheses for enrichment
-  const llmMap = new Map<string, { classification: string; rootCauseHypothesis: string }>();
+  let fuzzyClassifications: any[] = [];
+  let subsetSumClassifications: any[] = [];
   try {
     const llm = loadJson(join(RESULTS_DIR, "llm_classification_results.json"));
-    for (const c of (llm.fuzzyClassifications ?? [])) {
-      llmMap.set(c.exceptionId, { classification: c.classification, rootCauseHypothesis: c.rootCauseHypothesis });
-    }
+    fuzzyClassifications     = llm.fuzzyClassifications ?? [];
+    subsetSumClassifications = llm.subsetSumClassifications ?? [];
   } catch { /* llm classify results may not exist */ }
 
-  const allExRows: any[] = [];
+  const ssLlmMap = new Map<string, { classification: string; rootCauseHypothesis: string; confidence: number }>();
+  for (const c of subsetSumClassifications) {
+    ssLlmMap.set(c.exceptionId, {
+      classification:      c.classification,
+      rootCauseHypothesis: c.rootCauseHypothesis,
+      confidence:          c.confidence ?? 0.5,
+    });
+    if (c.bankRecordId) {
+      ssLlmMap.set(c.bankRecordId, {
+        classification:      c.classification,
+        rootCauseHypothesis: c.rootCauseHypothesis,
+        confidence:          c.confidence ?? 0.5,
+      });
+    }
+  }
 
-  // SS AMBIGUOUS exceptions
+  const allExRows: any[] = [];
+  const seenIds = new Set<string>();
+
+  // 1. SS AMBIGUOUS exceptions
   const ss = loadJson(join(RESULTS_DIR, "subset_sum_results.json"));
   let ssCount = 0;
   for (const ex of (ss.exceptions ?? [])) {
     const bankId = ex.bankRecord?.transactionRecordId;
     if (!bankId || !knownIds.has(bankId)) continue;
+    const exId = ex.exceptionId ?? `ss_ex_${bankId}`;
+    if (seenIds.has(exId)) continue;
+    seenIds.add(exId);
+
+    const llmInfo = ssLlmMap.get(exId) ?? ssLlmMap.get(bankId);
     const gwIds = (ex.gatewaySubsets ?? []).flat().map((r: any) => r.transactionRecordId).filter(Boolean);
+
     allExRows.push({
-      unresolvedExceptionId: ex.exceptionId ?? `ss_ex_${bankId}`,
-      classification:        "AMBIGUOUS_MATCH",
+      unresolvedExceptionId: exId,
+      classification:        llmInfo ? classMap[llmInfo.classification] : "AMBIGUOUS_MATCH",
+      rootCauseHypothesis:   llmInfo?.rootCauseHypothesis ?? null,
+      riskScore:             llmInfo ? (1.0 - llmInfo.confidence) : 0.5,
       transactionRecordIds:  [bankId, ...gwIds],
       totalAmountPaise:      ex.bankRecord?.amountPaise ?? 0,
       candidateMetadata:     ex.candidateSubsets ?? null,
     });
     ssCount++;
   }
-  console.log(`  AMBIGUOUS_MATCH: ${ssCount} SS exceptions`);
+  console.log(`  AMBIGUOUS_MATCH / SS: ${ssCount} exceptions`);
 
-  // FUZZY exceptions (enriched with LLM hypotheses)
-  const fuzzy = loadJson(join(RESULTS_DIR, "fuzzy_match_results.json"));
+  // 2. FUZZY exceptions (from Layer 2b LLM classifications — includes 21 TIMING_LAG)
   let fzCount = 0;
-  for (const ex of (fuzzy.newExceptions ?? [])) {
-    const bankId = ex.bankRecordId;
-    if (!bankId || !knownIds.has(bankId)) continue;
-    const llm  = llmMap.get(ex.exceptionId);
-    const gwIds = (ex.candidateMetadata?.topCandidates ?? []).map((c: any) => c.gatewayId).filter(Boolean);
+  for (const c of fuzzyClassifications) {
+    if (!c.exceptionId || seenIds.has(c.exceptionId)) continue;
+    seenIds.add(c.exceptionId);
+
+    const bankId = c.bankRecordId;
+    const evidenceIds: string[] = Array.isArray(c.evidenceRefs) ? c.evidenceRefs : [];
+    const txIds = [bankId, ...evidenceIds].filter((id): id is string => typeof id === "string" && knownIds.has(id));
+
     allExRows.push({
-      unresolvedExceptionId: ex.exceptionId,
-      classification:        llm ? classMap[llm.classification] : null,
-      rootCauseHypothesis:   llm?.rootCauseHypothesis ?? null,
-      transactionRecordIds:  [bankId, ...gwIds],
+      unresolvedExceptionId: c.exceptionId,
+      classification:        classMap[c.classification] ?? "OTHER",
+      rootCauseHypothesis:   c.rootCauseHypothesis ?? null,
+      riskScore:             c.confidence ? Math.max(0, 1.0 - c.confidence) : 0.5,
+      transactionRecordIds:  txIds.length > 0 ? txIds : (bankId ? [bankId] : []),
       totalAmountPaise:      0,
-      candidateMetadata:     ex.candidateMetadata ?? null,
+      candidateMetadata:     {
+        evidenceRefs: c.evidenceRefs ?? [],
+        confidence:   c.confidence ?? 0.5,
+        modelId:      c.modelId ?? "gemini-3.5-flash-lite",
+      },
     });
     fzCount++;
   }
-  console.log(`  FUZZY_PENDING: ${fzCount} exceptions (LLM-enriched: ${llmMap.size})`);
+  console.log(`  FUZZY (Layer 2b):    ${fzCount} exceptions (LLM-classified, 21 TIMING_LAG)`);
 
   // Batch insert
   const BATCH = 100;
@@ -322,7 +357,7 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
     inserted += Math.min(BATCH, allExRows.length - i);
   }
 
-  console.log(`  → ${inserted} exceptions total`);
+  console.log(`  → ${inserted} exceptions total written to DB`);
   return inserted;
 }
 
