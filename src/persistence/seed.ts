@@ -307,20 +307,42 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
     seenIds.add(exId);
 
     const llmInfo = ssLlmMap.get(exId) ?? ssLlmMap.get(bankId);
-    const gwIds = (ex.gatewaySubsets ?? []).flat().map((r: any) => r.transactionRecordId).filter(Boolean);
+
+    const candidates = (ex.candidates ?? []).slice(0, 3).map((c: any, idx: number) => {
+      const gwList = (c.gatewaySubset ?? []).map((g: any) => ({
+        transactionRecordId: g.transactionRecordId,
+        externalReference:   g.externalReference,
+        amountPaise:         g.amountPaise,
+        transactionDate:     g.transactionDate,
+      }));
+      const sumPaise = gwList.reduce((s: number, r: any) => s + r.amountPaise, 0);
+      return {
+        candidateIndex:    idx,
+        gatewayRecords:    gwList,
+        sumPaise,
+        deltaPaise:        sumPaise - (ex.bankRecord?.amountPaise ?? 0),
+        finalScore:        c.score?.finalScore ?? 0,
+        amountPrecision:   c.score?.amountPrecision ?? 0,
+        dateProximity:     c.score?.dateProximity ?? 0,
+        subsetSizePenalty: c.score?.subsetSizePenalty ?? 0,
+      };
+    });
+
+    const allGwIds = candidates.flatMap((c: any) => c.gatewayRecords.map((g: any) => g.transactionRecordId));
+    const uniqueTxIds = Array.from(new Set([bankId, ...allGwIds])).filter((id) => knownIds.has(id));
 
     allExRows.push({
       unresolvedExceptionId: exId,
       classification:        llmInfo ? classMap[llmInfo.classification] : "AMBIGUOUS_MATCH",
       rootCauseHypothesis:   llmInfo?.rootCauseHypothesis ?? null,
       riskScore:             llmInfo ? (1.0 - llmInfo.confidence) : 0.5,
-      transactionRecordIds:  [bankId, ...gwIds],
+      transactionRecordIds:  uniqueTxIds,
       totalAmountPaise:      ex.bankRecord?.amountPaise ?? 0,
-      candidateMetadata:     ex.candidateSubsets ?? null,
+      candidateMetadata:     candidates.length > 0 ? { candidates } : null,
     });
     ssCount++;
   }
-  console.log(`  AMBIGUOUS_MATCH / SS: ${ssCount} exceptions`);
+  console.log(`  AMBIGUOUS_MATCH / SS: ${ssCount} exceptions (with candidate subsets)`);
 
   // 2. FUZZY exceptions (from Layer 2b LLM classifications — includes 21 TIMING_LAG)
   let fzCount = 0;

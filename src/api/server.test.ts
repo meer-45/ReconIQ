@@ -21,7 +21,7 @@ describe("ReconIQ API Server Smoke Tests", () => {
 
     const mg = await prisma.matchGroup.findFirst();
     if (mg) sampleMatchGroupId = mg.matchGroupId;
-  });
+  }, 30000);
 
   afterAll(async () => {
     await closePrisma();

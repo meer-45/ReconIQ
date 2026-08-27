@@ -133,6 +133,38 @@ export const api = {
   },
 
   /**
+   * POST /api/exceptions/:id/reject
+   */
+  async rejectException(
+    id: string,
+    data: { actorId?: string; reason?: string } = {}
+  ): Promise<{ status: string; auditTrailId: string; message: string }> {
+    return request<{ status: string; auditTrailId: string; message: string }>(
+      `/exceptions/${encodeURIComponent(id)}/reject`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    );
+  },
+
+  /**
+   * POST /api/exceptions/:id/resolve
+   */
+  async resolveException(
+    id: string,
+    data: { actorId?: string; reason?: string } = {}
+  ): Promise<{ status: string; auditTrailId: string; message: string }> {
+    return request<{ status: string; auditTrailId: string; message: string }>(
+      `/exceptions/${encodeURIComponent(id)}/resolve`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    );
+  },
+
+  /**
    * GET /api/match-groups/:id
    */
   async getMatchGroup(id: string): Promise<MatchGroupDetailResponse> {

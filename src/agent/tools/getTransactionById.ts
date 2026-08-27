@@ -23,9 +23,9 @@ function parseCsv(path: string, dataSource: "BANK_STATEMENT" | "GATEWAY_SETTLEME
   const idx    = (f: string) => header.indexOf(f);
   const records: TransactionRecord[] = [];
   for (let i = 1; i < lines.length; i++) {
-    const v = lines[i].split(",");
+    const v = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
     if (v.length <= idx("transactionRecordId")) continue;
-    const g = (f: string) => v[idx(f)]?.replace(/"/g, "") ?? "";
+    const g = (f: string) => v[idx(f)]?.replace(/^"|"$/g, "").replace(/""/g, '"') ?? "";
     records.push({
       transactionRecordId: g("transactionRecordId"),
       dataSource,

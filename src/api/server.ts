@@ -76,6 +76,25 @@ export function errorResponse(message: string, status: number, requestId: string
   });
 }
 
+export async function getMainChainTailHash(): Promise<string> {
+  const allRows = await prisma.auditTrail.findMany({
+    where: { method: { not: "FEE_INFERENCE" } },
+    select: { rowHash: true, previousRowHash: true },
+  });
+  if (allRows.length === 0) return "0".repeat(64);
+
+  const byPrev = new Map<string, string>();
+  for (const r of allRows) {
+    byPrev.set(r.previousRowHash, r.rowHash);
+  }
+
+  let curr = "0".repeat(64);
+  while (byPrev.has(curr)) {
+    curr = byPrev.get(curr)!;
+  }
+  return curr;
+}
+
 // ── Route Handlers ────────────────────────────────────────────────────────────
 
 /**
@@ -268,10 +287,20 @@ async function handleApproveException(id: string, req: Request, requestId: strin
   });
 
   // Link transactions
-  const txIds = ex.transactionRecordIds ?? [];
-  if (txIds.length > 0) {
+  let targetTxIds = ex.transactionRecordIds ?? [];
+  const meta: any = ex.candidateMetadata;
+  if (meta?.candidates && Array.isArray(meta.candidates) && meta.candidates[chosenCandidateIndex]) {
+    const chosenCand = meta.candidates[chosenCandidateIndex];
+    const bankId = ex.transactionRecordIds[0];
+    const candGwIds = (chosenCand.gatewayRecords ?? []).map((g: any) => g.transactionRecordId).filter(Boolean);
+    if (bankId && candGwIds.length > 0) {
+      targetTxIds = [bankId, ...candGwIds];
+    }
+  }
+
+  if (targetTxIds.length > 0) {
     await prisma.transactionRecord.updateMany({
-      where: { transactionRecordId: { in: txIds } },
+      where: { transactionRecordId: { in: targetTxIds } },
       data:  { matchGroupId },
     });
   }
@@ -287,10 +316,7 @@ async function handleApproveException(id: string, req: Request, requestId: strin
   });
 
   // Fetch tail audit row for continuous hash chain
-  const lastAudit = await prisma.auditTrail.findFirst({
-    orderBy: { decisionTimestamp: "desc" },
-  });
-  const previousRowHash = lastAudit?.rowHash ?? "0".repeat(64);
+  const previousRowHash = await getMainChainTailHash();
   const auditTrailId = `at_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`;
 
   const content = {
@@ -298,9 +324,9 @@ async function handleApproveException(id: string, req: Request, requestId: strin
     reason:              `Manual approval by ${actorId} for exception ${id} (candidate #${chosenCandidateIndex})`,
     actor:               "HUMAN",
     actorId:             actorId,
-    transactionRecordId: txIds[0] ?? null,
+    transactionRecordId: targetTxIds[0] ?? null,
     matchGroupId:        matchGroupId,
-    metadata:            JSON.stringify({ exceptionId: id, chosenCandidateIndex }),
+    metadata:            JSON.stringify({ exceptionId: id, chosenCandidateIndex, linkedTransactionCount: targetTxIds.length }),
     decisionTimestamp:   now.toISOString(),
   };
 
@@ -316,9 +342,9 @@ async function handleApproveException(id: string, req: Request, requestId: strin
       reason:              content.reason,
       actor:               "HUMAN",
       actorId:             actorId,
-      transactionRecordId: txIds[0] ?? null,
+      transactionRecordId: targetTxIds[0] ?? null,
       matchGroupId:        matchGroupId,
-      metadata:            { exceptionId: id, chosenCandidateIndex },
+      metadata:            { exceptionId: id, chosenCandidateIndex, linkedTransactionCount: targetTxIds.length },
       rowHash,
       previousRowHash,
     },
@@ -332,6 +358,81 @@ async function handleApproveException(id: string, req: Request, requestId: strin
   };
 
   return jsonResponse(payload, 200, ApproveExceptionResponseSchema);
+}
+
+/**
+ * POST /api/exceptions/:id/resolve or /reject
+ */
+async function handleResolveOrRejectException(
+  id: string,
+  action: "REJECTED" | "RESOLVED",
+  req: Request,
+  requestId: string
+): Promise<Response> {
+  let bodyRaw: any = {};
+  try {
+    bodyRaw = await req.json();
+  } catch { /* optional body */ }
+
+  const actorId = bodyRaw?.actorId || "human_analyst_1";
+  const reason = bodyRaw?.reason || (action === "REJECTED" ? `Exception rejected by ${actorId}` : `Exception marked resolved by ${actorId}`);
+
+  const ex = await prisma.unresolvedException.findUnique({
+    where: { unresolvedExceptionId: id },
+  });
+  if (!ex) return errorResponse("Exception not found", 404, requestId);
+  if (ex.isResolved) return errorResponse("Exception already resolved", 409, requestId);
+
+  const now = new Date();
+  await prisma.unresolvedException.update({
+    where: { unresolvedExceptionId: id },
+    data: {
+      isResolved: true,
+      resolvedAt: now,
+      resolvedBy: actorId,
+    },
+  });
+
+  // Fetch tail audit row for continuous hash chain
+  const previousRowHash = await getMainChainTailHash();
+  const auditTrailId = `at_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`;
+
+  const content = {
+    method:              "MANUAL",
+    reason,
+    actor:               "HUMAN",
+    actorId:             actorId,
+    transactionRecordId: ex.transactionRecordIds[0] ?? null,
+    matchGroupId:        null,
+    metadata:            JSON.stringify({ exceptionId: id, action, note: reason }),
+    decisionTimestamp:   now.toISOString(),
+  };
+
+  const rowHash = createHash("sha256")
+    .update(previousRowHash + JSON.stringify(content), "utf8")
+    .digest("hex");
+
+  await prisma.auditTrail.create({
+    data: {
+      auditTrailId,
+      decisionTimestamp:   now,
+      method:              "MANUAL",
+      reason,
+      actor:               "HUMAN",
+      actorId:             actorId,
+      transactionRecordId: ex.transactionRecordIds[0] ?? null,
+      matchGroupId:        null,
+      metadata:            { exceptionId: id, action, note: reason },
+      rowHash,
+      previousRowHash,
+    },
+  });
+
+  return jsonResponse({
+    status: action,
+    auditTrailId,
+    message: `Exception ${id} marked as ${action.toLowerCase()}`,
+  }, 200);
 }
 
 /**
@@ -554,6 +655,18 @@ export async function handleRequest(req: Request): Promise<Response> {
     const approveMatch = path.match(/^\/api\/exceptions\/([^/]+)\/approve$/);
     if (method === "POST" && approveMatch) {
       return await handleApproveException(decodeURIComponent(approveMatch[1]), req, requestId);
+    }
+
+    // POST /api/exceptions/:id/reject
+    const rejectMatch = path.match(/^\/api\/exceptions\/([^/]+)\/reject$/);
+    if (method === "POST" && rejectMatch) {
+      return await handleResolveOrRejectException(decodeURIComponent(rejectMatch[1]), "REJECTED", req, requestId);
+    }
+
+    // POST /api/exceptions/:id/resolve
+    const resolveMatch = path.match(/^\/api\/exceptions\/([^/]+)\/resolve$/);
+    if (method === "POST" && resolveMatch) {
+      return await handleResolveOrRejectException(decodeURIComponent(resolveMatch[1]), "RESOLVED", req, requestId);
     }
 
     // GET /api/exceptions/:id

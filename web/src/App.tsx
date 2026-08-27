@@ -1,4 +1,4 @@
-// web/src/App.tsx — Root application routing and shell.
+// web/src/App.tsx — Root application routing, shell, and floating Q&A bar.
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -8,12 +8,14 @@ import { OverviewPage } from "./pages/OverviewPage";
 import { ExceptionsPage } from "./pages/ExceptionsPage";
 import { ExceptionDetailPage } from "./pages/ExceptionDetailPage";
 import { MatchGroupDetailPage } from "./pages/MatchGroupDetailPage";
+import { TransactionDetailPage } from "./pages/TransactionDetailPage";
+import { QaFloatingBar } from "./components/QaFloatingBar";
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-200">
+        <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-200 relative">
           <Navbar />
           <main className="flex-1 pb-16">
             <Routes>
@@ -21,8 +23,13 @@ export const App: React.FC = () => {
               <Route path="/exceptions" element={<ExceptionsPage />} />
               <Route path="/exceptions/:id" element={<ExceptionDetailPage />} />
               <Route path="/match-groups/:id" element={<MatchGroupDetailPage />} />
+              <Route path="/transactions/:id" element={<TransactionDetailPage />} />
             </Routes>
           </main>
+
+          {/* Floating Q&A Bar on ALL routes */}
+          <QaFloatingBar />
+
           <footer className="border-t border-border py-6 bg-card text-center text-xs text-muted">
             <div className="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
               <span className="font-mono">ReconIQ Engine · SHA-256 Cryptographic Audit Ledger</span>

@@ -21,7 +21,7 @@ export interface GeminiCallOpts {
 }
 
 // ── Constants ─────────────────────────────────────────────────────────────────
-const MODEL_ID        = "gemini-3.5-flash-lite";
+const MODEL_ID        = process.env.GEMINI_MODEL_ID || "gemini-2.5-flash";
 const BASE_URL        = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_ID}:generateContent`;
 const DEFAULT_TEMP    = 0.0;
 const DEFAULT_MAX_OUT = 2048;
