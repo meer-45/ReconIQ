@@ -3,7 +3,7 @@
 // Shape is designed so Day 7 can add: tokens, costRupees, modelId — zero interface churn.
 
 import { mkdirSync, appendFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
 export interface TracerEntry {
   runId:              string;
@@ -38,7 +38,7 @@ export class FuzzyTracer {
 
   constructor(runId: string) {
     this.runId      = runId;
-    const logsDir    = join(process.cwd(), "logs");
+    const logsDir    = resolve(__dirname, "../../logs");
     mkdirSync(logsDir, { recursive: true });
     this.logPath    = join(logsDir, `fuzzy-trace-${runId}.jsonl`);
     this.llmLogPath = join(logsDir, `llm-trace-${runId}.jsonl`);

@@ -5,11 +5,11 @@
 
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import type { GeminiCallResult } from "./geminiClient";
 import type { FuzzyTracer } from "../matching/fuzzyTracer";
 
-const CACHE_DIR = join(process.cwd(), "logs", "llm-cache");
+const CACHE_DIR = resolve(__dirname, "../../logs/llm-cache");
 
 function ensureCacheDir(): void {
   mkdirSync(CACHE_DIR, { recursive: true });

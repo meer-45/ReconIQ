@@ -2,14 +2,14 @@
 // Free tier: 15 req/min, 1500 req/day. We leave margin for retries.
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
 // ── Named constants (no magic numbers below) ──────────────────────────────────
 const REQUESTS_PER_MINUTE = 12;  // ceiling 15, leave 3 margin
 const REQUESTS_PER_DAY    = 1400; // ceiling 1500, leave 100 margin
 const WINDOW_MS           = 60_000; // 1 minute in ms
 
-const STATE_PATH = join(process.cwd(), "logs", "rate-limiter-state.json");
+const STATE_PATH = resolve(__dirname, "../../logs/rate-limiter-state.json");
 
 interface RateLimiterState {
   dayCount:      number;
@@ -39,7 +39,7 @@ function loadState(): RateLimiterState {
 
 function saveState(state: RateLimiterState): void {
   try {
-    mkdirSync(join(process.cwd(), "logs"), { recursive: true });
+    mkdirSync(resolve(__dirname, "../../logs"), { recursive: true });
     writeFileSync(STATE_PATH, JSON.stringify(state, null, 2), "utf-8");
   } catch { /* non-fatal — state persistence is best-effort */ }
 }

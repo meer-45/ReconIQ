@@ -1,9 +1,9 @@
 // getTransactionById.ts — look up any TransactionRecord by ID from current CSVs.
 
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
-const DATA_DIR = join(process.cwd(), "data");
+const DATA_DIR = resolve(__dirname, "../../../data");
 
 export interface TransactionRecord {
   transactionRecordId: string;

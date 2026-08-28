@@ -12,15 +12,15 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { createHash }    from "node:crypto";
-import { join }          from "path";
+import { join, resolve } from "path";
 import { z }             from "zod";
 import { callGemini }    from "../llm/geminiClient";
 import { withCache }     from "../llm/responseCache";
 import { acquire }       from "../llm/rateLimiter";
 
-const DATA_DIR     = join(process.cwd(), "data");
-const BASELINE_DIR = join(process.cwd(), "src", "baseline");
-const PROMPT_PATH  = join(process.cwd(), "src", "prompts", "baseline-v1.md");
+const DATA_DIR     = resolve(__dirname, "../../data");
+const BASELINE_DIR = __dirname;
+const PROMPT_PATH  = resolve(__dirname, "../prompts/baseline-v1.md");
 
 // Tuning knobs — adjust here if output hits ceiling
 const N_BANK_ROWS      = 50;   // GT-covered bank rows to sample
@@ -269,7 +269,7 @@ function score(llmResponse: LlmResponse, coveredGT: GTEntry[]): ScoreResult {
 
 // ── Layered pipeline score on the same GT subset ──────────────────────────────
 function scoreLayeredOnSample(coveredGT: GTEntry[]): { precision: number; recall: number; matchCount: number; note: string } {
-  const RESULTS_DIR = join(process.cwd(), "src", "matching");
+  const RESULTS_DIR = resolve(__dirname, "../matching");
   let exactRaw: any = {};
   let ssRaw: any = {};
   let fuzzyRaw: any = {};

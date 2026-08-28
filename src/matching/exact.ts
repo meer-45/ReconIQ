@@ -5,7 +5,7 @@
 // Creates MatchGroup and AuditTrail entries for each match, with tamper-evident hash chaining
 
 import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { createHash } from 'node:crypto';
 
 // Types for reconciliation matching
@@ -483,11 +483,11 @@ export {
 };
 
 if (import.meta.main) {
-  const dataDir = join(process.cwd(), 'data');
-  const gtPath = join(process.cwd(), 'data', 'ground_truth.json');
+  const dataDir = resolve(__dirname, '../../data');
+  const gtPath = resolve(__dirname, '../../data/ground_truth.json');
 
   runExactMatch(dataDir, gtPath).then(results => {
-    const outPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
+    const outPath = resolve(__dirname, 'exact_match_results.json');
     writeFileSync(outPath, JSON.stringify(results, null, 2));
     console.log(`\nResults written to ${outPath}`);
   }).catch(err => {

@@ -3,7 +3,7 @@
 // Generates MatchGroup and AuditTrail entries for matches and exceptions
 
 import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { createHash } from 'node:crypto';
 import {
   performSubsetSumMatching,
@@ -34,7 +34,7 @@ async function runSubsetSum(dataDirectory: string) {
   console.log("Starting Subset-Sum matching layer...");
 
   // 1. Hash-Chain Continuity: Load exact matcher audit results
-  const exactResultsPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
+  const exactResultsPath = resolve(__dirname, 'exact_match_results.json');
   let genesisHash = "0".repeat(64);
 
   try {
@@ -59,7 +59,7 @@ async function runSubsetSum(dataDirectory: string) {
   // Bug 1 Fix: Mark records claimed by exact.ts so subset-sum knows to exclude them
   let exactClaimedCount = 0;
   try {
-    const exactResultsPath = join(process.cwd(), 'src', 'matching', 'exact_match_results.json');
+    const exactResultsPath = resolve(__dirname, 'exact_match_results.json');
     const exactResultsContent = readFileSync(exactResultsPath, 'utf-8');
     const exactResults = JSON.parse(exactResultsContent);
 
@@ -88,7 +88,7 @@ async function runSubsetSum(dataDirectory: string) {
   // Load fee inference results if available
   let netFactor = 1.0;
   let toleranceBasisPoints = 400; // default, will be overridden if fee inference results exist
-  const feeInferencePath = join(process.cwd(), 'src', 'matching', 'fee_inference_results.json');
+  const feeInferencePath = resolve(__dirname, 'fee_inference_results.json');
   try {
     const feeContent = readFileSync(feeInferencePath, 'utf-8');
     const feeResults = JSON.parse(feeContent);
@@ -235,7 +235,7 @@ async function runSubsetSum(dataDirectory: string) {
   }
 
   // 5. Score against Ground Truth v2.1
-  const gtPath = join(process.cwd(), 'data', 'ground_truth.json');
+  const gtPath = resolve(__dirname, '../../data/ground_truth.json');
   const gtContent = readFileSync(gtPath, 'utf-8');
   const groundTruth: { expectedMatches: GroundTruthEntry[] } = JSON.parse(gtContent);
 
@@ -271,7 +271,7 @@ async function runSubsetSum(dataDirectory: string) {
   console.log(`- Catch Rate:                    ${(catchRate * 100).toFixed(1)}%`);
 
   // 6. Write results to file
-  const outPath = join(process.cwd(), 'src', 'matching', 'subset_sum_results.json');
+  const outPath = resolve(__dirname, 'subset_sum_results.json');
   writeFileSync(outPath, JSON.stringify({
     matches,
     exceptions,
@@ -291,6 +291,6 @@ async function runSubsetSum(dataDirectory: string) {
 }
 
 if (import.meta.main) {
-  const dataDir = join(process.cwd(), 'data');
+  const dataDir = resolve(__dirname, '../../data');
   runSubsetSum(dataDir).catch(console.error);
 }

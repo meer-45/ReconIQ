@@ -4,7 +4,7 @@
 
 import { readFileSync } from "fs";
 import { createHash } from "node:crypto";
-import { join } from "path";
+import { join, resolve } from "path";
 import { z } from "zod";
 import { callGemini } from "../llm/geminiClient";
 import { withCache } from "../llm/responseCache";
@@ -63,8 +63,8 @@ const MAX_EVIDENCE_REFS           = 5;
 const MODEL_ID                    = process.env.GEMINI_MODEL_ID || "gemini-3.5-flash-lite";
 const TEMPERATURE                 = 0.0;
 
-const PROMPT_V1_PATH = join(process.cwd(), "src", "prompts", "classification-v1.md");
-const PROMPT_V2_PATH = join(process.cwd(), "src", "prompts", "classification-v2.md");
+const PROMPT_V1_PATH = resolve(__dirname, "../prompts/classification-v1.md");
+const PROMPT_V2_PATH = resolve(__dirname, "../prompts/classification-v2.md");
 
 const ClassificationSchema = z.object({
   classification:      z.enum(["DUPLICATE", "MISSING_COUNTERPART", "TIMING_LAG", "OTHER"]),

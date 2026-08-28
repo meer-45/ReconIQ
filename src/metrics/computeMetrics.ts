@@ -2,11 +2,11 @@
 // No Postgres. No external network calls. Pure file I/O + in-memory computation.
 
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import type { MetricsReport, MethodMetrics, LlmBreakdown, UnmatchedCash } from "./metricsSchema";
 
-const DATA_DIR    = join(process.cwd(), "data");
-const RESULTS_DIR = join(process.cwd(), "src", "matching");
+const DATA_DIR    = resolve(__dirname, "../../data");
+const RESULTS_DIR = resolve(__dirname, "../matching");
 
 // ── CSV loader ────────────────────────────────────────────────────────────────
 interface BankRecord {

@@ -3,12 +3,12 @@
 // Outputs: src/metrics/metrics_report.json + formatted table to stdout.
 
 import { writeFileSync, mkdirSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { computeMetrics } from "./computeMetrics";
 import { MetricsReportSchema } from "./metricsSchema";
 
-const METRICS_DIR = join(process.cwd(), "src", "metrics");
-const OUT_PATH    = join(METRICS_DIR, "metrics_report.json");
+const METRICS_DIR = __dirname;
+const OUT_PATH    = resolve(METRICS_DIR, "metrics_report.json");
 
 // ── Table renderer ─────────────────────────────────────────────────────────────
 function pct(v: number | null | undefined, decimals = 1): string {

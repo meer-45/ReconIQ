@@ -2,10 +2,10 @@
 // Merges fuzzy_match_results.newExceptions with llm_classification_results for full context.
 
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { getBankRecords } from "./getTransactionById";
 
-const RESULTS_DIR = join(process.cwd(), "src", "matching");
+const RESULTS_DIR = resolve(__dirname, "../../matching");
 
 export type ExceptionClassification =
   | "TIMING_LAG"

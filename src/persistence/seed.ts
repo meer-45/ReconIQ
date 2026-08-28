@@ -10,11 +10,11 @@
 
 import "dotenv/config";
 import { readFileSync } from "fs";
-import { join }         from "path";
+import { join, resolve } from "path";
 import { prisma, closePrisma } from "./db";
 
-const DATA_DIR     = join(process.cwd(), "data");
-const RESULTS_DIR  = join(process.cwd(), "src", "matching");
+const DATA_DIR     = resolve(__dirname, "../../data");
+const RESULTS_DIR  = resolve(__dirname, "../matching");
 
 // ── CSV parsing (RFC 4180 — handles quoted fields with embedded commas) ────────
 interface RawTx {

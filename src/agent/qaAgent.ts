@@ -3,7 +3,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { createHash } from "node:crypto";
-import { join } from "path";
+import { join, resolve } from "path";
 import { z } from "zod";
 
 import { callGemini }   from "../llm/geminiClient";
@@ -15,7 +15,7 @@ import { getMatchRateByMethod, type MatchMethod } from "./tools/getMatchRateByMe
 import { getAuditTrailForMatch }       from "./tools/getAuditTrailForMatch";
 
 // ── Prompt ────────────────────────────────────────────────────────────────────
-const PROMPT_PATH = join(process.cwd(), "src", "prompts", "qa-agent-v1.md");
+const PROMPT_PATH = resolve(__dirname, "../prompts/qa-agent-v1.md");
 
 let _systemPrompt: string | null = null;
 let _promptVersion: string | null = null;
@@ -313,7 +313,7 @@ export async function runQaAgent(question: string): Promise<QaResult> {
 
   // Persist audit row to the agent log file
   try {
-    const logDir  = join(process.cwd(), "logs");
+    const logDir  = resolve(__dirname, "../../logs");
     mkdirSync(logDir, { recursive: true });
     const logPath = join(logDir, "agent-audit.jsonl");
     const { appendFileSync } = await import("fs");

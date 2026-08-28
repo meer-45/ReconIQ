@@ -2,9 +2,9 @@
 // Scans ALL result files' audit trails; preserves hash-chain order.
 
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
-const RESULTS_DIR = join(process.cwd(), "src", "matching");
+const RESULTS_DIR = resolve(__dirname, "../../matching");
 
 export interface AuditTrailEntry {
   auditTrailId:        string;

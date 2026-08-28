@@ -2,7 +2,7 @@
 // Infers fee schedule (MDR/GST/TDS) and writes audit rows chained from subset-sum tail.
 
 import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { createHash } from "node:crypto";
 import { inferFeeSchedule } from "./feeInference";
 
@@ -25,8 +25,8 @@ async function runFeeInference(dataDirectory: string) {
 
   // 1. Hash-Chain Continuity: Read the tail hash from subset_sum_results.json
   let genesisHash = "0".repeat(64);
-  const subsetSumResultsPath = join(process.cwd(), "src", "matching", "subset_sum_results.json");
-  const exactResultsPath     = join(process.cwd(), "src", "matching", "exact_match_results.json");
+  const subsetSumResultsPath = resolve(__dirname, "subset_sum_results.json");
+  const exactResultsPath     = resolve(__dirname, "exact_match_results.json");
 
   try {
     const subsetSumContent = readFileSync(subsetSumResultsPath, "utf-8");
@@ -136,7 +136,7 @@ async function runFeeInference(dataDirectory: string) {
   }
 
   // 5. Write results to file with standard audit envelope
-  const outPath = join(process.cwd(), "src", "matching", "fee_inference_results.json");
+  const outPath = resolve(__dirname, "fee_inference_results.json");
   writeFileSync(
     outPath,
     JSON.stringify(
@@ -152,7 +152,7 @@ async function runFeeInference(dataDirectory: string) {
   console.log(`\nFee inference results written to ${outPath}`);
 
   // Also write fee_inference_audit_results.json for secondary tooling compatibility
-  const auditOutPath = join(process.cwd(), "src", "matching", "fee_inference_audit_results.json");
+  const auditOutPath = resolve(__dirname, "fee_inference_audit_results.json");
   writeFileSync(auditOutPath, JSON.stringify({ auditTrail: finalAuditTrailEntries }, null, 2));
   console.log(`Fee inference audit trail written to ${auditOutPath}`);
 
@@ -160,6 +160,6 @@ async function runFeeInference(dataDirectory: string) {
 }
 
 if (import.meta.main) {
-  const dataDir = join(process.cwd(), "data");
+  const dataDir = resolve(__dirname, "../../data");
   runFeeInference(dataDir).catch(console.error);
 }

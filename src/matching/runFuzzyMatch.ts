@@ -3,7 +3,7 @@
 // Does NOT touch Postgres, pgvector, or any API. Reads JSON/CSV, writes JSON.
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { loadAllTransactions } from "./exact";
 import {
   resolveExactResiduals,
@@ -16,8 +16,8 @@ import {
 } from "./fuzzyMatch";
 import { FuzzyTracer } from "./fuzzyTracer";
 
-const DATA_DIR    = join(process.cwd(), "data");
-const RESULTS_DIR = join(process.cwd(), "src", "matching");
+const DATA_DIR    = resolve(__dirname, "../../data");
+const RESULTS_DIR = __dirname;
 
 // ── Unique run ID for this invocation ─────────────────────────────────────────
 const RUN_ID = `run_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`;

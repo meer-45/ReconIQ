@@ -5,7 +5,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { createHash } from "node:crypto";
-import { join } from "path";
+import { join, resolve } from "path";
 import {
   classifyFuzzyPendingReview,
   classifySubsetSumAmbiguous,
@@ -19,9 +19,9 @@ import { FuzzyTracer } from "./fuzzyTracer";
 import { getState as getRateLimiterState } from "../llm/rateLimiter";
 import { loadAllTransactions } from "./exact";
 
-const RESULTS_DIR = join(process.cwd(), "src", "matching");
-const DATA_DIR    = join(process.cwd(), "data");
-const PROMPT_PATH = join(process.cwd(), "src", "prompts", "classification-v1.md");
+const RESULTS_DIR = __dirname;
+const DATA_DIR    = resolve(__dirname, "../../data");
+const PROMPT_PATH = resolve(__dirname, "../prompts/classification-v1.md");
 
 // ── Run ID ────────────────────────────────────────────────────────────────────
 const RUN_ID = `llm_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`;

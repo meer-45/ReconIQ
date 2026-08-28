@@ -5,7 +5,7 @@
 import { describe, test, expect } from "bun:test";
 import { createHash } from "node:crypto";
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
 // ── Inline the core parsing/validation logic under test ────────────────────────
 // We replicate the parse/validate path here so we can test it without needing
@@ -68,7 +68,7 @@ function parseWithRetry(firstText: string, secondText?: string) {
 
 // ── Prompt version integrity ───────────────────────────────────────────────────
 function promptSha256(): string {
-  const path = join(process.cwd(), "src", "prompts", "classification-v1.md");
+  const path = resolve(__dirname, "../prompts/classification-v1.md");
   return createHash("sha256").update(readFileSync(path, "utf-8"), "utf8").digest("hex");
 }
 

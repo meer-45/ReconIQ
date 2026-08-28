@@ -3,7 +3,7 @@
 // No API calls, no Postgres, no pgvector. Reads JSON/CSV, writes JSON.
 
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 import { createHash } from "node:crypto";
 import { z } from "zod";
 import { computeEmbedding, cosineSimilarity, normalizeReference } from "./embedding";
@@ -178,9 +178,9 @@ function makeAuditRow(
 export function loadStartingHash(): string {
   const GENESIS = "0".repeat(64);
 
-  const feePath      = join(process.cwd(), "src", "matching", "fee_inference_results.json");
-  const feeAuditPath = join(process.cwd(), "src", "matching", "fee_inference_audit_results.json");
-  const subsetPath   = join(process.cwd(), "src", "matching", "subset_sum_results.json");
+  const feePath      = resolve(__dirname, "fee_inference_results.json");
+  const feeAuditPath = resolve(__dirname, "fee_inference_audit_results.json");
+  const subsetPath   = resolve(__dirname, "subset_sum_results.json");
 
   // 1. Try fee_inference_results.json
   try {

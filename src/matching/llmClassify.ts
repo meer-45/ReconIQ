@@ -4,7 +4,7 @@
 
 import { readFileSync } from "fs";
 import { createHash } from "node:crypto";
-import { join } from "path";
+import { join, resolve } from "path";
 import { z } from "zod";
 import { callGemini } from "../llm/geminiClient";
 import { withCache } from "../llm/responseCache";
@@ -33,7 +33,7 @@ const MODEL_ID                      = "gemini-3.5-flash-lite";
 const TEMPERATURE                   = 0.0;
 
 // ── Prompt template (loaded once per module load) ─────────────────────────────
-const PROMPT_TEMPLATE_PATH = join(process.cwd(), "src", "prompts", "classification-v1.md");
+const PROMPT_TEMPLATE_PATH = resolve(__dirname, "../prompts/classification-v1.md");
 
 let _promptTemplate: string | null = null;
 let _promptVersion:  string | null = null;
