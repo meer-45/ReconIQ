@@ -20,3 +20,8 @@ logs/llm-cache/
 logs/*.jsonl
 logs/rate-limiter-state.json
 docs/INTERVIEW_PREP.md
+INTERVIEW_PREP.md
+docs/reconiq-project-doc.md
+reconiq-project-doc.md
+docs/reconiq-day3-revision.md
+reconiq-day3-revision.md
