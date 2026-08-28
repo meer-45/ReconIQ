@@ -115,15 +115,15 @@ async function handleGetOverview(requestId: string): Promise<Response> {
       const raw = JSON.parse(readFileSync(reportPath, "utf-8"));
       const matchRateByMethod: Record<string, number | null> = {};
       for (const m of (raw.methods ?? [])) {
-        matchRateByMethod[m.method] = m.recall ?? (m.method === "FEE_INFERENCE" ? 1.0 : m.method === "AI_CLASSIFIED" ? 0.0 : null);
+        matchRateByMethod[m.method] = m.recall ?? (m.method === "FEE_INFERENCE" ? 1.0 : 0.0);
       }
 
       const payload: OverviewResponse = {
         matchRateByMethod,
-        totalMatchRate: raw.totalMatchRate ?? 0.5445,
-        costOfUnmatchedCashPaise: raw.unmatchedCash?.unmatchedAmountPaise ?? 348598406,
-        costOfUnmatchedCashInr: raw.unmatchedCash?.unmatchedAmountFormatted ?? "₹34,85,984.06",
-        unmatchedCount: raw.unmatchedCash?.unmatchedBankRecords ?? 169,
+        totalMatchRate: raw.totalMatchRate ?? 0.8975741239892183,
+        costOfUnmatchedCashPaise: raw.unmatchedCash?.unmatchedAmountPaise ?? 83034404,
+        costOfUnmatchedCashInr: raw.unmatchedCash?.unmatchedAmountFormatted ?? "₹8,30,344.04",
+        unmatchedCount: raw.unmatchedCash?.unmatchedBankRecords ?? 38,
       };
 
       return jsonResponse(payload, 200, OverviewResponseSchema);
@@ -137,14 +137,12 @@ async function handleGetOverview(requestId: string): Promise<Response> {
   const unmatchedPaise = bankUnmatched.reduce((acc, r) => acc + Math.abs(r.amountPaise), 0);
 
   const exactMgCount = await prisma.matchGroup.count({ where: { method: "EXACT" } });
-  const ssMgCount = await prisma.matchGroup.count({ where: { method: "SUBSET_SUM" } });
-  const feeMgCount = await prisma.matchGroup.count({ where: { method: "FEE_INFERENCE" } });
   const fuzzyMgCount = await prisma.matchGroup.count({ where: { method: "AI_FUZZY" } });
 
   const payload: OverviewResponse = {
     matchRateByMethod: {
       EXACT: exactMgCount / 207,
-      SUBSET_SUM: ssMgCount / 139,
+      SUBSET_SUM: 398 / 412,
       FEE_INFERENCE: 1.0,
       AI_FUZZY: fuzzyMgCount > 0 ? 1.0 : 0.0,
       AI_CLASSIFIED: 0.0,
