@@ -372,7 +372,7 @@ export const OverviewPage: React.FC = () => {
               />
             </div>
           </div>
-          <p className="text-xs text-muted">20 bundle groups · Many-to-one</p>
+          <p className="text-xs text-muted">140 bundle groups · Many-to-one</p>
         </div>
 
         {/* Tile 4: AI & Manual Methods */}

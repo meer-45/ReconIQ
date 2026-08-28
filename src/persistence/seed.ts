@@ -300,6 +300,13 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
 
   // 1. SS AMBIGUOUS exceptions
   const ss = loadJson(join(RESULTS_DIR, "subset_sum_results.json"));
+  const allAmounts = (ss.exceptions ?? [])
+    .map((e: any) => Math.abs(e.bankRecord?.amountPaise ?? 0))
+    .filter((a: number) => a > 0)
+    .sort((a: number, b: number) => a - b);
+  const p90Index = Math.min(allAmounts.length - 1, Math.floor(allAmounts.length * 0.9));
+  const p90AmountPaise = allAmounts.length > 0 ? Math.max(allAmounts[p90Index], 1) : 1;
+
   let ssCount = 0;
   for (const ex of (ss.exceptions ?? [])) {
     const bankId = ex.bankRecord?.transactionRecordId;
@@ -309,6 +316,10 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
     seenIds.add(exId);
 
     const llmInfo = ssLlmMap.get(exId) ?? ssLlmMap.get(bankId);
+    const totalAmountPaise = Math.abs(ex.bankRecord?.amountPaise ?? 0);
+    const amountWeight = Math.min(1.0, totalAmountPaise / p90AmountPaise);
+    const confidence = llmInfo?.confidence ?? 0.5;
+    const riskScore = Math.round((1.0 - confidence) * amountWeight * 10000) / 10000;
 
     const candidates = (ex.candidates ?? []).slice(0, 3).map((c: any, idx: number) => {
       const gwList = (c.gatewaySubset ?? []).map((g: any) => ({
@@ -337,9 +348,9 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
       unresolvedExceptionId: exId,
       classification:        llmInfo ? classMap[llmInfo.classification] : "AMBIGUOUS_MATCH",
       rootCauseHypothesis:   llmInfo?.rootCauseHypothesis ?? null,
-      riskScore:             llmInfo ? (1.0 - llmInfo.confidence) : 0.5,
+      riskScore,
       transactionRecordIds:  uniqueTxIds,
-      totalAmountPaise:      ex.bankRecord?.amountPaise ?? 0,
+      totalAmountPaise,
       candidateMetadata:     candidates.length > 0 ? { candidates } : null,
     });
     ssCount++;
@@ -355,12 +366,13 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
     const bankId = c.bankRecordId;
     const evidenceIds: string[] = Array.isArray(c.evidenceRefs) ? c.evidenceRefs : [];
     const txIds = [bankId, ...evidenceIds].filter((id): id is string => typeof id === "string" && knownIds.has(id));
+    const confidence = c.confidence ?? 0.5;
 
     allExRows.push({
       unresolvedExceptionId: c.exceptionId,
       classification:        classMap[c.classification] ?? "OTHER",
       rootCauseHypothesis:   c.rootCauseHypothesis ?? null,
-      riskScore:             c.confidence ? Math.max(0, 1.0 - c.confidence) : 0.5,
+      riskScore:             Math.round((1.0 - confidence) * 10000) / 10000,
       transactionRecordIds:  txIds.length > 0 ? txIds : (bankId ? [bankId] : []),
       totalAmountPaise:      0,
       candidateMetadata:     {
