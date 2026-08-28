@@ -1,7 +1,10 @@
 // db.ts — singleton Prisma client with pg driver adapter (Prisma v7 requirement).
 // Import this instead of constructing PrismaClient directly anywhere in the codebase.
 
-import "dotenv/config";
+import dotenv from "dotenv";
+import { resolve } from "path";
+dotenv.config();
+dotenv.config({ path: resolve(__dirname, "../../.env") });
 import { Pool }       from "pg";
 import { PrismaPg }   from "@prisma/adapter-pg";
 import { PrismaClient } from "../../generated/prisma/client";

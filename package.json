@@ -2,7 +2,12 @@
   "name": "reconiq",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "scripts": {
+    "start": "bun run src/api/server.ts",
+    "dev": "bun run src/api/server.ts",
+    "server": "bun run src/api/server.ts",
+    "test": "bun test"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "prisma": "^7.9.1"

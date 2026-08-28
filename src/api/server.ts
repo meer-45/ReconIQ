@@ -2,7 +2,10 @@
 // Validates all responses with Zod schemas from src/api/schemas.ts.
 // CORS enabled for http://localhost:5173. Error responses contain requestId.
 
-import "dotenv/config";
+import dotenv from "dotenv";
+import { resolve } from "path";
+dotenv.config();
+dotenv.config({ path: resolve(__dirname, "../../.env") });
 import { createHash } from "node:crypto";
 import { readFileSync, existsSync } from "fs";
 import { join } from "path";
@@ -109,7 +112,9 @@ export async function getMainChainTailHash(): Promise<string> {
  * Returns high-level metrics matching Day 8 metrics report, reading from Postgres with file fallback.
  */
 async function handleGetOverview(requestId: string): Promise<Response> {
-  const reportPath = join(process.cwd(), "src", "metrics", "metrics_report.json");
+  const cwdReportPath = join(process.cwd(), "src", "metrics", "metrics_report.json");
+  const dirnameReportPath = resolve(__dirname, "../metrics/metrics_report.json");
+  const reportPath = existsSync(cwdReportPath) ? cwdReportPath : dirnameReportPath;
   if (existsSync(reportPath)) {
     try {
       const raw = JSON.parse(readFileSync(reportPath, "utf-8"));
