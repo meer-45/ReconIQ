@@ -12,10 +12,10 @@
 - **URL:** `http://localhost:5173/`
 - **Visual Action:** 
   1. Load Overview page.
-  2. Cursor points to the headline metric **Cost of Unmatched Cash (`₹34,85,984.06`)** as it smoothly counts up over 800ms.
-  3. Cursor hovers over the 4-tile KPI grid showing **54.4% Total Match Rate** and **100% Exact Precision**.
+  2. Cursor points to the headline metric **Cost of Unmatched Cash (`₹8,30,344.04`)** as it smoothly counts up over 800ms.
+  3. Cursor hovers over the 4-tile KPI grid showing **89.8% Total Match Rate** and **100% Exact Precision**.
 - **Voiceover:**
-  > "Every month-end, finance teams struggle to reconcile bank statements with payment gateway settlements. Look at this headline number: **₹34.85 Lakhs in Cost of Unmatched Cash** locked up in manual exception queues. ReconIQ replaces brittle rules and hallucinating LLMs with a mathematically proven, layered engine."
+  > "Every month-end, finance teams struggle to reconcile bank statements with payment gateway settlements. Look at this headline number: **₹8.30 Lakhs in Cost of Unmatched Cash** locked up in manual exception queues. ReconIQ replaces brittle rules and hallucinating LLMs with a mathematically proven, layered engine."
 
 ---
 
@@ -73,7 +73,7 @@
 
 - **URL:** Global view across any page
 - **Visual Action:**
-  1. Click the green badge in the footer: **`✓ MAIN CHAIN OK (786 rows) · 0 link breaks`**.
+  1. Click the green badge in the footer: **`✓ MAIN CHAIN OK (1,061 rows) · 0 link breaks`**.
   2. Press **`Cmd + K`** to trigger the floating Q&A bar.
   3. Type: *"Why wasn't tx_aa5ltds16g matched by exact match?"* and press Enter.
   4. Agent returns grounded response citing real transaction IDs from the database.

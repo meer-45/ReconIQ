@@ -1,7 +1,7 @@
 // Subset-sum matching layer for ReconIQ payment reconciliation engine
 // Matches bank records with groups of gateway transactions whose raw amounts sum to the bank payout
 // Uses bounded backtracking (DFS) to enumerate subsets up to maxSubsetSize
-// Incorporates deterministic scoring and rigorous pre-filtering complexity caps
+// Incorporates deterministic scoring, reference root gating, and pre-filtering complexity caps
 
 import { createHash } from 'node:crypto';
 
@@ -73,10 +73,40 @@ export interface PendingException {
   candidates: SubsetSumCandidate[]; // All candidates that were considered (for metadata)
 }
 
+// ── Reference Normalization & Root Gating ─────────────────────────────────────
+
+/**
+ * Normalize reference string: strips UTR, pay_, gtx_, ORD- prefixes, trims whitespace, uppercases.
+ */
+export function normalizeReference(reference: string): string {
+  if (!reference) return '';
+  return reference
+    .trim()
+    .replace(/^(UTR|pay_|gtx_|ORD-)/i, '')
+    .trim()
+    .toUpperCase();
+}
+
+/**
+ * Checks if a gateway reference shares a root with a bank reference.
+ * Bundles typically append suffixes like _1, _2, -REF, etc. (e.g. UTRJ585GT2H vs pay_J585GT2H_1)
+ */
+export function sharesReferenceRoot(bankRef: string, gatewayRef: string): boolean {
+  if (!bankRef || !gatewayRef) return false;
+  const bNorm = normalizeReference(bankRef);
+  const gNorm = normalizeReference(gatewayRef);
+  if (!bNorm || !gNorm) return false;
+
+  const bRoot = bNorm.split(/[_-]/)[0];
+  const gRoot = gNorm.split(/[_-]/)[0];
+
+  return bRoot === gRoot || bNorm.startsWith(gRoot) || gNorm.startsWith(bRoot);
+}
+
 /**
  * Pre-filters unmatched gateway records for a given bank statement record.
  *
- * - Enforces complexity cap of maxSubsetSize * 8 to prevent combinatorial explosion.
+ * - Enforces complexity cap of maxSubsetSize * 40 to prevent combinatorial explosion.
  * - Sorts pool by transactionDate ascending, then lexicographically by transactionRecordId ascending.
  */
 export function getGatewayCandidates(
@@ -85,7 +115,6 @@ export function getGatewayCandidates(
   config: SubsetSumConfig
 ): TransactionRecord[] {
   const bankDateMs = bankRecord.transactionDateMs;
-  const windowMs = config.dateWindowDays * 24 * 3600 * 1000;
   const pool = gatewayPool.filter(g => {
     const diffMs = Math.abs(bankDateMs - g.transactionDateMs);
     const diffDays = Math.round(diffMs / (24 * 3600 * 1000));
@@ -215,13 +244,6 @@ export function calculateScore(
 /**
  * Recursive backtracking to find all subsets of gateways that sum to the bank amount within tolerance.
  * Works with raw amounts of gateways (no fee conversion) for amount comparison.
- * @param bank The bank transaction to match.
- * @param origPool Original gateway transactions (sorted by date, then ID).
- * @param start Index to start considering (to avoid recomputing permutations).
- * @param currentOrig Current subset of original gateways.
- * @param currentSum Current sum of raw amounts.
- * @param results Accumulator for valid subsets found.
- * @param config Configuration.
  */
 function findCandidatesForBank(
   bank: TransactionRecord,
@@ -291,29 +313,51 @@ export function performSubsetSumMatching(
   const unmatchedBanks = bankRecords.filter(bank => bank.matchGroupId === null);
   // We only consider gateway records that are unmatched by exact.ts
   const unmatchedGateways = gatewayRecords.filter(gw => gw.matchGroupId === null);
-  // Merchant ledger records are not used in subset-sum matching (they are 1:1 with bank in exact.ts)
-  // but we keep the argument for interface compatibility.
 
   // Build date buckets for efficient lookup (using original gateways)
   const gatewayBuckets = bucketGatewaysByDate(unmatchedGateways);
 
   for (const bank of unmatchedBanks) {
-    // Get candidate gateways within date window (original records)
-    const origPool = getGatewayCandidatesBucketed(bank, gatewayBuckets, config);
-    if (origPool.length === 0) {
+    // Check if there are gateway records sharing reference root with bank (batch members)
+    const refMatchingGws = unmatchedGateways.filter(g =>
+      sharesReferenceRoot(bank.externalReference, g.externalReference)
+    );
+
+    let pool: TransactionRecord[] = [];
+    if (refMatchingGws.length >= config.minSubsetSize) {
+      pool = refMatchingGws;
+    } else {
+      pool = getGatewayCandidatesBucketed(bank, gatewayBuckets, config);
+    }
+
+    if (pool.length === 0) {
       continue; // No candidates, skip
     }
 
     // Find all valid subsets via bounded backtracking
     const rawCandidates: SubsetSumCandidate[] = [];
-    findCandidatesForBank(bank, origPool, 0, [], 0, rawCandidates, config);
+    findCandidatesForBank(bank, pool, 0, [], 0, rawCandidates, config);
 
     if (rawCandidates.length === 0) {
       continue; // No valid subsets, skip
     }
 
-    // Sort by finalScore descending, then by sortedIds ascending (lexicographic)
-    rawCandidates.sort((a, b) => {
+    // HARD GATE: At least one gateway transaction in the picked subset must share normalized reference root with bank
+    const refGatedCandidates = rawCandidates.filter(cand =>
+      cand.gatewaySubset.some(gw => sharesReferenceRoot(bank.externalReference, gw.externalReference))
+    );
+
+    if (refGatedCandidates.length === 0) {
+      // Does not satisfy reference gate: route to AMBIGUOUS_MATCH exception
+      exceptions.push({
+        bankRecord: bank,
+        candidates: rawCandidates
+      });
+      continue;
+    }
+
+    // Sort by finalScore descending, then by sortedIds ascending (lexicographic tie-breaker)
+    refGatedCandidates.sort((a, b) => {
       if (a.score.finalScore !== b.score.finalScore) {
         return b.score.finalScore - a.score.finalScore; // descending
       }
@@ -326,15 +370,12 @@ export function performSubsetSumMatching(
       return 0;
     });
 
-    // Keep top-5 by score for downstream decision; full enumeration only affects sorting
-    const topN = rawCandidates.slice(0, 5);
-
-    const topCandidate = topN[0];
-    const secondBest = topN[1];
+    const topCandidate = refGatedCandidates[0];
+    const secondBest = refGatedCandidates[1];
 
     // Determine if we have a clear winner
     const isClearWinner =
-      rawCandidates.length === 1 ||
+      refGatedCandidates.length === 1 ||
       (secondBest && (topCandidate.score.finalScore - secondBest.score.finalScore) >= config.minimumScoreGap);
 
     if (isClearWinner) {
@@ -344,7 +385,7 @@ export function performSubsetSumMatching(
       // Ambiguous case: create an exception
       exceptions.push({
         bankRecord: bank,
-        candidates: rawCandidates
+        candidates: refGatedCandidates
       });
     }
   }

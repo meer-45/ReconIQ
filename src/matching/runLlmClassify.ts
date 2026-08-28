@@ -48,10 +48,24 @@ function loadSubsetSumAmbiguous(): SubsetSumException[] {
 }
 
 function loadStartingHash(): string {
-  // Continue chain from fuzzy_match_results.json last auditRow
   try {
-    const content = JSON.parse(readFileSync(join(RESULTS_DIR, "fuzzy_match_results.json"), "utf-8"));
-    const rows    = content.auditRows ?? [];
+    const fz = JSON.parse(readFileSync(join(RESULTS_DIR, "fuzzy_match_results.json"), "utf-8"));
+    const rows = fz.auditRows ?? [];
+    if (rows.length > 0) return rows[rows.length - 1].rowHash;
+  } catch { /* fall through */ }
+  try {
+    const fi = JSON.parse(readFileSync(join(RESULTS_DIR, "fee_inference_audit_results.json"), "utf-8"));
+    const rows = fi.auditTrail ?? fi.auditRows ?? [];
+    if (rows.length > 0) return rows[rows.length - 1].rowHash;
+  } catch { /* fall through */ }
+  try {
+    const fi = JSON.parse(readFileSync(join(RESULTS_DIR, "fee_inference_results.json"), "utf-8"));
+    const rows = fi.auditTrail ?? fi.auditRows ?? [];
+    if (rows.length > 0) return rows[rows.length - 1].rowHash;
+  } catch { /* fall through */ }
+  try {
+    const ss = JSON.parse(readFileSync(join(RESULTS_DIR, "subset_sum_results.json"), "utf-8"));
+    const rows = ss.auditTrail ?? [];
     if (rows.length > 0) return rows[rows.length - 1].rowHash;
   } catch { /* fall through */ }
   return "0".repeat(64);

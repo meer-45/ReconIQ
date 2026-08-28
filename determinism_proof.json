@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-28T08:41:23.988Z",
+  "timestamp": "2026-08-28T10:51:43.863Z",
   "status": "DETERMINISTIC_PROOF_PASSED",
-  "verifiedAuditRows": 787,
-  "verifiedMatchGroups": 221,
+  "verifiedAuditRows": 1061,
+  "verifiedMatchGroups": 340,
   "divergences": 0
 }

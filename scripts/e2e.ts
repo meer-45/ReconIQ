@@ -15,7 +15,7 @@ interface StepResult {
 }
 
 const REPORT_PATH = join(process.cwd(), "e2e_report.json");
-const BASELINE_UNMATCHED_CASH_PAISE = 348598406; // ₹34,85,984.06 (±0.1% tolerance)
+const BASELINE_UNMATCHED_CASH_PAISE = 83034404; // ₹8,30,344.04 (from freshly evaluated metrics_report.json)
 
 async function runCmd(cmd: string, args: string[], env: Record<string, string> = {}): Promise<{ stdout: string; stderr: string; code: number }> {
   return new Promise((resolve) => {

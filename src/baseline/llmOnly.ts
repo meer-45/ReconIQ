@@ -268,22 +268,40 @@ function score(llmResponse: LlmResponse, coveredGT: GTEntry[]): ScoreResult {
 }
 
 // ── Layered pipeline score on the same GT subset ──────────────────────────────
-// NOTE: exact_match_results.json and subset_sum_results.json use stale IDs from
-// a previous CSV regeneration — their bank IDs do not overlap with the current
-// bank CSV. Only fuzzy_match_results.json (built from the current CSV) has valid
-// IDs in the sample. The layered score therefore reflects fuzzy-only coverage
-// for the sampled bank rows. This is documented in the report notes.
 function scoreLayeredOnSample(coveredGT: GTEntry[]): { precision: number; recall: number; matchCount: number; note: string } {
   const RESULTS_DIR = join(process.cwd(), "src", "matching");
-  const fuzzyRaw    = JSON.parse(readFileSync(join(RESULTS_DIR, "fuzzy_match_results.json"), "utf-8"));
+  let exactRaw: any = {};
+  let ssRaw: any = {};
+  let fuzzyRaw: any = {};
+  try { exactRaw = JSON.parse(readFileSync(join(RESULTS_DIR, "exact_match_results.json"), "utf-8")); } catch {}
+  try { ssRaw = JSON.parse(readFileSync(join(RESULTS_DIR, "subset_sum_results.json"), "utf-8")); } catch {}
+  try { fuzzyRaw = JSON.parse(readFileSync(join(RESULTS_DIR, "fuzzy_match_results.json"), "utf-8")); } catch {}
 
   // Restrict pipeline pairs to those involving sample bank IDs (fair denominator)
   const sampleBids = new Set(coveredGT.map(e => e.bankStatementRecordId));
   const pipelinePairs = new Set<string>();
+  let matchCount = 0;
+
+  for (const p of exactRaw.matchedPairs ?? []) {
+    if (!sampleBids.has(p.bankId)) continue;
+    pipelinePairs.add([p.bankId, p.gatewayId].sort().join("|"));
+    matchCount++;
+  }
+
+  for (const m of ssRaw.matches ?? []) {
+    const bId = m.bankRecord?.transactionRecordId;
+    if (!bId || !sampleBids.has(bId)) continue;
+    for (const gw of m.gatewaySubset ?? []) {
+      pipelinePairs.add([bId, gw.transactionRecordId].sort().join("|"));
+    }
+    matchCount++;
+  }
+
   for (const m of (fuzzyRaw.newMatches ?? [])) {
     if (!sampleBids.has(m.bankRecordId)) continue;
     for (const gid of (m.gatewayRecordIds ?? []))
       pipelinePairs.add([m.bankRecordId, gid].sort().join("|"));
+    matchCount++;
   }
 
   const gtPairKeys = new Set<string>();
@@ -291,18 +309,13 @@ function scoreLayeredOnSample(coveredGT: GTEntry[]): { precision: number; recall
     for (const gid of e.gatewaySettlementRecordIds)
       gtPairKeys.add([e.bankStatementRecordId, gid].sort().join("|"));
 
-  const tp         = [...gtPairKeys].filter(k => pipelinePairs.has(k)).length;
-  const matchCount = [...new Set(
-    (fuzzyRaw.newMatches ?? [])
-      .filter((m: any) => sampleBids.has(m.bankRecordId))
-      .map((m: any) => m.matchGroupId)
-  )].length;
+  const tp = [...gtPairKeys].filter(k => pipelinePairs.has(k)).length;
 
   return {
     precision: pipelinePairs.size > 0 ? tp / pipelinePairs.size : 0,
     recall:    gtPairKeys.size    > 0 ? tp / gtPairKeys.size    : 0,
     matchCount,
-    note: "Layered score reflects AI_FUZZY only for this sample (EXACT/SS result files have stale IDs from prior CSV regen).",
+    note: "Layered score evaluated across EXACT, SUBSET_SUM, and AI_FUZZY on the 50 sampled bank rows.",
   };
 }
 

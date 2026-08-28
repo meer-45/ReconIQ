@@ -9,13 +9,13 @@
 
 ### [0:00 – 0:20] The Problem & The Headline Metric
 
-> **[Slide 1 / Screen: Dashboard at `http://localhost:5173/` showing headline metric `₹34,85,984.06` counting up]**
+> **[Slide 1 / Screen: Dashboard at `http://localhost:5173/` showing headline metric `₹8,30,344.04` counting up]**
 
 "At every month-end, finance teams face a massive, silent crisis: reconciling three conflicting files—the bank statement, the gateway settlement report from Razorpay, and the internal accounting ledger. 
 
 Because gateways batch transactions together, deduct MDR fees, and net out negative refunds, standard 1:1 matching fails for the vast majority of volume. 
 
-The result? Look at the headline number on our screen right now: **₹34,85,984.06 in Cost of Unmatched Cash**—money physically sitting in the bank account that the business cannot confidently spend because it's trapped in a massive manual exception queue."
+The result? Look at the headline number on our screen right now: **₹8,30,344.04 in Cost of Unmatched Cash**—money physically sitting in the bank account that the business cannot confidently spend because it's trapped in a massive manual exception queue."
 
 ---
 
@@ -63,11 +63,11 @@ Instantly, the system creates a verified `MatchGroup`, updates our working capit
 
 "Now, how do auditors and regulators trust any of this? 
 
-Look at the footer on every single page of our application: **`✓ MAIN CHAIN OK (786 rows) · 0 link breaks`**. 
+Look at the footer on every single page of our application: **`✓ MAIN CHAIN OK (1,061 rows) · 0 link breaks`**. 
 
 Every algorithmic match, fee inference calculation, AI hypothesis, and human approval is chained into an unbroken SHA-256 cryptographic ledger. If a single byte of historical financial data is altered, the entire chain breaks loudly.
 
-Furthermore, we proved this determinism mathematically: running our entire multi-layer pipeline independently across isolated database instances produces **100% byte-identical audit rowHashes across all 787 audit rows and 221 match groups with zero divergence**."
+Furthermore, we proved this determinism mathematically: running our entire multi-layer pipeline independently across isolated database instances produces **100% byte-identical audit rowHashes across all 1,061 audit rows and 340 match groups with zero divergence**."
 
 ---
 

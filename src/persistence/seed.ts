@@ -161,18 +161,20 @@ async function seedMatchGroups(knownIds: Set<string>): Promise<{ count: number; 
   const ss = loadJson(join(RESULTS_DIR, "subset_sum_results.json"));
   let ssCount = 0; let ssSkip = 0;
   for (const m of (ss.matches ?? [])) {
+    const mgId = m.matchGroupId || `ss_mg_${m.bankRecord?.transactionRecordId}`;
+    const gatewayList = m.gatewaySubset ?? m.gatewayRecords ?? [];
     const memberIds: string[] = [
       m.bankRecord?.transactionRecordId,
-      ...(m.gatewayRecords ?? []).map((r: any) => r.transactionRecordId),
+      ...gatewayList.map((r: any) => r.transactionRecordId),
     ].filter(Boolean);
     if (memberIds.some(id => !knownIds.has(id))) { ssSkip++; continue; }
     allMgRows.push({
-      matchGroupId: m.matchGroupId, method: "SUBSET_SUM", confidenceScore: 1.0,
+      matchGroupId: mgId, method: "SUBSET_SUM", confidenceScore: 1.0,
       status: "MATCHED", createdAt: new Date(m.createdAt ?? Date.now()),
       resolvedAt: new Date(m.createdAt ?? Date.now()),
     });
-    for (const id of memberIds) allLinkages.set(id, m.matchGroupId);
-    mgIds.add(m.matchGroupId);
+    for (const id of memberIds) allLinkages.set(id, mgId);
+    mgIds.add(mgId);
     ssCount++;
   }
   console.log(`  SUBSET_SUM:    ${ssCount} match groups collected (skipped ${ssSkip})`);

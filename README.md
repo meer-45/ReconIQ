@@ -1,3 +1,5 @@
+<div align="center">
+
 # ReconIQ
 
 **Payment reconciliation engine — deterministic core, AI for ambiguity, tamper-evident by design.**
@@ -9,7 +11,7 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=000)](https://react.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-*Razorpay Buildathon 2026 · Track 04 (AI Finance Controller) · IIIT Lucknow*
+*Razorpay Buildathon 2026 · Track 04 (AI Finance Controller)*
 
 </div>
 
@@ -21,10 +23,11 @@ At month-end, every merchant taking online payments faces the same problem: thre
 
 ReconIQ takes a different position: **math for the math parts, AI for the ambiguity parts, cryptographic proof on every decision.**
 
-- **100% precision** on the deterministic pipeline
+- **100% precision** on the deterministic exact matching layer
 - **49.7% precision** on the LLM-only baseline for the same data
-- **787 audit rows, byte-identical across replays** — provably tamper-evident
-- **₹34.86 lakh** of unmatched cash surfaced as a single headline number
+- **1,061 audit rows, byte-identical across replays** — provably tamper-evident
+- **₹8.30 lakh** of unmatched cash surfaced as a single headline number
+- **89.76%** total match rate across all layers (333/371 bank records resolved)
 
 ---
 
@@ -44,47 +47,46 @@ ReconIQ takes a different position: **math for the math parts, AI for the ambigu
 
 ## Architecture
 
-```
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│  Bank CSV    │  │ Gateway CSV  │  │  Ledger CSV  │
-└──────┬───────┘  └──────┬───────┘  └──────┬───────┘
-       └─────────────────┼─────────────────┘
-                         ▼
-                    Ingestion
-              (normalize, paise-cast)
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │  Layer 1a  Exact    │  →  100% precision, cheap
-              └──────────┬──────────┘
-                         ▼
-              ┌─────────────────────┐
-              │  Layer 1b  Subset-  │  →  many-to-one bundles
-              │            sum DP   │      (signed, DP w/ pointers)
-              └──────────┬──────────┘
-                         ▼
-              ┌─────────────────────┐
-              │  Layer 1.5 Fee      │  →  learns MDR rate, catches
-              │            infer.   │      fee leakage as a finding
-              └──────────┬──────────┘
-                         ▼
-              ┌─────────────────────┐
-              │  Layer 2a  Fuzzy    │  →  TF-IDF trigrams,
-              │            match    │      PENDING_REVIEW band
-              └──────────┬──────────┘
-                         ▼
-              ┌─────────────────────┐
-              │  Layer 2b  LLM      │  →  structured JSON only,
-              │            classify │      prompt version logged
-              └──────────┬──────────┘
-                         ▼
-              ┌─────────────────────┐
-              │   Hash-chained      │  ←  every decision, one row
-              │   audit ledger      │      SHA-256 tamper-evidence
-              └──────────┬──────────┘
-                         ▼
-              Dashboard · Q&A · MCP
-```
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Bank CSV │ │ Gateway CSV │ │ Ledger CSV │
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+└─────────────────┼─────────────────┘
+▼
+Ingestion
+(normalize, paise-cast)
+│
+▼
+┌─────────────────────┐
+│ Layer 1a Exact │ → 100% precision, cheap
+└──────────┬──────────┘
+▼
+┌─────────────────────┐
+│ Layer 1b Subset- │ → many-to-one bundles
+│ sum DP │ (signed, DP w/ pointers)
+└──────────┬──────────┘
+▼
+┌─────────────────────┐
+│ Layer 1.5 Fee │ → learns MDR rate, catches
+│ infer. │ fee leakage as a finding
+└──────────┬──────────┘
+▼
+┌─────────────────────┐
+│ Layer 2a Fuzzy │ → TF-IDF trigrams,
+│ match │ PENDING_REVIEW band
+└──────────┬──────────┘
+▼
+┌─────────────────────┐
+│ Layer 2b LLM │ → structured JSON only,
+│ classify │ prompt version logged
+└──────────┬──────────┘
+▼
+┌─────────────────────┐
+│ Hash-chained │ ← every decision, one row
+│ audit ledger │ SHA-256 tamper-evidence
+└──────────┬──────────┘
+▼
+Dashboard · Q&A · MCP
+
 
 Every stage that isn't confident stops and asks a human. The system never silently guesses, and every decision — algorithmic, AI, or human — lands in the same chain.
 
@@ -92,18 +94,20 @@ Every stage that isn't confident stops and asks a human. The system never silent
 
 ## The numbers
 
-| Metric | Layered pipeline | LLM-only baseline |
-|---|---|---|
-| Precision | **100.0%** | 49.7% |
-| Recall | 26.5% | 95.9% |
-| Committed matches | 26 (correct) | 51 (25 wrong) |
-| Hallucinated IDs | 0 | 1 |
-| Cost per run | ₹0 | ₹0 (free tier) |
-| Auditable | ✅ | ❌ |
+*(Baseline comparison run on a matched sample for fair apples-to-apples timing/cost comparison — full-pipeline totals below.)*
 
-**Determinism proof:** 787 / 787 audit rows byte-identical across two isolated pipeline runs. 221 / 221 match groups identical. Zero divergence.
+| Metric              | Layered pipeline   | LLM-only baseline    |
+| ------------------- | ------------------ | -------------------- |
+| Precision           | **95.3%**          | 49.7%                |
+| Recall              | 83.7%              | 95.9%                |
+| Committed matches   | 38 (correct)       | 51 (25 wrong)        |
+| Hallucinated IDs    | 0                  | 1                    |
+| Cost per run        | ₹0                 | ₹0 (free tier)       |
+| Auditable           | ✅                 | ❌                   |
 
-**Cost of unmatched cash surfaced:** ₹34,85,984.06 across 169 unmatched bank records — money the merchant can see arrived but can't yet spend confidently, quantified as a single headline number.
+**Determinism proof:** 1,061 / 1,061 audit rows byte-identical across two isolated pipeline runs. 340 / 340 match groups identical. Zero divergence.
+
+**Cost of unmatched cash surfaced:** ₹8,30,344.04 across 38 unmatched bank records — money the merchant can see arrived but can't yet spend confidently, quantified as a single headline number.
 
 ---
 
@@ -131,8 +135,8 @@ Every stage that isn't confident stops and asks a human. The system never silent
 ### Setup
 
 ```bash
-git clone https://github.com/<your-username>/reconiq.git
-cd reconiq
+git clone https://github.com/meer-45/ReconIQ.git
+cd ReconIQ
 
 # Install dependencies
 bun install
@@ -160,7 +164,7 @@ bun run src/persistence/seed.ts
 
 # Verify audit chain
 bun run verify-chain.ts
-# → MAIN CHAIN OK (787 rows)
+# → MAIN CHAIN OK (1062 rows)
 ```
 
 ### Running the app
@@ -198,7 +202,7 @@ Add to your Claude Desktop config:
   "mcpServers": {
     "reconiq": {
       "command": "bun",
-      "args": ["run", "/absolute/path/to/reconiq/src/mcp/runServer.ts"],
+      "args": ["run", "/absolute/path/to/ReconIQ/src/mcp/runServer.ts"],
       "env": {
         "DATABASE_URL": "postgresql://..."
       }
@@ -218,19 +222,19 @@ Available tools:
 
 ## API reference
 
-| Method | Path | Purpose |
-|---|---|---|
-| GET | `/api/overview` | Match rates, unmatched cash, layer breakdown |
-| GET | `/api/exceptions` | Filterable, sortable, paginated |
-| GET | `/api/exceptions/:id` | Detail + candidate metadata |
-| POST | `/api/exceptions/:id/approve` | Human picks a candidate → MANUAL match |
-| POST | `/api/exceptions/:id/reject` | Reject with audit row |
-| POST | `/api/exceptions/:id/resolve` | Mark resolved without a match |
-| GET | `/api/match-groups/:id` | Match detail + linked audit slice |
-| GET | `/api/transactions/:id` | Transaction detail |
-| GET | `/api/transactions/:id/nearest-miss` | Counterfactual candidates |
-| POST | `/api/qa` | Grounded Q&A with cited IDs |
-| GET | `/api/verify-chain` | Live chain integrity check |
+| Method | Path                                    | Purpose                                         |
+| ------ | --------------------------------------- | ----------------------------------------------- |
+| GET    | `/api/overview`                         | Match rates, unmatched cash, layer breakdown    |
+| GET    | `/api/exceptions`                       | Filterable, sortable, paginated                 |
+| GET    | `/api/exceptions/:id`                   | Detail + candidate metadata                     |
+| POST   | `/api/exceptions/:id/approve`           | Human picks a candidate → MANUAL match          |
+| POST   | `/api/exceptions/:id/reject`            | Reject with audit row                           |
+| POST   | `/api/exceptions/:id/resolve`           | Mark resolved without a match                   |
+| GET    | `/api/match-groups/:id`                 | Match detail + linked audit slice               |
+| GET    | `/api/transactions/:id`                 | Transaction detail                              |
+| GET    | `/api/transactions/:id/nearest-miss`    | Counterfactual candidates                       |
+| POST   | `/api/qa`                               | Grounded Q&A with cited IDs                     |
+| GET    | `/api/verify-chain`                     | Live chain integrity check                      |
 
 All responses are Zod-schema-validated. Every state-changing endpoint appends a hash-chained audit row.
 
@@ -246,33 +250,32 @@ All responses are Zod-schema-validated. Every state-changing endpoint appends a 
 
 ## Project structure
 
-```
-reconiq/
+ReconIQ/
 ├── prisma/
-│   ├── schema.prisma           # single source of truth for data model
-│   └── migrations/
+│ ├── schema.prisma # single source of truth for data model
+│ └── migrations/
 ├── src/
-│   ├── matching/               # 5 pipeline layers, each pure & testable
-│   │   ├── exact.ts
-│   │   ├── subsetSum.ts
-│   │   ├── feeInference.ts
-│   │   ├── embedding.ts
-│   │   ├── fuzzyMatch.ts
-│   │   └── llmClassify.ts
-│   ├── llm/                    # Gemini client + cache + rate limiter
-│   ├── metrics/                # precision/recall/cost-of-unmatched-cash
-│   ├── agent/                  # Q&A agent with 4 function-calling tools
-│   ├── mcp/                    # MCP server wrapping the same tools
-│   ├── api/                    # Bun HTTP API + Zod schemas
-│   ├── persistence/            # Prisma client + seed
-│   └── prompts/                # LLM prompts, versioned by content hash
+│ ├── matching/ # 5 pipeline layers, each pure & testable
+│ │ ├── exact.ts
+│ │ ├── subsetSum.ts
+│ │ ├── feeInference.ts
+│ │ ├── embedding.ts
+│ │ ├── fuzzyMatch.ts
+│ │ └── llmClassify.ts
+│ ├── llm/ # Gemini client + cache + rate limiter
+│ ├── metrics/ # precision/recall/cost-of-unmatched-cash
+│ ├── agent/ # Q&A agent with 4 function-calling tools
+│ ├── mcp/ # MCP server wrapping the same tools
+│ ├── api/ # Bun HTTP API + Zod schemas
+│ ├── persistence/ # Prisma client + seed
+│ └── prompts/ # LLM prompts, versioned by content hash
 ├── scripts/
-│   ├── e2e.ts                  # end-to-end integration test
-│   └── determinism.ts          # byte-identical replay proof
-├── web/                        # React + Vite + Tailwind dashboard
-├── verify-chain.ts             # walk the audit chain, verify every hash
+│ ├── e2e.ts # end-to-end integration test
+│ └── determinism.ts # byte-identical replay proof
+├── web/ # React + Vite + Tailwind dashboard
+├── verify-chain.ts # walk the audit chain, verify every hash
 └── docs/
-```
+
 
 ---
 
@@ -283,6 +286,7 @@ bun test
 ```
 
 Coverage:
+
 - API smoke tests (endpoints, CORS, error handling)
 - Embedding correctness (normalization, cosine similarity, batch retrieval)
 - Subset-sum contracts (unambiguous, ambiguous, signed refunds, complexity caps)
@@ -290,9 +294,21 @@ Coverage:
 - MCP server (tool registration, delegation, error masking)
 
 Plus:
+
 - `verify-chain.ts` — full chain traversal
 - `scripts/e2e.ts` — 9-step end-to-end integration
 - `scripts/determinism.ts` — two-run byte-identical proof
 
 ---
 
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+
+Made by **Meer** · [GitHub](https://github.com/meer-45)
+
+</div>

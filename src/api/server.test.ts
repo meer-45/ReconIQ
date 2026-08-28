@@ -35,9 +35,9 @@ describe("ReconIQ API Server Smoke Tests", () => {
     expect(res.status).toBe(200);
     const data = await res.json();
 
-    expect(data.costOfUnmatchedCashPaise).toBe(348598406);
-    expect(data.costOfUnmatchedCashInr).toBe("₹34,85,984.06");
-    expect(data.unmatchedCount).toBe(169);
+    expect(data.costOfUnmatchedCashPaise).toBe(83034404);
+    expect(data.costOfUnmatchedCashInr).toBe("₹8,30,344.04");
+    expect(data.unmatchedCount).toBe(38);
     expect(typeof data.totalMatchRate).toBe("number");
     expect(data.matchRateByMethod).toBeDefined();
     expect(data.matchRateByMethod.EXACT).toBeGreaterThan(0);
