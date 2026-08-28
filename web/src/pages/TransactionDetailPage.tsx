@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import { api } from "../api/client";
 import { type TransactionDetailResponse, type NearestMissResponse } from "../api/schemas";
 import { formatInr, formatDate } from "../utils/formatters";
+import { PipelineTraceModal } from "../components/PipelineTraceModal";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -13,6 +14,7 @@ import {
   ArrowRight,
   FileText,
   Compass,
+  Zap,
 } from "lucide-react";
 
 export const TransactionDetailPage: React.FC = () => {
@@ -21,6 +23,7 @@ export const TransactionDetailPage: React.FC = () => {
   const [nearestMiss, setNearestMiss] = useState<NearestMissResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [isTraceOpen, setIsTraceOpen] = useState<boolean>(false);
 
   const fetchTransactionData = async () => {
     if (!id) return;
@@ -98,10 +101,20 @@ export const TransactionDetailPage: React.FC = () => {
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-8">
       {/* ── Breadcrumb & Top Bar ─────────────────────────────────────────── */}
       <div className="space-y-4">
-        <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-foreground transition-colors">
-          <ArrowLeft className="h-4 w-4" />
-          <span>Back to Overview</span>
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-foreground transition-colors">
+            <ArrowLeft className="h-4 w-4" />
+            <span>Back to Overview</span>
+          </Link>
+
+          <button
+            onClick={() => setIsTraceOpen(true)}
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-primary-500/20 hover:from-primary-500 hover:to-indigo-500 transition-all hover:scale-105"
+          >
+            <Zap className="h-4 w-4 text-amber-300" />
+            <span>Trace Pipeline</span>
+          </button>
+        </div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-border pb-6">
           <div className="space-y-2">
@@ -271,6 +284,13 @@ export const TransactionDetailPage: React.FC = () => {
           )}
         </section>
       )}
+
+      {/* ── Pipeline Trace Staged Modal ──────────────────────────────────── */}
+      <PipelineTraceModal
+        transactionId={transaction.transactionRecordId}
+        isOpen={isTraceOpen}
+        onClose={() => setIsTraceOpen(false)}
+      />
     </div>
   );
 };

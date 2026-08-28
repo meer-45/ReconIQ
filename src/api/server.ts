@@ -10,6 +10,7 @@ import { z } from "zod";
 import { prisma, closePrisma } from "../persistence/db";
 import { computeEmbedding, cosineSimilarity } from "../matching/embedding";
 import { runQaAgent } from "../agent/qaAgent";
+import { broadcastLiveMatch, websocketHandlers, type WsClientData } from "./websocket";
 import {
   OverviewResponseSchema,
   ExceptionsListResponseSchema,
@@ -356,6 +357,15 @@ async function handleApproveException(id: string, req: Request, requestId: strin
     auditTrailId,
     message:      `Exception ${id} approved successfully`,
   };
+
+  // Broadcast to all WebSocket subscribers on live_matches channel
+  broadcastLiveMatch({
+    matchGroupId,
+    method:               "MANUAL",
+    transactionRecordIds: targetTxIds,
+    confidence:           1.0,
+    at:                   now.toISOString(),
+  });
 
   return jsonResponse(payload, 200, ApproveExceptionResponseSchema);
 }
@@ -709,11 +719,25 @@ export async function handleRequest(req: Request): Promise<Response> {
 // ── Server Launcher ───────────────────────────────────────────────────────────
 
 export function startServer(port: number = 3000) {
-  const server = Bun.serve({
+  const server = Bun.serve<WsClientData>({
     port,
-    fetch: handleRequest,
+    fetch(req, server) {
+      const url = new URL(req.url);
+      if (url.pathname === "/ws") {
+        const success = server.upgrade(req, {
+          data: {
+            id: `client_${Math.random().toString(36).slice(2, 9)}`,
+            subscriptions: new Set<string>(),
+          },
+        });
+        if (success) return undefined;
+        return new Response("WebSocket upgrade failed", { status: 400 });
+      }
+      return handleRequest(req);
+    },
+    websocket: websocketHandlers,
   });
-  console.log(`ReconIQ API server running on http://localhost:${server.port}`);
+  console.log(`ReconIQ API server running on http://localhost:${server.port} (WS on /ws)`);
   return server;
 }
 
