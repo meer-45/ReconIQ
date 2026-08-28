@@ -1,44 +1,44 @@
 {
-  "timestamp": "2026-08-28T08:06:08.661Z",
+  "timestamp": "2026-08-28T08:28:35.317Z",
   "overallStatus": "PASS",
   "totalSteps": 9,
   "passedSteps": 9,
   "failedSteps": 0,
-  "totalDurationMs": 156029,
+  "totalDurationMs": 151484,
   "steps": [
     {
       "step": 1,
       "name": "Postgres Initial Seed",
       "passed": true,
-      "durationMs": 47787,
+      "durationMs": 52768,
       "details": "Tables populated and hash-chain seeded"
     },
     {
       "step": 2,
       "name": "Regenerate Pipeline Layer Outputs",
       "passed": true,
-      "durationMs": 12692,
+      "durationMs": 8449,
       "details": "All 5 pipeline layers executed successfully"
     },
     {
       "step": 3,
       "name": "Re-seed Postgres From Fresh Results",
       "passed": true,
-      "durationMs": 55780,
+      "durationMs": 45886,
       "details": "993 audit rows loaded cleanly"
     },
     {
       "step": 4,
       "name": "Verify Hash Chain (Pre-Approval)",
       "passed": true,
-      "durationMs": 15293,
-      "details": "MAIN CHAIN OK & SIDE CHAIN OK (0 breaks)"
+      "durationMs": 9094,
+      "details": "MAIN CHAIN OK (0 breaks)"
     },
     {
       "step": 5,
       "name": "API Server Health Probe",
       "passed": true,
-      "durationMs": 5,
+      "durationMs": 13,
       "details": "API server responsive on http://localhost:3000"
     },
     {
@@ -52,21 +52,21 @@
       "step": 7,
       "name": "Approve AMBIGUOUS_MATCH Exception",
       "passed": true,
-      "durationMs": 6955,
-      "details": "Approved ss_ex_tx_0cpybumsfkvn → MatchGroup mg_manual_mtco342f_6w05q"
+      "durationMs": 7598,
+      "details": "Approved ss_ex_tx_lo1yhvr9thk → MatchGroup mg_manual_mtcovrjq_45jai"
     },
     {
       "step": 8,
       "name": "Verify Hash Chain (Post-Approval Continuation)",
       "passed": true,
-      "durationMs": 16266,
-      "details": "MAIN CHAIN OK & SIDE CHAIN OK — new approval chained seamlessly onto tail"
+      "durationMs": 14518,
+      "details": "MAIN CHAIN OK — new approval chained seamlessly onto tail"
     },
     {
       "step": 9,
       "name": "Autonomous Q&A Agent Probes (3 Questions)",
       "passed": true,
-      "durationMs": 1249,
+      "durationMs": 13157,
       "details": "3 questions asked; each cited valid database entity IDs"
     }
   ]

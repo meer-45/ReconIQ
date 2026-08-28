@@ -86,7 +86,6 @@ export function errorResponse(message: string, status: number, requestId: string
 
 export async function getMainChainTailHash(): Promise<string> {
   const allRows = await prisma.auditTrail.findMany({
-    where: { method: { not: "FEE_INFERENCE" } },
     select: { rowHash: true, previousRowHash: true },
   });
   if (allRows.length === 0) return "0".repeat(64);
@@ -729,10 +728,9 @@ async function handleVerifyChain(requestId: string): Promise<Response> {
     return jsonResponse(payload, 200, VerifyChainResponseSchema);
   }
 
-  const MAIN_CHAIN_METHODS = new Set([
-    "EXACT", "SUBSET_SUM", "AI_FUZZY", "AI_CLASSIFIED", "AI_CLASSIFY", "AGENT_QUERY", "MANUAL"
+  const ALL_CHAIN_METHODS = new Set([
+    "EXACT", "SUBSET_SUM", "FEE_INFERENCE", "AI_FUZZY", "AI_CLASSIFIED", "AI_CLASSIFY", "AGENT_QUERY", "MANUAL"
   ]);
-  const SIDE_CHAIN_METHODS = new Set(["FEE_INFERENCE"]);
 
   const byPrev = new Map<string, any[]>();
   for (const r of allRows) {
@@ -741,14 +739,13 @@ async function handleVerifyChain(requestId: string): Promise<Response> {
     byPrev.set(r.previousRowHash, bucket);
   }
 
-  // 1. Walk and verify main chain
+  // Walk and verify single continuous linear chain
   let curr = "0".repeat(64);
   const mainRows: any[] = [];
-  let ssTailHash = "";
 
   while (true) {
     const candidates = byPrev.get(curr) ?? [];
-    const next = candidates.find(r => MAIN_CHAIN_METHODS.has(r.method));
+    const next = candidates.find(r => ALL_CHAIN_METHODS.has(r.method));
     if (!next) break;
 
     if (next.previousRowHash !== curr) {
@@ -766,45 +763,14 @@ async function handleVerifyChain(requestId: string): Promise<Response> {
 
     mainRows.push(next);
     curr = next.rowHash;
-
-    if (next.method === "SUBSET_SUM") {
-      ssTailHash = next.rowHash;
-    }
-  }
-
-  // 2. Walk and verify side chain
-  const sideRows: any[] = [];
-  if (ssTailHash) {
-    let feePrev = ssTailHash;
-    while (true) {
-      const candidates = byPrev.get(feePrev) ?? [];
-      const next = candidates.find(r => SIDE_CHAIN_METHODS.has(r.method));
-      if (!next) break;
-
-      if (next.previousRowHash !== feePrev) {
-        const payload: VerifyChainResponse = {
-          ok: false,
-          mainChainRows: mainRows.length,
-          sideChainRows: sideRows.length,
-          totalRows: allRows.length,
-          status: "SIDE_CHAIN_BREAK",
-          verifiedAt: new Date().toISOString(),
-          error: `Side chain link break at auditTrailId=${next.auditTrailId}, expected=${feePrev}, actual=${next.previousRowHash}`,
-        };
-        return jsonResponse(payload, 200, VerifyChainResponseSchema);
-      }
-
-      sideRows.push(next);
-      feePrev = next.rowHash;
-    }
   }
 
   const payload: VerifyChainResponse = {
     ok: true,
     mainChainRows: mainRows.length,
-    sideChainRows: sideRows.length,
+    sideChainRows: 0,
     totalRows: allRows.length,
-    status: `MAIN CHAIN OK (${mainRows.length} rows) & SIDE CHAIN OK (${sideRows.length} rows)`,
+    status: `MAIN CHAIN OK (${mainRows.length} rows)`,
     verifiedAt: new Date().toISOString(),
   };
   return jsonResponse(payload, 200, VerifyChainResponseSchema);

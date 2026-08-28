@@ -100,10 +100,10 @@ async function main() {
   t0 = Date.now();
   try {
     const verifyRes = await runCmd("bun", ["run", "verify-chain.ts"]);
-    if (verifyRes.code !== 0 || !verifyRes.stdout.includes("MAIN CHAIN OK") || !verifyRes.stdout.includes("SIDE CHAIN OK")) {
+    if (verifyRes.code !== 0 || !verifyRes.stdout.includes("MAIN CHAIN OK")) {
       throw new Error(verifyRes.stderr || verifyRes.stdout);
     }
-    recordStep(4, "Verify Hash Chain (Pre-Approval)", true, t0, "MAIN CHAIN OK & SIDE CHAIN OK (0 breaks)");
+    recordStep(4, "Verify Hash Chain (Pre-Approval)", true, t0, "MAIN CHAIN OK (0 breaks)");
   } catch (err: any) {
     recordStep(4, "Verify Hash Chain (Pre-Approval)", false, t0, undefined, err.message);
   }
@@ -188,10 +188,10 @@ async function main() {
   t0 = Date.now();
   try {
     const verifyPostRes = await runCmd("bun", ["run", "verify-chain.ts"]);
-    if (verifyPostRes.code !== 0 || !verifyPostRes.stdout.includes("MAIN CHAIN OK") || !verifyPostRes.stdout.includes("SIDE CHAIN OK")) {
+    if (verifyPostRes.code !== 0 || !verifyPostRes.stdout.includes("MAIN CHAIN OK")) {
       throw new Error(verifyPostRes.stderr || verifyPostRes.stdout);
     }
-    recordStep(8, "Verify Hash Chain (Post-Approval Continuation)", true, t0, "MAIN CHAIN OK & SIDE CHAIN OK — new approval chained seamlessly onto tail");
+    recordStep(8, "Verify Hash Chain (Post-Approval Continuation)", true, t0, "MAIN CHAIN OK — new approval chained seamlessly onto tail");
   } catch (err: any) {
     recordStep(8, "Verify Hash Chain (Post-Approval Continuation)", false, t0, undefined, err.message);
   }

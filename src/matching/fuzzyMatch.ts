@@ -172,41 +172,44 @@ function makeAuditRow(
 }
 
 /**
- * Load the last rowHash from subset_sum_results.json (primary) or
- * fee_inference_audit_results.json (fallback), whichever was written last.
+ * Load the last rowHash from fee_inference_results.json (primary) or
+ * fee_inference_audit_results.json, with fallback to subset_sum_results.json.
  */
 export function loadStartingHash(): string {
   const GENESIS = "0".repeat(64);
 
-  const subsetPath  = join(process.cwd(), "src", "matching", "subset_sum_results.json");
-  const feePath     = join(process.cwd(), "src", "matching", "fee_inference_audit_results.json");
+  const feePath      = join(process.cwd(), "src", "matching", "fee_inference_results.json");
+  const feeAuditPath = join(process.cwd(), "src", "matching", "fee_inference_audit_results.json");
+  const subsetPath   = join(process.cwd(), "src", "matching", "subset_sum_results.json");
 
-  let subsetHash = GENESIS;
-  let subsetTs   = 0;
-  let feeHash    = GENESIS;
-  let feeTs      = 0;
-
-  try {
-    const ss = JSON.parse(readFileSync(subsetPath, "utf-8"));
-    const at: AuditRow[] = ss.auditTrail ?? [];
-    if (at.length > 0) {
-      const last = at[at.length - 1];
-      subsetHash = last.rowHash;
-      subsetTs   = new Date(last.decisionTimestamp).getTime();
-    }
-  } catch { /* file absent — stay at GENESIS */ }
-
+  // 1. Try fee_inference_results.json
   try {
     const fi = JSON.parse(readFileSync(feePath, "utf-8"));
     const at: AuditRow[] = fi.auditTrail ?? [];
     if (at.length > 0) {
-      const last = at[at.length - 1];
-      feeHash = last.rowHash;
-      feeTs   = new Date(last.decisionTimestamp).getTime();
+      return at[at.length - 1].rowHash;
     }
-  } catch { /* file absent */ }
+  } catch {}
 
-  return subsetTs >= feeTs ? subsetHash : feeHash;
+  // 2. Try fee_inference_audit_results.json
+  try {
+    const fi = JSON.parse(readFileSync(feeAuditPath, "utf-8"));
+    const at: AuditRow[] = fi.auditTrail ?? [];
+    if (at.length > 0) {
+      return at[at.length - 1].rowHash;
+    }
+  } catch {}
+
+  // 3. Fallback to subset_sum_results.json
+  try {
+    const ss = JSON.parse(readFileSync(subsetPath, "utf-8"));
+    const at: AuditRow[] = ss.auditTrail ?? [];
+    if (at.length > 0) {
+      return at[at.length - 1].rowHash;
+    }
+  } catch {}
+
+  return GENESIS;
 }
 
 // ── Amount check ──────────────────────────────────────────────────────────────

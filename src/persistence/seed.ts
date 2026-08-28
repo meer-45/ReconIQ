@@ -385,14 +385,13 @@ async function seedExceptions(knownIds: Set<string>): Promise<number> {
 
 // ── Step 4: AuditTrail rows ───────────────────────────────────────────────────
 async function seedAuditTrail(knownIds: Set<string>, knownMgIds: Set<string>): Promise<number> {
-  // Source files in chain order
-  const sources: Array<{ path: string; key: string }> = [
-    { path: join(RESULTS_DIR, "exact_match_results.json"),        key: "auditTrailEntries" },
-    { path: join(RESULTS_DIR, "subset_sum_results.json"),         key: "auditTrail" },
-    { path: join(RESULTS_DIR, "fuzzy_match_results.json"),        key: "auditRows" },
+  // Source files in linear continuous chain order: EXACT → SUBSET_SUM → FEE_INFERENCE → FUZZY → LLM_CLASSIFY
+  const sources: Array<{ path: string; key: string; label: string; fallbackPath?: string }> = [
+    { path: join(RESULTS_DIR, "exact_match_results.json"), key: "auditTrailEntries", label: "EXACT" },
+    { path: join(RESULTS_DIR, "subset_sum_results.json"), key: "auditTrail", label: "SS" },
+    { path: join(RESULTS_DIR, "fee_inference_results.json"), key: "auditTrail", label: "FEE_INFERENCE", fallbackPath: join(RESULTS_DIR, "fee_inference_audit_results.json") },
+    { path: join(RESULTS_DIR, "fuzzy_match_results.json"), key: "auditRows", label: "FUZZY" },
   ];
-  // Fee inference is a side chain — seeded last
-  const sideChainSource = { path: join(RESULTS_DIR, "fee_inference_audit_results.json"), key: "auditTrail" };
 
   let total = 0;
 
@@ -431,11 +430,17 @@ async function seedAuditTrail(knownIds: Set<string>, knownMgIds: Set<string>): P
     console.log(`  ${label}: ${inserted} rows`);
   }
 
-  // Main chain
-  for (const { path, key } of sources) {
-    const d    = loadJson(path);
-    const rows = d[key] ?? [];
-    const label = key === "auditTrailEntries" ? "EXACT" : key === "auditTrail" ? "SS" : "FUZZY";
+  // Linear Main chain traversal
+  for (const { path, key, label, fallbackPath } of sources) {
+    let d: any;
+    try {
+      d = loadJson(path);
+    } catch {
+      if (fallbackPath) {
+        try { d = loadJson(fallbackPath); } catch {}
+      }
+    }
+    const rows = d ? (d[key] ?? []) : [];
     if (rows.length > 0) await insertBatch(rows, label);
   }
 
@@ -446,12 +451,7 @@ async function seedAuditTrail(knownIds: Set<string>, knownMgIds: Set<string>): P
     if (rows.length > 0) await insertBatch(rows, "LLM_CLASSIFY");
   } catch { /* not yet generated */ }
 
-  // Side chain: fee inference
-  const fee  = loadJson(sideChainSource.path);
-  const feeRows = fee[sideChainSource.key] ?? [];
-  if (feeRows.length > 0) await insertBatch(feeRows, "FEE_INFERENCE (side chain)");
-
-  console.log(`  → ${total} audit rows total`);
+  console.log(`  → ${total} audit rows total (single continuous chain)`);
   return total;
 }
 
