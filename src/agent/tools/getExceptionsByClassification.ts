@@ -33,33 +33,51 @@ function loadFuzzyExceptions(): UnresolvedException[] {
   const fuzzyRaw = JSON.parse(readFileSync(join(RESULTS_DIR, "fuzzy_match_results.json"), "utf-8"));
   const llmRaw   = JSON.parse(readFileSync(join(RESULTS_DIR, "llm_classification_results.json"), "utf-8"));
 
-  // Build lookup: exceptionId → LLM classification
-  const llmByException = new Map<string, { classification: string; rootCauseHypothesis: string; confidence: number }>();
-  for (const c of (llmRaw.fuzzyClassifications ?? [])) {
-    llmByException.set(c.exceptionId, {
-      classification:      c.classification,
-      rootCauseHypothesis: c.rootCauseHypothesis,
-      confidence:          c.confidence,
-    });
-  }
-
   // Build lookup: bankRecordId → CSV fields
   const bankMap = new Map(getBankRecords().map(r => [r.transactionRecordId, r]));
 
-  return (fuzzyRaw.newExceptions ?? []).map((ex: any): UnresolvedException => {
-    const llm  = llmByException.get(ex.exceptionId);
-    const bank = bankMap.get(ex.bankRecordId);
+  if (Array.isArray(fuzzyRaw.newExceptions) && fuzzyRaw.newExceptions.length > 0) {
+    const llmByException = new Map<string, { classification: string; rootCauseHypothesis: string; confidence: number }>();
+    for (const c of (llmRaw.fuzzyClassifications ?? [])) {
+      llmByException.set(c.exceptionId, {
+        classification:      c.classification,
+        rootCauseHypothesis: c.rootCauseHypothesis,
+        confidence:          c.confidence,
+      });
+    }
+
+    return fuzzyRaw.newExceptions.map((ex: any): UnresolvedException => {
+      const llm  = llmByException.get(ex.exceptionId);
+      const bank = bankMap.get(ex.bankRecordId);
+      return {
+        exceptionId:          ex.exceptionId,
+        bankRecordId:         ex.bankRecordId,
+        externalReference:    bank?.externalReference  ?? "",
+        amountPaise:          bank?.amountPaise        ?? 0,
+        transactionDate:      bank?.transactionDate    ?? "",
+        exceptionType:        ex.exceptionType,
+        classification:       llm?.classification,
+        rootCauseHypothesis:  llm?.rootCauseHypothesis,
+        confidence:           llm?.confidence,
+        topCandidates:        ex.candidateMetadata?.topCandidates ?? [],
+      };
+    });
+  }
+
+  // Fallback / direct mapping from llm_classification_results.json
+  return (llmRaw.fuzzyClassifications ?? []).map((c: any): UnresolvedException => {
+    const bank = bankMap.get(c.bankRecordId);
     return {
-      exceptionId:          ex.exceptionId,
-      bankRecordId:         ex.bankRecordId,
+      exceptionId:          c.exceptionId,
+      bankRecordId:         c.bankRecordId,
       externalReference:    bank?.externalReference  ?? "",
       amountPaise:          bank?.amountPaise        ?? 0,
       transactionDate:      bank?.transactionDate    ?? "",
-      exceptionType:        ex.exceptionType,
-      classification:       llm?.classification,
-      rootCauseHypothesis:  llm?.rootCauseHypothesis,
-      confidence:           llm?.confidence,
-      topCandidates:        ex.candidateMetadata?.topCandidates ?? [],
+      exceptionType:        "FUZZY_LOW_CONFIDENCE",
+      classification:       c.classification,
+      rootCauseHypothesis:  c.rootCauseHypothesis,
+      confidence:           c.confidence,
+      topCandidates:        [],
     };
   });
 }
