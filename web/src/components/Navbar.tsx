@@ -19,6 +19,7 @@ export const Navbar: React.FC = () => {
   const navItems = [
     { label: "Overview", path: "/", icon: LayoutDashboard },
     { label: "Exceptions", path: "/exceptions", icon: AlertTriangle },
+    { label: "ExampleBank", path: "/example-bank", icon: Database },
   ];
 
   return (

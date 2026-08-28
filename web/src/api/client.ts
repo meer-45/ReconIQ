@@ -210,4 +210,30 @@ export const api = {
       QaResponseSchema
     );
   },
+
+  /**
+   * GET /api/example-bank/count
+   */
+  async getExampleBankCount(): Promise<{ count: number }> {
+    return request<{ count: number }>("/example-bank/count", { method: "GET" });
+  },
+
+  /**
+   * GET /api/example-bank?limit=&offset=
+   */
+  async getExampleBankList(params: { limit?: number; offset?: number } = {}): Promise<{
+    examples: Array<{
+      exampleBankId: string;
+      createdAt: string;
+      exceptionSnapshot: Record<string, any>;
+      correctAction: Record<string, any>;
+    }>;
+    total: number;
+  }> {
+    const query = new URLSearchParams();
+    if (params.limit !== undefined) query.set("limit", params.limit.toString());
+    if (params.offset !== undefined) query.set("offset", params.offset.toString());
+    const qs = query.toString();
+    return request(`/example-bank${qs ? `?${qs}` : ""}`, { method: "GET" });
+  },
 };

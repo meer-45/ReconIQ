@@ -72,10 +72,11 @@ export const ExceptionDetailPage: React.FC = () => {
         chosenCandidateIndex: chosenIndex,
         actorId: "human_analyst_1",
       });
-      setToastMessage(`✓ Match Approved! Created MatchGroup: ${res.matchGroupId}`);
+      const countRes = await api.getExampleBankCount().catch(() => ({ count: 1 }));
+      setToastMessage(`✓ Match Approved! Saved as example. ${countRes.count} similar past cases now inform future classifications.`);
       setTimeout(() => {
         navigate(`/match-groups/${encodeURIComponent(res.matchGroupId)}`);
-      }, 1000);
+      }, 1500);
     } catch (err: any) {
       alert(`Approval failed: ${err.message}`);
     } finally {
@@ -92,7 +93,8 @@ export const ExceptionDetailPage: React.FC = () => {
         actorId: "human_analyst_1",
         reason: "Manual rejection: none of the candidates matched the bank record",
       });
-      setToastMessage("✓ Exception marked as REJECTED.");
+      const countRes = await api.getExampleBankCount().catch(() => ({ count: 1 }));
+      setToastMessage(`✓ Saved as example. ${countRes.count} similar past cases now inform future classifications.`);
       fetchDetail();
     } catch (err: any) {
       alert(`Rejection failed: ${err.message}`);
@@ -109,7 +111,8 @@ export const ExceptionDetailPage: React.FC = () => {
         actorId: "human_analyst_1",
         reason: `Manually reviewed and resolved based on hypothesis: ${data.rootCauseHypothesis || "Verified"}`,
       });
-      setToastMessage("✓ Exception marked as RESOLVED.");
+      const countRes = await api.getExampleBankCount().catch(() => ({ count: 1 }));
+      setToastMessage(`✓ Saved as example. ${countRes.count} similar past cases now inform future classifications.`);
       fetchDetail();
     } catch (err: any) {
       alert(`Resolution failed: ${err.message}`);

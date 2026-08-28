@@ -11,6 +11,7 @@ import { prisma, closePrisma } from "../persistence/db";
 import { computeEmbedding, cosineSimilarity } from "../matching/embedding";
 import { runQaAgent } from "../agent/qaAgent";
 import { broadcastLiveMatch, websocketHandlers, type WsClientData } from "./websocket";
+import { saveExample, getExampleCount, listExamples } from "../agent/exampleBank";
 import {
   OverviewResponseSchema,
   ExceptionsListResponseSchema,
@@ -22,6 +23,8 @@ import {
   NearestMissResponseSchema,
   QaRequestSchema,
   QaResponseSchema,
+  ExampleBankCountResponseSchema,
+  ExampleBankListResponseSchema,
   ErrorResponseSchema,
   type OverviewResponse,
   type ExceptionsListResponse,
@@ -31,6 +34,8 @@ import {
   type TransactionDetailResponse,
   type NearestMissResponse,
   type QaResponse,
+  type ExampleBankCountResponse,
+  type ExampleBankListResponse,
 } from "./schemas";
 
 // ── CORS Headers ──────────────────────────────────────────────────────────────
@@ -358,6 +363,29 @@ async function handleApproveException(id: string, req: Request, requestId: strin
     message:      `Exception ${id} approved successfully`,
   };
 
+  // Save to ExampleBank for few-shot self-healing
+  try {
+    await saveExample({
+      exceptionSnapshot: {
+        exceptionId:          id,
+        classification:       ex.classification,
+        totalAmountPaise:     ex.totalAmountPaise,
+        transactionRecordIds: ex.transactionRecordIds,
+        candidateMetadata:    ex.candidateMetadata,
+        rootCauseHypothesis:  ex.rootCauseHypothesis,
+      },
+      correctAction: {
+        type:                 "APPROVE_CANDIDATE",
+        chosenCandidateIndex,
+        classification:       "AMBIGUOUS_MATCH",
+        actorId,
+      },
+      actorId,
+    });
+  } catch (ebErr) {
+    console.error("[ExampleBank save error]:", ebErr);
+  }
+
   // Broadcast to all WebSocket subscribers on live_matches channel
   broadcastLiveMatch({
     matchGroupId,
@@ -437,6 +465,29 @@ async function handleResolveOrRejectException(
       previousRowHash,
     },
   });
+
+  // Save to ExampleBank for few-shot self-healing
+  try {
+    await saveExample({
+      exceptionSnapshot: {
+        exceptionId:          id,
+        classification:       ex.classification,
+        totalAmountPaise:     ex.totalAmountPaise,
+        transactionRecordIds: ex.transactionRecordIds,
+        candidateMetadata:    ex.candidateMetadata,
+        rootCauseHypothesis:  ex.rootCauseHypothesis,
+      },
+      correctAction: {
+        type:           action === "REJECTED" ? "REJECT" : "MARK_RESOLVED",
+        classification: ex.classification ?? undefined,
+        humanNote:      reason,
+        actorId,
+      },
+      actorId,
+    });
+  } catch (ebErr) {
+    console.error("[ExampleBank save error]:", ebErr);
+  }
 
   return jsonResponse({
     status: action,
@@ -637,6 +688,27 @@ async function handlePostQa(req: Request, requestId: string): Promise<Response> 
   return jsonResponse(payload, 200, QaResponseSchema);
 }
 
+/**
+ * GET /api/example-bank/count
+ */
+async function handleGetExampleBankCount(requestId: string): Promise<Response> {
+  const count = await getExampleCount();
+  const payload: ExampleBankCountResponse = { count };
+  return jsonResponse(payload, 200, ExampleBankCountResponseSchema);
+}
+
+/**
+ * GET /api/example-bank?limit=20&offset=0
+ */
+async function handleGetExampleBankList(url: URL, requestId: string): Promise<Response> {
+  const limit = Math.min(100, Math.max(1, parseInt(url.searchParams.get("limit") || "20", 10)));
+  const offset = Math.max(0, parseInt(url.searchParams.get("offset") || "0", 10));
+
+  const result = await listExamples(limit, offset);
+  const payload: ExampleBankListResponse = result;
+  return jsonResponse(payload, 200, ExampleBankListResponseSchema);
+}
+
 // ── Main Request Dispatcher ───────────────────────────────────────────────────
 
 export async function handleRequest(req: Request): Promise<Response> {
@@ -659,6 +731,16 @@ export async function handleRequest(req: Request): Promise<Response> {
     // GET /api/exceptions
     if (method === "GET" && path === "/api/exceptions") {
       return await handleGetExceptions(url, requestId);
+    }
+
+    // GET /api/example-bank/count
+    if (method === "GET" && path === "/api/example-bank/count") {
+      return await handleGetExampleBankCount(requestId);
+    }
+
+    // GET /api/example-bank
+    if (method === "GET" && path === "/api/example-bank") {
+      return await handleGetExampleBankList(url, requestId);
     }
 
     // POST /api/exceptions/:id/approve

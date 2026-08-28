@@ -161,6 +161,27 @@ export const QaResponseSchema = z.object({
 });
 export type QaResponse = z.infer<typeof QaResponseSchema>;
 
+// ── GET /api/example-bank ─────────────────────────────────────────────────────
+
+export const ExampleBankCountResponseSchema = z.object({
+  count: z.number(),
+});
+export type ExampleBankCountResponse = z.infer<typeof ExampleBankCountResponseSchema>;
+
+export const ExampleBankItemSchema = z.object({
+  exampleBankId:     z.string(),
+  createdAt:         z.string(),
+  exceptionSnapshot: z.record(z.any()),
+  correctAction:     z.record(z.any()),
+});
+export type ExampleBankItem = z.infer<typeof ExampleBankItemSchema>;
+
+export const ExampleBankListResponseSchema = z.object({
+  examples: z.array(ExampleBankItemSchema),
+  total:    z.number(),
+});
+export type ExampleBankListResponse = z.infer<typeof ExampleBankListResponseSchema>;
+
 // ── Error Response ────────────────────────────────────────────────────────────
 
 export const ErrorResponseSchema = z.object({

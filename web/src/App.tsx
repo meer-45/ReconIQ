@@ -9,6 +9,7 @@ import { ExceptionsPage } from "./pages/ExceptionsPage";
 import { ExceptionDetailPage } from "./pages/ExceptionDetailPage";
 import { MatchGroupDetailPage } from "./pages/MatchGroupDetailPage";
 import { TransactionDetailPage } from "./pages/TransactionDetailPage";
+import { ExampleBankPage } from "./pages/ExampleBankPage";
 import { QaFloatingBar } from "./components/QaFloatingBar";
 
 export const App: React.FC = () => {
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
               <Route path="/exceptions/:id" element={<ExceptionDetailPage />} />
               <Route path="/match-groups/:id" element={<MatchGroupDetailPage />} />
               <Route path="/transactions/:id" element={<TransactionDetailPage />} />
+              <Route path="/example-bank" element={<ExampleBankPage />} />
             </Routes>
           </main>
 
