@@ -25,6 +25,7 @@ import {
   QaResponseSchema,
   ExampleBankCountResponseSchema,
   ExampleBankListResponseSchema,
+  VerifyChainResponseSchema,
   ErrorResponseSchema,
   type OverviewResponse,
   type ExceptionsListResponse,
@@ -36,6 +37,7 @@ import {
   type QaResponse,
   type ExampleBankCountResponse,
   type ExampleBankListResponse,
+  type VerifyChainResponse,
 } from "./schemas";
 
 // ── CORS Headers ──────────────────────────────────────────────────────────────
@@ -709,6 +711,105 @@ async function handleGetExampleBankList(url: URL, requestId: string): Promise<Re
   return jsonResponse(payload, 200, ExampleBankListResponseSchema);
 }
 
+/**
+ * GET /api/verify-chain
+ */
+async function handleVerifyChain(requestId: string): Promise<Response> {
+  const allRows = await prisma.auditTrail.findMany();
+  if (allRows.length === 0) {
+    const payload: VerifyChainResponse = {
+      ok: false,
+      mainChainRows: 0,
+      sideChainRows: 0,
+      totalRows: 0,
+      status: "DB_EMPTY",
+      verifiedAt: new Date().toISOString(),
+      error: "No audit rows found in database",
+    };
+    return jsonResponse(payload, 200, VerifyChainResponseSchema);
+  }
+
+  const MAIN_CHAIN_METHODS = new Set([
+    "EXACT", "SUBSET_SUM", "AI_FUZZY", "AI_CLASSIFIED", "AI_CLASSIFY", "AGENT_QUERY", "MANUAL"
+  ]);
+  const SIDE_CHAIN_METHODS = new Set(["FEE_INFERENCE"]);
+
+  const byPrev = new Map<string, any[]>();
+  for (const r of allRows) {
+    const bucket = byPrev.get(r.previousRowHash) ?? [];
+    bucket.push(r);
+    byPrev.set(r.previousRowHash, bucket);
+  }
+
+  // 1. Walk and verify main chain
+  let curr = "0".repeat(64);
+  const mainRows: any[] = [];
+  let ssTailHash = "";
+
+  while (true) {
+    const candidates = byPrev.get(curr) ?? [];
+    const next = candidates.find(r => MAIN_CHAIN_METHODS.has(r.method));
+    if (!next) break;
+
+    if (next.previousRowHash !== curr) {
+      const payload: VerifyChainResponse = {
+        ok: false,
+        mainChainRows: mainRows.length,
+        sideChainRows: 0,
+        totalRows: allRows.length,
+        status: "MAIN_CHAIN_BREAK",
+        verifiedAt: new Date().toISOString(),
+        error: `Main chain link break at auditTrailId=${next.auditTrailId}, expected=${curr}, actual=${next.previousRowHash}`,
+      };
+      return jsonResponse(payload, 200, VerifyChainResponseSchema);
+    }
+
+    mainRows.push(next);
+    curr = next.rowHash;
+
+    if (next.method === "SUBSET_SUM") {
+      ssTailHash = next.rowHash;
+    }
+  }
+
+  // 2. Walk and verify side chain
+  const sideRows: any[] = [];
+  if (ssTailHash) {
+    let feePrev = ssTailHash;
+    while (true) {
+      const candidates = byPrev.get(feePrev) ?? [];
+      const next = candidates.find(r => SIDE_CHAIN_METHODS.has(r.method));
+      if (!next) break;
+
+      if (next.previousRowHash !== feePrev) {
+        const payload: VerifyChainResponse = {
+          ok: false,
+          mainChainRows: mainRows.length,
+          sideChainRows: sideRows.length,
+          totalRows: allRows.length,
+          status: "SIDE_CHAIN_BREAK",
+          verifiedAt: new Date().toISOString(),
+          error: `Side chain link break at auditTrailId=${next.auditTrailId}, expected=${feePrev}, actual=${next.previousRowHash}`,
+        };
+        return jsonResponse(payload, 200, VerifyChainResponseSchema);
+      }
+
+      sideRows.push(next);
+      feePrev = next.rowHash;
+    }
+  }
+
+  const payload: VerifyChainResponse = {
+    ok: true,
+    mainChainRows: mainRows.length,
+    sideChainRows: sideRows.length,
+    totalRows: allRows.length,
+    status: `MAIN CHAIN OK (${mainRows.length} rows) & SIDE CHAIN OK (${sideRows.length} rows)`,
+    verifiedAt: new Date().toISOString(),
+  };
+  return jsonResponse(payload, 200, VerifyChainResponseSchema);
+}
+
 // ── Main Request Dispatcher ───────────────────────────────────────────────────
 
 export async function handleRequest(req: Request): Promise<Response> {
@@ -726,6 +827,11 @@ export async function handleRequest(req: Request): Promise<Response> {
     // GET /api/overview
     if (method === "GET" && path === "/api/overview") {
       return await handleGetOverview(requestId);
+    }
+
+    // GET /api/verify-chain
+    if (method === "GET" && path === "/api/verify-chain") {
+      return await handleVerifyChain(requestId);
     }
 
     // GET /api/exceptions

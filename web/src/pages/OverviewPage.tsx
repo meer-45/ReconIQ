@@ -19,6 +19,34 @@ import {
   Sparkles,
 } from "lucide-react";
 
+// Smooth 800ms count-up easing for headline metric
+function useCountUp(targetPaise: number, durationMs: number = 800): number {
+  const [current, setCurrent] = useState<number>(0);
+
+  useEffect(() => {
+    if (!targetPaise) return;
+    const start = performance.now();
+    let frameId: number;
+
+    const step = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(1, elapsed / durationMs);
+      const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const val = Math.round(targetPaise * ease);
+      setCurrent(val);
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step);
+      }
+    };
+
+    frameId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frameId);
+  }, [targetPaise, durationMs]);
+
+  return current;
+}
+
 export const OverviewPage: React.FC = () => {
   const [data, setData] = useState<OverviewResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,6 +54,8 @@ export const OverviewPage: React.FC = () => {
   const [liveBanner, setLiveBanner] = useState<LiveMatch | null>(null);
   const [flashTiles, setFlashTiles] = useState<boolean>(false);
   const [flashMethod, setFlashMethod] = useState<string | null>(null);
+
+  const animatedCashPaise = useCountUp(data?.costOfUnmatchedCashPaise ?? 0, 800);
 
   const fetchOverview = async () => {
     try {
@@ -232,8 +262,8 @@ export const OverviewPage: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-              {data.costOfUnmatchedCashInr || formatInr(data.costOfUnmatchedCashPaise)}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-mono">
+              {formatInr(animatedCashPaise)}
             </h1>
 
             <p className="text-sm sm:text-base text-muted max-w-2xl">

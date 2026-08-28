@@ -12,6 +12,8 @@ import { TransactionDetailPage } from "./pages/TransactionDetailPage";
 import { ExampleBankPage } from "./pages/ExampleBankPage";
 import { QaFloatingBar } from "./components/QaFloatingBar";
 
+import { AuditChainVerifier } from "./components/AuditChainVerifier";
+
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -32,10 +34,14 @@ export const App: React.FC = () => {
           {/* Floating Q&A Bar on ALL routes */}
           <QaFloatingBar />
 
-          <footer className="border-t border-border py-6 bg-card text-center text-xs text-muted">
-            <div className="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-              <span className="font-mono">ReconIQ Engine · SHA-256 Cryptographic Audit Ledger</span>
-              <span>Deterministic matching & AI-assisted exception resolution</span>
+          <footer className="border-t border-border py-5 bg-card text-xs text-muted">
+            <div className="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                <span className="font-mono font-semibold text-foreground">ReconIQ Engine · SHA-256 Cryptographic Audit Ledger</span>
+                <span className="hidden sm:inline text-muted/60">|</span>
+                <span>Deterministic matching & AI exception resolution</span>
+              </div>
+              <AuditChainVerifier />
             </div>
           </footer>
         </div>

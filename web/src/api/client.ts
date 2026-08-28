@@ -234,6 +234,14 @@ export const api = {
     if (params.limit !== undefined) query.set("limit", params.limit.toString());
     if (params.offset !== undefined) query.set("offset", params.offset.toString());
     const qs = query.toString();
-    return request(`/example-bank${qs ? `?${qs}` : ""}`, { method: "GET" });
+  /**
+   * GET /api/verify-chain
+   */
+  async verifyChain(): Promise<import("./schemas").VerifyChainResponse> {
+    return request<import("./schemas").VerifyChainResponse>(
+      "/verify-chain",
+      { method: "GET" },
+      (await import("./schemas")).VerifyChainResponseSchema
+    );
   },
 };

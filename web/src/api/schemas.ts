@@ -184,6 +184,19 @@ export const ExampleBankListResponseSchema = z.object({
 });
 export type ExampleBankListResponse = z.infer<typeof ExampleBankListResponseSchema>;
 
+// ── GET /api/verify-chain ───────────────────────────────────────────────────
+
+export const VerifyChainResponseSchema = z.object({
+  ok:             z.boolean(),
+  mainChainRows:  z.number(),
+  sideChainRows:  z.number(),
+  totalRows:      z.number(),
+  status:         z.string(),
+  verifiedAt:     z.string(),
+  error:          z.string().optional(),
+});
+export type VerifyChainResponse = z.infer<typeof VerifyChainResponseSchema>;
+
 // ── Error Response ────────────────────────────────────────────────────────────
 
 export const ErrorResponseSchema = z.object({

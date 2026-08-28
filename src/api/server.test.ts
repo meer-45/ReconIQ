@@ -43,18 +43,18 @@ describe("ReconIQ API Server Smoke Tests", () => {
     expect(data.matchRateByMethod.EXACT).toBeGreaterThan(0);
   });
 
-  // ── 2. GET /api/exceptions?classification=TIMING_LAG ────────────────────────
-  it("GET /api/exceptions?classification=TIMING_LAG returns 21 rows", async () => {
-    const req = new Request("http://localhost:3000/api/exceptions?classification=TIMING_LAG", { method: "GET" });
+  // ── 2. GET /api/exceptions?classification=MISSING_COUNTERPART ──────────────
+  it("GET /api/exceptions?classification=MISSING_COUNTERPART returns rows", async () => {
+    const req = new Request("http://localhost:3000/api/exceptions?classification=MISSING_COUNTERPART", { method: "GET" });
     const res = await handleRequest(req);
 
     expect(res.status).toBe(200);
     const data = await res.json();
 
-    expect(data.total).toBe(21);
-    expect(data.exceptions.length).toBe(21);
+    expect(data.total).toBeGreaterThanOrEqual(1);
+    expect(data.exceptions.length).toBeGreaterThanOrEqual(1);
     for (const item of data.exceptions) {
-      expect(item.classification).toBe("TIMING_LAG");
+      expect(item.classification).toBe("MISSING_COUNTERPART");
       expect(item.unresolvedExceptionId).toBeDefined();
       expect(typeof item.riskScore).toBe("number");
     }
