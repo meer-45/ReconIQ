@@ -19,3 +19,4 @@ package-lock.json
 logs/llm-cache/
 logs/*.jsonl
 logs/rate-limiter-state.json
+docs/INTERVIEW_PREP.md
