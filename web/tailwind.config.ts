@@ -14,6 +14,9 @@ export default {
         card: "var(--card)",
         "card-foreground": "var(--card-foreground)",
         border: "var(--border)",
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
+        accent: "var(--accent)",
         primary: {
           50:  "#eef2ff",
           100: "#e0e7ff",

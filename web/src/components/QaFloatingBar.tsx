@@ -293,12 +293,12 @@ export const QaFloatingBar: React.FC = () => {
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="Ask about txns, matches, timing lags…"
               disabled={loading}
-              className="flex-1 rounded-xl border border-border bg-accent/40 px-3.5 py-2 text-xs text-foreground placeholder-muted focus:outline-none focus:border-primary-500 disabled:opacity-50"
+              className="flex-1 rounded-xl border border-border bg-slate-100 dark:bg-slate-800/90 px-3.5 py-2 text-xs text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 disabled:opacity-50 transition-all"
             />
             <button
               type="submit"
               disabled={!question.trim() || loading}
-              className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white hover:bg-primary-500 disabled:opacity-40 transition-colors"
+              className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white hover:bg-primary-500 disabled:opacity-40 transition-colors shrink-0"
             >
               <Send className="h-3.5 w-3.5" />
             </button>
