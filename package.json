@@ -5,6 +5,7 @@
   "scripts": {
     "start": "bun run src/api/server.ts",
     "dev": "bun run src/api/server.ts",
+    "dev:all": "bun run src/api/server.ts & (cd web && bun run dev) & wait",
     "server": "bun run src/api/server.ts",
     "test": "bun test"
   },

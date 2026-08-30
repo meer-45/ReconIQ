@@ -8,7 +8,6 @@ dotenv.config();
 dotenv.config({ path: resolve(__dirname, "../../.env") });
 import { createHash } from "node:crypto";
 import { readFileSync, existsSync } from "fs";
-import { join } from "path";
 import { z } from "zod";
 import { prisma, closePrisma } from "../persistence/db";
 import { computeEmbedding, cosineSimilarity } from "../matching/embedding";
@@ -112,9 +111,7 @@ export async function getMainChainTailHash(): Promise<string> {
  * Returns high-level metrics matching Day 8 metrics report, reading from Postgres with file fallback.
  */
 async function handleGetOverview(requestId: string): Promise<Response> {
-  const cwdReportPath = join(process.cwd(), "src", "metrics", "metrics_report.json");
-  const dirnameReportPath = resolve(__dirname, "../metrics/metrics_report.json");
-  const reportPath = existsSync(cwdReportPath) ? cwdReportPath : dirnameReportPath;
+  const reportPath = resolve(__dirname, "../metrics/metrics_report.json");
   if (existsSync(reportPath)) {
     try {
       const raw = JSON.parse(readFileSync(reportPath, "utf-8"));
