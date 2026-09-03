@@ -36,18 +36,18 @@ ReconIQ is built on a simple, powerful thesis:
 
 ### [1:00 – 2:00] Live Walkthrough: Resolving a Real Ambiguous Exception
 
-> **[Screen: Click into `/exceptions`, select Exception `ss_ex_tx_aa5ltds16g` (`₹6,104.34`)]**
+> **[Screen: Click into `/exceptions`, select Exception `ss_ex_tx_s4bmvi97tp` (`₹12,225.31`)]**
 
 "Let's see this in action on a real, live case from our batch. 
 
-Here is bank credit `tx_aa5ltds16g` for **₹6,104.34** (610,434 paise). 
+Here is bank credit `tx_s4bmvi97tp` for **₹12,225.31** (1,222,531 paise). 
 
 Exact matching couldn't find a single payment. Our bounded subset-sum engine stepped in, factored in the 3.36% inferred gateway fee schedule, and discovered multiple competing candidate bundles. 
 
 Instead of guessing—which is how bugs slip into ledgers—ReconIQ flagged this as an `AMBIGUOUS_MATCH` exception and presents both candidate subsets side-by-side:
 
-- **Candidate 0** (Score: `0.1469`): 3 gateway transactions including a gross sale of ₹8,695.87 offset by two customer refund records of `-₹529.42` (`pay_KWSRBSYP-REF`) and `-₹1,877.00` (`pay_NTFQJ7NT-REF`), netting out to ₹6,289.45 gross.
-- **Candidate 1** (Score: `0.1405`): 5 smaller gateway transactions.
+- **Candidate 0** (Score: `0.0614`): 5 gateway transactions including gross sales of ₹32,859.61 offset by two customer refund records of `-₹10,824.26` (`pay_VX97NJW7-REF`) and `-₹9,397.34` (`pay_1CWHSY43-REF`), netting out to ₹12,638.01 gross.
+- **Candidate 1** (Score: `0.0383`): 5 gateway transactions with alternate refund allocations netting out to ₹12,664.68 gross.
 
 ReconIQ surfaces the exact score breakdown—amount precision, date proximity, and bundle size penalty. 
 

@@ -25,7 +25,7 @@
 - **Visual Action:**
   1. Click **"Exceptions"** in the top navigation bar.
   2. Click the classification filter dropdown and select **`MISSING_COUNTERPART`**.
-  3. Scroll down and click on exception row **`ss_ex_tx_aa5ltds16g`** (`₹6,104.34`).
+  3. Scroll down and click on exception row **`ss_ex_tx_s4bmvi97tp`** (`₹12,225.31`).
 - **Voiceover:**
   > "When transactions cannot be matched 1:1, ReconIQ's bounded subset-sum dynamic programming finds complex multi-payment bundles. If multiple candidate subsets compete, the system doesn't guess—it generates an `AMBIGUOUS_MATCH` exception with transparent scoring."
 
@@ -33,16 +33,16 @@
 
 ### [00:32 – 00:52] Frame 3: Side-by-Side Candidate Disambiguation & One-Click Approval
 
-- **URL:** `http://localhost:5173/exceptions/ss_ex_tx_aa5ltds16g`
+- **URL:** `http://localhost:5173/exceptions/ss_ex_tx_s4bmvi97tp`
 - **Visual Action:**
   1. Show the side-by-side comparison cards:
-     - **Candidate 0** (Green border, Score `0.1469`): 3 transactions including gross sale ₹8,695.87 and two refunds (`-₹529.42` and `-₹1,877.00`).
-     - **Candidate 1** (Score `0.1405`): 5 transactions.
+     - **Candidate 0** (Green border, Score `0.0614`): 5 transactions including gross sales and two refunds (`-₹10,824.26` and `-₹9,397.34`).
+     - **Candidate 1** (Score `0.0383`): 5 transactions with alternate refund offsets.
   2. Hover over the score breakdown (Amount Precision, Date Proximity, Subset Penalty).
   3. Click the large green button: **"Approve this match"** on Candidate 0.
   4. Instant success toast appears: *"Match approved successfully"*, then redirects to the new MatchGroup.
 - **Voiceover:**
-  > "Here on exception `ss_ex_tx_aa5ltds16g`, we see two competing bundles. Candidate 0 correctly nets two customer refund records against a gross settlement. As a controller, I inspect the score breakdown, click **'Approve this match'**, and resolve the exception in one click."
+  > "Here on exception `ss_ex_tx_s4bmvi97tp`, we see two competing bundles. Candidate 0 correctly nets two customer refund records against a gross settlement. As a controller, I inspect the score breakdown, click **'Approve this match'**, and resolve the exception in one click."
 
 ---
 
@@ -75,7 +75,7 @@
 - **Visual Action:**
   1. Click the green badge in the footer: **`✓ MAIN CHAIN OK (1,061 rows) · 0 link breaks`**.
   2. Press **`Cmd + K`** to trigger the floating Q&A bar.
-  3. Type: *"Why wasn't tx_aa5ltds16g matched by exact match?"* and press Enter.
+  3. Type: *"Why wasn't tx_s4bmvi97tp matched by exact match?"* and press Enter.
   4. Agent returns grounded response citing real transaction IDs from the database.
 - **Voiceover:**
   > "Auditors can verify ledger integrity across the entire database in milliseconds, while finance teams query reconciliation history in plain English via our grounded Q&A agent and MCP server. That's ReconIQ."

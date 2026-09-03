@@ -1,9 +1,9 @@
 import { prisma, closePrisma } from "../src/persistence/db";
 
 const ids = [
-  "ss_ex_tx_l3poge24r5a",
-  "ss_ex_tx_lr5wwbfyt4",
   "ss_ex_tx_s4bmvi97tp",
+  "ss_ex_tx_wcume4wn5p",
+  "ss_ex_tx_vyismk47bp",
 ];
 
 for (const id of ids) {
