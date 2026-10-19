@@ -11,7 +11,6 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=000)](https://react.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-*Razorpay Buildathon 2026 · Track 04 (AI Finance Controller)*
 
 </div>
 
